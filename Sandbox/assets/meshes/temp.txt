@@ -1,0 +1,271 @@
+#include "syrpch.h"
+#include "CollisionSystem.h"
+
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtx/projection.hpp>
+
+
+#include "SYR/Renderer/Renderer2D.h"
+
+namespace SYR {
+
+	void checkCollisions(entt::registry& registry) {
+		auto view = registry.view<TransformComponent, Hitbox2DComponent>();
+		
+		for (const entt::entity e1 : view) {
+			for (const entt::entity e2 : view) {
+				if (e1 <= e2) {
+					continue;
+				}
+
+				glm::vec2 overlap = getOverlap(view.get<Hitbox2DComponent>(e1), view.get<Hitbox2DComponent>(e2));
+
+				if (overlap.x != 0 || overlap.y != 0) {
+					view.get<Hitbox2DComponent>(e1).addCollider(e2);
+					view.get<Hitbox2DComponent>(e2).addCollider(e1);
+				}else {
+					view.get<Hitbox2DComponent>(e1).addCollider(entt::null);
+					view.get<Hitbox2DComponent>(e2).addCollider(entt::null);
+				}
+			}
+			//view.get<Hitbox2DComponent>(e).addCollider(e);
+		}
+	}
+
+	void handleCollisions(entt::registry& registry) {
+		auto view = registry.view<TransformComponent, Hitbox2DComponent>();
+
+		for (const entt::entity e : view) {
+			//view.get<Hitbox2DComponent>(e).addCollider(entt::null);
+		}
+	}
+
+	bool areParallel(const glm::vec4& a, const glm::vec4& b) {
+		return abs((a.z - a.x) * (b.w - b.y) - (b.z - b.x) * (a.w - a.y)) < 0.01f;
+	}
+
+	const glm::vec4* getEdges(const glm::vec2* vertices, uint32_t vertexCount) {
+		glm::vec4* edges = new glm::vec4[vertexCount];
+
+		for (int i = 0; i < vertexCount - 1; i++) {
+			edges[i] = glm::vec4(vertices[i].x, vertices[i].y, vertices[i + 1].x, vertices[i + 1].y);
+		}
+
+		edges[vertexCount - 1] = glm::vec4(vertices[0].x, vertices[0].y, vertices[vertexCount - 1].x, vertices[vertexCount - 1].y);
+
+		return edges;
+	}
+
+	const glm::vec4* getEdges(Hitbox2DComponent hitbox) {
+		return getEdges(hitbox.getVertices(), hitbox.getVertexCount());
+	}
+
+	glm::vec4* getUniqueAxes() {
+		return new glm::vec4[1];
+	}
+
+	glm::vec2 getMidPoint(glm::vec4& surface, glm::vec2& point) {
+		glm::vec4 pToTail = { point, surface.x, surface.y };
+		glm::vec4 pToHead = { point, surface.z, surface.w };
+
+		if (pToTail.length() > surface.length()) {
+			if (pToHead.length() > pToTail.length()) {
+				return glm::vec2(surface.x, surface.y);
+			}
+
+			return glm::vec2(surface.z, surface.w);
+		}
+
+		if (pToHead.length() > surface.length()) {
+			return glm::vec2(surface.x, surface.y);
+		}
+
+		return point;
+	}
+
+	glm::vec4 getShadow(glm::vec4 surface, const glm::vec2* vertices, int vertexCount) {
+
+		glm::vec2 axis = {surface.z - surface.x, surface.w - surface.y};
+
+		glm::vec2* projections = new glm::vec2[vertexCount];
+
+		for (int i = 0; i < vertexCount; i++) {
+			projections[i] = glm::proj(vertices[i], axis);
+		}
+
+		glm::vec4 shadow = { projections[0], projections[1] };
+		float max = pow(shadow.z - shadow.x, 2) + pow(shadow.w - shadow.y, 2);
+
+		for (int i = 0; i < vertexCount; i++) {
+			for (int j = i + 1; j < vertexCount; j++) {
+				float temp = pow(projections[j].x - projections[i].x, 2) + pow(projections[j].y - projections[i].y, 2);
+
+				if (temp > max) {
+					shadow = { projections[i], projections[j] };
+					max = temp;
+				}
+			}
+		}
+
+#ifdef _DEBUG
+		Renderer2D::drawLine(glm::vec2(shadow.x, shadow.y), glm::vec2(shadow.z, shadow.w), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
+#endif
+
+		return shadow;
+	}
+
+	const glm::vec2* getOutline(Hitbox2DComponent hitbox) {
+
+		float scale = 1.4f;
+
+		glm::vec2 sum = { 0.0f, 0.0f };
+		glm::vec2* outlineVertices = new glm::vec2[hitbox.getVertexCount()];
+
+		for (int i = 0; i < hitbox.getVertexCount(); i++) {
+			sum.x -= hitbox.getVertices()[i].x * (1 - scale);
+			sum.y -= hitbox.getVertices()[i].y * (1 - scale);
+		}
+
+		glm::mat4 transform = glm::translate(glm::mat4(1.0f), { -sum.x / hitbox.getVertexCount(), -sum.y / hitbox.getVertexCount(), 0.0f }) * glm::scale(glm::mat4(1.0f), { scale, scale, 1.0f });
+
+
+		for (int i = 0; i < hitbox.getVertexCount(); i++) {
+			glm::vec3 vertex = transform * glm::vec4(hitbox.getVertices()[i], 1.0f, 1.0f);
+
+			outlineVertices[i] = { vertex.x, vertex.y };
+		}
+
+		return outlineVertices;
+	}
+
+	glm::vec2 getOverlap(Hitbox2DComponent a, Hitbox2DComponent b) {
+
+		const glm::vec2* aVertices = a.getVertices();
+		const glm::vec2* bVertices = b.getVertices();
+
+#ifdef _DEBUG
+		aVertices = getOutline(a);
+		getOutline(b);
+#endif
+
+		glm::vec2 minimumDisplacement = glm::vec2(0.0f, 0.0f);
+		
+		int uniqueAxisCount = 1;
+		int maxAxisCount = a.getVertexCount() + b.getVertexCount();
+
+		const glm::vec4* aEdges = getEdges(aVertices, a.getVertexCount());
+		const glm::vec4* bEdges = getEdges(bVertices, b.getVertexCount());
+
+		glm::vec4* uniqueAxes = new glm::vec4[maxAxisCount];
+		uniqueAxes[0] = aEdges[0];
+
+		for (int i = 1; i < a.getVertexCount(); i++) {
+			for (int j = 0; j < uniqueAxisCount; j++) {
+				if (areParallel(uniqueAxes[j], aEdges[i])) {
+					break;
+				}
+
+				if (j == uniqueAxisCount - 1) {
+					uniqueAxes[uniqueAxisCount] = aEdges[i];
+					uniqueAxisCount++;
+				}
+			}
+		}
+
+		int aAxes = uniqueAxisCount;
+
+		for (int i = 0; i < b.getVertexCount(); i++) {
+			for (int j = 0; j < uniqueAxisCount; j++) {
+				if (areParallel(uniqueAxes[j], bEdges[i])) {
+					break;
+				}
+
+				if (j == uniqueAxisCount - 1) {
+					uniqueAxes[uniqueAxisCount] = bEdges[i];
+					uniqueAxisCount++;
+				}
+			}
+		}
+		
+		bool noCollision = false;
+
+		for (int i = 0; i < uniqueAxisCount; i++) {
+			glm::vec4 aProj = getShadow(uniqueAxes[i], a.getVertices(), a.getVertexCount());
+			glm::vec4 bProj = getShadow(uniqueAxes[i], b.getVertices(), b.getVertexCount());
+			
+			glm::vec2 overlap = getOverlap(aProj, bProj);
+
+			
+			if (overlap.x != 0 || overlap.y != 0) {
+
+				//If minimumDisplacement is undeclared or greater than the new overlap
+				if ((minimumDisplacement.x == 0 && minimumDisplacement.y == 0) || overlap.length() < minimumDisplacement.length()) {
+					minimumDisplacement = overlap;
+				}
+			}else {
+				noCollision = true;
+				//return glm::vec2(0.0f, 0.0f);
+			}
+			
+		}
+		
+		return noCollision ? glm::vec2(0.0f) : minimumDisplacement;
+	}
+
+	glm::vec2 getOverlap(const glm::vec4& aProj, const glm::vec4& bProj) {
+
+		glm::vec2 direction = { aProj.z - aProj.x, aProj.w - aProj.y };
+
+		float k1 = direction.x != 0 ? (bProj.x - aProj.x) / direction.x : (bProj.y - aProj.y) / direction.y;
+		float k2 = direction.x != 0 ? (bProj.z - aProj.x) / direction.x : (bProj.w - aProj.y) / direction.y;
+
+		SYR_CORE_INFO("{0} {1}", k1, k2);
+
+		if (abs(k1) > 1 && abs(k2) > 1) {
+			return glm::vec2(0.0f);
+		}
+
+		glm::vec2 tail = k1 >= 0 && k1 <= 1 ? glm::vec2(direction.x * k1 + aProj.x, direction.y * k1 + aProj.y) : glm::vec2(aProj.x, aProj.y);
+		glm::vec2 head = k2 >= 0 && k2 <= 1 ? glm::vec2(direction.x * k2 + aProj.x, direction.y * k2 + aProj.y) : (glm::vec2(aProj.z, aProj.w + 1));
+
+		glm::vec4 overlap = {tail, head};
+
+#ifdef _DEBUG
+		glm::vec2 normal = { overlap.z - overlap.x, overlap.w - overlap.y };
+		normal = { -normal.y / glm::length(normal) / 10, normal.x / glm::length(normal) / 10 };
+
+		Renderer2D::drawLine(glm::vec2(overlap.x + normal.x, overlap.y + normal.y), glm::vec2(overlap.z + normal.x, overlap.w + normal.y), glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
+#endif
+
+		return glm::vec2(overlap.z - overlap.x, overlap.w - overlap.y);
+	}
+
+	void movement(entt::registry& registry, Timestep ts) {
+		auto view = registry.view<TransformComponent, VelocityComponent>();
+		
+		for (const entt::entity e : view) {
+
+			glm::vec3& velocity = view.get<VelocityComponent>(e);
+
+			if (velocity.x != 0 || velocity.y != 0 || velocity.z != 0) {
+				glm::vec3 displacement = { velocity.x * ts, velocity.y * ts, velocity.z * ts };
+
+				view.get<TransformComponent>(e).offset(displacement);
+			}
+		}
+	}
+
+	void render(entt::registry& registry) {
+		auto view = registry.view<TransformComponent, Hitbox2DComponent>();
+
+		for (const entt::entity e : view) {
+			glm::mat4& transform = view.get<TransformComponent>(e);
+			Hitbox2DComponent& hitbox = view.get<Hitbox2DComponent>(e);
+			hitbox.applyNewTransform(transform);
+
+			Renderer2D::drawLines(hitbox.getVertices(), hitbox.getVertexCount(), hitbox.getColor());
+		}
+
+	}
+
+}

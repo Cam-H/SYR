@@ -1,0 +1,6353 @@
+﻿大人 おとな Adult
+一人 ひとり Alone
+人工 じんこう Artificial
+大きい おおきい Big
+下 した Down
+八 はち Eight
+八つ やっつ Eight Things
+入り口 いりぐち Entrance
+大した たいした Great
+山 やま Mountain
+口 くち Mouth
+ふじ山 ふじさん Mt Fuji
+九 きゅう Nine
+九つ ここのつ Nine Things
+一 いち One
+一つ ひとつ One Thing
+人 ひと Person
+下さい ください Please
+人口 じんこう Population
+力 ちから Power
+川 かわ River
+七 なな Seven
+七つ ななつ Seven Things
+大きさ おおきさ Size
+十 じゅう Ten
+三 さん Three
+三人 さんにん Three People
+三つ みっつ Three Things
+上る のぼる To Climb
+入る はいる To Enter
+下がる さがる To Get Lower
+入れる いれる To Insert
+下げる さげる To Lower
+上げる あげる To Raise
+上がる あがる To Rise
+二 に Two
+二人 ふたり Two People
+二つ ふたつ Two Things
+上 うえ Up
+女 おんな Woman
+又 また Again
+四月 しがつ April
+玉 たま Ball
+本 ほん Book
+白人 はくじん Caucasian
+丸 まる Circle
+丸い まるい Circular
+正しい ただしい Correct
+犬 いぬ Dog
+八日 ようか Eight Days
+夕べ ゆうべ Evening
+出口 でぐち Exit
+目 め Eye
+目玉 めだま Eyeball
+二月 にがつ February
+五日 いつか Fifth Day
+五十 ごじゅう Fifty
+火 ひ Fire
+五 ご Five
+五つ いつつ Five Things
+四 よん Four
+天才 てんさい Genius
+女子 じょし Girl
+女の子 おんなのこ Girl
+上手 じょうず Good At
+手 て Hand
+天 てん Heaven
+入力 にゅうりょく Input
+一月 いちがつ January
+日本 にほん Japan
+六月 ろくがつ June
+子 こ Kid
+王 おう King
+左右 さゆう Left And Right
+左 ひだり Left Direction
+五月 ごがつ May
+中 なか Middle
+~円 えん Money
+月 つき Moon
+九日 ここのか Nine Days
+十月 じゅうがつ October
+一日 いちにち One Day
+一千 いっせん One Thousand
+千円 せんえん One Thousand Yen
+玉ねぎ たまねぎ Onion
+人々 ひとびと People
+王子 おうじ Prince
+王女 おうじょ Princess
+子犬 こいぬ Puppy
+女王 じょおう Queen
+田 た Rice Field
+右 みぎ Right Direction
+円い まるい Round
+二日 ふつか Second Day
+七日 なのか Seventh Day
+六 ろく Six
+十六 じゅうろく Sixteen
+六日 むいか Sixth Day
+六つ むっつ Six Things
+小さい ちいさい Small
+土 つち Soil
+日 ひ Sun
+刀 かたな Sword
+十日 とおか Ten Days
+三日 みっか Third Day
+千 せん One Thousand
+正す ただす To Correct
+出る でる To Exit
+立つ たつ To Stand
+立てる たてる To Stand Up
+出す だす To Take Out
+木 き Tree
+水中 すいちゅう Underwater
+下手 へた Unskillful
+中々 なかなか Very
+大いに おおいに Very
+火山 かざん Volcano
+水 みず Water
+白 しろ White
+文 ぶん Writing
+~才 さい Years Old
+少ない すくない A Few
+少し すこし A Little
+アメリカ人 あめりかじん American
+矢 や Arrow
+~台 だい Big Machine
+市 し City
+牛 うし Cow
+戸口 とぐち Doorway
+外れ はずれ Extremity
+太い ふとい Fat
+お父さん おとうさん Father
+父 ちち Father
+五台 ごだい Five Machines
+外人 がいじん Foreigner
+フランス人 ふらんすじん Frenchman
+生 なま Fresh
+友人 ゆうじん Friend
+毛 け Fur
+少女 しょうじょ Girl
+公用 こうよう Government Business
+半分 はんぶん Half
+半 はん Half
+心 こころ Heart
+今日は こんにちは Hello
+大切 たいせつ Important
+内 うち Inside
+戸 と Door
+ビ-玉 び-だま Marble
+分 ふん Minute
+お母さん おかあさん Mother
+母 はは Mother
+市立 しりつ Municipal
+北 きた North
+今 いま Now
+~人 にん Number Of People
+大人しい おとなしい Obedient
+古い ふるい Old
+十万 じゅうまん One Hundred Thousand
+一台 いちだい One Machine
+人生 じんせい One's Life
+元 もと Origin
+外 そと Outside
+シアトル市 しあとるし Seattle
+中古 ちゅうこ Secondhand
+中止 ちゅうし Suspension
+用 よう Task
+十台 じゅうだい Ten Machines
+一万 いちまん Ten Thousand
+万 まん Ten Thousand
+今月 こんげつ This Month
+生まれる うまれる To Be Born
+切れる きれる To Be Cut
+外れる はずれる To Be Disconnected
+切る きる To Cut
+今日 きょう Today
+太る ふとる To Get Fat
+生む うむ To Give Birth
+生きる いきる To Live
+引く ひく To Pull
+分ける わける To Separate
+止まる とまる To Stop
+止める とめる To Stop Something
+分かる わかる To Understand
+用いる もちいる To Utilize
+二万 にまん Twenty Thousand
+二台 にだい Two Machines
+方 かた Way
+広い ひろい Wide
+冬 ふゆ Winter
+女の人 おんなのひと Woman
+他人 たにん Another Person
+早々 そうそう As Soon As
+大気 たいき Atmosphere
+赤ちゃん あかちゃん Baby
+竹 たけ Bamboo
+竹の子 たけのこ Bamboo Shoots
+太字 ふとじ Bold Letter
+少年 しょうねん Boy
+虫 むし Bug
+子牛 こうし Calf
+平気 へいき Calm
+見える みえる Can See
+車 くるま Car
+中央 ちゅうおう Center
+字 じ Character
+耳 みみ Ear
+早い はやい Early
+元気 げんき Energy
+気分 きぶん Feeling
+花火 はなび Fireworks
+先ず まず First Of All
+一年生 いちねんせい First Year Student
+五百 ごひゃく Five Hundred
+平ら たいら Flat
+花 はな Flower
+足 あし Foot
+四十 よんじゅう Forty
+四百 よんひゃく Four Hundred
+四日 よっか Fourth Day
+四つ よっつ Four Things
+四千 よんせん Four Thousand
+主人 しゅじん Head Of Household
+休日 きゅうじつ Holiday
+百 ひゃく One Hundred
+氷 こおり Ice
+丸ごと まるごと In Its Entirety
+不正 ふせい Injustice
+車内 しゃない Inside The Car
+宝石 ほうせき Jewel
+先月 せんげつ Last Month
+去年 きょねん Last Year
+左手 ひだりて Left Hand
+文字 もじ Letter
+一代 いちだい Lifetime
+主に おもに Mainly
+男 おとこ Man
+名人 めいじん Master
+仕方 しかた Method
+百万 ひゃくまん One Million
+先々月 せんせんげつ Month Before Last
+月見 つきみ Moon Viewing
+名 な Name
+号 ごう Number
+一気 いっき One Breath
+一本気 いっぽんぎ One Track Mind
+他 ほか Other
+休止 きゅうし Pause
+皿 さら Plate
+人気 にんき Popular
+切手 きって Postage Stamp
+先 さき Previous
+赤 あか Red
+赤い あかい Red
+休み やすみ Rest
+右手 みぎて Right Hand
+二世 にせい Second Generation
+本気 ほんき Serious
+かき氷 かきごおり Shaved Ice
+貝 かい Shell
+不足 ふそく Shortage
+小皿 こざら Small Plate
+気 き Spirit
+石 いし Stone
+一文字 いちもんじ Straight Line
+一打 いちだ Strike
+代用 だいよう Substitution
+名字 みょうじ Surname
+先生 せんせい Teacher
+申し申し もうしもうし Telephone Hello
+お礼 おれい Thanks
+先日 せんじつ The Other Day
+三世 さんせい Third Generation
+糸 いと Thread
+引き分け ひきわけ Tie
+足りる たりる To Be Enough
+写る うつる To Be Photographed
+気に入る きにいる To Be Pleased With
+写す うつす To Copy
+見分ける みわける To Distinguish
+出かける でかける To Go Out
+打つ うつ To Hit
+代わる かわる To Replace
+休む やすむ To Rest
+申す もうす To Say Humbly
+見る みる To See
+見せる みせる To Show
+町 まち Town
+宝 たから Treasure
+二十日 はつか Twentieth Day
+二百 にひゃく Two Hundred
+花見 はなみ Viewing Cherry Blossoms
+村 むら Village
+村人 むらびと Villager
+見方 みかた Way Of Seeing
+天気 てんき Weather
+平日 へいじつ Weekdays
+白い しろい White
+年内 ねんない Within A Year
+世 よ World
+年 とし Year
+2011年 にせんじゅういちねん 2011
+年中 ねんじゅう Year Round
+休学 きゅうがく Absent From School
+仕草 しぐさ Action
+作用 さよう Action
+空気 くうき Air
+万人 ばんにん All People
+古来 こらい Ancient
+大作 たいさく An Epic
+角 かく Angle
+考古学 こうこがく Archeology
+当たり あたり A Success
+今すぐ いますぐ At Once
+牛肉 ぎゅうにく Beef
+生まれ うまれ Birthplace
+青い あおい Blue
+体 からだ Body
+男の子 おとこのこ Boy
+~斤 きん Bread Loaf Counter
+兄弟 きょうだい Brothers
+毛虫 けむし Caterpillar
+近い ちかい Close
+色 いろ Colour
+会社 かいしゃ Company
+作文 さくぶん Composition
+工作 こうさく Construction
+大会 たいかい Convention
+図 ず Diagram
+外交 がいこう Diplomacy
+下町 したまち Downtown
+工学 こうがく Engineering
+毎日 まいにち Every Day
+毎月 まいつき Every Month
+毎回 まいかい Every Time
+毎年 まいとし Every Year
+羽 はね Feathers
+林 はやし Forest
+~形 けい Form
+~年来 ねんらい For Some Years
+大体 だいたい General
+金 きん Gold
+草 くさ Grass
+本社 ほんしゃ Headquarters
+里心 さとごころ Homesick
+里 さと Home Village
+何日 なんにち How Many Days
+何人 なんにん How Many People
+何回 なんかい How Many Times
+外来 がいらい Imported
+自立 じりつ Independence
+体内 たいない Internal
+皮肉 ひにく Irony
+入社 にゅうしゃ Joining A Company
+大声 おおごえ Large Voice
+光 ひかり Light
+光年 こうねん Light Year
+文学 ぶんがく Literature
+男の人 おとこのひと Man
+多い おおい Many
+多分 たぶん Maybe
+肉 にく Meat
+会 かい Meeting
+お金 おかね Money
+月光 げっこう Moonlight
+来月 らいげつ Next Month
+来年 らいねん Next Year
+北西 ほくせい Northwest
+兄 あに Older Brother
+自分 じぶん Oneself
+一回 いっかい One Time
+空車 くうしゃ Open Taxi
+本来 ほんらい Originally
+体力 たいりょく Physical Strength
+公社 こうしゃ Public Corporation
+雨 あめ Rain
+本当 ほんとう Reality
+近年 きんねん Recent Years
+米 こめ Rice
+同じ おなじ Same
+同日 どうじつ Same Day
+入学 にゅうがく School Admission
+学年 がくねん School Grade
+皮 かわ Skin
+空 そら Sky
+水色 みずいろ Sky Blue
+近日 きんじつ Soon
+音 おと Sound
+四角 しかく Square
+学生 がくせい Student
+日光 にっこう Sunlight
+金玉 きんたま Testicles
+今回 こんかい This Time
+何千 なんぜん Thousands
+~回 かい Times
+当たる あたる To Be Right
+行う おこなう To Carry Out
+来る くる To Come
+行く いく To Go
+生える はえる To Grow
+学ぶ まなぶ To Learn
+作る つくる To Make
+会う あう To Meet
+交ぜる まぜる To Mix
+回る まわる To Revolve
+走る はしる To Run
+言う いう To Say
+考える かんがえる To Think About
+行き ゆき Train Direction
+走行 そうこう Traveling
+三角 さんかく Triangle
+大学 だいがく University
+今まで いままで Until Now
+谷 たに Valley
+色々 いろいろ Various
+声 こえ Voice
+西 にし West
+何 なに What
+何月 なんがつ What Month
+何年 なんねん What Year
+麦 むぎ Wheat
+一生 いっしょう Whole Life
+社内 しゃない Within The Company
+毛糸 けいと Wool Yarn
+弟 おとうと Younger Brother
+青年 せいねん Youth
+後で あとで After
+全て すべて All
+全日本 ぜんにほん All Japan
+午前 ごぜん AM
+米国 べいこく America
+足首 あしくび Ankle
+年次 ねんじ Annual
+後ろ うしろ Behind
+出血 しゅっけつ Bleeding
+血 ち Blood
+両方 りょうほう Both
+両日 りょうじつ Both Days
+両手 りょうて Both Hands
+明るい あかるい Bright
+茶色 ちゃいろ Brown
+仕方がない しかたがない Can't Be Helped
+安い やすい Cheap
+中国 ちゅうごく China
+社長 しゃちょう Company President
+活用 かつよう Conjugation
+国 くに Country
+文化 ぶんか Culture
+死体 したい Dead Body
+死 し Death
+方言 ほうげん Dialect
+方向 ほうこう Direction
+早く はやく Early
+地 ち Earth
+東 ひがし East
+東方 とうほう Eastward
+活気 かっき Energy
+有名 ゆうめい Famous
+名曲 めいきょく Famous Music
+早口 はやくち Fast Talker
+外国 がいこく Foreign Countries
+外国人 がいこくじん Foreign People
+四十二 よんじゅうに Forty Two
+前 まえ Front
+全力 ぜんりょく Full Effort
+正直 しょうじき Honest
+本州 ほんしゅう Honshuu
+私 わたし I
+国王 こくおう King
+天国 てんごく Kingdom Of Heaven
+九州 きゅうしゅう Kyuushuu
+土地 とち Land
+生活 せいかつ Life
+長い ながい Long
+宝くじ たからくじ Lottery
+小文字 こもじ Lowercase Letters
+地図 ちず Map
+草地 くさち Meadow
+水星 すいせい Mercury
+中東 ちゅうとう Middle East
+死亡 しぼう Mortality
+国宝 こくほう National Treasure
+全国 ぜんこく Nationwide
+首 くび Neck
+海王星 かいおうせい Neptune
+次 つぎ Next
+次回 じかい Next Time
+夜 よる Night
+直行 ちょっこう Nonstop
+東北 とうほく Northeast
+足りない たりない Not Enough
+海 うみ Ocean
+年上 としうえ Older
+姉 あね Older Sister
+お姉さん おねえさん Older Sister
+一歩 いっぽ One Step
+海外 かいがい Overseas
+平安 へいあん Peace
+私生活 しせいかつ Personal Life
+午後 ごご PM
+点 てん Point
+私立 しりつ Private
+車両 しゃりょう Railroad Car
+安心 あんしん Relief
+~室 しつ Room
+安全 あんぜん Safety
+土星 どせい Saturn
+科学 かがく Science
+羊 ひつじ Sheep
+四国 しこく Shikoku
+店 みせ Shop
+姉妹 しまい Sisters
+世の中 よのなか Society
+南 みなみ South
+南東 なんとう Southeast
+星 ほし Star
+州 しゅう State
+代わり かわり Substitute
+目次 もくじ Table Of Contents
+お茶 おちゃ Tea
+今年 ことし This Year
+三百 さんびゃく Three Hundred
+足す たす To Add
+出来る できる To Be Able
+直る なおる To Be Fixed
+死ぬ しぬ To Die
+食べる たべる To Eat
+向く むく To Face
+直す なおす To Fix
+首になる くびになる To Get Fired
+有る ある To Have
+知る しる To Know
+東京 とうきょう Tokyo
+今夜 こんや Tonight
+亡くなる なくなる To Pass Away
+代える かえる To Replace
+思う おもう To Think
+歩く あるく To Walk
+曲 きょく Tune
+地下 ちか Underground
+地中 ちちゅう Underground
+不安 ふあん Uneasiness
+不明 ふめい Unknown
+大文字 おおもじ Uppercase Letter
+金星 きんせい Venus
+耳打ち みみうち Whisper In Ear
+冬休み ふゆやすみ Winter Holiday
+羊毛 ようもう Wool
+手首 てくび Wrist
+年下 としした Younger
+妹 いもうと Younger Sister
+以後 いご After This
+先回り さきまわり Anticipation
+辺 へん Area
+辺り あたり Area
+この辺 このへん Around Here
+作家 さっか Author
+風船 ふうせん Balloon
+近々 ちかぢか Before Long
+~札 さつ Bill
+鳥 とり Bird
+黒い くろい Black
+黒人 こくじん Black Person
+青空 あおぞら Blue Sky
+船 ふね Boat
+教室 きょうしつ Classroom
+活用形 かつようけい Conjugated Form
+日記 にっき Diary
+~丁目 ちょうめ District Of A Town
+人形 にんぎょう Doll
+小学生 しょうがくせい Elementary School Student
+月末 げつまつ End Of The Month
+魚 さかな Fish
+必死 ひっし Frantic
+自由 じゆう Freedom
+氏名 しめい Full Name
+未来 みらい Future
+地理 ちり Geography
+金魚 きんぎょ Goldfish
+組 くみ Group
+手作り てづくり Handmade
+大空 おおぞら Heavens
+高校 こうこう High School
+家 いえ Home
+作り方 つくりかた How To Make
+船体 せんたい Hull
+大きく おおきく In A Big Way
+先週 せんしゅう Last Week
+以下 いか Less Than
+手紙 てがみ Letter
+小声 こごえ Low Voice
+心理 しんり Mental State
+中学生 ちゅうがくせい Middle School Student
+~氏 し Mister
+以上 いじょう More Than
+近く ちかく Near
+来週 らいしゅう Next Week
+未だ まだ Not Yet
+海魚 かいぎょ Ocean Fish
+~時 じ O'clock
+お兄さん おにいさん Older Brother
+一斤 いっきん One Loaf Of Bread
+一時 いちじ One O'clock
+以外 いがい Other Than
+紙 かみ Paper
+時代 じだい Period
+以前 いぜん Previously
+心理学 しんりがく Psychology
+本当に ほんとうに Really
+理由 りゆう Reason
+~号室 ごうしつ Room Number
+失礼 しつれい Rude
+同時 どうじ Same Time
+学校 がっこう School
+形 かたち Shape
+欠点 けってん Shortcoming
+雪 ゆき Snow
+社会 しゃかい Society
+強力 きょうりょく Strength
+強い つよい Strong
+夏 なつ Summer
+夏休み なつやすみ Summer Vacation
+必ず かならず Surely
+白鳥 はくちょう Swan
+札 ふだ Tag
+高い たかい Tall
+末 すえ The End
+一体 いったい The Heck
+国民 こくみん The People
+今週 こんしゅう This Week
+考え かんがえ Thought
+時 とき Time
+付ける つける To Attach
+見当たる みあたる To Be Found
+欠ける かける To Lack
+失う うしなう To Lose
+通る とおる To Pass
+光る ひかる To Shine
+教える おしえる To Teach
+町民 ちょうみん Townspeople
+交通 こうつう Traffic
+三角形 さんかくけい Triangle
+二斤 にきん Two Loaves of Bread
+二時半 にじはん Two Thirty
+台風 たいふう Typhoon
+大学生 だいがくせい University Student
+不人気 ふにんき Unpopular
+言い方 いいかた Way Of Saying
+考え方 かんがえかた Way Of Thinking
+弱い よわい Weak
+弱点 じゃくてん Weak Point
+週末 しゅうまつ Weekend
+何時 なんじ What Time
+風 かぜ Wind
+年末 ねんまつ Year End
+黄色 きいろ Yellow
+地上 ちじょう Above Ground
+住所 じゅうしょ Address
+入所 にゅうしょ Admission
+助言 じょげん Advice
+全米 ぜんべい All America
+思い出 おもいで A Memory
+~間 かん Amount Of Time
+他所 たしょ Another Place
+答え こたえ Answer
+助力 じょりょく Assistance
+作者 さくしゃ Author
+電池 でんち Battery
+身 み Body
+心身 しんしん Body And Mind
+両者 りょうしゃ Both People
+~君 くん Boy Name Ender
+支局 しきょく Branch Office
+支店 してん Branch Office
+朝ごはん あさごはん Breakfast
+局 きょく Bureau
+雲 くも Cloud
+楽 らく Comfort
+全く まったく Completely
+対立 たいりつ Confrontation
+会話 かいわ Conversation
+決 けつ Decision
+決心 けっしん Determination
+医者 いしゃ Doctor
+役目 やくめ Duty
+東口 ひがしぐち East Exit
+電気 でんき Electricity
+電力 でんりょく Electric Power
+電子 でんし Electron
+絵文字 えもじ Emoji
+工学者 こうがくしゃ Engineer
+入場 にゅうじょう Entrance
+毎朝 まいあさ Every Morning
+工場 こうじょう Factory
+名所 めいしょ Famous Place
+対外 たいがい Foreign
+楽しい たのしい Fun
+北海道 ほっかいどう Hokkaido
+馬 うま Horse
+馬力 ばりき Horsepower
+人間 にんげん Human
+大役 たいやく Important Task
+間 あいだ Interval
+究明 きゅうめい Investigation
+研究 けんきゅう Investigation
+この前 このまえ Last Time
+前回 ぜんかい Last Time
+長さ ながさ Length
+生地 きじ Material
+数学 すうがく Mathematics
+医学 いがく Medical Science
+医大 いだい Medical University
+地中海 ちちゅうかい Mediterranean Sea
+~道 どう Method Of
+君主国 くんしゅこく Monarchy
+朝 あさ Morning
+朝日 あさひ Morning Sun
+音楽 おんがく Music
+名前 なまえ Name
+当たり前 あたりまえ Natural
+お知らせ おしらせ Notice
+数 かず Number
+番号 ばんごう Number
+一番 いちばん Number One
+二番 にばん Number Two
+数字 すうじ Numeral
+次々 つぎつぎ One By One
+反対 はんたい Opposition
+向こう むこう Over There
+絵 え Painting
+未決 みけつ Pending
+私自身 わたしじしん Personally
+投手 とうしゅ Pitcher
+場所 ばしょ Place
+所 ところ Place
+点数 てんすう Points
+交番 こうばん Police Box
+池 いけ Pond
+私立大学 しりつだいがく Private College
+番組 ばんぐみ Program
+役人 やくにん Public Official
+住人 じゅうにん Resident
+道 みち Road
+役 やく Role
+学者 がくしゃ Scholar
+数年 すうねん Several Years
+歩道 ほどう Sidewalk
+間もなく まもなく Soon
+出所 しゅっしょ Release From Prison
+南米 なんべい South America
+南口 みなみぐち South Exit
+空間 くうかん Space
+科目 かもく Subject
+自決 じけつ Suicide
+電話 でんわ Telephone
+身体 しんたい The Body
+人数 にんずう The Number Of People
+時間 じかん Time
+答える こたえる To Answer
+曲がる まがる To Be Bent
+出来上がる できあがる To Be Finished
+交じる まじる To Be Mixed
+曲げる まげる To Bend
+役に立つ やくにたつ To Be Useful
+買う かう To Buy
+対する たいする To Compare With
+数える かぞえる To Count
+決める きめる To Decide
+近づく ちかづく To Get Close
+当てる あてる To Guess
+助ける たすける To Help
+交わる まじわる To Intersect
+住む すむ To Live
+明日 あした Tomorrow
+見直す みなおす To Reevaluate
+思い出す おもいだす To Remember
+走り回る はしりまわる To Run Around
+話す はなす To Speak
+支える ささえる To Support
+投げる なげる To Throw
+化ける ばける To Transform
+回す まわす To Turn
+点ける つける To Turn On
+向ける むける To Turn Towards
+電車 でんしゃ Train
+水道 すいどう Water Supply
+全身 ぜんしん Whole Body
+森 もり Woods
+お前 おまえ You
+君 きみ You
+全部 ぜんぶ All
+天使 てんし Angel
+角度 かくど Angle
+発表 はっぴょう Announcement
+記事 きじ Article
+仮定 かてい Assumption
+通り とおり Avenue
+美しい うつくしい Beautiful
+美人 びじん Beautiful Woman
+気を付けて きをつけて Be Careful
+苦い にがい Bitter Tasting
+白黒 しろくろ Black And White
+体重 たいじゅう Body Weight
+本屋 ほんや Bookstore
+肉屋 にくや Butcher Shop
+服 ふく Clothes
+部室 ぶしつ Clubroom
+工事 こうじ Construction
+相談 そうだん Consultation
+対談 たいだん Conversation
+決定 けってい Decision
+~度 ど Degrees
+~部 ぶ Department
+出発 しゅっぱつ Departure
+不自由 ふじゆう Discomfort
+発見 はっけん Discovery
+二重 にじゅう Double
+毎度 まいど Each Time
+楽勝 らくしょう Easy Victory
+小学校 しょうがっこう Elementary School
+用事 ようじ Errand
+重要 じゅうよう Essential
+丁度 ちょうど Exactly
+試験 しけん Examination
+体験 たいけん Experience
+実験 じっけん Experiment
+火事 かじ Fire
+魚屋 さかなや Fish Shop
+発売 はつばい For Sale
+表 おもて Front
+家具 かぐ Furniture
+お客さん おきゃくさん Guest
+客室 きゃくしつ Guest Room
+ハート形 は-とがた Heart Shaped
+重い おもい Heavy
+高さ たかさ Height
+高校生 こうこうせい High School Student
+家事 かじ Housework
+何度 なんど How Many Times
+大事 だいじ Important
+和風 わふう Japanese Style
+和服 わふく Japanese Style Clothes
+和食 わしょく Japanese Style Food
+和室 わしつ Japanese Style Room
+仮名 かな Kana
+生保 せいほ Life Insurance
+生物 せいぶつ Living Things
+名物 めいぶつ Local Specialty
+要点 ようてん Main Point
+勝負 しょうぶ Match
+食事 しょくじ Meal
+中学校 ちゅうがっこう Middle School
+名古屋 なごや Nagoya
+必要 ひつよう Necessary
+付近 ふきん Neighborhood
+新しい あたらしい New
+新年 しんねん New Year
+苦しい くるしい Painful
+相手 あいて Partner
+平和 へいわ Peace
+予定 よてい Plan
+部分 ぶぶん Portion
+~県 けん Prefecture
+発音 はつおん Pronunciation
+部首 ぶしゅ Radical
+返事 へんじ Reply
+住民 じゅうみん Residents
+保持 ほじ Retention
+部屋 へや Room
+試食 ししょく Sample
+~屋 や Store
+必勝 ひっしょう Sure Victory
+泳ぎ およぎ Swimming
+受験 じゅけん Take An Exam
+教え おしえ Teaching
+茶屋 ちゃや Tea Shop
+仮に かりに Temporarily
+世界 せかい The World
+物 もの Thing
+事 こと Thing
+今度 こんど This Time
+千円札 せんえんさつ Thousand Yen Bill
+付く つく To Be Attached
+売れる うれる To Be Sold
+表す あらわす To Express
+見付ける みつける To Find
+乗せる のせる To Give A Ride
+持つ もつ To Hold
+通す とおす To Let Pass
+負ける まける To Lose
+欠かす かかす To Miss
+要る いる To Need
+道具 どうぐ Tool
+保つ たもつ To Preserve
+受ける うける To Receive
+返す かえす To Return
+乗る のる To Ride
+売る うる To Sell
+送る おくる To Send
+泳ぐ およぐ To Swim
+試みる こころみる To Try
+使う つかう To Use
+勝つ かつ To Win
+実力 じつりょく True Strength
+事実 じじつ Truth
+実 じつ Truth
+使用 しよう Use
+弱虫 よわむし Weakling
+弱々しい よわよわしい Weak Looking
+勝者 しょうしゃ Winner
+学院 がくいん Academy
+足し算 たしざん Addition
+進行 しんこう Advance
+農業 のうぎょう Agriculture
+路地 ろじ Alley
+算数 さんすう Arithmetic
+助手 じょしゅ Assistant
+早速 さっそく At Once
+心配 しんぱい A Worry
+自転車 じてんしゃ Bicycle
+千葉 ちば Chiba
+親友 しんゆう Close Friend
+集金 しゅうきん Collecting Money
+集中 しゅうちゅう Concentration
+調子 ちょうし Condition
+曲線 きょくせん Curve
+要求 ようきゅう Demand
+開発 かいはつ Development
+~病 びょう Disease
+電鉄 でんてつ Electric Railway
+強調 きょうちょう Emphasis
+終了 しゅうりょう End
+進化 しんか Evolution
+顔付き かおつき Expression
+目医者 めいしゃ Eye Doctor
+顔 かお Face
+農場 のうじょう Farm
+速い はやい Fast
+一番目 いちばんめ First Thing
+外来語 がいらいご Foreign Word
+フランス語 ふらんすご French Language
+青葉 あおば Fresh Leaves
+大学院 だいがくいん Graduate School
+頭 あたま Head
+求人 きゅうじん Help Wanted
+病院 びょういん Hospital
+入院 にゅういん Hospitalization
+工業 こうぎょう Industry
+親しい したしい Intimate
+日本語 にほんご Japanese Language
+日本酒 にほんしゅ Japanese Style Alcohol
+漢字 かんじ Kanji
+親切 しんせつ Kind
+台所 だいどころ Kitchen
+研究室 けんきゅうしつ Laboratory
+言語 げんご Language
+最後 さいご Last
+最終 さいしゅう Last
+終点 しゅうてん Last Stop
+葉 は Leaf
+軽い かるい Lightweight
+線 せん Line
+楽しみ たのしみ Looking Forward To
+運がいい うんがいい Lucky
+~向け むけ Made For
+近所 きんじょ Neighborhood
+新聞 しんぶん Newspaper
+番号札 ばんごうふだ Numbered Tag
+開業 かいぎょう Opening A Business
+公開 こうかい Open To The Public
+親 おや Parent
+道路 どうろ Paved Road
+農民 のうみん Peasants
+当て字 あてじ Phonetic Kanji
+私大 しだい Private College
+私鉄 してつ Private Railway
+線路 せんろ Railroad Track
+読み方 よみかた Reading
+最近 さいきん Recent
+研究所 けんきゅうしょ Research Institute
+回転 かいてん Rotation
+お酒 おさけ Sake
+近道 ちかみち Shortcut
+病気 びょうき Sick
+病人 びょうにん Sick Person
+横 よこ Side
+歌手 かしゅ Singer
+歌 うた Song
+スペイン語 すぺいんご Spanish Language
+速度 そくど Speed
+立ち飲み たちのみ Stand And Drinking
+開始 かいし Start
+話 はなし Story
+鉄人 てつじん Strong Man
+主語 しゅご Subject
+引き算 ひきざん Subtraction
+地下鉄 ちかてつ Subway
+最高 さいこう The Best
+最も もっとも The Most
+今朝 けさ This Morning
+進む すすむ To Advance
+決まる きまる To Be Decided
+始める はじめる To Begin
+助かる たすかる To Be Helped
+病む やむ To Be Sick
+化かす ばかす To Bewitch
+算定する さんていする To Calculate
+運ぶ はこぶ To Carry
+鳴く なく To Chirp
+集める あつめる To Collect
+配る くばる To Distribute
+飲む のむ To Drink
+運転する うんてんする To Drive
+終わる おわる To End
+楽しむ たのしむ To Enjoy
+落ちる おちる To Fall Down
+聞く きく To Hear
+調べる しらべる To Investigate
+習う ならう To Learn
+出会う であう To Meet By Chance
+口調 くちょう Tone
+開ける あける To Open
+読む よむ To Read
+転がる ころがる To Roll
+語る かたる To Talk
+投げ付ける なげつける To Throw Against
+起きる おきる To Wake Up
+求める もとめる To Want
+役場 やくば Town Hall
+転送 てんそう Transfer
+思わず おもわず Unintentionally
+作業 さぎょう Work
+上級 じょうきゅう Advanced Level
+味方 みかた Ally
+売り上げ うりあげ Amount Sold
+不良 ふりょう Bad
+初歩 しょほ Basics
+戦い たたかい Battle
+戦場 せんじょう Battlefield
+予め あらかじめ Beforehand
+初級 しょきゅう Beginner Level
+伝記 でんき Biography
+生物学 せいぶつがく Biology
+乗り場 のりば Bus Stop
+注意 ちゅうい Caution
+洋服 ようふく Clothes
+共通点 きょうつうてん Common Point
+仲間 なかま Companion
+競争 きょうそう Competition
+便利 べんり Convenient
+共同 きょうどう Cooperation
+別 べつ Different
+別人 べつじん Different Person
+教育 きょういく Education
+入学試験 にゅうがくしけん Entrance Exam
+特に とくに Especially
+運命 うんめい Fate
+心持ち こころもち Feeling
+気持ち きもち Feeling
+指 ゆび Finger
+首位 しゅい First Place
+一位 いちい First Place
+昔話 むかしばなし Folk Tale
+食べ物 たべもの Food
+友好 ゆうこう Friendship
+仕返し しかえし Get Even
+神 かみ God
+良い よい Good
+気持ちいい きもちいい Good Feeling
+努力 どりょく Great Effort
+苦労 くろう Hardship
+苦手 にがて Hard To Deal With
+高級 こうきゅう High Class
+平仮名 ひらがな Hiragana
+使い方 つかいかた How To Use
+~付き つき Including
+不便 ふべん Inconvenient
+中級 ちゅうきゅう Intermediate Level
+仕事 しごと Job
+丁度いい ちょうどいい Just Right
+労働者 ろうどうしゃ Laborer
+命 いのち Life
+好き すき Like
+文字通り もじどおり Literal
+昔 むかし Long Ago
+負け犬 まけいぬ Loser
+低い ひくい Low
+労働 ろうどう Manual Labor
+意味 いみ Meaning
+新た あらた New
+別に べつに Not Particularly
+発売中 はつばいちゅう Now On Sale
+老人 ろうじん Old Person
+意見 いけん Opinion
+命令 めいれい Order
+注文 ちゅうもん Order
+太平洋 たいへいよう Pacific Ocean
+用意 ようい Preparation
+支度 したく Preparation
+公共 こうきょう Public
+~位 い Rank
+電波 でんぱ Reception
+受付 うけつけ Receptionist
+仲直り なかなおり Reconciliation
+仲 なか Relationship
+金持ち かねもち Rich Person
+屋上 おくじょう Rooftop
+海岸 かいがん Seashore
+秒 びょう Second
+安売り やすうり Sell Cheaply
+売り手 うりて Seller
+別の べつの Separate
+別々 べつべつ Separately
+共有 きょうゆう Shared
+神道 しんとう Shinto
+神社 じんじゃ Shinto Shrine
+買い物 かいもの Shopping
+見物 けんぶつ Sightseeing
+売り切れ うりきれ Sold Out
+時々 ときどき Sometimes
+特別 とくべつ Special
+見事 みごと Splendid
+成功 せいこう Success
+作戦 さくせん Tactics
+物語 ものがたり Tale
+戦車 せんしゃ Tank
+味 あじ Taste
+最初 さいしょ The First
+初回 しょかい The First Time
+最低 さいてい The Lowest
+本物 ほんもの The Real Thing
+西洋 せいよう The West
+指定する していする To Appoint
+試す ためす To Attempt
+成る なる To Become
+育つ そだつ To Be Raised
+返る かえる To Be Returned
+伝わる つたわる To Be Transmitted
+放送する ほうそうする To Broadcast
+追う おう To Chase
+通う かよう To Commute
+争う あらそう To Compete
+競う きそう To Compete
+集中する しゅうちゅうする To Concentrate
+決定する けっていする To Decide
+便所 べんじょ Toilet
+保持する ほじする To Maintain
+開放する かいほうする To Open Up
+拾う ひろう To Pick Up
+指す さす To Point
+注ぐ そそぐ To Pour
+気付く きづく To Realize
+放す はなす To Release
+見送る みおくる To See Off
+苦しむ くるしむ To Suffer
+伝える つたえる To Transmit
+働く はたらく To Work
+利く きく To Work Well
+意外 いがい Unexpected
+乗り物 のりもの Vehicle
+勝ち かち Victory
+戦争 せんそう War
+波 なみ Wave
+洋食 ようしょく Western Food
+洋風 ようふう Western Style
+洋室 ようしつ Western Style Room
+行動 こうどう Action
+活動 かつどう Action
+空港 くうこう Airport
+酒飲み さけのみ Alcoholic
+全員 ぜんいん All Members
+動物 どうぶつ Animal
+鳴き声 なきごえ Animal Cry
+勝手 かって As One Pleases
+都合 つごう At Your Convenience
+悪い わるい Bad
+悪人 あくにん Bad Person
+野球 やきゅう Baseball
+飲み物 のみもの Beverage
+血族 けつぞく Blood Relative
+親分 おやぶん Boss
+息 いき Breath
+商売 しょうばい Business
+心配事 しんぱいごと Cares
+虫歯 むしば Cavity
+第二章 だいにしょう Chapter Two
+陽気 ようき Cheerful
+童話 どうわ Children's Story
+音読み おんよみ Chinese Reading
+都会 とかい City
+都市 とし City
+寒い さむい Cold
+会社員 かいしゃいん Company Em...
+落ち おち Conclusion
+大根 だいこん Daikon
+深い ふかい Deep
+最深 さいしん Deepest
+歯医者 はいしゃ Dentist
+消化 しょうか Digestion
+二倍 にばい Double
+運転手 うんてんしゅ Driver
+社員 しゃいん Employee
+民族 みんぞく Ethnic Group
+悪女 あくじょ Evil Woman
+運動 うんどう Exercise
+期待 きたい Expectation
+落ち葉 おちば Fallen Leaves
+家庭 かてい Family
+家族 かぞく Family
+父親 ちちおや Father
+祭 まつり Festival
+一階 いっかい First Floor
+第一位 だいいちい First Place
+一流 いちりゅう First Rate
+~階 かい Floor
+四十二階 よんじゅうにかい Forty Seco...
+庭 にわ Garden
+集まり あつまり Gathering
+大学院生 だいがくいんせい Graduate S...
+港 みなと Harbor
+聞こえる きこえる Hearable
+広島 ひろしま Hiroshima
+温泉 おんせん Hot Springs
+湯 ゆ Hot Water
+暑い あつい Hot Weather
+僕 ぼく I
+利息 りそく Interest
+始めに はじめに In The Beg...
+島 しま Island
+顔文字 かおもじ Kaomoji
+京都 きょうと Kyoto
+終電 しゅうでん Last Train
+運 うん Luck
+本流 ほんりゅう Mainstream
+会員 かいいん Member
+商人 しょうにん Merchant
+深夜 しんや Middle Of ...
+母親 ははおや Mother
+登山 とざん Mountain C...
+祭日 さいじつ National H...
+根気 こんき Patience
+期間 きかん Period
+植物 しょくぶつ Plant
+屋根 やね Roof
+根本 こんぽん Root
+根 ね Root
+船員 せんいん Sailor
+学期 がっき School Term
+二階 にかい Second Floor
+店員 てんいん Shop Staff
+短い みじかい Short
+短期 たんき Short Period
+短刀 たんとう Short Sword
+息子 むすこ Son
+球 たま Sphere
+泉 いずみ Spring
+着々 ちゃくちゃく Steadily
+湯気 ゆげ Steam
+勉強 べんきょう Studies
+太陽 たいよう Sun
+田代島 たしろじま Tashirojima
+茶の湯 ちゃのゆ Tea Ceremony
+温度 おんど Temperature
+気温 きおん Temperature
+地球 ちきゅう The Earth
+終わり おわり The End
+第一 だいいち The First
+最悪 さいあく The Worst
+三番目 さんばんめ Third Thing
+時期 じき Time
+~倍 ばい Times
+着く つく To Arrive
+始まる はじまる To Begin
+登る のぼる To Climb
+集まる あつまる To Come To...
+要求する ようきゅうする To Demand
+落とす おとす To Drop So...
+消す けす To Extinguish
+転ぶ ころぶ To Fall Over
+流す ながす To Flow
+東京都 とうきょうと Tokyo Metr...
+動く うごく To Move
+起こる おこる To Occur
+開く あく To Open
+歯 は Tooth
+植える うえる To Plant
+鳴る なる To Ring
+歌う うたう To Sing
+合う あう To Suit
+待つ まつ To Wait
+着る きる To Wear
+心配する しんぱいする To Worry
+流行 りゅうこう Trend
+旅行 りょこう Trip
+旅 たび Trip
+温かい あたたかい Warm
+水深 すいしん Water Depth
+話し方 はなしかた Way Of Spe...
+言葉 ことば Word
+文章 ぶんしょう Writing
+感心 かんしん Admiration
+入館料 にゅうかんりょう Admission Fee
+養子 ようし Adopted Child
+整理 せいり Arrangement
+~放題 ほうだい As Much As...
+暗殺 あんさつ Assassination
+銀行 ぎんこう Bank
+初めに はじめに Beginning
+橋 はし Bridge
+賞金 しょうきん Cash Prize
+事情 じじょう Circumstances
+器 うつわ Container
+暗い くらい Dark
+器用 きよう Dextrous
+疑問 ぎもん Doubt
+酒好き さけずき Drinker
+飲み会 のみかい Drinking P...
+熱心 ねっしん Enthusiasm
+全然 ぜんぜん Entirely
+皆さん みなさん Everyone
+皆様 みなさま Everyone
+予想 よそう Expectation
+表情 ひょうじょう Facial Exp...
+料金 りょうきん Fee
+感じ かんじ Feeling
+感情 かんじょう Feeling
+熱 ねつ Fever
+指先 ゆびさき Fingertip
+~様 さま Formal Nam...
+初めて はじめて For The Fi...
+仲良く なかよく Friendly
+駅前 えきまえ Front Of S...
+福島 ふくしま Fukushima
+目標 もくひょう Goal
+神様 かみさま God
+女神 めがみ Goddess
+仲良し なかよし Good Friend
+緑色 みどりいろ Green
+緑 みどり Green
+心願 しんがん Heartfelt ...
+宿題 しゅくだい Homework
+熱い あつい Hot Thing
+人情 にんじょう Humanity
+億 おく Hundred Mi...
+想定 そうてい Hypothesis
+画像 がぞう Image
+感想 かんそう Impressions
+旅館 りょかん Japanese Inn
+神風 かみかぜ Kamikaze
+王様 おうさま King
+左利き ひだりきき Left Handed
+小指 こゆび Little Finger
+宿 やど Lodging
+本館 ほんかん Main Building
+暗記 あんき Memorization
+水銀 すいぎん Mercury
+中指 なかゆび Middle Finger
+鏡 かがみ Mirror
+映画 えいが Movie
+殺人 さつじん Murder
+楽器 がっき Musical In...
+当然 とうぜん Natural
+自然 しぜん Nature
+一億 いちおく One Hundre...
+一億円 いちおくえん One Hundre...
+整然 せいぜん Orderly
+情熱 じょうねつ Passion
+体育 たいいく PE Class
+情け なさけ Pity
+お願いします おねがいします Please Hel...
+詩 し Poem
+詩人 しじん Poet
+詩歌 しいか Poetry
+練習 れんしゅう Practice
+選手 せんしゅ Pro Athlete
+問題 もんだい Problem
+実感 じっかん Realization
+大好き だいすき Really Like
+映像 えいぞう Reflection
+回想 かいそう Retrospection
+右利き みぎきき Right Handed
+輪 わ Ring
+学問 がくもん Scholarship
+課長 かちょう Section Ma...
+新宿 しんじゅく Shinjuku
+銀 ぎん Silver
+銀色 ぎんいろ Silver
+特選 とくせん Special Se...
+駅 えき Station
+駅長 えきちょう Station Ma...
+自殺 じさつ Suicide
+力士 りきし Sumo Wrestler
+同感 どうかん Sympathy
+食器 しょっき Tableware
+感謝 かんしゃ Thanks
+五感 ごかん The Five S...
+思想 しそう Thought
+親指 おやゆび Thumb
+車輪 しゃりん Tire
+謝る あやまる To Apologize
+感動する かんどうする To Be Emot...
+映る うつる To Be Refl...
+放れる はなれる To Be Rele...
+育てる そだてる To Bring Up
+追い付く おいつく To Catch U...
+選ぶ えらぶ To Choose
+感じる かんじる To Feel
+戦う たたかう To Fight
+追いかける おいかける To Follow
+養う やしなう To Foster
+手伝う てつだう To Help
+想像する そうぞうする To Imagine
+殺す ころす To Kill
+見返る みかえる To Look Ba...
+注文する ちゅうもんする To Order
+話題 わだい Topic
+別れる わかれる To Separate
+共有する きょうゆうする To Share
+駅員 えきいん Train Stat...
+様々 さまざま Various
+能力 のうりょく Ability
+約 やく About
+知り合い しりあい Acquaintance
+~的 てき Al
+周年 しゅうねん Anniversary
+芸術 げいじゅつ Art
+雰囲気 ふんいき Atmosphere
+自動 じどう Automatic
+悪例 あくれい Bad Example
+気持ち悪い きもちわるい Bad Feeling
+骨 ほね Bone
+骨折 こっせつ Broken Bone
+束 たば Bundle
+人参 にんじん Carrot
+場合 ばあい Case
+人格 じんかく Character
+周り まわり Circumference
+芸人 げいにん Comedian
+完全 かんぜん Complete
+完了 かんりょう Completion
+完成 かんせい Completion
+妥協 だきょう Compromise
+具合 ぐあい Condition
+料理 りょうり Cooking
+協力 きょうりょく Cooperation
+周期 しゅうき Cycle
+深さ ふかさ Depth
+願望 がんぼう Desire
+失望 しつぼう Disappoint...
+消しゴム けしごむ Eraser
+悪気 わるぎ Evil Intent
+例文 れいぶん Example Se...
+例外 れいがい Exception
+女性 じょせい Female
+美術 びじゅつ Fine Art
+例えば たとえば For Example
+基本 きほん Foundation
+試合 しあい Game
+芸者 げいしゃ Geisha
+性 せい Gender
+良好 りょうこう Good
+卒業 そつぎょう Graduation
+固い かたい Hard
+念願 ねんがん Heart's De...
+希望 きぼう Hope
+人性 じんせい Human Nature
+消化不良 しょうかふりょう Indigestion
+材料 ざいりょう Ingredients
+一例 いちれい Instance
+本能 ほんのう Instinct
+意図的 いとてき Intentional
+着物 きもの Kimono
+材木 ざいもく Lumber
+男性 だんせい Male
+意地悪 いじわる Malicious
+近代的 きんだいてき Modern
+山登り やまのぼり Mountain C...
+動き うごき Movement
+一周 いっしゅう One Time A...
+残業 ざんぎょう Overtime
+周囲 しゅうい Perimeter
+性格 せいかく Personality
+松 まつ Pine
+松葉 まつば Pine Needle
+流行語 りゅうこうご Popular Ph...
+流行歌 りゅうこうか Popular Song
+約束 やくそく Promise
+目的 もくてき Purpose
+理性 りせい Reason
+残り のこり Remainder
+予約 よやく Reservation
+回転ずし かいてんずし Rotating S...
+文化祭 ぶんかさい School Fes...
+性病 せいびょう Sexually T...
+格好 かっこう Shape
+芸能界 げいのうかい Showbusiness
+合図 あいず Sign
+骨格 こっかく Skeleton
+技能 ぎのう Skill
+特技 とくぎ Specialty
+言葉つき ことばつき Speech
+運動会 うんどうかい Sports Day
+待ちぼうけ まちぼうけ Stood Up
+頑固 がんこ Stubborn
+水着 みずぎ Swim Suit
+才能 さいのう Talent
+技 わざ Technique
+四季 しき The Four S...
+間に合う まにあう To Be In T...
+落ち着く おちつく To Calm Down
+参る まいる To Come
+消化する しょうかする To Digest
+消える きえる To Disappear
+期待する きたいする To Expect
+折る おる To Fold
+合わせる あわせる To Join To...
+待たせる またせる To Make So...
+動かす うごかす To Move So...
+残念 ざんねん Too Bad
+合格する ごうかくする To Pass A ...
+着ける つける To Put On
+残る のこる To Remain ...
+回転する かいてんする To Rotate
+流れる ながれる To Stream
+勉強する べんきょうする To Study
+囲む かこむ To Surround
+旅行する りょこうする To Travel
+起こす おこす To Wake So...
+温める あたためる To Warm Up
+望む のぞむ To Wish
+旅行者 りょこうしゃ Traveler
+下着 したぎ Underwear
+協会 きょうかい Union
+悪口 わるくち Verbal Abuse
+日本的 にほんてき Very Japanese
+待合 まちあい Waiting Room
+望み のぞみ Wish
+折角 せっかく With Trouble
+木材 もくざい Wood
+紀元後 きげんご AD
+飲み放題 のみほうだい All You Ca...
+食べ放題 たべほうだい All You Ca...
+変人 へんじん An Eccentric
+建築 けんちく Architecture
+お願い おねがい A Request
+軍 ぐん Army
+秋 あき Autumn
+上司 じょうし Boss
+岩 いわ Boulder
+英国 えいこく Britain
+仏 ほとけ Buddha
+仏教 ぶっきょう Buddhism
+計算 けいさん Calculation
+猫 ねこ Cat
+世紀 せいき Century
+式 しき Ceremony
+変化 へんか Change
+晴れ はれ Clear Weather
+不器用 ぶきよう Clumsy
+自信 じしん Confidence
+勇気 ゆうき Courage
+区 く District
+地区 ちく District
+不信 ふしん Distrust
+区分 くぶん Division
+英会話 えいかいわ English Co...
+英和 えいわ English Ja...
+英語 えいご English La...
+英文 えいぶん English Wr...
+毎晩 まいばん Every Night
+信心 しんじん Faith
+食中毒 しょくちゅうどく Food Poiso...
+大仏 だいぶつ Giant Budd...
+今晩は こんばんは Good Evening
+文法 ぶんぽう Grammar
+丈 たけ Height
+夫 おっと Husband
+不法 ふほう Illegal
+事変 じへん Incident
+伝 つて Intermediary
+子猫 こねこ Kitten
+昨年 さくねん Last Year
+列 れつ Line
+昼休み ひるやすみ Lunch Break
+飯 めし Meal
+ご飯 ごはん Meal
+方法 ほうほう Method
+情けない なさけない Miserable
+映画館 えいがかん Movie Theater
+人殺し ひとごろし Murder
+殺人者 さつじんしゃ Murderer
+海軍 かいぐん Navy
+新築 しんちく Newly Built
+晩 ばん Night
+昼 ひる Noon
+計画 けいかく Plan
+毒 どく Poison
+毒ガス どくがす Poison Gas
+中毒 ちゅうどく Poisoning
+有毒 ゆうどく Poisonous
+返信 へんしん Reply
+指輪 ゆびわ Ring
+輪ゴム わごむ Rubber Band
+大変 たいへん Serious
+浅い あさい Shallow
+単に たんに Simply
+坂 さか Slope
+軍人 ぐんじん Soldier
+頑丈 がんじょう Solid
+春 はる Spring
+春休み はるやすみ Spring Break
+変 へん Strange
+変事 へんじ Strange In...
+丈夫 じょうぶ Sturdy
+同期中 どうきちゅう Syncing
+美味しい おいしい Tasty
+寺 てら Temple
+昨今 さっこん These Days
+整える ととのえる To Arrange
+整理する せいりする To Arrange
+好む このむ To Be Fond Of
+信じる しんじる To Believe
+建てる たてる To Build
+変える かえる To Change
+晴れる はれる To Clear Up
+泣く なく To Cry
+放つ はなつ To Fire
+見返す みかえす To Look Ba...
+暗記する あんきする To Memorize
+練習する れんしゅうする To Practice
+映す うつす To Project
+帰る かえる To Return ...
+合計 ごうけい Total
+信号 しんごう Traffic Light
+信用 しんよう Trust
+変死 へんし Unnatural ...
+時計 とけい Watch
+単語 たんご Word
+昨日 きのう Yesterday
+留守 るす Absence
+料理人 りょうりにん A Cook
+入門 にゅうもん Admission
+冒険 ぼうけん Adventure
+技術 ぎじゅつ Art
+品 ひん Article
+芸術家 げいじゅつか Artist
+自動的 じどうてき Automatic
+自動車 じどうしゃ Automobile
+作品 さくひん A Work
+弁当 べんとう Bento
+箱 はこ Box
+新品 しんぴん Brand New
+仏典 ぶってん Buddhist S...
+字典 じてん Character ...
+古典的 こてんてき Classical
+全治 ぜんち Complete R...
+関心 かんしん Concern
+関係 かんけい Connection
+保守的 ほしゅてき Conservative
+取材 しゅざい Covering A...
+下品 げひん Crude
+危ない あぶない Dangerous
+曜日 ようび Day Of The...
+~弁 べん Dialect
+辞書 じしょ Dictionary
+辞典 じてん Dictionary
+事典 じてん Encyclopedia
+証 あかし Evidence
+遠足 えんそく Excursion
+生存 せいぞん Existence
+急行 きゅうこう Express
+外面 がいめん Exterior
+顔面 がんめん Face Of A ...
+不合格 ふごうかく Fail A Test
+遠い とおい Far
+世辞 せじ Flattery
+折り目 おりめ Fold
+前面 ぜんめん Front
+基本的 きほんてき Fundamentals
+ゴミ箱 ごみばこ Garbage Can
+園 えん Garden
+門 もん Gate
+幸運 こううん Good Luck
+政府 せいふ Government
+卒業式 そつぎょうしき Graduation...
+食料品 しょくりょうひん Groceries
+地面 じめん Ground
+保証 ほしょう Guarantee
+阪神 はんしん Hanshin
+幸せ しあわせ Happiness
+幸福 こうふく Happiness
+記念日 きねんび Holiday
+仏像 ぶつぞう Image Of B...
+不完全 ふかんぜん Incomplete
+不治 ふじ Incurability
+保険 ほけん Insurance
+面白い おもしろい Interesting
+冗談 じょうだん Joke
+関西 かんさい Kansai
+図書館 としょかん Library
+特急 とっきゅう Limited Ex...
+荷物 にもつ Luggage
+仮面 かめん Mask
+明治 めいじ Meiji Era
+商品 しょうひん Merchandise
+美術館 びじゅつかん Museum
+折り紙 おりがみ Origami
+大阪 おおさか Osaka
+写真 しゃしん Photo
+真っ黒 まっくろ Pitch Black
+政治 せいじ Politics
+保存 ほぞん Preserve
+証明 しょうめい Proof
+治安 ちあん Public Order
+公園 こうえん Public Park
+危険 きけん Risky
+場面 ばめん Scene
+画面 がめん Screen
+笑顔 えがお Smile
+専門 せんもん Specialty
+留学 りゅうがく Study Abroad
+急死 きゅうし Sudden Death
+急に きゅうに Suddenly
+日光浴 にっこうよく Sunbathe
+荷札 にふだ Tag
+証言 しょうげん Testimony
+教科書 きょうかしょ Textbook
+浴びる あびる To Bathe
+関する かんする To Be Conn...
+係わる かかわる To Be Invo...
+折れる おれる To Break
+取れる とれる To Come Off
+妥協する だきょうする To Compromise
+治す なおす To Cure
+卒業する そつぎょうする To Graduate
+急ぐ いそぐ To Hurry
+存じる ぞんじる To Know
+東京弁 とうきょうべん Tokyo Dialect
+笑う わらう To Laugh
+残す のこす To Leave B...
+固める かためる To Make Hard
+約束する やくそくする To Promise
+守る まもる To Protect
+辞める やめる To Quit
+希望する きぼうする To Request
+取る とる To Take
+書く かく To Write
+真実 しんじつ Truth
+不幸 ふこう Unhappiness
+残品 ざんぴん Unsold Mer...
+急 きゅう Urgent
+待合室 まちあいしつ Waiting Room
+証人 しょうにん Witness
+動物園 どうぶつえん Zoo
+欠席 けっせき Absence
+是非 ぜひ Absolutely
+無茶 むちゃ Absurd
+結局 けっきょく After All
+愛知県 あいちけん Aichi Pref...
+常に つねに Always
+無名 むめい Anonymous
+建築家 けんちくか Architect
+兵器 へいき Arms
+相変わらず あいかわらず As Usual
+原子 げんし Atom
+出席 しゅっせき Attendance
+意識 いしき Awareness
+不味い まずい Bad Tasting
+紀元前 きげんぜん Before Christ
+両側 りょうがわ Both Sides
+底 そこ Bottom
+心底 しんそこ Bottom Of ...
+朝ご飯 あさごはん Breakfast
+イギリス人 いぎりすじん British Pe...
+建物 たてもの Building
+食堂 しょくどう Cafeteria
+原因 げんいん Cause
+喜劇 きげき Comedy
+常識 じょうしき Common Sense
+完結 かんけつ Conclusion
+自覚 じかく Consciousness
+泣き虫 なきむし Crybaby
+泣き声 なきごえ Crying
+一昨日 おととい Day Before...
+詳しい くわしい Detailed
+詳細 しょうさい Details
+晩ご飯 ばんごはん Dinner
+外交官 がいこうかん Diplomat
+劇 げき Drama
+劇的 げきてき Dramatic
+干天 かんてん Dry Weather
+東側 ひがしがわ East Side
+非常 ひじょう Emergency
+虚しい むなしい Empty
+日常 にちじょう Everyday Life
+悪因悪果 あくいんあっか Evil Breed...
+説明 せつめい Explanation
+失敗 しっぱい Failure
+幻想 げんそう Fantasy
+無料 むりょう Free
+果物 くだもの Fruit
+栄光 えいこう Glory
+官金 かんきん Government...
+幻覚 げんかく Hallucination
+失恋 しつれん Heartbreak
+光栄 こうえい Honor
+鼻歌 はなうた Humming
+仮説 かせつ Hypothesis
+無知 むち Ignorance
+幻 まぼろし Illusion
+図説 ずせつ Illustration
+無理 むり Impossible
+察知 さっち Inference
+内側 うちがわ Inside
+干渉 かんしょう Interference
+内因 ないいん Internal C...
+知識 ちしき Knowledge
+左側 ひだりがわ Left Side
+伝説 でんせつ Legend
+敗者 はいしゃ Loser
+恋愛 れんあい Love
+愛情 あいじょう Love
+恋 こい Love
+愛 あい Love
+愛人 あいじん Lover
+昼ご飯 ひるごはん Lunch
+主因 しゅいん Main Cause
+薬用 やくよう Medicinal
+薬 くすり Medicine
+薬物 やくぶつ Medicines
+兵員 へいいん Military P...
+水兵 すいへい Navy Soldier
+交渉 こうしょう Negotiation
+無休 むきゅう No Holidays
+鼻 はな Nose
+鼻血 はなぢ Nosebleed
+小説 しょうせつ Novel
+願い事 ねがいごと One's Wish
+空席 くうせき Open Seat
+歌劇 かげき Opera
+原作 げんさく Original Work
+外側 そとがわ Outside
+愛国心 あいこくしん Patriotism
+警察 けいさつ Police
+無力 むりょく Powerless
+薬方 やくほう Prescription
+建前 たてまえ Public Beh...
+結果 けっか Result
+右側 みぎがわ Right Side
+川底 かわぞこ Riverbed
+無事 ぶじ Safe And S...
+塩 しお Salt
+塩水 しおみず Salt Water
+塩味 しおあじ Salty Taste
+席 せき Seat
+自愛 じあい Self Love
+感覚 かんかく Senses
+性愛 せいあい Sexual Love
+側 がわ Side
+署名 しょめい Signature
+無言 むごん Silence
+鼻くそ はなくそ Snot
+兵 へい Soldier
+兵士 へいし Soldier
+薬学 やくがく Study Of P...
+劇場 げきじょう Theater
+細い ほそい Thin
+鼻先 はなさき Tip Of The...
+変わる かわる To Be Changed
+敗れる やぶれる To Be Defe...
+勇む いさむ To Be Enco...
+建つ たつ To Be Erected
+悲しむ かなしむ To Be Sad
+干す ほす To Dry
+果てる はてる To End
+栄える さかえる To Flourish
+察する さっする To Guess
+愛する あいする To Love
+喜ぶ よろこぶ To Rejoice
+悲劇 ひげき Tragedy
+梅 うめ Ume
+梅酒 うめしゅ Ume Wine
+不詳 ふしょう Unknown
+米兵 べいへい US Soldier
+虚栄心 きょえいしん Vanity
+勝敗 しょうはい Victory Or...
+虚弱 きょじゃく Weak
+西側 にしがわ West Side
+無し なし Without
+予告 よこく Advance No...
+広告 こうこく Advertisement
+笑い わらい A Laugh
+弓道 きゅうどう Archery
+取り決め とりきめ Arrangement
+黒煙 こくえん Black Smoke
+借用 しゃくよう Borrowing
+弓 ゆみ Bow
+脳 のう Brain
+脳死 のうし Brain Death
+脳みそ のうみそ Brains
+洗脳 せんのう Brainwashing
+仏僧 ぶっそう Buddhist P...
+平静 へいせい Calm
+飴 あめ Candy
+留守番 るすばん Caretaker
+洗車 せんしゃ Car Wash
+証明書 しょうめいしょ Certificate
+お守り おまもり Charm
+胸 むね Chest
+分類 ぶんるい Classifica...
+お笑い おわらい Comedy
+文句 もんく Complaint
+告白 こくはく Confession
+可愛い かわいい Cute
+借金 しゃっきん Debt
+辞書形 じしょけい Dictionary...
+可分 かぶん Divisible
+書類 しょるい Document
+上品 じょうひん Elegant
+等しい ひとしい Equal
+対等 たいとう Equality
+等号 とうごう Equal Sign
+取り分け とりわけ Especially
+留学生 りゅうがくせい Exchange S...
+遠く とおく Far Away
+一等 いっとう First Class
+五枚 ごまい Five Flat ...
+~枚 まい Flat Object
+禁止 きんし Forbidden
+予報 よほう Forecast
+金曜日 きんようび Friday
+友達 ともだち Friend
+銀座 ぎんざ Ginza
+品物 しなもの Goods
+落書き らくがき Graffiti
+手荷物 てにもつ Hand Baggage
+幸い さいわい Happiness
+高等 こうとう High Class
+何枚 なんまい How Many F...
+不可欠 ふかけつ Indispensable
+不等 ふとう Inequality
+情報 じょうほう Information
+関西弁 かんさいべん Kansai Dia...
+種類 しゅるい Kind
+叩頭 こうとう Kowtow
+訓読み くんよみ Kun'yomi
+喉頭 こうとう Larynx
+教訓 きょうくん Lesson
+子守歌 こもりうた Lullaby
+人類 じんるい Mankind
+達人 たつじん Master
+月曜日 げつようび Monday
+報道 ほうどう News Report
+禁煙 きんえん No Smoking
+枚数 まいすう Number Of ...
+大阪弁 おおさかべん Osaka Dialect
+書き方 かきかた Penmanship
+許可 きょか Permission
+~達 たち Pluralizin...
+可能 かのう Possible
+葉書 はがき Postcard
+祈願 きがん Prayer
+祈念 きねん Prayer
+公告 こうこく Public Notice
+静か しずか Quiet
+人種 じんしゅ Race Of Pe...
+洗練 せんれん Refinement
+親類 しんるい Relatives
+借家 しゃくや Renting A ...
+報告 ほうこく Report
+焼き鳥 やきとり Roast Chicken
+焼き肉 やきにく Roast Meat
+下書き したがき Rough Draft
+大丈夫 だいじょうぶ Safe
+土曜日 どようび Saturday
+座席 ざせき Seat
+正座 せいざ Seiza
+煙 けむり Smoke
+喫煙 きつえん Smoking
+汽船 きせん Steam Ship
+汽車 きしゃ Steam Train
+静止 せいし Still
+飴細工 あめざいく Sugar Scul...
+日焼け ひやけ Sunburn
+日曜日 にちようび Sunday
+夕焼け ゆうやけ Sunset
+禁句 きんく Taboo Word
+喫茶店 きっさてん Tea House
+僧院 そういん Temple
+喉 のど Throat
+木曜日 もくようび Thursday
+告げる つげる To Announce
+達する たっする To Attain
+焼く やく To Bake
+借りる かりる To Borrow
+切り取る きりとる To Cut Off
+配達する はいたつする To Deliver
+忘れる わすれる To Forget
+固まる かたまる To Harden
+許す ゆるす To Permit
+取り出す とりだす To Pick Out
+祈る いのる To Pray
+禁じる きんじる To Prohibit
+報じる ほうじる To Report On
+書き直す かきなおす To Rewrite
+座る すわる To Sit
+叩く たたく To Strike
+洗う あらう To Wash
+書き入れる かきいれる To Write In
+訓練 くんれん Training
+駅弁 えきべん Train Stat...
+伝達 でんたつ Transmission
+火曜日 かようび Tuesday
+警告 けいこく Warning
+水曜日 すいようび Wednesday
+忘年会 ぼうねんかい Year End P...
+座禅 ざぜん Zen Medita...
+禅僧 ぜんそう Zen Priest
+禅寺 ぜんでら Zen Temple
+学歴 がくれき Academic H...
+形容詞 けいようし Adjective
+五十音順 ごじゅうおんじゅん Aiueo Order
+猫舌 ねこじた Aversion T...
+信徒 しんと Believer
+得 とく Benefit
+毛布 もうふ Blanket
+~冊 さつ Book Counter
+仏教徒 ぶっきょうと Buddhist
+忙しい いそがしい Busy
+多忙 たぼう Busy
+年代順 ねんだいじゅん Chronologi...
+布 ぬの Cloth
+連中 れんちゅう Colleagues
+混乱 こんらん Confusion
+内容 ないよう Contents
+対比 たいひ Contrast
+借財 しゃくざい Debt
+大きい順 おおきいじゅん Decreasing...
+細かい こまかい Detailed
+劇団 げきだん Drama Troupe
+容易 ようい Ease
+易しい やさしい Easy
+八冊 はっさつ Eight Books
+非常口 ひじょうぐち Emergency ...
+連日 れんじつ Every Day
+笛 ふえ Flute
+二枚舌 にまいじた Forked Tongue
+布団 ふとん Futon
+善悪 ぜんあく Good And Evil
+得意 とくい Good At
+助詞 じょし Grammar Pa...
+集団 しゅうだん Group
+歴史 れきし History
+改善 かいぜん Improvement
+小さい順 ちいさいじゅん Increasing...
+自動詞 じどうし Intransiti...
+いい加減 いいかげん Irresponsible
+入団 にゅうだん Join
+喜び よろこび Joy
+昆布 こんぶ Konbu
+恋人 こいびと Lover
+乱戦 らんせん Melee
+宙 ちゅう Midair
+混血 こんけつ Mixed Race
+名詞 めいし Noun
+原子力 げんしりょく Nuclear Power
+数詞 すうし Numeral
+続々 ぞくぞく One After ...
+一冊 いっさつ One Book
+順番 じゅんばん Order
+乱交 らんこう Orgy
+宇宙 うちゅう Outer Space
+参加 さんか Participation
+品詞 ひんし Part Of Sp...
+履歴書 りれきしょ Personal H...
+説得 せっとく Persuasion
+梅干 うめぼし Pickled Plums
+財閥 ざいばつ Plutocrats
+警官 けいかん Police Off...
+警察署 けいさつしょ Police Sta...
+私財 しざい Private Funds
+比例 ひれい Proportion
+順位 じゅんい Ranking
+果たして はたして Really
+関連 かんれん Relation
+改正 かいせい Revision
+暴走 ぼうそう Run Wild
+悲しい かなしい Sad
+悲しみ かなしみ Sadness
+季節 きせつ Season
+節句 せっく Seasonal F...
+席順 せきじゅん Seating Order
+別冊 べっさつ Separate V...
+連続 れんぞく Serial
+歌詞 かし Song Lyrics
+汽笛 きてき Steam Whistle
+生徒 せいと Student
+減法 げんぽう Subtraction
+容疑 ようぎ Suspicion
+三冊 さんさつ Three Books
+得る える To Acquire
+暴れる あばれる To Act Vio...
+加える くわえる To Add
+減る へる To Be Decr...
+絡む からむ To Be Enta...
+乱れる みだれる To Be In D...
+改まる あらたまる To Be Renewed
+比べる くらべる To Compare
+連絡する れんらくする To Contact
+続く つづく To Continue
+混ざる まざる To Get Mixed
+覚える おぼえる To Memorize
+混ぜる まぜる To Mix
+舌 した Tongue
+履く はく To Put On ...
+連れる つれる To Take Along
+大失敗 だいしっぱい Total Failure
+無意識 むいしき Unconsciou...
+動詞 どうし Verb
+非常に ひじょうに Very
+暴力 ぼうりょく Violence
+乱暴 らんぼう Violence
+若布 わかめ Wakame
+財布 さいふ Wallet
+説明書 せつめいしょ Written Ex...
+若い わかい Young
+若者 わかもの Young Person
+若々しい わかわかしい Youthful
+共犯者 きょうはんしゃ Accomplice
+正確 せいかく Accurate
+余震 よしん Aftershock
+飛行機 ひこうき Airplane
+留守番電話 るすばんでんわ Answering ...
+人類学 じんるいがく Anthropology
+議論 ぎろん Argument
+倒産 とうさん Bankruptcy
+血圧 けつあつ Blood Pres...
+借り手 かりて Borrower
+弓矢 ゆみや Bow And Arrow
+お尻 おしり Butt
+確かに たしかに Certainly
+議長 ぎちょう Chairman
+会議室 かいぎしつ Conference...
+穴子 あなご Conger Eel
+喉飴 のどあめ Cough Drop
+夢中 むちゅう Crazy About
+犯罪 はんざい Crime
+犯人 はんにん Criminal
+危機 きき Crisis
+非難 ひなん Criticism
+被害 ひがい Damage
+議会 ぎかい Diet
+難しい むずかしい Difficult
+嫌悪 けんお Disgust
+皿洗い さらあらい Dishwashing
+嫌い きらい Dislike
+嫌 いや Dislike
+立入禁止 たちいりきんし Do Not Enter
+夢 ゆめ Dream
+地震 じしん Earthquake
+震災 しんさい Earthquake...
+震度 しんど Earthquake...
+電子機器 でんしきき Electronic...
+最後尾 さいこうび End Of A Line
+存在 そんざい Existence
+経験 けいけん Experience
+火災 かさい Fire Disaster
+防火 ぼうか Fire Preve...
+水害 すいがい Flood Damage
+忘れ物 わすれもの Forgotten ...
+自在 じざい Freely
+有罪 ゆうざい Guilty
+手洗い てあらい Hand Washing
+困難 こんなん Hardship
+無害 むがい Harmless
+胸焼け むねやけ Heartburn
+穴 あな Hole
+穴場 あなば Hole In Th...
+夫妻 ふさい Husband An...
+不可分 ふかぶん Indivisible
+論理 ろんり Logic
+機械 きかい Machine
+機 き Machine
+会議 かいぎ Meeting
+議員 ぎいん Member Of ...
+災難 さいなん Misfortune
+機嫌 きげん Mood
+災害 さいがい Natural Di...
+悪夢 あくむ Nightmare
+鼻の穴 はなのあな Nostril
+妨害 ぼうがい Obstruction
+一個 いっこ One Small ...
+音訓 おんくん On'yomi An...
+在外 ざいがい Overseas
+人達 ひとたち People
+比率 ひりつ Percentage
+個人 こじん Personal
+災い わざわい Personal D...
+公害 こうがい Pollution
+一夫多妻 いっぷたさい Polygamy
+可能性 かのうせい Possibility
+圧力 あつりょく Pressure
+予防 よぼう Prevention
+防止 ぼうし Prevention
+個室 こしつ Private Room
+確率 かくりつ Probability
+静々 しずしず Quietly
+読者 どくしゃ Reader
+実在 じつざい Reality
+残余 ざんよ Remainder
+在留 ざいりゅう Residence
+高等学校 こうとうがっこう Senior Hig...
+指圧 しあつ Shiatsu
+罪 つみ Sin
+煙い けむい Smoky
+臭い くさい Stinky
+余裕 よゆう Surplus
+嫌疑 けんぎ Suspicion
+尾 お Tail
+理論 りろん Theory
+論文 ろんぶん Thesis
+厚い あつい Thick
+三個 さんこ Three Smal...
+焼ける やける To Be Cooked
+困る こまる To Be Dist...
+余る あまる To Be In S...
+犯す おかす To Commit ...
+防ぐ ふせぐ To Defend
+飛ぶ とぶ To Fly
+産む うむ To Give Birth
+倒す たおす To Knock Over
+妨げる さまたげる To Obstruct
+経つ たつ To Pass
+被る かぶる To Put On ...
+面倒 めんどう Trouble
+余計 よけい Unneeded
+防水 ぼうすい Waterproof
+裕福 ゆうふく Wealth
+天気予報 てんきよほう Weather Fo...
+妻 つま Wife
+妻子 さいし Wife And Kids
+不思議 ふしぎ Wonder
+実際 じっさい Actually
+宇宙人 うちゅうじん Alien
+分解 ぶんかい Analysis
+大敵 たいてき Arch Enemy
+権利 けんり A Right
+総体的 そうたいてき As A Whole
+暴走族 ぼうそうぞく Biker Gang
+書評 しょひょう Book Review
+得体 えたい Character
+検査 けんさ Checkup
+布地 ぬのじ Cloth
+理解 りかい Comprehension
+強制 きょうせい Compulsory
+条件 じょうけん Condition
+確認 かくにん Confirmation
+建設 けんせつ Construction
+正解 せいかい Correct An...
+暴力団 ぼうりょくだん Crime Synd...
+批判 ひはん Criticism
+評論 ひょうろん Critique
+いい加減にしろ いいかげんにしろ Cut It Out
+定義 ていぎ Definition
+任務 にんむ Duty
+経済 けいざい Economy
+選挙 せんきょ Election
+敵 てき Enemy
+羨望 せんぼう Envy
+審査 しんさ Examination
+解説 かいせつ Explanation
+評判 ひょうばん Fame
+履き物 はきもの Footwear
+資本 しほん Funds
+資金 しきん Funds
+立派 りっぱ High Class
+人権 じんけん Human Rights
+事件 じけん Incident
+増加 ぞうか Increase
+国際 こくさい International
+投資 とうし Investment
+主義 しゅぎ Ism
+判断 はんだん Judgement
+審判 しんぱん Judgment
+正義 せいぎ Justice
+心得 こころえ Knowledge
+素敵 すてき Lovely
+資料 しりょう Material
+委員 いいん Member Of ...
+~務省 むしょう Ministry Of
+形容動詞 けいようどうし Na Adjective
+義務 ぎむ Obligation
+事務所 じむしょ Office
+岡山県 おかやまけん Okayama Pr...
+判子 はんこ One's Seal
+任意 にんい Optional
+総合 そうごう Overall
+参加者 さんかしゃ Participant
+企画 きかく Plan
+警察官 けいさつかん Police Off...
+総理 そうり Prime Mini...
+手続き てつづき Procedure
+固有名詞 こゆうめいし Proper Noun
+公設 こうせつ Public
+資格 しかく Qualificat...
+素材 そざい Raw Material
+反省 はんせい Reconsider...
+責任 せきにん Responsibi...
+自制 じせい Self Control
+義理 ぎり Sense Of Duty
+派手 はで Showy
+際 きわ Side
+解決 かいけつ Solution
+宇宙船 うちゅうせん Space Ship
+急増 きゅうぞう Sudden Inc...
+容疑者 ようぎしゃ Suspect
+制度 せいど System
+税金 ぜいきん Tax
+無税 むぜい Tax Free
+増税 ぞうぜい Tax Increase
+混乱する こんらんする To Be Conf...
+混む こむ To Be Crowded
+解ける とける To Be Solved
+責める せめる To Blame
+済む すむ To Come To...
+続ける つづける To Continue
+減らす へらす To Decrease
+羨む うらやむ To Envy
+設ける もうける To Establish
+設定する せっていする To Establish
+混じる まじる To Get Mix...
+増える ふえる To Increase
+検問する けんもんする To Inspect
+省く はぶく To Omit
+参加する さんかする To Partici...
+説得する せっとくする To Persuade
+企てる くわだてる To Plan
+乱す みだす To Put In ...
+認める みとめる To Recognize
+断る ことわる To Refuse
+挙がる あがる To Rise
+目覚める めざめる To Wake Up
+務める つとめる To Work As
+他動詞 たどうし Transitive...
+条約 じょうやく Treaty
+制服 せいふく Uniform
+無敵 むてき Unrivaled
+口笛 くちぶえ Whistling
+女権 じょけん Women's Ri...
+副詞 ふくし Adverb
+罰金 ばっきん A Fine
+待機 たいき Alert
+策 さく A Plan
+反応 はんのう A Response
+援助 えんじょ Assistance
+態度 たいど Attitude
+観客 かんきゃく Audience
+赤ん坊 あかんぼう Baby
+不機嫌 ふきげん Bad Mood
+罰ゲ-ム ばつげ-む Batsu Game
+誕生 たんじょう Birth
+失態 しったい Blunder
+区域 くいき Boundary
+坊主 ぼうず Buddhist P...
+営業 えいぎょう Business
+社費 しゃひ Company Ex...
+状態 じょうたい Condition
+消費 しょうひ Consumption
+防犯 ぼうはん Crime Prev...
+大勢 おおぜい Crowd
+脱線 だっせん Digression
+領域 りょういき Domain
+各~ かく Each
+各々 おのおの Each
+各地 かくち Each Area
+各自 かくじ Each Person
+評価 ひょうか Evaluation
+費用 ひよう Expenses
+経験者 けいけんしゃ Experience...
+外観 がいかん External A...
+姿 すがた Figure
+勢い いきおい Force
+官営 かんえい Government...
+案内 あんない Guide
+大嫌い だいきらい Hate
+高血圧 こうけつあつ High Blood...
+嫌味 いやみ Hurtful Words
+観念 かんねん Idea
+不可能 ふかのう Impossible
+産業 さんぎょう Industry
+勢力 せいりょく Influence
+指示 しじ Instructions
+対応 たいおう Interaction
+寝不足 ねぶそく Lack Of Sleep
+地価 ちか Land Value
+領袖 りょうしゅう Leader
+坊さん ぼうさん Monk
+昼寝 ひるね Nap
+年賀状 ねんがじょう New Year's...
+脱字 だつじ Omitted Ch...
+態と わざと On Purpose
+機会 きかい Opportunity
+寝坊 ねぼう Oversleep
+宮 みや Palace
+過去 かこ Past
+罰 ばつ Penalty
+変態 へんたい Pervert
+政策 せいさく Policy
+位置 いち Position
+姿勢 しせい Posture
+提出 ていしゅつ Presentation
+大統領 だいとうりょう President
+価格 かかく Price
+物価 ぶっか Prices
+値札 ねふだ Price Tag
+私営 しえい Private
+提案 ていあん Proposition
+公営 こうえい Public
+公示 こうじ Public Ann...
+受領書 じゅりょうしょ Receipt
+地域 ちいき Region
+諦観 ていかん Resignation
+市営 しえい Run By The...
+県営 けんえい Run By The...
+副業 ふくぎょう Side Business
+観光 かんこう Sightseeing
+袖 そで Sleeve
+お土産 おみやげ Souvenir
+主観 しゅかん Subjectivity
+副題 ふくだい Subtitle
+応援 おうえん Support
+支援 しえん Support
+尻尾 しっぽ Tail
+脱税 だつぜい Tax Evasion
+一応 いちおう Tentatively
+領土 りょうど Territory
+有り難う ありがとう Thank You
+非難する ひなんする To Criticize
+脱走する だっそうする To Escape
+過ぎる すぎる To Exceed
+存在する そんざいする To Exist
+倒れる たおれる To Get Kno...
+諦める あきらめる To Give Up
+お手洗い おてあらい Toilet
+示す しめす To Indicate
+飛ばす とばす To Let Fly
+確かめる たしかめる To Make Su...
+圧倒する あっとうする To Overwhelm
+罰する ばっする To Punish
+置く おく To Put Down
+在留する ざいりゅうする To Reside
+応じる おうじる To Respond
+営む いとなむ To Run A B...
+震える ふるえる To Shake
+寝る ねる To Sleep
+吸う すう To Smoke
+脱ぐ ぬぐ To Undress
+観る みる To View
+伝統 でんとう Tradition
+面倒臭い めんどうくさい Troublesome
+案外 あんがい Unexpectedly
+統合 とうごう Unification
+嫌悪感 けんおかん Unpleasant...
+価値 かち Value
+値 ね Value
+価 あたい Value
+被害者 ひがいしゃ Victim
+藤 ふじ Wisteria
+吸収 きゅうしゅう Absorption
+演技 えんぎ Acting
+俳優 はいゆう Actor
+男優 だんゆう Actor
+現に げんに Actually
+沢山 たくさん A Lot
+弁護士 べんごし Attorney
+新幹線 しんかんせん Bullet Train
+バス停 ばすてい Bus Stop
+崎 さき Cape
+城 しろ Castle
+委員会 いいんかい Committee
+了解 りょうかい Comprehension
+保守主義 ほしゅしゅぎ Conservative
+鬼 おに Demon
+割り算 わりざん Division
+医師 いし Doctor
+住宅 じゅうたく Dwelling
+経済的 けいざいてき Economic
+経済学 けいざいがく Economics
+有職 ゆうしょく Employed
+施行 しこう Enforcement
+羨ましい うらやましい Envious
+表現 ひょうげん Expression
+贅沢 ぜいたく Extravagant
+反則 はんそく Foul
+優しい やさしい Gentle
+指導 しどう Guidance
+俳句 はいく Haiku
+宅 たく Home
+収入 しゅうにゅう Income
+施設 しせつ Institution
+求職 きゅうしょく Job Hunting
+川崎 かわさき Kawasaki
+法律 ほうりつ Law
+革 かわ Leather
+皮革 ひかく Leather
+各駅停車 かくえきていしゃ Local Train
+牛乳 ぎゅうにゅう Milk
+沢 さわ Mountain S...
+長崎 ながさき Nagasaki
+乳首 ちくび Nipple
+看護師 かんごし Nurse
+職業 しょくぎょう Occupation
+自宅 じたく One's Home
+楽天主義 らくてんしゅぎ Optimism
+演芸 えんげい Performance
+上演 じょうえん Performance
+職員 しょくいん Personnel
+法則 ほうそく Physical Law
+職場 しょくば Place Of Work
+停電 ていでん Power Outage
+準備 じゅんび Preparations
+現在 げんざい Present
+総理府 そうりふ Prime Mini...
+優先 ゆうせん Priority
+割合 わりあい Ratio
+現実 げんじつ Reality
+領収書 りょうしゅうしょ Receipt
+辞職 じしょく Resignation
+革命 かくめい Revolution
+律動 りつどう Rhythm
+役割 やくわり Role
+規則 きそく Rule
+規律 きりつ Rules
+現場 げんば Scene
+責任感 せきにんかん Sense Of R...
+台詞 せりふ Speech
+基準 きじゅん Standard
+停止 ていし Stoppage
+優秀 ゆうしゅう Superior
+教師 きょうし Teacher
+一割 いちわり Ten Percent
+現れる あらわれる To Appear
+呼ぶ よぶ To Call
+確認する かくにんする To Confirm
+保護する ほごする To Conserve
+批判する ひはんする To Criticize
+断つ たつ To Cut Off
+割る わる To Divide
+選挙する せんきょする To Elect
+検査する けんさする To Examine
+秀でる ひいでる To Excel
+済ます すます To Finish
+増やす ふやす To Increas...
+裁く さばく To Judge
+判断する はんだんする To Judge
+心得る こころえる To Know
+導く みちびく To Lead
+演ずる えんずる To Perform
+備える そなえる To Provide
+挙げる あげる To Raise
+解く とく To Solve
+張る はる To Stretch
+理解する りかいする To Understand
+幹 みき Tree Trunk
+裁判 さいばん Trial
+無職 むしょく Unemployment
+不文律 ふぶんりつ Unwritten Law
+吸血鬼 きゅうけつき Vampire
+優勝 ゆうしょう Victory
+素晴らしい すばらしい Wonderful
+上述 じょうじゅつ Above Ment...
+年額 ねんがく Annual Amount
+触角 しょっかく Antenna
+腕 うで Arm
+誕生日 たんじょうび Birthday
+輸血 ゆけつ Blood Tran...
+血管 けっかん Blood Vessel
+両腕 りょううで Both Arms
+境界 きょうかい Boundary
+境 さかい Boundary
+負担 ふたん Burden
+可燃ゴミ かねんごみ Burnable G...
+特質 とくしつ Characteri...
+子供 こども Child
+親展 しんてん Confidential
+対策 たいさく Counter Plan
+記述 きじゅつ Description
+違い ちがい Difference
+差別 さべつ Discrimina...
+象 ぞう Elephant
+環境 かんきょう Environment
+本質 ほんしつ Essence
+輸出 ゆしゅつ Export
+遠視 えんし Farsighted...
+定額 ていがく Fixed Amount
+定量 ていりょう Fixed Quan...
+額 がく Framed Pic...
+燃料 ねんりょう Fuel
+良質 りょうしつ Good Quality
+官庁 かんちょう Government...
+半額 はんがく Half Price
+高値 たかね High Price
+祝日 しゅくじつ Holiday
+自家製 じかせい Homemade
+担当 たんとう In Charge
+交差点 こうさてん Intersection
+多額 たがく Large Amount
+大量 たいりょう Large Quan...
+朝寝坊 あさねぼう Late Riser
+法規 ほうき Laws
+~層 そう Layer Of
+左腕 ひだりうで Left Arm
+長袖 ながそで Long Sleeves
+安値 やすね Low Price
+アメリカ製 あめりかせい Made In Am...
+中国製 ちゅうごくせい Made In China
+日本製 にほんせい Made In Japan
+通販 つうはん Mail Order
+管理 かんり Management
+製作 せいさく Manufacturing
+武道 ぶどう Martial Arts
+品質 ひんしつ Material Q...
+都庁 とちょう Metropolit...
+警視庁 けいしちょう Metropolit...
+型 かた Model
+月額 げつがく Monthly Am...
+一層 いっそう Much More
+狭い せまい Narrow
+国境 こっきょう National B...
+警察庁 けいさつちょう National P...
+近視 きんし Nearsighte...
+不燃ゴミ ふねんごみ Nonburnabl...
+提供 ていきょう Offer
+営業中 えいぎょうちゅう Open For B...
+過去形 かこけい Past Tense
+現象 げんしょう Phenomenon
+管 くだ Pipe
+置き場 おきば Place To P...
+所載 しょさい Printed
+製品 せいひん Product
+原型 げんけい Prototype
+質 しつ Quality
+量 りょう Quantity
+質問 しつもん Question
+記載 きさい Record
+残額 ざんがく Remaining ...
+応援団 おうえんだん Rooting Se...
+販売 はんばい Sales
+武士 ぶし Samurai
+視覚 しかく Sense Of S...
+半袖 はんそで Short Sleeves
+肩 かた Shoulder
+規準 きじゅん Standard
+株式 かぶしき Stock
+株 かぶ Stock
+主観的 しゅかんてき Subjective
+対象 たいしょう Target
+時差 じさ Time Diffe...
+援助する えんじょする To Assist
+届く とどく To Be Deli...
+違う ちがう To Be Diff...
+載る のる To Be Publ...
+燃やす もやす To Burn So...
+担ぐ かつぐ To Carry
+祝う いわう To Celebrate
+発展する はってんする To Develop
+無視する むしする To Ignore
+供える そなえる To Make An...
+量る はかる To Measure
+述べる のべる To Mention
+過ぎ すぎ Too Much
+寝坊する ねぼうする To Oversleep
+指差す ゆびさす To Point At
+提案する ていあんする To Propose
+応援する おうえんする To Root For
+営業する えいぎょうする To Run A B...
+差す さす To Shine At
+支援する しえんする To Support
+全額 ぜんがく Total
+触る さわる To Touch
+感触 かんしょく Touch
+観光客 かんこうきゃく Tourist
+展示会 てんじかい Trade Show
+伝統的 でんとうてき Traditional
+輸送 ゆそう Transport
+典型的 てんけいてき Typical
+展開 てんかい Unfolding
+価値観 かちかん Values
+自動販売機 じどうはんばいき Vending Ma...
+副大統領 ふくだいとうりょう Vice Presi...
+腰 こし Waist
+武器 ぶき Weapon
+気象 きしょう Weather
+木製 もくせい Wooden
+腕時計 うでどけい Wristwatch
+告訴 こくそ Accusation
+女優 じょゆう Actress
+効果 こうか An Effect
+逮捕 たいほ Arrest
+所属 しょぞく Attached To
+票 ひょう Ballot
+賞与金 しょうよきん Bonus
+景況 けいきょう Business C...
+候補者 こうほしゃ Candidate
+気候 きこう Climate
+全景 ぜんけい Complete View
+状況 じょうきょう Condition
+捜査 そうさ Criminal I...
+習慣 しゅうかん Custom
+絞殺 こうさつ Death By S...
+割引 わりびき Discount
+反響 はんきょう Echo
+効力 こうりょく Effectiveness
+効率 こうりつ Efficiency
+年輩 ねんぱい Elderly Pe...
+結構 けっこう Fine
+上巻 じょうかん First Volume
+前景 ぜんけい Foreground
+新鮮 しんせん Fresh
+鮮魚 せんぎょ Fresh Fish
+満員 まんいん Full House
+満月 まんげつ Full Moon
+含意 がんい Implication
+無限 むげん Infinite
+影響 えいきょう Influence
+不規則 ふきそく Irregularity
+後輩 こうはい Junior
+下巻 げかん Last Volume
+訴訟 そしょう Lawsuit
+革ジャン かわじゃん Leather Ja...
+限界 げんかい Limit
+限定 げんてい Limit
+限度 げんど Limit
+肥料 ひりょう Manure
+金属 きんぞく Metal
+掛け算 かけざん Multiplica...
+長崎県 ながさきけん Nagasaki P...
+肥満 ひまん Obesity
+一巻 いっかん One Volume
+構成 こうせい Organization
+模様 もよう Pattern
+満点 まんてん Perfect Score
+模型 もけい Plastic Model
+豊か ゆたか Plentiful
+豊満 ほうまん Plump
+不況 ふきょう Recession
+規則正しい きそくただしい Regular
+隠居 いんきょ Retirement
+革命家 かくめいか Revolutionary
+律動的 りつどうてき Rhythmical
+満足 まんぞく Satisfied
+規模 きぼ Scale
+景色 けしき Scenery
+景観 けいかん Scenery
+時候 じこう Season
+二巻 にかん Second Volume
+先輩 せんぱい Senior
+影 かげ Shadow
+光景 こうけい Spectacle
+期限 きげん Term
+天候 てんこう The Weather
+時限 じげん Time Limit
+吸収する きゅうしゅうする To Absorb
+居る いる To Be Alive
+呼ばれる よばれる To Be Called
+捕まる つかまる To Be Caught
+慣れる なれる To Become ...
+割れる われる To Be Divided
+効く きく To Be Effe...
+属する ぞくする To Belong To
+替わる かわる To Be Repl...
+構う かまう To Care About
+捉える とらえる To Catch
+渡る わたる To Cross
+響く ひびく To Echo
+抜く ぬく To Extract
+与える あたえる To Give
+渡す わたす To Hand Over
+掛ける かける To Hang
+隠す かくす To Hide
+含む ふくむ To Include
+増す ます To Increase
+限る かぎる To Limit
+見渡す みわたす To Look Ou...
+頑張る がんばる To Persevere
+準備する じゅんびする To Prepare
+替える かえる To Replace
+巻く まく To Roll
+捜す さがす To Search For
+現す あらわす To Show
+収める おさめる To Store
+絞める しめる To Strangle
+訴える うったえる To Sue
+補う おぎなう To Supplement
+優れる すぐれる To Surpass
+投票する とうひょうする To Vote
+絞る しぼる To Wring Out
+家庭教師 かていきょうし Tutor
+鮮やか あざやか Vivid
+事故 じこ Accident
+針医 はりい Acupuncturist
+再度 さいど Again
+再び ふたたび Again
+独り ひとり Alone
+間違い まちがい A Mistake
+人造 じんぞう Artificial
+獣 けもの Beast
+獣類 じゅうるい Beasts
+大違い おおちがい Big Differ...
+酒造 しゅぞう Brewing
+名刺 めいし Business Card
+運河 うんが Canal
+お菓子 おかし Candy
+特徴 とくちょう Characteri...
+比較 ひかく Comparison
+お祝い おいわい Congratula...
+株式会社 かぶしきがいしゃ Corporation
+気違い きちがい Crazy
+創造 そうぞう Creation
+討論 とうろん Debate
+独裁 どくさい Dictatorship
+直接 ちょくせつ Direct
+障害 しょうがい Disability
+不振 ふしん Dullness
+従業 じゅうぎょう Employment
+激励 げきれい Encouragement
+創立 そうりつ Establishment
+激しい はげしい Fierce
+第一印象 だいいちいんしょう First Impr...
+占い うらない Fortune Te...
+万年筆 まんねんひつ Fountain Pen
+河豚 ふぐ Fugu
+怪談 かいだん Ghost Story
+怪獣 かいじゅう Giant Monster
+氷河 ひょうが Glacier
+保障 ほしょう Guarantee
+お誕生日おめでとう おたんじょうびおめでとう Happy Birt...
+我 われ I
+輸入 ゆにゅう Import
+独立 どくりつ Independence
+人差し指 ひとさしゆび Index Finger
+間接 かんせつ Indirect
+故意 こい Intention
+面接 めんせつ Interview
+障子 しょうじ Japanese S...
+河童 かっぱ Kappa
+造園 ぞうえん Landscape ...
+鉛 なまり Lead
+鉛管 えんかん Lead Pipe
+鉛毒 えんどく Lead Poiso...
+授業 じゅぎょう Lesson
+郵便 ゆうびん Mail
+故障 こしょう Malfunction
+管理人 かんりにん Manager
+製造 せいぞう Manufacturing
+印 しるし Mark
+読み違い よみちがい Misreading
+人違い ひとちがい Mistaken I...
+独占 どくせん Monopoly
+怪物 かいぶつ Monster
+再来月 さらいげつ Month Afte...
+従順 じゅうじゅん Obedient
+独創 どくそう Originality
+鉛筆 えんぴつ Pencil
+豚 ぶた Pig
+豚肉 ぶたにく Pork
+故 ゆえ Reason
+再建 さいけん Rebuilding
+回復 かいふく Recovery
+改造 かいぞう Remodeling
+再開 さいかい Reopening
+復習 ふくしゅう Review
+右腕 みぎうで Right Arm
+河 かわ River
+往復 おうふく Round Trip
+貯金 ちょきん Savings
+秒針 びょうしん Second Hand
+無我 むが Selflessness
+独学 どくがく Self Study
+独身 どくしん Single
+刺激 しげき Stimulation
+株式市場 かぶしきしじょう Stock Market
+怪事件 かいじけん Strange My...
+構造 こうぞう Structure
+突然 とつぜん Suddenly
+怪しい あやしい Suspicious
+汗 あせ Sweat
+汗臭い あせくさい Sweaty Smell
+象徴 しょうちょう Symbol
+教授 きょうじゅ Teaching
+燃え付く もえつく To Catch Fire
+届ける とどける To Deliver
+差別する さべつする To Discrim...
+励ます はげます To Encoura...
+検討する けんとうする To Examine
+輸出する ゆしゅつする To Export
+触れる ふれる To Feel
+燃える もえる To Get Burned
+差し上げる さしあげる To Give
+障る さわる To Irritate
+造る つくる To Manufac...
+狭める せばめる To Narrow
+従う したがう To Obey
+占める しめる To Occupy
+載せる のせる To Publish
+貯える たくわえる To Save
+振る ふる To Shake
+過ごす すごす To Spend T...
+突く つく To Stab
+刺す さす To Stab
+担う になう To Take Re...
+独特 どくとく Unique
+従来 じゅうらい Up To Now
+自販機 じはんき Vending Ma...
+獣医 じゅうい Veterinarian
+振動 しんどう Vibration
+違反 いはん Violation
+気象庁 きしょうちょう Weather Ag...
+再来週 さらいしゅう Week After...
+何故 なぜ Why
+野獣 やじゅう Wild Beast
+筆 ふで Writing Brush
+再来年 さらいねん Year After...
+給与 きゅうよ Allowance
+健忘症 けんぼうしょう Amnesia
+南極 なんきょく Antarctica
+訪問 ほうもん A Visit
+悩み なやみ A Worry
+悪影響 あくえいきょう Bad Influence
+野郎 やろう Bastard
+腹 はら Belly
+長靴 ながぐつ Boots
+退屈 たいくつ Boring
+着替え きがえ Change Of ...
+手掛かり てがかり Clue
+腰抜け こしぬけ Coward
+濃度 のうど Density
+~症 しょう Disease
+お構いなく おかまいなく Don't Worr...
+頑張れ がんばれ Do Your Best
+端 はし Edge
+効果的 こうかてき Effective
+就業 しゅうぎょう Employment
+極端 きょくたん Extreme
+就職 しゅうしょく Finding Em...
+段々 だんだん Gradually
+中途半端 ちゅうとはんぱ Half Finished
+頭痛 ずつう Headache
+健康 けんこう Health
+休暇 きゅうか Holiday
+間抜け まぬけ Idiot
+不眠症 ふみんしょう Insomnia
+居酒屋 いざかや Izakaya
+昇進 しょうしん Job Promotion
+大規模 だいきぼ Large Scale
+早退 そうたい Leave Early
+限定販売 げんていはんばい Limited Ed...
+居間 いま Living Room
+迷子 まいご Lost Child
+迷路 めいろ Maze
+両替 りょうがえ Money Exch...
+結構です けっこうです No Thank You
+途中 とちゅう On The Way
+組織 そしき Organization
+痛い いたい Painful
+極楽 ごくらく Paradise
+減給 げんきゅう Pay Cut
+昇給 しょうきゅう Pay Raise
+迫害 はくがい Persecution
+圧迫 あっぱく Pressure
+値段 ねだん Price
+貸し切り かしきり Reserved
+引退 いんたい Retire
+巻きずし まきずし Rolled Sushi
+切腹 せっぷく Seppuku
+靴 くつ Shoes
+靴屋 くつや Shoe Store
+睡眠 すいみん Sleep
+眠い ねむい Sleepy
+小規模 しょうきぼ Small Scale
+靴下 くつした Socks
+暇 ひま Spare Time
+春巻き はるまき Spring Rolls
+段階 だんかい Stage
+階段 かいだん Stairs
+構え かまえ Stance
+胃 い Stomach
+胃痛 いつう Stomachache
+迷信 めいしん Superstition
+供給 きょうきゅう Supply
+症状 しょうじょう Symptom
+誘惑 ゆうわく Temptation
+第一段 だいいちだん The First ...
+理屈 りくつ Theory
+濃い こい Thick
+先端 せんたん Tip
+逮捕する たいほする To Arrest
+昇る のぼる To Ascend
+招く まねく To Beckon
+退院する たいいんする To Be Disc...
+抜ける ぬける To Be Extr...
+隠れる かくれる To Be Hidden
+掛かる かかる To Be Hung
+惑う まどう To Be Misg...
+極める きわめる To Carry T...
+捕える とらえる To Catch
+締結する ていけつする To Conclude
+取り替える とりかえる To Exchange
+怒る おこる To Get Angry
+迷う まよう To Get Lost
+手渡す てわたす To Hand Over
+誘う さそう To Invite
+招待する しょうたいする To Invite
+貸す かす To Lend
+隠居する いんきょする To Retire
+見抜く みぬく To See Thr...
+抜き出す ぬきだす To Select
+就く つく To Settle In
+怒鳴る どなる To Shout At
+屈む かがむ To Stoop
+締める しめる To Tighten
+迫る せまる To Urge
+訪ねる たずねる To Visit
+織る おる To Weave
+退く しりぞく To Withdra...
+悩む なやむ To Worry
+迷惑 めいわく Trouble
+究極 きゅうきょく Ultimate
+切迫 せっぱく Urgency
+給料 きゅうりょう Wages
+絶対 ぜったい Absolutely
+進撃 しんげき Advance
+前売り券 まえうりけん Advance Ti...
+巨人 きょじん A Giant
+軍隊 ぐんたい Army
+矢印 やじるし Arrow
+金庫 きんこ A Safe
+星占い ほしうらない Astrology
+攻撃 こうげき Attack
+浜 はま Beach
+浜辺 はまべ Beach
+何故なら なぜなら Because
+有益 ゆうえき Beneficial
+大間違い おおまちがい Big Mistake
+回数券 かいすうけん Book Of Ti...
+菓子屋 かしや Candy Store
+幼年時代 ようねんじだい Childhood
+幼い おさない Childish
+幼稚 ようち Childish
+幼児 ようじ Children
+児童 じどう Children
+清潔 せいけつ Clean
+冷たい つめたい Cold
+比較的 ひかくてき Comparatively
+憲法 けんぽう Constitution
+憲政 けんせい Constituti...
+冷静 れいせい Cool Headed
+反攻 はんこう Counterattack
+従兄弟 いとこ Cousin
+創造的 そうぞうてき Creative
+創造力 そうぞうりょく Creative P...
+処理 しょり Deal With
+程度 ていど Degree
+微か かすか Delicate
+絶望 ぜつぼう Despair
+直接的 ちょくせつてき Directly
+処分 しょぶん Disposal
+入隊 にゅうたい Enlist In ...
+程 ほど Extent
+不潔 ふけつ Filthy
+凍結 とうけつ Freeze
+冷凍庫 れいとうこ Freezer
+凍死 とうし Freeze To ...
+振り仮名 ふりがな Furigana
+博打 ばくち Gambling
+車庫 しゃこ Garage
+大衆 たいしゅう General Pu...
+身振り みぶり Gesture
+家政婦 かせいふ Housekeeper
+衆議院 しゅうぎいん House Of R...
+主婦 しゅふ Housewife
+巨大 きょだい Huge
+夫婦 ふうふ Husband An...
+移民 いみん Immigration
+並列 へいれつ In A Row
+婦人 ふじん Lady
+郵便箱 ゆうびんばこ Mailbox
+専攻 せんこう Major
+修士 しゅうし Master's D...
+微生物 びせいぶつ Microorganism
+移住 いじゅう Migration
+移動 いどう Movement
+博物館 はくぶつかん Museum
+国益 こくえき National I...
+微妙 びみょう Not So Good
+妙 みょう Odd
+逆効果 ぎゃくこうか Opposite E...
+並 なみ Ordinary
+逆説 ぎゃくせつ Paradox
+並行 へいこう Parallel
+旅券 りょけん Passport
+郵便番号 ゆうびんばんごう Post Number
+郵便局 ゆうびんきょく Post Office
+精度 せいど Precision
+過程 かてい Process
+利益 りえき Profit
+公益 こうえき Public Ben...
+潔い いさぎよい Pure
+清い きよい Pure
+記録 きろく Record
+登録 とうろく Registration
+修理 しゅうり Repair
+逆 ぎゃく Reverse
+修辞学 しゅうじがく Rhetoric
+刺身 さしみ Sashimi
+貯金箱 ちょきんばこ Savings Box
+日程 にってい Schedule
+兵隊 へいたい Soldier
+録音 ろくおん Sound Reco...
+精神 せいしん Spirit
+~隊 たい Squad
+絶景 ぜっけい Superb View
+独り言 ひとりごと Talking To...
+故に ゆえに Therefore
+~券 けん Ticket
+攻める せめる To Attack
+並ぶ ならぶ To Be Line...
+比較する ひかくする To Compare
+凍る こおる To Freeze
+逆らう さからう To Go Against
+輸入する ゆにゅうする To Import
+面接する めんせつする To Intervi...
+間違える まちがえる To Make A ...
+回復する かいふくする To Recover
+絶つ たつ To Sever
+移す うつす To Shift
+撃つ うつ To Shoot
+無我夢中 むがむちゅう Total Abso...
+研修 けんしゅう Training
+処置 しょち Treatment
+傘 かさ Umbrella
+傘立て かさたて Umbrella S...
+庫 くら Warehouse
+我々 われわれ We
+針金 はりがね Wire
+妙薬 みょうやく Wonder Drug
+横浜 よこはま Yokohama
+省略 しょうりゃく Abbreviation
+略語 りゃくご Abbreviation
+板 いた A Board
+怒り いかり Anger
+怒気 どき Anger
+痛み いたみ A Pain
+面積 めんせき Area
+添付 てんぷ Attachment
+航空 こうくう Aviation
+宴会 えんかい Banquet
+宴 うたげ Banquet
+お腹 おなか Belly
+黒板 こくばん Blackboard
+官僚 かんりょう Bureaucrat
+閣議 かくぎ Cabinet Me...
+閣僚 かくりょう Cabinet Mi...
+中欧 ちゅうおう Central Eu...
+織物 おりもの Cloth
+倒壊 とうかい Collapse
+同僚 どうりょう Colleague
+全壊 ぜんかい Complete D...
+寄付 きふ Contribution
+寄与 きよ Contribution
+好奇心 こうきしん Curiosity
+娘 むすめ Daughter
+締切 しめきり Deadline
+要請 ようせい Demand
+請求 せいきゅう Demand
+診断 しんだん Diagnosis
+乾季 かんき Dry Season
+江戸 えど Edo
+欧米 おうべい Europe And...
+日欧 にちおう Europe And...
+極めて きわめて Extremely
+猛~ もう Fierce
+猛烈 もうれつ Fierce
+腹切り はらきり Harakiri
+英雄 えいゆう Hero
+迷い まよい Hesitation
+街道 かいどう Highway
+腹が減った はらがへった Hungry
+熱烈 ねつれつ Impassioned
+索引 さくいん Index
+入り江 いりえ Inlet
+日韓 にっかん Japan And ...
+乾杯 かんぱい Kanpai
+検索 けんさく Lookup
+診察 しんさつ Medical Exam
+大臣 だいじん Minister
+居眠り いねむり Nap
+航法 こうほう Navigation
+直航 ちょっこう Nonstop Fl...
+催告 さいこく Notification
+監視 かんし Observation
+奇数 きすう Odd Number
+一杯 いっぱい One Cup
+一人娘 ひとりむすめ Only Daughter
+痛み止め いたみどめ Painkiller
+請願 せいがん Petition
+恐怖症 きょうふしょう Phobia
+綺麗 きれい Pretty
+宗教 しゅうきょう Religion
+貸し かし Rental
+略図 りゃくず Rough Sketch
+怖い こわい Scary
+恐ろしい おそろしい Scary
+捜索 そうさく Search
+宗派 しゅうは Sect
+商店街 しょうてんがい Shopping D...
+招き猫 まねきねこ Shop Windo...
+眠り薬 ねむりぐすり Sleeping P...
+睡眠薬 すいみんやく Sleeping P...
+韓国 かんこく South Korea
+迷惑メ-ル めいわくめ-る Spam
+主催 しゅさい Sponsorship
+看板 かんばん Store Sign
+奇妙 きみょう Strange
+緊張 きんちょう Stress
+強烈 きょうれつ Strong
+大略 たいりゃく Summary
+監督 かんとく Supervision
+恐怖 きょうふ Terror
+三杯 さんばい Three Cups
+略す りゃくす To Abbreviate
+積もる つもる To Accumulate
+怒らせる おこらせる To Anger S...
+添える そえる To Append
+寄る よる To Approach
+構える かまえる To Assume ...
+痛む いたむ To Be Painful
+詰まる つまる To Be Stuffed
+壊す こわす To Break S...
+診る みる To Examine...
+乾く かわく To Get Dry
+道に迷う みちにまよう To Get Lost
+腹立つ はらだつ To Get Mad
+見極める みきわめる To See Thr...
+眠る ねむる To Sleep
+詰める つめる To Stuff In
+請ける うける To Take
+誘惑する ゆうわくする To Tempt
+締まる しまる To Tighten
+促す うながす To Urge
+訪れる おとずれる To Visit
+二杯 にはい Two Cups
+不健康 ふけんこう Unhealthy
+催促 さいそく Urge
+緊急 きんきゅう Urgent
+体積 たいせき Volume
+禅宗 ぜんしゅう Zen Sect
+浮気 うわき Affair
+魅力 みりょく Allure
+一覧 いちらん A Look
+変更 へんこう Alteration
+遊園地 ゆうえんち Amusement ...
+適当 てきとう Appropriate
+服飾 ふくしょく Attire
+先程 さきほど A While Ago
+背景 はいけい Background
+背後 はいご Background
+預金 よきん Bank Deposit
+官僚的 かんりょうてき Bureaucratic
+強盗 ごうとう Burglary
+版権 はんけん Copyright
+電飾 でんしょく Decorative...
+移住者 いじゅうしゃ Emigrant
+博覧会 はくらんかい Exposition
+初版 しょはん First Edition
+旗 はた Flag
+更に さらに Furthermore
+背 せ Height
+快速 かいそく High Speed
+新婚旅行 しんこんりょこう Honeymoon
+照明 しょうめい Illumination
+成程 なるほど I See
+日系 にっけい Japanese D...
+幼稚園 ようちえん Kindergarten
+欠乏 けつぼう Lack
+漏出 ろうしゅつ Leak Out
+ご覧 ごらん Look At
+結婚 けっこん Marriage
+求婚 きゅうこん Marriage P...
+主 ぬし Master
+精神病 せいしんびょう Mental Ill...
+国旗 こっき National Flag
+騒音 そうおん Noise
+懐かしい なつかしい Nostalgic
+越権 えっけん Oversteppi...
+撮影 さつえい Photoshoot
+枕 まくら Pillow
+盗作 とうさく Plagiarism
+快適 かいてき Pleasant
+快い こころよい Pleasant
+快楽 かいらく Pleasure
+快感 かいかん Pleasure
+貧乏 びんぼう Poor
+貧しい まずしい Poor
+延長 えんちょう Prolonging
+程よく ほどよく Properly
+出版 しゅっぱん Publishing
+購入 こうにゅう Purchase
+購買 こうばい Purchasing
+押し おし Push
+更生 こうせい Rebirth
+更新 こうしん Renewal
+乏しい とぼしい Scarce
+盗撮 とうさつ Secret Pho...
+太陽系 たいようけい Solar System
+精神的 せいしんてき Spiritual
+盗品 とうひん Stolen Goods
+購読 こうどく Subscription
+体系的 たいけいてき Systematic
+翌日 よくじつ The Next Day
+翌月 よくげつ The Next M...
+翌朝 よくあさ The Next M...
+翌年 よくねん The Next Year
+切符 きっぷ Ticket
+攻撃する こうげきする To Attack
+渇く かわく To Become ...
+匂う におう To Be Frag...
+移る うつる To Be Shifted
+冷やす ひやす To Chill S...
+飾る かざる To Decorate
+預ける あずける To Deposit
+診断する しんだんする To Diagnose
+絶える たえる To Die Out
+照れる てれる To Feel Em...
+浮く うく To Float
+越える こえる To Go Beyond
+照らす てらす To Illuminate
+漏れる もれる To Leak
+並べる ならべる To Line Up
+騒ぐ さわぐ To Make Noise
+遊ぶ あそぶ To Play
+延期する えんきする To Postpone
+延ばす のばす To Prolong
+押す おす To Push
+登録する とうろくする To Register
+盗む ぬすむ To Steal
+撮る とる To Take A ...
+濡らす ぬらす To Wet
+研修生 けんしゅうせい Trainee
+~系 けい Tribe
+浮世絵 うきよえ Ukiyo E
+未婚 みこん Unmarried
+不快 ふかい Unpleasant
+不適 ふてき Unsuitable
+逆さま さかさま Upside Down
+観覧 かんらん Viewing
+漏水 ろうすい Water Leakage
+精一杯 せいいっぱい With All O...
+驚嘆 きょうたん Admiration
+航空券 こうくうけん Airplane T...
+既に すでに Already
+救急車 きゅうきゅうしゃ Ambulance
+鑑定 かんてい Appraisal
+散歩 さんぽ A Stroll
+平均 へいきん Average
+ハチの巣 はちのす Beehive
+帯 おび Belt
+血脈 けつみゃく Blood Vessel
+用心棒 ようじんぼう Bodyguard
+解散 かいさん Breakup
+中華 ちゅうか Chinese
+掃除 そうじ Cleaning
+大陸 たいりく Continent
+廊下 ろうか Corridor
+通貨 つうか Currency
+既決 きけつ Decided
+子孫 しそん Descendant
+直径 ちょっけい Diameter
+離婚 りこん Divorce
+編集 へんしゅう Edit
+編者 へんしゃ Editor
+均等 きんとう Equality
+除外 じょがい Exception
+感嘆符 かんたんふ Exclamatio...
+既存 きそん Existing
+恐れ おそれ Fear
+融資 ゆうし Financing
+華道 かどう Flower Arr...
+壊れ物 こわれもの Fragile Thing
+貨物 かもつ Freight
+融合 ゆうごう Fusion
+華美 かび Gaudy
+幾何学 きかがく Geometry
+孫 まご Grandchild
+墓 はか Grave
+墓地 ぼち Graveyard
+花粉症 かふんしょう Hay Fever
+幾つ いくつ How Many
+幾度 いくど How Many T...
+幾ら いくら How Much
+真似 まね Impersonation
+陸軍 りくぐん Land Army
+巣立ち すだち Leave The ...
+豪華 ごうか Luxurious
+雄犬 おすいぬ Male Dog
+外務大臣 がいむだいじん Minister O...
+道徳 どうとく Morals
+山脈 さんみゃく Mountain R...
+富士山 ふじさん Mt Fuji
+泥 どろ Mud
+泥水 でいすい Muddy Water
+巣 す Nest
+普通 ふつう Normal
+人脈 じんみゃく Personal C...
+画廊 がろう Picture Ga...
+棒 ぼう Pole
+粉 こな Powder
+粉状 ふんじょう Powdered
+総理大臣 そうりだいじん Prime Mini...
+探偵 たんてい Private De...
+恐らく おそらく Probably
+尋問 じんもん Questioning
+半径 はんけい Radius
+探究 たんきゅう Research
+経路 けいろ Route
+恐い こわい Scary
+内偵 ないてい Scouting
+印鑑 いんかん Seal
+分離 ぶんり Segregation
+華やか はなやか Showy
+嘆息 たんそく Sigh
+クモの巣 くものす Spiderweb
+倉庫 そうこ Storehouse
+鼻詰まり はなづまり Stuffy Nose
+均整 きんせい Symmetry
+壊れる こわれる To Be Broken
+富む とむ To Be Rich
+怖がる こわがる To Be Scared
+散る ちる To Be Scat...
+驚く おどろく To Be Surp...
+思い詰める おもいつめる To Brood
+除く のぞく To Exclude
+恐れる おそれる To Fear
+尋ねる たずねる To Inquire
+絶やす たやす To Kill Off
+編む あむ To Knit
+徳川 とくがわ Tokugawa
+徳島県 とくしまけん Tokushima ...
+嘆く なげく To Lament
+迷わす まよわす To Lead As...
+探す さがす To Look For
+積む つむ To Pile Th...
+救う すくう To Rescue
+似る にる To Resemble
+離れる はなれる To Separate
+主催する しゅさいする To Sponsor
+見詰める みつめる To Stare At
+緊張する きんちょうする To Stress
+掃く はく To Sweep
+催促する さいそくする To Urge
+地下街 ちかがい Undergroun...
+普段 ふだん Usual
+野菜 やさい Vegetable
+菜食 さいしょく Vegetarianism
+倉 くら Warehouse
+富 とみ Wealth
+富裕 ふゆう Wealthy
+地帯 ちたい Zone
+功績 こうせき Achievement
+賛成 さんせい Agreement
+先祖 せんぞ Ancestors
+食欲 しょくよく Appetite
+恩人 おんじん Benefactor
+血液 けつえき Blood
+ゆで卵 ゆでたまご Boiled Egg
+火傷 やけど Burn
+背広 せびろ Business Suit
+肉欲 にくよく Carnal Des...
+桜んぼ さくらんぼ Cherry
+大騒ぎ おおさわぎ Clamor
+押入れ おしいれ Closet
+銭 ぜに Coin
+共産党 きょうさんとう Communist ...
+複雑 ふくざつ Complicated
+便秘 べんぴ Constipation
+伝染病 でんせんびょう Contagious...
+複写 ふくしゃ Copying
+飾り かざり Decoration
+志望 しぼう Desire
+机 つくえ Desk
+汚水 おすい Dirty Water
+卵 たまご Egg
+英訳 えいやく English Tr...
+眼 め Eye
+眼球 がんきゅう Eyeball
+老眼 ろうがん Farsighted...
+永遠 えいえん Forever
+永久 えいきゅう Forever
+成績 せいせき Grades
+祖父 そふ Grandfather
+祖母 そぼ Grandmother
+傷心 しょうしん Heartbreak
+桜肉 さくらにく Horse Meat
+衛生 えいせい Hygiene
+感染 かんせん Infection
+傷者 しょうしゃ Injured Pe...
+志 こころざし Intention
+興味 きょうみ Interest
+通訳 つうやく Interpreting
+和訳 わやく Japanese T...
+自民党 じみんとう Liberal De...
+液体 えきたい Liquid
+久しい ひさしい Long Time
+結婚式 けっこんしき Marriage C...
+雑費 ざっぴ Miscellane...
+複数 ふくすう Multiple
+雑音 ざつおん Noise
+撮影禁止 さつえいきんし No Photos
+背中 せなか One's Back
+酸素 さんそ Oxygen
+党員 とういん Party Member
+桜色 さくらいろ Pink
+遊び あそび Play
+政党 せいとう Political ...
+汚染 おせん Pollution
+貧乏人 びんぼうにん Poor Person
+序文 じょぶん Preface
+採算 さいさん Profit
+銭湯 せんとう Public Bath
+出版社 しゅっぱんしゃ Publishing...
+押しボタン おしぼたん Push Button
+生卵 なまたまご Raw Egg
+訳 わけ Reason
+恩賞 おんしょう Reward
+桜 さくら Sakura
+衛星 えいせい Satellite
+匂い におい Scent
+密か ひそか Secret
+秘密 ひみつ Secret
+密告 みっこく Secret Inf...
+密会 みっかい Secret Mee...
+自衛 じえい Self Defense
+順序 じゅんじょ Sequence
+飾り気 かざりけ Showing Off
+密輸 みつゆ Smuggling
+社会党 しゃかいとう Socialist ...
+酸っぱい すっぱい Sour
+汚点 おてん Stain
+背丈 せたけ Stature
+厳しい きびしい Strict
+厳禁 げんきん Strictly F...
+背が高い せがたかい Tall
+照り焼き てりやき Teriyaki
+冷える ひえる To Be Chilled
+込む こむ To Be Crowded
+浮かれる うかれる To Be Happy
+秘める ひめる To Conceal
+傷める いためる To Damage
+染める そめる To Dye
+火照る ほてる To Feel Hot
+採る とる To Gather
+汚れる よごれる To Get Dirty
+濡れる ぬれる To Get Wet
+越す こす To Go Beyond
+飼う かう To Keep A Pet
+漏らす もらす To Leak So...
+結婚する けっこんする To Marry
+今更 いまさら Too Late
+迎える むかえる To Pick So...
+延長する えんちょうする To Prolong
+出版する しゅっぱんする To Publish
+購読する こうどくする To Subscribe
+捨てる すてる To Throw Away
+訳す やくす To Translate
+訳語 やくご Translated...
+訳者 やくしゃ Translator
+採用 さいよう Use
+採決 さいけつ Voting
+欲しい ほしい Wanted
+欲求 よっきゅう Wants
+暖かい あたたかい Warm
+温暖 おんだん Warm
+白旗 しらはた White Flag
+意志 いし Will
+意欲 いよく Will
+傷 きず Wound
+異常 いじょう Abnormal
+異状 いじょう Abnormality
+忠告 ちゅうこく Advice
+裏通り うらどおり Alley
+武装 ぶそう Arms
+灰 はい Ash
+灰皿 はいざら Ashtray
+装い よそおい Attire
+服装 ふくそう Attire
+著者 ちょしゃ Author
+裏口 うらぐち Back Door
+裏 うら Backside
+裏切り うらぎり Backstab
+体操 たいそう Calisthenics
+操 みさお Chastity
+熟語 じゅくご Compound Word
+皇太子 こうたいし Crown Prince
+否定 ひてい Denial
+砂漠 さばく Desert
+異義 いぎ Different ...
+変装 へんそう Disguise
+編集者 へんしゅうしゃ Editor
+天皇 てんのう Emperor Of...
+拡張 かくちょう Enlargement
+装置 そうち Equipment
+除いて のぞいて Except
+忠実 ちゅうじつ Faithful
+小麦粉 こむぎこ Flour
+貨物船 かもつせん Freighter
+果糖 かとう Fructose
+諸君 しょくん Gentlemen
+華々しい はなばなしい Gorgeous
+墓場 はかば Graveyard
+灰色 はいいろ Gray
+敬語 けいご Honorific
+家賃 やちん House Rent
+皇族 こうぞく Imperial F...
+皇室 こうしつ Imperial P...
+物真似 ものまね Impersonation
+地蔵 じぞう Jizo
+散らし ちらし Leaflet
+肺 はい Lung
+肺がん はいがん Lung Cancer
+肺病 はいびょう Lung Disease
+雑誌 ざっし Magazine
+筋肉 きんにく Muscle
+否 いな No
+未熟 みじゅく Not Yet Go...
+開閉 かいへい Opening An...
+操作 そうさ Operation
+異性 いせい Opposite Sex
+納入 のうにゅう Payment
+宣言 せんげん Proclamation
+宣伝 せんでん Propaganda
+冷蔵庫 れいぞうこ Refrigerator
+否決 ひけつ Rejection
+著しい いちじるしい Remarkable
+賃貸 ちんたい Rental
+尊敬 そんけい Respect
+尊い とうとい Revered
+成熟 せいじゅく Ripen
+泥棒 どろぼう Robber
+噂 うわさ Rumor
+砂 すな Sand
+簡易 かんい Simple
+簡単 かんたん Simple
+蒸気 じょうき Steam
+収納 しゅうのう Storage
+閉店 へいてん Store Closed
+蔵 くら Storehouse
+砂糖 さとう Sugar
+無糖 むとう Sugar Free
+筋 すじ Tendon
+窓口 まどぐち Ticket Window
+裏切る うらぎる To Backstab
+蒸れる むれる To Be Humid
+掃除する そうじする To Clean
+閉める しめる To Close
+垂らす たらす To Dangle ...
+異なる ことなる To Differ
+乾かす かわかす To Dry Som...
+編集する へんしゅうする To Edit
+拡がる ひろがる To Extend
+散歩する さんぽする To Go For ...
+盛る もる To Heap Up
+暮らす くらす To Live
+操る あやつる To Manipulate
+熟れる うれる To Ripen
+散らかす ちらかす To Scatter
+離す はなす To Separate
+似合う にあう To Suit
+納める おさめる To Supply
+驚かす おどろかす To Surprise
+野暮 やぼ Unrefined
+掃除機 そうじき Vacuum Cleaner
+漠然 ばくぜん Vague
+諸~ しょ Various
+垂直 すいちょく Vertical
+窓 まど Window
+著作 ちょさく Writing
+拡大 かくだい Zoom
+純毛 じゅんもう All Wool
+沿線 えんせん Along The Line
+承認 しょうにん Approval
+歓迎 かんげい A Welcome
+小豆 あずき Azuki Beans
+幕府 ばくふ Bakufu
+豆 まめ Beans
+牛丼 ぎゅうどん Beef Bowl
+聖書 せいしょ Bible
+紅茶 こうちゃ Black Tea
+血液型 けつえきがた Blood Type
+枝 えだ Branch
+爪 つめ Claw
+沿岸 えんがん Coast
+沿海 えんかい Shore
+指揮 しき Command
+通勤 つうきん Commute
+承知 しょうち Consent
+腐食 ふしょく Corrosion
+人込み ひとごみ Crowd Of People
+幕 まく Curtain
+損害 そんがい Damage
+腐敗 ふはい Decomposition
+紅 くれない Deep Red
+損 そん Disadvantage
+使い捨て つかいすて Disposable
+奴 やつ Dude
+震源地 しんげんち Epicenter
+推定 すいてい Estimate
+言い訳 いいわけ Excuse
+常勤 じょうきん Full Time ...
+源氏 げんじ Genji
+降車 こうしゃ Getting Off
+眼鏡 めがね Glasses
+祖父母 そふぼ Grandparents
+心臓 しんぞう Heart
+大損 おおぞん Heavy Loss
+以降 いこう Hereafter
+神聖 しんせい Holiness
+聖日 せいじつ Holy Day
+聖地 せいち Holy Land
+不純 ふじゅん Impure
+内臓 ないぞう Internal O...
+痩身 そうしん Lean
+縦横 たてよこ Length And...
+久しぶり ひさしぶり Long Time ...
+肺臓 はいぞう Lung
+磁石 じしゃく Magnet
+磁場 じば Magnetic F...
+磁気 じき Magnetism
+迎え むかえ Meeting
+誤算 ごさん Miscalcula...
+誤解 ごかい Misunderst...
+誤用 ごよう Misuse
+爪切り つめきり Nail Clipper
+納豆 なっとう Natto
+興味がない きょうみがない No Interest
+兄貴 あにき Older Brother
+源 みなもと Origin
+飼い主 かいぬし Pet Owner
+歓楽街 かんらくがい Pleasure Q...
+複数形 ふくすうけい Plural
+芋 いも Potato
+電源 でんげん Power Source
+貴重 きちょう Precious
+純粋 じゅんすい Pure
+放射 ほうしゃ Radiation
+推理 すいり Reasoning
+推薦 すいせん Recommenda...
+縮小 しゅくしょう Reduction
+反射 はんしゃ Reflection
+丼 どんぶり Rice Bowl
+焼き芋 やきいも Roast Potato
+自薦 じせん Self Recom...
+深刻 しんこく Serious
+注射 ちゅうしゃ Shot
+単純 たんじゅん Simple
+奴隷 どれい Slave
+染み しみ Stain
+粋 いき Stylish
+字幕 じまく Subtitles
+飛び込み自殺 とびこみじさつ Suicide By...
+降参 こうさん Surrender
+貴族 きぞく The Nobility
+時刻表 じこくひょう Timetable
+賛成する さんせいする To Agree
+申し込む もうしこむ To Apply
+傷む いたむ To Be Damaged
+染まる そまる To Be Dyed
+勤める つとめる To Be Empl...
+刻む きざむ To Carve
+発揮する はっきする To Exhibit
+降る ふる To Fall
+書き込む かきこむ To Fill Out
+傷つく きずつく To Get Hurt
+痩せる やせる To Get Thin
+損なう そこなう To Harm
+拝見する はいけんする To Have A ...
+承る うけたまわる To Hear
+傷つける きずつける To Hurt So...
+込める こめる To Include
+発射する はっしゃする To Launch
+汚す よごす To Make Dirty
+引っ越す ひっこす To Move
+追い越す おいこす To Overtake
+吐く はく To Puke
+薦める すすめる To Recommend
+腐る くさる To Rot
+沿う そう To Run Alo...
+縮まる ちぢまる To Shrink
+詰め込む つめこむ To Stuff
+全損 ぜんそん Total Loss
+投げ捨てる なげすてる To Throw Away
+拝む おがむ To Worship
+誤字 ごじ Typo
+貴い とうとい Valuable
+縦 たて Vertical
+縦書 たてがき Vertical W...
+じゃが芋 じゃがいも White Potato
+黒幕 くろまく Wirepuller
+貴様 きさま You
+交互 こうご Alternately
+破産 はさん Bankruptcy
+兵舎 へいしゃ Barracks
+熊 くま Bear
+遅刻 ちこく Be Late
+彼氏 かれし Boyfriend
+三つ編み みつあみ Braided Hair
+青銅 せいどう Bronze
+杉 すぎ Cedar
+推測 すいそく Conjecture
+納得 なっとく Consent
+銅山 どうざん Copper Mine
+銅像 どうぞう Copper Statue
+著作権 ちょさくけん Copyright
+田舎 いなか Countryside
+原油 げんゆ Crude Oil
+泥酔 でいすい Dead Drunk
+行為 こうい Deed
+遅延 ちえん Delay
+遅滞 ちたい Delay
+破壊 はかい Destruction
+恥ずかしい はずかしい Embarrassing
+炎 ほのお Flame
+為に ために For
+果汁 かじゅう Fruit Juice
+給油 きゅうゆ Fueling
+庁舎 ちょうしゃ Government...
+福寿 ふくじゅ Happiness ...
+彼 かれ He
+地獄 じごく Hell
+同音異義語 どうおんいぎご Homonym
+尊敬語 そんけいご Honorific ...
+蒸し暑い むしあつい Humid
+入獄 にゅうごく Imprisonment
+油断 ゆだん Inattentiv...
+炎症 えんしょう Inflammation
+獄内 ごくない In Prison
+介入 かいにゅう Intervention
+紹介 しょうかい Introduction
+脱獄 だつごく Jailbreak
+剣道 けんどう Kendo
+熊本県 くまもとけん Kumamoto P...
+湖 みずうみ Lake
+山中湖 やまなかこ Lake Yamanaka
+講演 こうえん Lecture
+講義 こうぎ Lecture
+講師 こうし Lecturer
+暮らし くらし Life
+寿命 じゅみょう Lifespan
+長寿 ちょうじゅ Long Life
+味噌 みそ Miso
+互い たがい Mutual
+相互 そうご Mutual
+否定形 ひていけい Negative Form
+観測 かんそく Observation
+石油 せきゆ Oil
+油 あぶら Oil
+油田 ゆでん Oil Field
+己 おのれ Oneself
+白熊 しろくま Polar Bear
+鍋 なべ Pot
+予測 よそく Prediction
+出獄 しゅつごく Release Fr...
+彫刻 ちょうこく Sculpture
+海亀 うみがめ Sea Turtle
+自己 じこ Self
+真剣 しんけん Serious
+喜寿 きじゅ Seventy Se...
+恥 はじ Shame
+破船 はせん Shipwreck
+醤油 しょうゆ Shoyu
+有意 ゆうい Significance
+一筋 ひとすじ Single Min...
+汁 しる Soup
+寿司 すし Sushi
+剣 けん Sword
+彼ら かれら They
+酔う よう To Be Drunk
+遅れる おくれる To Be Late
+滞る とどこおる To Be Overdue
+納まる おさまる To Be Sati...
+閉まる しまる To Be Shut
+垂れる たれる To Dangle
+否定する ひていする To Deny
+装う よそおう To Feign
+暮れる くれる To Get Dark
+盛り上げる もりあげる To Heap Up
+測る はかる To Measure
+払う はらう To Pay
+宣言する せんげんする To Proclaim
+蒸し返す むしかえす To Rehash
+尊敬する そんけいする To Respect
+閉じる とじる To Shut
+破る やぶる To Tear
+裏切り者 うらぎりもの Traitor
+厄介 やっかい Troublesome
+亀 かめ Turtle
+諸々 もろもろ Various
+酢 す Vinegar
+酢の物 すのもの Vinegared ...
+廃止 はいし Abolition
+受諾 じゅだく Acceptance
+同盟 どうめい Alliance
+大幅 おおはば Big
+献血 けんけつ Blood Dona...
+債券 さいけん Bond
+主将 しゅしょう Commander
+指揮者 しきしゃ Conductor
+承諾 しょうだく Consent
+許諾 きょだく Consent
+諾否 だくひ Consent Or...
+変換 へんかん Conversion
+遺体 いたい Corpse
+債権 さいけん Credit
+舞 まい Dancing
+舞踏 ぶとう Dancing
+鹿 しか Deer
+依存 いぞん Dependence
+普及 ふきゅう Diffusion
+汚い きたない Dirty
+献金 けんきん Donation
+枝豆 えだまめ Edamame
+うなぎ丼 うなぎどんぶり Eel Bowl
+電磁場 でんじば Electromag...
+廃絶 はいぜつ Extinction
+牙 きば Fang
+姓名 せいめい Full Name
+将来 しょうらい Future
+大将 たいしょう General
+一般 いっぱん General
+遺伝 いでん Heredity
+馬鹿 ばか Idiot
+遺産 いさん Inheritance
+象牙 ぞうげ Ivory
+縄文 じょうもん Jomon People
+歌舞伎 かぶき Kabuki
+鹿児島県 かごしまけん Kagoshima ...
+神奈川県 かながわけん Kanagawa P...
+連盟 れんめい League
+口紅 くちべに Lipstick
+遺失 いしつ Loss
+旧姓 きゅうせい Maiden Name
+維持 いじ Maintenance
+治療 ちりょう Medical Th...
+医療 いりょう Medical Tr...
+誤り あやまり Mistake
+奈良 なら Nara
+国債 こくさい National Debt
+吐き気 はきけ Nausea
+核実験 かくじっけん Nuclear Test
+核兵器 かくへいき Nuclear We...
+核 かく Nucleus
+沖合 おきあい Open Sea
+親子丼 おやこどんぶり Parent And...
+及第 きゅうだい Passing An...
+盟約 めいやく Pledge
+指摘 してき Pointing Out
+放射能 ほうしゃのう Radioactivity
+薦め すすめ Recommenda...
+信頼 しんらい Reliance
+依頼 いらい Request
+維新 いしん Restoration
+復旧 ふっきゅう Restoration
+縄 なわ Rope
+将軍 しょうぐん Shogun
+舞台 ぶたい Stage
+継父 けいふ Stepfather
+依然 いぜん Still
+継承 けいしょう Succession
+超自然的 ちょうしぜんてき Supernatural
+超音速 ちょうおんそく Supersonic...
+甘い あまい Sweet
+甘党 あまとう Sweet Tooth
+源氏物語 げんじものがたり Tale Of Genji
+奴ら やつら Those Dudes
+頼む たのむ To Ask For
+廃れる すたれる To Become ...
+伸びる のびる To Be Stre...
+損害する そんがいする To Damage
+舞う まう To Dance
+換える かえる To Exchange
+豆腐 とうふ Tofu
+降りる おりる To Get Off
+継ぐ つぐ To Inherit
+甘く見る あまくみる To Not Tak...
+摘む つむ To Pluck
+及ぶ およぶ To Reach
+吐き出す はきだす To Spit Out
+踏む ふむ To Step On
+降参する こうさんする To Surrender
+摘発する てきはつする To Unmask
+貿易 ぼうえき Trade
+津波 つなみ Tsunami
+超~ ちょう Ultra
+超音波 ちょうおんぱ Ultrasonic...
+貴重品 きちょうひん Valuables
+換気 かんき Ventilation
+幅 はば Width
+勤め つとめ Work
+狙い ねらい Aim
+抗体 こうたい Antibody
+患者 かんじゃ A Patient
+応募 おうぼ Application
+陣 じん Army Base
+執着 しゅうちゃく Attachment To
+塁 るい Baseball Base
+塁審 るいしん Baseball U...
+塁打 るいだ Base Hit
+戦闘 せんとう Battle
+爆弾 ばくだん Bomb
+爆撃 ばくげき Bombing
+眉間 みけん Brow
+弾丸 だんがん Bullet
+弾 たま Bullet
+陣営 じんえい Camp
+契機 けいき Chance
+崩壊 ほうかい Collapse
+契約 けいやく Contract
+火葬 かそう Cremation
+死刑 しけい Death Penalty
+削除 さくじょ Deletion
+派遣 はけん Dispatch
+酔っ払い よっぱらい Drunk
+弾力 だんりょく Elasticity
+急患 きゅうかん Emergency ...
+証跡 しょうせき Evidence
+試験地獄 しけんじごく Exam Hell
+爆発 ばくはつ Explosion
+爆笑 ばくしょう Explosive ...
+眉 まゆ Eyebrows
+闘志 とうし Fighting S...
+上旬 じょうじゅん First Ten ...
+漁師 りょうし Fisherman
+漁船 ぎょせん Fishing Boat
+漁業 ぎょぎょう Fishing In...
+香り かおり Fragrance
+募金 ぼきん Fundraising
+葬式 そうしき Funeral
+給油所 きゅうゆじょ Gas Station
+大抵 たいてい Generally
+串焼き くしやき Grilled Sk...
+湾 わん Gulf
+二日酔い ふつかよい Hangover
+聴力 ちょうりょく Hearing Ab...
+香港 ほんこん Hong Kong
+旬 しゅん In Season
+刑務所 けいむしょ Jail
+香川県 かがわけん Kagawa Pre...
+下旬 げじゅん Last Ten D...
+紹介状 しょうかいじょう Letter Of ...
+終身刑 しゅうしんけい Life Sentence
+聴者 ちょうしゃ Listener
+一人暮らし ひとりぐらし Living Alone
+中旬 ちゅうじゅん Middle Ten...
+奇跡 きせき Miracle
+味噌汁 みそしる Miso Soup
+掲示 けいじ Notice
+油絵 あぶらえ Oil Painting
+前兆 ぜんちょう Omen
+払い はらい Payment
+支払い しはらい Payment
+香水 こうすい Perfume
+刑事 けいじ Police Det...
+~鍋 なべ Pot
+刑期 けいき Prison Term
+掲載 けいさい Publication
+刑罰 けいばつ Punishment
+募集 ぼしゅう Recruiting
+削減 さくげん Reduction
+弁償 べんしょう Reimbursement
+抗戦 こうせん Resistance
+遺跡 いせき Ruins
+船酔い ふなよい Sea Sickness
+臨海 りんかい Seaside
+自己紹介 じこしょうかい Self Intro...
+恥知らず はじしらず Shameless ...
+彼女 かのじょ She
+狙撃 そげき Shooting
+昭和 しょうわ Showa Era
+兆候 ちょうこう Sign
+串 くし Skewer
+遅い おそい Slow
+汁物 しるもの Soups
+自爆 じばく Suicide Bomb
+甘酢 あまず Sweet Vinegar
+台湾 たいわん Taiwan
+臨時 りんじ Temporary
+募る つのる To Appeal For
+患う わずらう To Be Affl...
+恥ずかしがる はずかしがる To Be Shy
+弾む はずむ To Bounce
+葬る ほうむる To Bury
+償う つぐなう To Compens...
+遣う つかう To Consider
+対向する たいこうする To Counter
+崩す くずす To Demolish
+恵む めぐむ To Do A Favor
+臨む のぞむ To Face
+破れる やぶれる To Get Torn
+抱く だく To Hug
+紹介する しょうかいする To Introduce
+跳ぶ とぶ To Jump
+聴く きく To Listen To
+掲げる かかげる To Put Up ...
+反抗する はんこうする To Rebel
+抵抗する ていこうする To Resist
+戻す もどす To Return
+戻る もどる To Return
+闘う たたかう To Struggle
+盛り上がる もりあがる To Swell
+執る とる To Take Co...
+削る けずる To Whittle...
+跡 あと Traces
+盗聴 とうちょう Wiretapping
+知恵 ちえ Wisdom
+執筆 しっぴつ Writing
+馬鹿らしい ばからしい Absurd
+馬鹿馬鹿しい ばかばかしい Absurd
+頼み たのみ A Favor
+冷房 れいぼう Air Condit...
+及び および As Well As
+舞踏会 ぶとうかい Ball
+基盤 きばん Base
+受託 じゅたく Be Entrust...
+避妊 ひにん Birth Control
+湯豆腐 ゆどうふ Boiled Tofu
+賄賂 わいろ Bribe
+贈収賄 ぞうしゅうわい Bribery
+依頼人 いらいにん Client
+房 ふさ Cluster
+考慮 こうりょ Consideration
+配慮 はいりょ Consideration
+委託 いたく Consign
+抑制 よくせい Control
+日刊 にっかん Daily Edition
+需要 じゅよう Demand
+描写 びょうしゃ Depiction
+奥底 おくそこ Depths
+抑止 よくし Deterrent
+円盤 えんばん Disk
+併殺 へいさつ Double Play
+描画 びょうが Drawing
+懸命 けんめい Eager
+高齢者 こうれいしゃ Elderly Pe...
+逃亡 とうぼう Escape
+避難 ひなん Evacuation
+夕刊 ゆうかん Evening Ed...
+奥 おく Far Back
+致命的 ちめいてき Fatal
+一人称 いちにんしょう First Person
+全般的 ぜんぱんてき General
+遺伝子 いでんし Genes
+宜しい よろしい Good
+暖房 だんぼう Heating
+膝 ひざ Knee
+膝頭 ひざがしら Kneecap
+緩やか ゆるやか Loose
+緩い ゆるい Loose
+明治維新 めいじいしん Meiji Rest...
+併合 へいごう Merger
+月刊 げっかん Monthly Ed...
+朝刊 ちょうかん Morning Ed...
+演奏 えんそう Musical Pe...
+奏楽 そうがく Musical Pe...
+奈良県 ならけん Nara Prefe...
+必需品 ひつじゅひん Necessities
+沖縄 おきなわ Okinawa
+老齢 ろうれい Old Age
+却って かえって On The Con...
+抑圧 よくあつ Oppression
+一般的 いっぱんてき Ordinary
+妊婦 にんぷ Pregnant W...
+奥深い おくぶかい Profound
+生還 せいかん Reaching H...
+却下 きゃっか Rejection
+遠慮 えんりょ Restraint
+返還 へんかん Return
+還元 かんげん Return To ...
+縄張り なわばり Rope Off
+内緒 ないしょ Secret
+選択 せんたく Selection
+対称 たいしょう Symmetry
+お見舞い おみまい Sympathy V...
+傾向 けいこう Tendency
+廃止する はいしする To Abolish
+同伴する どうはんする To Accompany
+伴う ともなう To Accompany
+避ける さける To Avoid
+傾く かたむく To Be Leaned
+妊娠する にんしんする To Be Preg...
+致す いたす To Do
+描く かく To Draw
+託す たくす To Entrust
+逃げる にげる To Escape
+超す こす To Exceed
+及ぼす およぼす To Exert
+一緒 いっしょ Together
+贈る おくる To Give A ...
+扱う あつかう To Handle
+緩む ゆるむ To Loosen
+維持する いじする To Maintain
+一致する いっちする To Match
+賄う まかなう To Pay
+指摘する してきする To Point Out
+刊行する かんこうする To Publish
+頼る たよる To Rely On
+繰る くる To Spin
+懸ける かける To Stake
+踏み込む ふみこむ To Step Into
+伸ばす のばす To Stretch...
+降ろす おろす To Take Down
+乗り換える のりかえる To Transfer
+貿易会社 ぼうえきがいしゃ Trading Firm
+盤 ばん Tray
+信託 しんたく Trust
+奥さん おくさん Wife
+仮称 かしょう Working Name
+欠伸 あくび Yawn
+年齢 ねんれい Years Old
+活躍 かつやく Activities
+小遣い こづかい Allowance
+南極圏 なんきょくけん Antarctic ...
+原子爆弾 げんしばくだん Atomic Bomb
+控え ひかえ Backup
+渋い しぶい Bitter Flavor
+片言 かたこと Broken Jap...
+掲示板 けいじばん Bulletin B...
+免状 めんじょう Certificate
+言葉遣い ことばづかい Choice Of ...
+連邦 れんぽう Commonwealth
+御飯 ごはん Cooked Rice
+群集 ぐんしゅう Crowd
+水仙 すいせん Daffodil
+銃殺 じゅうさつ Death By S...
+慎重 しんちょう Discreet
+呼び鈴 よびりん Doorbell
+甲斐 かい Effect
+雇用 こよう Employment
+英語圏 えいごけん English Sp...
+免除 めんじょ Exemption
+眉毛 まゆげ Eyebrow
+邦人 ほうじん Fellow Cou...
+群れ むれ Flock
+足跡 あしあと Footprint
+片~ かた Fragment
+枠組み わくぐみ Frame
+枠 わく Frame
+充実 じゅうじつ Fullness
+岐阜 ぎふ Gifu
+棋院 きいん Go Hall
+銃 じゅう Gun
+群馬県 ぐんまけん Gunma Pref...
+跡継ぎ あとつぎ Heir
+仙人 せんにん Hermit
+本塁打 ほんるいだ Home Run
+謙譲語 けんじょうご Humble Jap...
+要項 ようこう Important ...
+項目 こうもく Item
+跳躍 ちょうやく Jump
+縄跳び なわとび Jump Rope
+片仮名 かたかな Katakana
+飛躍 ひやく Leaping
+免許 めんきょ License
+躍動 やくどう Lively Motion
+事項 じこう Matter
+謙虚 けんきょ Modesty
+募集中 ぼしゅうちゅう Now Hiring
+片手 かたて One Handed
+片道 かたみち One Way
+圏外 けんがい Out Of Range
+短銃 たんじゅう Pistol
+隆盛 りゅうせい Prosperity
+隆起 りゅうき Protuberance
+充電 じゅうでん Recharge
+勧告 かんこく Recommenda...
+拒否 きょひ Refusal
+稲作 いなさく Rice Culti...
+稲田 いなだ Rice Field
+稲 いね Rice Plant
+銃弾 じゅうだん Rifle Bullet
+躍進 やくしん Rush
+埼玉県 さいたまけん Saitama Pr...
+仙台 せんだい Sendai
+将棋 しょうぎ Shogi
+棋士 きし Shogi Player
+鈴 すず Small Bell
+勧誘 かんゆう Solicitation
+御免 ごめん Sorry
+鋼 はがね Steel
+製鋼 せいこう Steel Manu...
+鋼材 こうざい Steel Mate...
+補充 ほじゅう Supplement
+免税 めんぜい Tax Exemption
+狙う ねらう To Aim At
+応募する おうぼする To Apply For
+慎む つつしむ To Be Disc...
+埋める うめる To Bury
+譲る ゆずる To Concede
+崩れる くずれる To Crumble
+削除する さくじょする To Delete
+雇う やとう To Employ
+免れる まぬかれる To Escape ...
+解雇する かいこする To Fire So...
+跳ねる はねる To Jump
+躍る おどる To Leap
+御覧になる ごらんになる To Look
+弾く ひく To Play A ...
+掲載する けいさいする To Publish
+勧める すすめる To Recommend
+拒む こばむ To Refuse
+払い戻す はらいもどす To Repay
+奪う うばう To Rob
+取り戻す とりもどす To Take Back
+渋滞 じゅうたい Traffic Jam
+移譲 いじょう Transfer
+邦訳 ほうやく Translatio...
+甲 こう Turtle Shell
+壁 かべ Wall
+壁紙 かべがみ Wallpaper
+戻り道 もどりみち Way Back
+福祉 ふくし Welfare
+獲得 かくとく Acquisition
+戒告 かいこく Admonition
+顧問 こもん Advisor
+主唱 しゅしょう Advocate
+贈り物 おくりもの A Present
+雅致 がち Artistry
+宜しく よろしく Best Regards
+宜しくお願いします よろしくおねがいします Best Regards
+繁殖 はんしょく Breeding
+贈賄 ぞうわい Bribery
+捕獲 ほかく Capture
+合唱団 がっしょうだん Chorus
+薄情 はくじょう Cold Hearted
+衝突 しょうとつ Collision
+兼用 けんよう Combined Use
+内緒話 ないしょばなし Confidenti...
+新鋭 しんえい Cutting Edge
+洗剤 せんざい Detergent
+不孝 ふこう Disobedien...
+堀 ほり Ditch
+排水 はいすい Drainage
+優雅 ゆうが Elegance
+排出 はいしゅつ Emission
+排他 はいた Exclusion
+排除 はいじょ Exclusion
+排気 はいき Exhaust
+殿様 とのさま Feudal Lord
+孝行 こうこう Filial Piety
+頻度 ひんど Frequency
+頻発 ひんぱつ Frequency
+頻繁 ひんぱん Frequent
+頻りに しきりに Frequently
+逃亡者 とうぼうしゃ Fugitive
+俊才 しゅんさい Genius
+嬉しい うれしい Glad
+扱い あつかい Handling
+嬉々 きき Happily
+名誉 めいよ Honor
+栄誉 えいよ Honor
+内堀 うちぼり Inner Moat
+雅楽 ががく Japanese C...
+膝小僧 ひざこぞう Kneecap
+~殿 どの Lord
+繁茂 はんも Luxuriant ...
+褒賞 ほうしょう Medal
+薬剤 やくざい Medicine
+~剤 ざい Medicine
+回顧録 かいころく Memoirs
+隣人 りんじん Neighbor
+隣 となり Neighbor
+近隣 きんりん Neighborhood
+隣国 りんごく Neighborin...
+隣家 りんか Neighborin...
+沖縄県 おきなわけん Okinawa Pr...
+外堀 そとぼり Outer Moat
+過敏 かびん Oversensit...
+殿堂 でんどう Palace
+駐車場 ちゅうしゃじょう Parking Lot
+巡回 じゅんかい Patrol
+薬剤師 やくざいし Pharmacist
+巡礼 じゅんれい Pilgrimage
+柱 はしら Pillar
+巡査 じゅんさ Police
+携帯 けいたい Portable
+防腐剤 ぼうふざい Preservative
+繁栄 はんえい Prospering
+機敏 きびん Quick
+生殖 せいしょく Reproduction
+屋敷 やしき Residence
+駐在 ちゅうざい Residence
+駐日 ちゅうにち Resident O...
+褒美 ほうび Reward
+犠打 ぎだ Sacrifice Fly
+~房 ふさ Section
+敷金 しききん Security D...
+敏感 びんかん Sensitivity
+鋭い するどい Sharp
+鋭敏 えいびん Sharpness
+鋭利 えいり Sharpness
+衝撃 しょうげき Shock
+兼業 けんぎょう Side Business
+歌唱 かしょう Singing
+唱歌 しょうか Singing
+独唱 どくしょう Solo
+獲物 えもの Spoils
+駐留軍 ちゅうりゅうぐん Stationed ...
+座敷 ざしき Tatami Room
+電柱 でんちゅう Telephone ...
+薄い うすい Thin
+茂る しげる To Be Luxu...
+透ける すける To Be Tran...
+吹く ふく To Blow
+唱える となえる To Chant
+兼ねる かねる To Combine
+遠慮する えんりょする To Decline
+携わる たずさわる To Engage In
+避難する ひなんする To Evacuate
+駆ける かける To Gallop
+巡る めぐる To Go Around
+懸かる かかる To Hang
+傾ける かたむける To Lean
+逃す のがす To Let Go
+顧みる かえりみる To Look Ba...
+緩める ゆるめる To Loosen
+取り扱う とりあつかう To Manage
+殖える ふえる To Multiply
+称える たたえる To Praise
+褒める ほめる To Praise
+繰り返す くりかえす To Repeat
+選択する せんたくする To Select
+敷く しく To Spread Out
+戒める いましめる To Warn
+透明 とうめい Transparent
+警戒 けいかい Vigilance
+訓戒 くんかい Warning
+薄弱 はくじゃく Weakness
+一生懸命 いっしょうけんめい With All O...
+奥様 おくさま Your Wife
+投棄 とうき Abandonment
+航空母艦 こうくうぼかん Aircraft C...
+徹夜 てつや All Night
+凄い すごい Amazing
+鉱山 こうざん A Mine
+廃棄 はいき Annulment
+原爆 げんばく Atomic Bomb
+手の甲 てのこう Back Of On...
+根拠 こんきょ Basis
+軍艦 ぐんかん Battleship
+蜂 はち Bee
+偽装 ぎそう Camouflage
+炭素 たんそ Carbon
+祝儀 しゅうぎ Celebration
+儀式 ぎしき Ceremony
+更衣室 こういしつ Changing Room
+炭 すみ Charcoal
+拳骨 げんこつ Clenched Fist
+衣 ころも Clothes
+衣服 いふく Clothes
+石炭 せきたん Coal
+炭鉱 たんこう Coal Mine
+思い遣り おもいやり Consideration
+潜水 せんすい Diving
+雇用者 こようしゃ Employer
+凄絶 せいぜつ Extremely ...
+偽 にせ Fake
+~畑 はたけ Field
+田畑 たはた Field
+蛍 ほたる Firefly
+拳 こぶし Fist
+偽造 ぎぞう Forgery
+破片 はへん Fragment
+果樹 かじゅ Fruit Tree
+葬儀 そうぎ Funeral
+岐阜県 ぎふけん Gifu Prefe...
+故郷 こきょう Hometown
+郷里 きょうり Hometown
+蜜 みつ Honey
+蜂蜜 はちみつ Honey
+仁 じん Humanity
+仁義 じんぎ Humanity A...
+謙遜 けんそん Humble
+必至 ひっし Inevitable
+侵害 しんがい Infringement
+侵入 しんにゅう Intrusion
+侵攻 しんこう Invasion
+鉄鉱 てっこう Iron Ore
+躍り おどり Jumping
+包丁 ほうちょう Kitchen Knife
+嘘吐き うそつき Liar
+嘘 うそ Lie
+忠誠 ちゅうせい Loyalty
+礼儀 れいぎ Manners
+措置 そち Measures
+鉱物 こうぶつ Mineral
+鉱業 こうぎょう Mining Ind...
+艦隊 かんたい Naval Fleet
+原潜 げんせん Nuclear Su...
+鉱石 こうせき Ore
+証拠 しょうこ Physical E...
+拠点 きょてん Position
+瀬 せ Rapids
+生き甲斐 いきがい Reason For...
+渋々 しぶしぶ Reluctantly
+放棄 ほうき Resignation
+甲斐性 かいしょう Resourcefu...
+御手洗 おてあらい Restroom
+拳銃 けんじゅう Revolver
+廃墟 はいきょ Ruins
+瀬戸 せと Seto
+高瀬 たかせ Shallows
+渋谷 しぶや Shibuya
+焼酎 しょうちゅう Shochu
+包囲 ほうい Siege
+誠実 せいじつ Sincere
+誠意 せいい Sincerity
+誠 まこと Sincerity
+社会福祉 しゃかいふくし Social Wel...
+御免なさい ごめんなさい Sorry
+潜在意識 せんざいいしき Subconscious
+潜水艦 せんすいかん Submarine
+夏至 げし Summer Sol...
+至上 しじょう Supremacy
+早瀬 はやせ Swift Curr...
+徹底 てってい Thoroughness
+虎 とら Tiger
+控える ひかえる To Abstain
+至る いたる To Arrive At
+拠る よる To Be Due To
+辞儀する じぎする To Bow
+充電する じゅうでんする To Charge ...
+埋め合わせる うめあわせる To Compens...
+徹する てっする To Devote ...
+群れる むれる To Flock
+埋もれる うもれる To Get Buried
+伺う うかがう To Inquire
+侵す おかす To Invade
+偽る いつわる To Lie
+潜む ひそむ To Lurk
+帰郷する ききょうする To Return ...
+包む つつむ To Wrap
+樹皮 じゅひ Tree Bark
+植樹 しょくじゅ Tree Planting
+脱衣 だつい Undressing
+艦船 かんせん Warship
+麦畑 むぎばたけ Wheat Field
+冬至 とうじ Winter Sol...
+撤回 てっかい Withdrawal
+撤去 てっきょ Withdrawal
+撤兵 てっぺい Withdrawal...
+措辞 そじ Wording
+やり甲斐 やりがい Worth Doing
+挑戦 ちょうせん A Challenge
+一括 いっかつ All Together
+分析 ぶんせき Analysis
+解析 かいせき Analysis
+円弧 えんこ Arc
+到着 とうちゃく Arrival
+中軸 ちゅうじく Axis
+軸 じく Axis
+枢軸 すうじく Axle
+双眼鏡 そうがんきょう Binoculars
+糾弾 きゅうだん Blame
+中枢 ちゅうすう Center
+通信網 つうしんもう Communicat...
+紛糾 ふんきゅう Complication
+克服 こくふく Conquest
+克明 こくめい Detailed
+不孝者 ふこうもの Disobedien...
+円滑 えんかつ Effortless
+範 はん Example
+発掘 はっくつ Excavation
+模範 もはん Exemplific...
+範囲 はんい Extent
+親孝行 おやこうこう Filial Piety
+床 ゆか Floor
+焦点 しょうてん Focal Point
+斎場 さいじょう Funeral Hall
+ゴミ袋 ごみぶくろ Garbage Bag
+握力 あくりょく Handgrip
+握手 あくしゅ Handshake
+掛軸 かけじく Hanging Sc...
+肝炎 かんえん Hepatitis
+温床 おんしょう Hotbed
+暫く しばらく In A Littl...
+親不孝 おやふこう Lack Of Fi...
+潟 かた Lagoon
+芝 しば Lawn
+芝生 しばふ Lawn
+芝草 しばくさ Lawn
+肝臓 かんぞう Liver
+肝 きも Liver
+宿泊 しゅくはく Lodging
+喪失 そうしつ Loss
+喪 も Mourning
+福袋 ふくぶくろ Mystery Bag
+国柄 くにがら National C...
+網 あみ Net
+一泊 いっぱく One Night'...
+不透明 ふとうめい Opacity
+双 そう Pair
+括弧 かっこ Parentheses
+柄 がら Pattern
+人柄 ひとがら Personal C...
+哲学 てつがく Philosophy
+携帯電話 けいたいでんわ Portable P...
+挑発 ちょうはつ Provocation
+起床 きしょう Rising
+綱 つな Rope
+袋 ふくろ Sack
+犠飛 ぎひ Sacrifice Fly
+動揺 どうよう Shaking
+病床 びょうしょう Sickbed
+小柄 こがら Small Build
+堅い かたい Solid
+最新鋭 さいしんえい State Of T...
+書斎 しょさい Study
+総括 そうかつ Synthesis
+暫定 ざんてい Tentative
+干潟 ひがた Tidal Flat
+焦げる こげる To Be Burned
+吹き出す ふきだす To Begin T...
+荒れる あれる To Be Stormy
+透き通る すきとおる To Be Tran...
+吹き飛ばす ふきとばす To Blow Away
+吹き込む ふきこむ To Blow In
+挑む いどむ To Challen...
+掘る ほる To Dig
+薄める うすめる To Dilute
+紛らす まぎらす To Divert
+逃れる のがれる To Escape
+握る にぎる To Grasp
+揚げる あげる To Hoist
+逃がす にがす To Let Go
+駆け回る かけまわる To Run Around
+駆け込む かけこむ To Rush Into
+駆け出す かけだす To Rush Out
+揺る ゆる To Shake
+東芝 とうしば Toshiba
+滑る すべる To Slide
+泊まる とまる To Stay Th...
+括る くくる To Tie Up
+口笛を吹く くちぶえをふく To Whistle
+交通網 こうつうもう Traffic Ne...
+綱引き つなひき Tug Of War
+双子 ふたご Twins
+二泊 にはく Two Night'...
+統括 とうかつ Unification
+荒い あらい Wild
+横綱 よこづな Yokozuna
+空襲 くうしゅう Air Raid
+御札 おふだ Amulet
+球威 きゅうい A Pitcher'...
+原子炉 げんしろ Atomic Rea...
+襲撃 しゅうげき Attack
+権威 けんい Authority
+凄く すごく Awfully
+軍艦島 ぐんかんじま Battleship...
+高炉 こうろ Blast Furnace
+沼 ぬま Bog
+泥沼 どろぬま Bog
+決裂 けつれつ Breakdown
+明朗 めいろう Bright
+朗らか ほがらか Bright
+包み つつみ Bundle
+国籍 こくせき Citizenship
+慰謝料 いしゃりょう Compensation
+慰問 いもん Condolences
+慰謝 いしゃ Consolation
+貢献 こうけん Contribution
+逆襲 ぎゃくしゅう Counterattack
+珍味 ちんみ Delicacy
+旨い うまい Delicious
+壊滅 かいめつ Destruction
+絶滅 ぜつめつ Destruction
+露 つゆ Dew
+威厳 いげん Dignity
+懲罰 ちょうばつ Discipline
+暴露 ばくろ Disclosure
+幻滅 げんめつ Disillusio...
+距離 きょり Distance
+滅亡 めつぼう Downfall
+封筒 ふうとう Envelope
+露出 ろしゅつ Exposure
+撲滅 ぼくめつ Extermination
+偽物 にせもの Fake
+濡れ衣 ぬれぎぬ False Accu...
+戸籍 こせき Family Reg...
+垣 かき Fence
+封建主義 ほうけんしゅぎ Feudalism
+暖炉 だんろ Fireplace
+露骨 ろこつ Frank
+摩擦 まさつ Friction
+懇話 こんわ Friendly Chat
+懇親 こんしん Friendship
+柔らかい やわらかい Gentle
+柔和 にゅうわ Gentleness
+趣 おもむき Gist
+旨 むね Gist
+朗報 ろうほう Good News
+垣根 かきね Hedge
+満潮 まんちょう High Tide
+趣味 しゅみ Hobby
+即座 そくざ Immediate
+即~ そく Immediate
+即効 そっこう Immediate ...
+即興 そっきょう Improvisation
+誠に まことに Indeed
+懇談 こんだん Informal Talk
+伺い うかがい Inquiry
+即死 そくし Instant Death
+懇意 こんい Intimacy
+柔道 じゅうどう Judo
+琴 こと Koto
+牧場 ぼくじょう Livestock ...
+沼地 ぬまち Marshland
+沼田 ぬまた Marshy Ric...
+山岳 さんがく Mountains
+滋養 じよう Nourishment
+炉心 ろしん Nuclear Re...
+牧師 ぼくし Pastor
+牧草 ぼくそう Pasture
+牧野 ぼくや Pasture Land
+安泰 あんたい Peace
+岳 たけ Peak
+筒 つつ Pipe
+要旨 ようし Point
+論旨 ろんし Point Of A...
+印刷 いんさつ Printing
+珍 ちん Rare
+珍しい めずらしい Rare
+即日 そくじつ Same Day
+封 ふう Seal
+封書 ふうしょ Sealed Letter
+一斉 いっせい Simultaneous
+慰安 いあん Solace
+誰か だれか Someone
+分裂 ぶんれつ Split
+沈滞 ちんたい Stagnation
+石垣 いしがき Stone Wall
+露店 ろてん Street Stall
+相撲 すもう Sumo Wrest...
+奇襲 きしゅう Surprise A...
+沼沢 しょうたく Swamp
+潮流 ちょうりゅう Tide
+風潮 ふうちょう Tide
+潮 しお Tide
+襲う おそう To Attack
+埋まる うまる To Be Buried
+威張る いばる To Be Proud
+擦れる すれる To Chafe
+慰める なぐさめる To Console
+滅ぼす ほろぼす To Destroy
+群がる むらがる To Flock
+懲りる こりる To Learn B...
+潜る くぐる To Pass Th...
+刷る する To Print
+沈む しずむ To Sink
+沈める しずめる To Sink
+裂く さく To Tear
+開封 かいふう Unsealed L...
+誰 だれ Who
+浴衣 ゆかた Yukata
+挑戦者 ちょうせんしゃ A Challenger
+寝床 ねどこ Bed
+刃 は Blade
+金髪 きんぱつ Blonde
+本棚 ほんだな Bookcase
+両翼 りょうよく Both Wings
+缶ビ-ル かんび-る Can Beer
+缶コ-ヒ- かんこ-ひ- Canned Coffee
+大砲 たいほう Cannon
+携帯ストラップ けいたいすとらっぷ Cell Phone...
+紛らわしい まぎらわしい Confusing
+笠 かさ Conical Hat
+管制塔 かんせいとう Control Tower
+戸棚 とだな Cupboard
+恐竜 きょうりゅう Dinosaur
+竜 りゅう Dragon
+縁 ふち Edge
+刃物 はもの Edged Tool
+刃先 はさき Edge Of Blade
+エッフェル塔 えっふぇるとう Eiffel Tower
+空き缶 あきかん Empty Can
+絶叫 ぜっきょう Exclamation
+釣り つり Fishing
+四匹 よんひき Four Small...
+揚げ あげ Fried
+手袋 てぶくろ Gloves
+吉 きち Good Omen
+粒 つぶ Grain
+挨拶 あいさつ Greeting
+握り にぎり Grip
+髪 かみ Hair
+髪型 かみがた Hairstyle
+髪の毛 かみのけ Head Hair
+丘 おか Hill
+俺 おれ I
+斗 と Ladle
+左翼 さよく Left Wing
+縁談 えんだん Marriage P...
+寸法 すんぽう Measurement
+喪服 もふく Mourning D...
+謎 なぞ Mystery
+辛勝 しんしょう Narrow Vic...
+忍者 にんじゃ Ninja
+縁起 えんぎ Omen
+不吉 ふきつ Ominous
+一匹 いっぴき One Small ...
+寸前 すんぜん On The Brink
+泊まり とまり Overnight ...
+一翼 いちよく Part
+粒子 りゅうし Particle
+辛抱 しんぼう Patience
+桃 もも Peach
+桃色 ももいろ Peach Colour
+梨 なし Pear
+哲学者 てつがくしゃ Philosopher
+滑り台 すべりだい Playground...
+娯楽 ごらく Pleasure
+姫様 ひめさま Princess
+姫 ひめ Princess
+朱印 しゅいん Red Seal
+謎々 なぞなぞ Riddle
+右翼 うよく Right Wing
+侍 さむらい Samurai
+砂丘 さきゅう Sand Dune
+網戸 あみど Screen Door
+棚 たな Shelf
+~匹 ひき Small Anim...
+手堅い てがたい Solid
+香辛料 こうしんりょう Spices
+辛い からい Spicy
+芽 め Sprout
+嵐 あらし Storm
+荒波 あらなみ Stormy Seas
+寸 すん Sun
+涙 なみだ Tears
+感涙 かんるい Tears Of G...
+雷 かみなり Thunder
+落雷 らくらい Thunderbolt
+雷雨 らいう Thunderstorm
+缶 かん Tin Can
+紛れる まぎれる To Be Dive...
+焦る あせる To Be In A...
+揺れる ゆれる To Be Shaken
+焦がす こがす To Burn
+克服する こくふくする To Conquer
+忍ぶ しのぶ To Endure
+取り逃がす とりにがす To Fail To...
+釣る つる To Fish
+荒らす あらす To Lay Waste
+泊める とめる To Let Som...
+見逃す みのがす To Overlook
+竜巻 たつまき Tornado
+魚雷 ぎょらい Torpedo
+叱る しかる To Scold
+揺さぶる ゆさぶる To Shake
+揺する ゆする To Shake
+叫ぶ さけぶ To Shout
+塔 とう Tower
+バベルの塔 ばべるのとう Tower Of B...
+無縁 むえん Unrelated
+朱 あけ Vermillion
+俺ら おれら We
+俺たち おれたち We
+荒々しい あらあらしい Wild
+翼 つばさ Wing
+いつ頃 いつごろ About When
+警鐘 けいしょう Alarm Bell
+年頃 としごろ Approximat...
+頃 ころ Approximat...
+凶悪 きょうあく Atrocious
+細菌 さいきん Bacteria
+悪趣味 あくしゅみ Bad Habit
+鐘 かね Bell
+賭け かけ Betting
+舟 ふね Boat
+小舟 こぶね Boat
+嫁 よめ Bride
+電卓 でんたく Calculator
+暦 こよみ Calendar
+天井 てんじょう Ceiling
+霊園 れいえん Cemetery
+西暦 せいれき Christian Era
+曇り くもり Cloudiness
+全裸 ぜんら Completely...
+可也 かなり Considerably
+塾 じゅく Cram School
+塾生 じゅくせい Cram Schoo...
+呪い のろい Curse
+凶器 きょうき Dangerous ...
+食卓 しょくたく Dining Table
+排水溝 はいすいこう Drainage
+入籍 にゅうせき Entry In F...
+悪霊 あくりょう Evil Spirit
+疲労 ひろう Fatigue
+肌色 はだいろ Flesh Colored
+ばい菌 ばいきん Germ
+亡霊 ぼうれい Ghost
+陰気 いんき Gloom
+鳥肌 とりはだ Goosebumps
+溝 みぞ Gutter
+半裸 はんら Half Naked
+肌 はだ Human Skin
+加湿器 かしつき Humidifier
+狩人 かりゅうど Hunter
+狩り かり Hunting
+霊感 れいかん Inspiration
+黒潮 くろしお Japan Current
+近頃 ちかごろ Lately
+脚 あし Leg
+遠距離 えんきょり Long Distance
+塊 かたまり Lump
+旧暦 きゅうれき Lunisolar ...
+狂気 きょうき Madness
+手頃 てごろ Moderate
+湿気 しっけ Moisture
+裸 はだか Naked
+核分裂 かくぶんれつ Nuclear Fi...
+海溝 かいこう Ocean Trench
+若い頃 わかいころ One's Youth
+小包 こづつみ Package
+磨き みがき Polish
+義塾 ぎじゅく Private Sc...
+眺望 ちょうぼう Prospect
+滝川 たきがわ Rapids
+先頃 さきごろ Recently
+この頃 このごろ Recently
+硬直 こうちょく Rigidity
+元凶 げんきょう Ringleader
+脚本 きゃくほん Script
+陰 かげ Shadow
+近距離 きんきょり Short Dist...
+短距離 たんきょり Short Dist...
+一斉に いっせいに Simultaneo...
+魂 たましい Soul
+矛 ほこ Spear
+~魂 こん Spirit
+殺菌 さっきん Sterilization
+無菌 むきん Sterilized
+硬い かたい Stiff
+卓 たく Table
+卓球 たっきゅう Table Tennis
+肌触り はだざわり The Touch Of
+潮時 しおどき Tidal Hour
+襲撃する しゅうげきする To Attack
+澄む すむ To Become ...
+湿る しめる To Be Damp
+滅びる ほろびる To Be Dest...
+疲れる つかれる To Be Exha...
+呪う のろう To Curse
+稼ぐ かせぐ To Earn In...
+翔る かける To Fly
+賭ける かける To Gamble
+曇る くもる To Get Cloudy
+狂う くるう To Go Mad
+嫁ぐ とつぐ To Marry
+磨く みがく To Polish
+擦る する To Rub
+眺める ながめる To Stare At
+引き裂く ひきさく To Tear Up
+滝 たき Waterfall
+井戸 いど Well
+湿地 しっち Wetlands
+包み紙 つつみがみ Wrapping P...
+瞬き まばたき A Blink
+気泡 きほう Air Bubble
+錬金術 れんきんじゅつ Alchemy
+瞬間 しゅんかん An Instant
+一瞬 いっしゅん An Instant
+歳入 さいにゅう Annual Rev...
+癖 くせ Bad Habit
+万歳 ばんざい Banzai
+零下 れいか Below Zero
+魔術 まじゅつ Black Magic
+鈍器 どんき Blunt Weapon
+寮生 りょうせい Boarding S...
+書架 しょか Bookshelf
+泡 あわ Bubble
+平穏 へいおん Calm
+穏やか おだやか Calm
+紛れもない まぎれもない Certain
+椅子 いす Chair
+租界 そかい Concession
+幽閉 ゆうへい Confinement
+架設 かせつ Construction
+涼しい すずしい Cool
+涼風 りょうふう Cool Breeze
+木綿 もめん Cotton
+綿 わた Cotton
+綿布 めんぷ Cotton Cloth
+揚げ出し あげだし Deep Fried
+魔 ま Devil
+悪魔 あくま Devil
+寮 りょう Dormitory
+鈍い にぶい Dull
+素粒子 そりゅうし Elementary...
+皇帝 こうてい Emperor
+帝国 ていこく Empire
+歳暮 せいぼ End Of The...
+誇大 こだい Exaggeration
+誇張 こちょう Exaggeration
+眼孔 がんこう Eye Socket
+口癖 くちぐせ Favorite P...
+水泡 すいほう Foam
+発泡 はっぽう Foaming
+幽霊 ゆうれい Ghost
+囲碁 いご Go
+碁 ご Go
+碁盤 ごばん Go Board
+碁会所 ごかいしょ Go Parlor
+穂 ほ Head Of Plant
+稲穂 いなほ Head Of Rice
+病棟 びょうとう Hospital Ward
+吾輩 わがはい I
+黙殺 もくさつ Ignoring
+焦り あせり Impatience
+帝政 ていせい Imperial G...
+墨 すみ Ink
+墨絵 すみえ Ink Painting
+帝 みかど Japanese E...
+鍵 かぎ Key
+斬殺 ざんさつ Killing Wi...
+魔法 まほう Magic
+庄園 しょうえん Manor
+零時 れいじ Midnight
+瞬時 しゅんじ Moment
+寸暇 すんか Moment's L...
+猿 さる Monkey
+猿真似 さるまね Monkey See...
+辛子 からし Mustard
+斬新 ざんしん Novel Idea
+お盆 おぼん Obon
+阻止 そし Obstruction
+阻害 そがい Obstruction
+お握り おにぎり Onigiri
+鳩 はと Pigeon
+丁寧 ていねい Polite
+穏当 おんとう Proper
+瞳孔 どうこう Pupil
+瞳 ひとみ Pupil
+寧ろ むしろ Rather
+清涼 せいりょう Refreshing
+土俵 どひょう Ring
+俵 たわら Sack
+叫び声 さけびごえ Shout
+叫び さけび Shout
+沈黙 ちんもく Silence
+辛口 からくち Spicy Taste
+新芽 しんめ Sprout
+担架 たんか Stretcher
+入れ墨 いれずみ Tattoo
+租税 そぜい Taxes
+鍛錬 たんれん Tempering
+鈍感 どんかん Thickheade...
+歳月 さいげつ Time
+誇る ほこる To Be Prou...
+瞬く またたく To Blink
+斬る きる To Cut Down
+鍛える きたえる To Forge
+揺らぐ ゆらぐ To Shake
+黙る だまる To Shut Up
+零す こぼす To Spill
+阻む はばむ To Thwart
+二十歳 はたち Twenty Yea...
+不穏 ふおん Unrest
+白菊 しらぎく White Chry...
+魔女 まじょ Witch
+~歳 さい Years Old
+零 れい Zero
+零点 れいてん Zero Points
+補佐 ほさ Aid
+裸足 はだし Barefoot
+胴体 どうたい Body
+挿絵 さしえ Book Illus...
+箸 はし Chopsticks
+明瞭 めいりょう Clarity
+粘土 ねんど Clay
+崖 がけ Cliff
+粘着 ねんちゃく Cohesion
+大佐 たいさ Colonel
+川柳 せんりゅう Comic Haiku
+炊事 すいじ Cooking
+自炊 じすい Cooking Fo...
+芯 しん Core
+~畳 じょう Counter Fo...
+布巾 ふきん Dish Cloth
+門扉 もんぴ Doors Of A...
+水滴 すいてき Drop Of Water
+雑巾 ぞうきん Dust Cloth
+稼ぎ かせぎ Earnings
+扇風機 せんぷうき Electric Fan
+伊達 だて Elegance
+挿話 そうわ Episode
+墜落 ついらく Falling
+霧 きり Fog
+扇子 せんす Folding Fan
+詐欺 さぎ Fraud
+扉 とびら Front Door
+お婆さん おばあさん Grandmother
+掌握 しょうあく Grasping
+帽子 ぼうし Hat
+~狩り かり Hunting
+挿入 そうにゅう Insertion
+点滴 てんてき Intravenou...
+伊勢 いせ Ise
+塊魂 かたまりだましい Katamari D...
+欠如 けつじょ Lack
+中佐 ちゅうさ Lieutenant...
+躍如 やくじょ Lifelike
+唇 くちびる Lips
+愛憎 あいぞう Love And Hate
+下唇 したくちびる Lower Lip
+少佐 しょうさ Major
+化粧 けしょう Makeup
+詐称 さしょう Misreprese...
+貨幣 かへい Money
+朝霧 あさぎり Morning Fog
+土塀 どべい Mud Wall
+老婆 ろうば Old Woman
+掌 てのひら Palm Of On...
+紙幣 しへい Paper Money
+可哀想 かわいそう Pitiful
+哀れ あわれ Pity
+矛先 ほこさき Point Of S...
+粉砕 ふんさい Pulverization
+虹 にじ Rainbow
+虹色 にじいろ Rainbow Co...
+花柳 かりゅう Red Light ...
+爽やか さわやか Refreshing
+痛恨 つうこん Regret
+休憩 きゅうけい Rest
+炊飯器 すいはんき Rice Cooker
+砕石 さいせき Rubble
+尺 しゃく Shaku
+撃墜 げきつい Shooting Down
+悲哀 ひあい Sorrow
+割り箸 わりばし Splittable...
+粘々 ねばねば Stickiness
+突如 とつじょ Suddenly
+詐取 さしゅ Swindle
+巻尺 まきじゃく Tape Measure
+畳 たたみ Tatami Mat
+お陰で おかげで Thanks To
+黒い霧 くろいきり Thick Fog
+疲れ つかれ Tiredness
+粘る ねばる To Be Sticky
+歯を磨く はをみがく To Brush O...
+澄ます すます To Clear
+炊く たく To Cook
+欺く あざむく To Deceive
+滴る したたる To Drip
+扇ぐ あおぐ To Fan
+憎む にくむ To Hate
+恨む うらむ To Hold A ...
+湿らせる しめらせる To Moisten
+憩う いこう To Rest
+胴 どう Torso
+砕く くだく To Smash
+車掌 しゃしょう Train Cond...
+上唇 うわくちびる Upper Lip
+眺め ながめ View
+塀 へい Wall
+柳 やなぎ Willow
+お嬢さん おじょうさん Young Lady
+遂行 すいこう Accomplish...
+癖に くせに And Yet
+麻酔 ますい Anesthesia
+畜産 ちくさん Animal Hus...
+塗布 とふ Application
+脇 わき Armpit
+未遂 みすい Attempt
+後ろ盾 うしろだて Backing
+盆踊り ぼんおどり Bon Festiv...
+鉢 はち Bowl
+火鉢 ひばち Brazier
+光輝 こうき Brightness
+迷彩 めいさい Camouflage
+麻 あさ Cannabis
+騎兵 きへい Cavalry
+賢い かしこい Clever
+塗装 とそう Coating
+色彩 しきさい Colour
+返り咲き かえりざき Comeback
+矛盾 むじゅん Contradiction
+隙間 すきま Crevice
+隙 すき Crevice
+培養 ばいよう Cultivation
+畜生 ちくしょう Damn It
+踊り おどり Dance
+踊り場 おどりば Dance Hall
+暗闇 くらやみ Darkness
+闇 やみ Darkness
+餓死 がし Death From...
+斜め ななめ Diagonal
+恥辱 ちじょく Disgrace
+屈辱 くつじょく Disgrace
+家畜 かちく Domestic A...
+耐久性 たいきゅうせい Durability
+土俵際 どひょうぎわ Edge Of A ...
+尽力 じんりょく Efforts
+電灯 でんとう Electric L...
+備蓄 びちく Emergency ...
+忍耐 にんたい Endurance
+耐火 たいか Fireproof
+紛れ まぐれ Fluke
+霜 しも Frost
+憶測 おくそく Guess
+収穫 しゅうかく Harvest
+首班 しゅはん Head
+鉢巻 はちまき Headband
+耐熱 たいねつ Heat Resis...
+大麻 たいま Hemp
+殴打 おうだ Hit
+騎手 きしゅ Horse Rider
+騎馬 きば Horse Riding
+帝国主義 ていこくしゅぎ Imperialism
+斜体 しゃたい Italics
+騎士 きし Knight
+灯り あかり Lamp
+遅咲き おそざき Late Flower
+溶岩 ようがん Lava
+脇見 わきみ Looking Away
+輝度 きど Luminance
+メモ帳 めもちょう Memo Book
+記憶 きおく Memory
+蚊 か Mosquito
+蚊帳 かや Mosquito Net
+手帳 てちょう Notebook
+油彩 ゆさい Oil Painting
+塗料 とりょう Paints
+迅速 じんそく Quick
+記帳 きちょう Registry
+後悔 こうかい Regret
+悔しい くやしい Regrettable
+貯蓄 ちょちく Savings
+盾 たて Shield
+斜面 しゃめん Slant
+蛇 へび Snake
+班 はん Squad
+班長 はんちょう Squad Leader
+飢餓 きが Starvation
+街灯 がいとう Streetlight
+脇役 わきやく Supporting...
+電話帳 でんわちょう Telephone ...
+脅し おどし Threat
+脅迫 きょうはく Threat
+蓄える たくわえる To Amass
+尽きる つきる To Be Exha...
+咲く さく To Bloom
+彩る いろどる To Colour S...
+涼む すずむ To Cool On...
+培う つちかう To Cultivate
+踊る おどる To Dance
+耐える たえる To Endure
+辱める はずかしめる To Humiliate
+溶かす とかす To Melt So...
+塗る ぬる To Paint
+貼る はる To Paste
+殴る なぐる To Punch
+輝く かがやく To Shine
+飢える うえる To Starve
+理不尽 りふじん Unreasonable
+無闇に むやみに Unreasonably
+水彩画 すいさいが Watercolour...
+水溶性 すいようせい Water Soluble
+車椅子 くるまいす Wheelchair
+賢明 けんめい Wise
+賢人 けんじん Wise Man
+魔法使い まほうつかい Wizard
+抽象 ちゅうしょう Abstract
+概算 がいさん Approximation
+煮物 にもの Boiled Foods
+仏壇 ぶつだん Buddhist A...
+珠算 しゅざん Calculatio...
+転覆 てんぷく Capsizing
+陶芸 とうげい Ceramic Art
+駒 こま Chess Piece
+俗語 ぞくご Colloquialism
+征服 せいふく Conquest
+陰謀 いんぼう Conspiracy
+鶴 つる Crane
+皇太子妃 こうたいしひ Crown Prin...
+貨幣価値 かへいかち Currency V...
+衰退 すいたい Decline
+拘置 こうち Detention
+劣化 れっか Deterioration
+不明瞭 ふめいりょう Dimness
+侵食 しんしょく Erosion
+隔月 かくげつ Every Othe...
+隔週 かくしゅう Every Othe...
+遠征 えんせい Expedition
+抽出 ちゅうしゅつ Extraction
+淡い あわい Faint
+団扇 うちわ Fan
+花壇 かだん Flower Bed
+扇 おうぎ Folding Fan
+民俗 みんぞく Folk Customs
+基礎 きそ Foundation
+礎 いしずえ Foundation
+淡水 たんすい Fresh Water
+概念 がいねん General Idea
+お婆ちゃん おばあちゃん Granny
+恨み うらみ Grudge
+憎い にくい Hateful
+憎らしい にくらしい Hateful
+憎しみ にくしみ Hatred
+劣悪 れつあく Inferiority
+劣等感 れっとうかん Inferiorit...
+大概 たいがい In General
+勘 かん Intuition
+隔離 かくり Isolation
+抽選 ちゅうせん Lottery
+覆面 ふくめん Mask
+唯物論 ゆいぶつろん Materialism
+勘違い かんちがい Misunderst...
+草刈り くさかり Mowing
+桑畑 くわばたけ Mulberry F...
+桑原 くわばら Mulberry F...
+桑 くわ Mulberry Tree
+雑煮 ぞうに New Year's...
+尼 あま Nun
+尼僧 にそう Nun
+唯一 ゆいつ Only
+概要 がいよう Outline
+恐慌 きょうこう Panic
+勘弁 かんべん Pardon
+真珠 しんじゅ Pearl
+浸透 しんとう Permeation
+壇 だん Podium
+陶器 とうき Pottery
+妃 ひ Princess
+利潤 りじゅん Profit
+紫 むらさき Purple
+王妃 おうひ Queen
+無謀 むぼう Reckless
+開拓 かいたく Reclamation
+推奨 すいしょう Recommenda...
+花柳界 かりゅうかい Red Light ...
+覚悟 かくご Resolution
+憩い いこい Rest
+休憩所 きゅうけいじょ Rest Area
+数珠 じゅず Rosary
+奨学金 しょうがくきん Scholarship
+老衰 ろうすい Senility
+俗 ぞく Slang
+唯 ただ Solely
+間隔 かんかく Space
+割り勘 わりかん Splitting ...
+粘り ねばり Stickiness
+気概 きがい Strong Spirit
+浸水 しんすい Submersion
+詐欺師 さぎし Swindler
+勘案 かんあん Taking Int...
+お疲れ様 おつかれさま Thank You
+劣る おとる To Be Infe...
+潤う うるおう To Be Moist
+覆る くつがえる To Be Over...
+浸る ひたる To Be Soak...
+煮る にる To Boil
+謀る はかる To Conspire
+衰える おとろえる To Decline
+挿入する そうにゅうする To Insert
+隔てる へだてる To Isolate
+刈り取る かりとる To Mow
+慌てる あわてる To Panic
+哀れむ あわれむ To Pity
+刈る かる To Prune
+悟る さとる To Realize
+紫外線 しがいせん Ultraviole...
+一概に いちがいに Unconditio...
+剛健 ごうけん Vigor
+紫色 むらさきいろ Violet
+誓約 せいやく Vow
+誓い ちかい Vow
+陛下 へいか Your Majesty
+帳簿 ちょうぼ Account Book
+巧い うまい Adept
+鰐 わに Alligator
+古墳 こふん Ancient Tomb
+伯母 おば Aunt
+銘柄 めいがら Brand
+偶然 ぐうぜん By Chance
+搬出 はんしゅつ Carry Out
+洞 ほら Cave
+洞穴 どうけつ Cave
+翻意 ほんい Change One...
+伯 はく Chief
+風邪 かぜ Cold
+彩り いろどり Colouring
+漫才 まんざい Comic Dial...
+訂正 ていせい Correction
+~把 わ Counter Fo...
+法廷 ほうてい Courtroom
+蟹 かに Crab
+水晶 すいしょう Crystal
+堰 せき Dam
+感銘 かんめい Deep Impre...
+悪賢い わるがしこい Devious
+漂流 ひょうりゅう Drifting
+漂着 ひょうちゃく Drifting A...
+銘々 めいめい Each
+堤防 ていぼう Embankment
+堤 つつみ Embankment
+興奮 こうふん Excitement
+殴り合い なぐりあい Fistfight
+無駄 むだ Futility
+下駄 げた Geta
+鬱陶しい うっとうしい Gloomy
+鬱気 うっき Gloomy
+把握 はあく Grasp
+墳墓 ふんぼ Grave
+麻布 あさぬの Hemp Cloth
+邪魔 じゃま Hindrance
+空洞 くうどう Hollow
+飢え うえ Hunger
+免疫 めんえき Immunity
+宮廷 きゅうてい Imperial C...
+疫病 えきびょう Infectious...
+巧妙 こうみょう Ingenious
+無邪気 むじゃき Innocence
+皇后 こうごう Japanese E...
+液晶 えきしょう Liquid Cry...
+壮大 そうだい Magnificent
+漫画 まんが Manga
+連峰 れんぽう Mountain R...
+駄目 だめ Not Good
+偶に たまに Occasionally
+生涯 しょうがい One's Life...
+軌道 きどう Orbit
+仰々しい ぎょうぎょうしい Pompous
+壮年 そうねん Prime Of Life
+表彰 ひょうしょう Public Ack...
+検疫 けんえき Quarantine
+諮問 しもん Question
+輝き かがやき Radiance
+殴り込み なぐりこみ Raid
+名簿 めいぼ Register O...
+信仰 しんこう Religious ...
+~亭 てい Restaurant
+改訂版 かいていばん Revised Ed...
+壮行 そうこう Rousing
+配偶者 はいぐうしゃ Spouse
+奮起 ふんき Stirring
+唐突 とうとつ Sudden
+峰 みね Summit
+仰天 ぎょうてん Taken Aback
+軌跡 きせき Tire Track
+遂げる とげる To Accomplish
+灯る ともる To Burn
+諮る はかる To Consult...
+漂う ただよう To Drift
+尽くす つくす To Exhaust
+翻る ひるがえる To Flip
+仰ぐ あおぐ To Look Up At
+溶ける とける To Melt
+悔やむ くやむ To Regret
+脅す おどす To Threaten
+翻訳 ほんやく Translation
+運搬 うんぱん Transport
+搬送 はんそう Transporta...
+伯父 おじ Uncle
+邪 よこしま Wicked
+淀川 よどがわ Yodogawa
+慈愛 じあい Affection
+耕地 こうち Arable Land
+喚起 かんき Awaken
+浦 うら Bay
+沸点 ふってん Boiling Point
+瓶 びん Bottle
+瓶詰 びんづめ Bottling
+勘定 かんじょう Calculation
+慈善 じぜん Charity
+貞節 ていせつ Chastity
+貞操 ていそう Chastity
+襟 えり Collar
+慈悲 じひ Compassion
+隅 すみ Corner
+片隅 かたすみ Corner
+耕作 こうさく Cultivation
+乾燥 かんそう Dehydration
+洗濯粉 せんたくこ Detergent
+郡 ぐん District
+洗濯屋 せんたくや Dry Cleaners
+枯渇 こかつ Drying Up
+軒 のき Eaves
+愛媛県 えひめけん Ehime Pref...
+空き瓶 あきびん Empty Bottle
+玄関 げんかん Entranceway
+釈明 しゃくめい Explanation
+解釈 かいしゃく Explanation
+農耕 のうこう Farming
+脂肪 しぼう Fat
+柔軟 じゅうなん Flexible
+四隅 よすみ Four Corners
+偉い えらい Great
+偉大 いだい Greatness
+偉人 いじん Great Person
+邸内 ていない Grounds
+軟禁 なんきん House Arrest
+~軒 けん House Counter
+慌ただしい あわただしい Hurried
+焦燥 しょうそう Impatience
+蓮花 れんげ Lotus Flower
+邸宅 ていたく Mansion
+潤い うるおい Moisture
+火炎瓶 かえんびん Molotov Co...
+塚 つか Mound
+会釈 えしゃく Nod
+隅々 すみずみ Nooks
+注釈 ちゅうしゃく Notes
+公邸 こうてい Official R...
+官邸 かんてい Official R...
+肯定 こうてい Positive
+私邸 してい Private Re...
+樹脂 じゅし Resin
+蓮 はす Sacred Lotus
+苗 なえ Seedling
+~隻 せき Ship Counter
+皮膚 ひふ Skin
+聡い さとい Smart
+郊外 こうがい Suburb
+近郊 きんこう Suburbs
+山頂 さんちょう Summit
+召喚 しょうかん Summon
+苗字 みょうじ Surname
+世界恐慌 せかいきょうこう The Great ...
+沸く わく To Boil
+覆う おおう To Cover
+頂く いただく To Humbly ...
+挟む はさむ To Put Bet...
+召す めす To Respect...
+喚く わめく To Shout
+浸す ひたす To Soak
+耕す たがやす To Till
+洗濯する せんたくする To Wash
+枯れる かれる To Wither
+不貞 ふてい Unfaithful
+玄米 げんまい Unpolished...
+花瓶 かびん Vase
+渦中 かちゅう Vortex
+洗濯機 せんたくき Washing Ma...
+渦 うず Whirlpool
+聡明 そうめい Wisdom
+殊勝 しゅしょう Admirable
+不倫 ふりん Adultery
+没後 ぼつご After Death
+覇気 はき Ambition
+出没 しゅつぼつ Appearing ...
+擁立 ようりつ Backing
+お風呂 おふろ Bath
+封鎖 ふうさ Blockade
+陥没 かんぼつ Cave In
+鎖 くさり Chain
+連鎖 れんさ Chain
+突貫 とっかん Charge
+慢性 まんせい Chronic
+陳腐 ちんぷ Cliched
+閉鎖 へいさ Closing
+冷遇 れいぐう Cold Recep...
+制覇 せいは Conquest
+恒常 こうじょう Constant
+欠陥 けっかん Defect
+遭難 そうなん Disaster
+没 ぼつ Discard
+抱擁 ほうよう Embrace
+遭遇 そうぐう Encounter
+我慢 がまん Endurance
+境遇 きょうぐう Environment
+噴火 ふんか Eruption
+恒例 こうれい Establishe...
+倫理 りんり Ethics
+陳列 ちんれつ Exhibition
+膨張 ぼうちょう Expansion
+隼 はやぶさ Falcon
+陥落 かんらく Fall
+没収 ぼっしゅう Forfeiture
+覇権 はけん Hegemony
+膨大 ぼうだい Huge
+猟師 りょうし Hunter
+猟 りょう Hunting
+狩猟 しゅりょう Hunting
+猟犬 りょうけん Hunting Dog
+没頭 ぼっとう Immersing ...
+埋没 まいぼつ Implantation
+必須 ひっす Indispensable
+惰性 だせい Inertia
+孤独 こどく Isolation
+孤立 こりつ Isolation
+噴射 ふんしゃ Jet
+戦没 せんぼつ Killed In ...
+怠惰 たいだ Laziness
+偏狭 へんきょう Narrow Minded
+鎖国 さこく National I...
+怠慢 たいまん Negligence
+一貫 いっかん One Piece ...
+秩序 ちつじょ Order
+発祥 はっしょう Origin
+孤児 こじ Orphan
+芳香 ほうこう Perfume
+恒久 こうきゅう Permanent
+貫徹 かんてつ Persistence
+陳情 ちんじょう Petition
+貫通 かんつう Pierce
+密猟 みつりょう Poaching
+優遇 ゆうぐう Preferenti...
+偏見 へんけん Prejudice
+自慢 じまん Pride
+擁護 ようご Protection
+食糧 しょくりょう Provisions
+颯と さっと Quickly
+賠償 ばいしょう Reparations
+没落 ぼつらく Ruin
+不祥事 ふしょうじ Scandal
+沈没 ちんぼつ Sinking
+緩慢 かんまん Slow
+孤島 ことう Solitary I...
+特殊 とくしゅ Special
+噴出 ふんしゅつ Spewing
+恒星 こうせい Star
+陳述 ちんじゅつ Statement
+連覇 れんぱ Successive...
+示唆 しさ Suggestion
+日没 にちぼつ Sunset
+覇者 はしゃ Supreme Ruler
+~貫 かん Sushi Piec...
+芳しい かんばしい Sweet
+茨 いばら Thorn
+偏る かたよる To Be Biased
+怠る おこたる To Be Negl...
+陥る おちいる To Cave In
+貫く つらぬく To Go Through
+擁する ようする To Have
+遭う あう To Meet
+膨れる ふくれる To Swell
+処遇 しょぐう Treatment
+待遇 たいぐう Treatment
+偏食 へんしょく Unbalanced...
+犠牲 ぎせい Victim
+噴煙 ふんえん Volcanic S...
+鰐蟹 わにかに Wani Kani
+噴水 ふんすい Water Foun...
+虐待 ぎゃくたい Abuse
+軒並 のきなみ Across The...
+稿料 こうりょう Advance Fo...
+披露 ひろう Announcement
+随時 ずいじ At Any Time
+虐殺 ぎゃくさつ Atrocity
+真鯉 まごい Black Carp
+搭乗 とうじょう Boarding
+競艇 きょうてい Boat Race
+沸騰 ふっとう Boiling
+同胞 どうほう Brethren
+錦 にしき Brocade
+搭載 とうさい Built In
+鯉 こい Carp
+細胞 さいぼう Cell
+浄水 じょうすい Clean Water
+襟元 えりもと Collar
+錦鯉 にしきごい Coloured Carp
+総帥 そうすい Commander
+頂 いただき Crown
+残虐 ざんぎゃく Cruelty
+惨敗 ざんぱい Crushing F...
+胡瓜 きゅうり Cucumber
+曙 あけぼの Dawn
+枯れ木 かれき Dead Tree
+繊細 せんさい Delicate
+皮膚科 ひふか Dermatology
+経緯 けいい Details
+丹念 たんねん Diligent
+惨事 さんじ Disaster
+悲惨 ひさん Disastrous
+惨状 さんじょう Disastrous...
+啓発 けいはつ Enlightenment
+啓蒙 けいもう Enlightenment
+随筆 ずいひつ Essays
+随所 ずいしょ Everywhere
+過剰 かじょう Excess
+玄人 くろうと Expert
+脂身 あぶらみ Fat Meat
+繊維 せんい Fiber
+追随 ついずい Follow
+元帥 げんすい General Of...
+徐行 じょこう Going Slowly
+徐々 じょじょ Gradually
+本舗 ほんぽ Head Office
+葵 あおい Hollyhock
+頂戴 ちょうだい Humbly Rec...
+緯度 いど Latitude
+蓮根 れんこん Lotus Root
+原稿 げんこう Manuscript
+瓜 うり Melon
+艦艇 かんてい Military V...
+惨め みじめ Miserable
+蒙古 もうこ Mongolia
+北緯 ほくい Northern L...
+草稿 そうこう Notes
+苗床 なえどこ Nursery
+緯線 いせん Parallel
+舗装 ほそう Pavement
+清浄 せいじょう Pure
+浄土 じょうど Pure Land
+浄化 じょうか Purification
+平壌 へいじょう Pyongyang
+批准 ひじゅん Ratification
+緋鯉 ひごい Red Carp
+余剰 よじょう Redundant
+啓示 けいじ Revelation
+襟巻き えりまき Scarf
+苗木 なえぎ Seedling
+自浄 じじょう Self Purif...
+舗 ほ Shop
+店舗 てんぽ Shop
+胡座 あぐら Sitting Cr...
+皮膚病 ひふびょう Skin Disease
+土壌 どじょう Soil
+南緯 なんい Southern L...
+胞子 ほうし Spore
+投稿 とうこう Submission
+高騰 こうとう Sudden Pri...
+暴騰 ぼうとう Sudden Rise
+急騰 きゅうとう Sudden Rise
+統帥 とうすい Supreme Co...
+剰余金 じょうよきん Surplus
+合繊 ごうせん Synthetic ...
+化繊 かせん Synthetic ...
+教諭 きょうゆ Teacher
+諭す さとす To Admonish
+沸かす わかす To Boil
+挟まる はさまる To Get Bet...
+据える すえる To Install
+寛容 かんよう Tolerance
+寛大 かんだい Tolerance
+枯らす からす To Let Dry
+肯く うなずく To Nod
+虐げる しいたげる To Oppress
+寛ぐ くつろぐ To Relax
+召し上がる めしあがる To Respect...
+暴虐 ぼうぎゃく Tyranny
+不浄 ふじょう Uncleanliness
+随分 ずいぶん Very
+洗浄 せんじょう Washing
+西瓜 すいか Watermelon
+渦巻き うずまき Whirlpool
+丹誠 たんせい Working Ea...
+顕在 けんざい Actual
+逸話 いつわ Anecdote
+杏 あんず Apricot
+兵糧 ひょうろう Army Provi...
+自叙伝 じじょでん Autobiography
+哺乳瓶 ほにゅうびん Baby Bottle
+風呂場 ふろば Bathroom
+偏り かたより Bias
+空欄 くうらん Blank Space
+盆栽 ぼんさい Bonsai
+栞 しおり Bookmark
+和尚 おしょう Buddhist H...
+欄 らん Column
+叙勲 じょくん Conferring...
+紋章 もんしょう Crest
+王冠 おうかん Crown
+酷い ひどい Cruel
+冷酷 れいこく Cruel
+残酷 ざんこく Cruelty
+栽培 さいばい Cultivation
+勲章 くんしょう Decoration
+痴呆 ちほう Dementia
+過疎 かそ Depopulation
+叙述 じょじゅつ Description
+逸脱 いつだつ Deviation
+露顕 ろけん Discovery
+疾患 しっかん Disease
+無秩序 むちつじょ Disorder
+叙事詩 じょじし Epic Poem
+殊に ことに Especially
+必須条件 ひっすじょうけん Essential ...
+疎外 そがい Estrangement
+疎遠 そえん Estrangement
+悠久 ゆうきゅう Eternity
+倫理的 りんりてき Ethical
+倫理学 りんりがく Ethics
+疎開 そかい Evacuation
+秀逸 しゅういつ Excellence
+応酬 おうしゅう Exchange
+酷使 こくし Exploitation
+露呈 ろてい Exposure
+紋 もん Family Crest
+指紋 しもん Fingerprint
+民謡 みんよう Folk Song
+阿呆 あほう Fool
+愚 ぐ Foolish
+尚 なお Furthermore
+疾風 しっぷう Gale
+逸品 いっぴん Gem
+庶務 しょむ General Af...
+銀杏 いちょう Ginkgo
+厳粛 げんしゅく Gravity
+欄干 らんかん Guardrail
+高尚 こうしょう High
+別荘 べっそう Holiday House
+顕彰 けんしょう Honoring
+茨城県 いばらきけん Ibaraki Pr...
+愚痴 ぐち Idle Compl...
+疾病 しっぺい Illness
+酷暑 こくしょ Intense Heat
+誘拐 ゆうかい Kidnapping
+悠長 ゆうちょう Leisurely
+叙情 じょじょう Lyricism
+欄外 らんがい Margin
+庶民 しょみん Masses
+殊勲 しゅくん Meritoriou...
+新陳代謝 しんちんたいしゃ Metabolism
+痴漢 ちかん Molester
+最優遇 さいゆうぐう Most Favor...
+山荘 さんそう Mountain R...
+疎通 そつう Mutual Und...
+童謡 どうよう Nursery Rhyme
+哺育 ほいく Nursing
+孤児院 こじいん Orphanage
+実践 じっせん Practice
+時期尚早 じきしょうそう Premature
+贈呈 ぞうてい Presentation
+進呈 しんてい Presentation
+傲慢 ごうまん Pride
+風呂屋 ふろや Public Bat...
+悠々 ゆうゆう Quiet
+顕著 けんちょ Remarkable
+賠償金 ばいしょうきん Reparations
+酷似 こくじ Resemblance
+報酬 ほうしゅう Reward
+波紋 はもん Ripple
+自粛 じしゅく Self Control
+酷 こく Severe
+酷評 こくひょう Severe Cri...
+過酷 かこく Severity
+陳列室 ちんれつしつ Showroom
+鎌 かま Sickle
+静粛 せいしゅく Silent
+荘厳 そうごん Solemnity
+歌謡 かよう Song
+疎ら まばら Sparse
+疾走 しっそう Sprint
+茎 くき Stem
+噴き出す ふきだす To Burst Out
+膨らむ ふくらむ To Expand
+貫き通す つらぬきとおす To Follow
+呆ける ぼける To Grow Se...
+音痴 おんち Tone Deafness
+怠ける なまける To Neglect
+卸す おろす To Sell Wh...
+逸らす そらす To Turn Away
+冠 かん Traditiona...
+空疎 くうそ Vain
+犠牲者 ぎせいしゃ Victim
+鯨 くじら Whale
+鯨肉 げいにく Whale Meat
+捕鯨 ほげい Whaling
+卸 おろし Wholesale
+卸売 おろしうり Wholesale
+卸値 おろしね Wholesale ...
+累積 るいせき Accumulation
+癒着 ゆちゃく Adhesion
+一抹 いちまつ A Little
+伏兵 ふくへい Ambush
+憂慮 ゆうりょ Anxiety
+奉仕 ほうし Attendance
+信奉 しんぽう Belief
+骨髄 こつずい Bone Marrow
+栓抜き せんぬき Bottle Opener
+虜 とりこ Captive
+循環 じゅんかん Circulation
+粗い あらい Coarse
+粗悪 そあく Coarse
+潜伏 せんぷく Conceal
+哀悼 あいとう Condolence
+栓 せん Cork
+該当 がいとう Correspond
+累計 るいけい Cumulative...
+奉納 ほうのう Dedication
+憂鬱 ゆううつ Depression
+洗浄剤 せんじょうざい Detergent
+抹消 まっしょう Erase
+神髄 しんずい Essence
+真髄 しんずい Essence
+佳作 かさく Fine Work
+伏線 ふくせん Foreshadowing
+来賓 らいひん Guest
+賓客 ひんきゃく Guest Of H...
+治癒 ちゆ Healing
+重鎮 じゅうちん Leader
+傍観 ぼうかん Look On
+惜敗 せきはい Loss Of A ...
+旦那 だんな Master
+抹茶 まっちゃ Matcha
+傍受 ぼうじゅ Monitoring
+追悼 ついとう Mourning
+赴任 ふにん Move For A...
+抹殺 まっさつ Murder
+傍 そば Near
+元旦 がんたん New Year's...
+貴賓 きひん Noble Visitor
+老舗 しにせ Old Shop
+一旦 いったん Once
+輪郭 りんかく Outline
+瓜実顔 うりざねがお Oval Face
+鎮痛剤 ちんつうざい Painkiller
+憂国 ゆうこく Patriotic ...
+愉快 ゆかい Pleasant
+捕虜 ほりょ Prisoner O...
+繁昌 はんじょう Prosperity
+南瓜 かぼちゃ Pumpkin
+遺憾 いかん Regrettable
+鎮魂 ちんこん Repose Of ...
+粗野 そや Rustic
+奉公 ほうこう Service
+素朴 そぼく Simple
+凝固 ぎょうこ Solidify
+脊髄 せきずい Spinal Cord
+凝視 ぎょうし Stare
+国賓 こくひん State Guest
+累進 るいしん Successive...
+鎮圧 ちんあつ Suppression
+降伏 こうふく Surrender
+之 これ This
+鎮める しずめる To Appease
+凝る こる To Be Abso...
+憂える うれえる To Be Anxious
+惜しむ おしむ To Be Frugal
+栃木県 とちぎけん Tochigi Pr...
+伏せる ふせる To Cover
+据え付ける すえつける To Install
+起伏 きふく Undulation
+尿 にょう Urine
+山葵 わさび Wasabi
+披露宴 ひろうえん Wedding Re...
+弥生 やよい Yayoi Period
+尚更 なおさら All The More
+尚且つ なおかつ And Yet
+拍手 はくしゅ Applause
+匠 たくみ Artisan
+嘉日 かじつ Auspicious...
+~拍 はく Beat
+呉越同舟 ごえつどうしゅう Bitter Ene...
+弦 つる Bowstring
+蝶 ちょう Butterfly
+大尉 たいい Captain
+摂氏 せっし Centigrade
+平凡 へいぼん Common
+錯乱 さくらん Confusion
+満悦 まんえつ Delight
+意匠 いしょう Design
+窮地 きゅうち Dilemma
+直轄 ちょっかつ Direct Con...
+窮状 きゅうじょう Distress
+摂理 せつり Divine Pro...
+呉服 ごふく Draperies
+弊害 へいがい Evil Effect
+疲弊 ひへい Exhaustion
+搾取 さくしゅ Exploitation
+猶予 ゆうよ Extension
+遥か はるか Far Away
+柴 しば Firewood
+中尉 ちゅうい First Lieu...
+洪水 こうずい Flood
+愚か おろか Foolish
+無報酬 むほうしゅう Free Of Ch...
+凛々しい りりしい Gallant
+紳士 しんし Gentleman
+飽食 ほうしょく Gluttony
+穀物 こくもつ Grain
+穀類 こくるい Grains
+墓碑 ぼひ Gravestone
+丘陵 きゅうりょう Hill
+錯覚 さっかく Illusion
+舶来 はくらい Imported
+碑文 ひぶん Inscription
+摂取 せっしゅ Intake
+管轄 かんかつ Jurisdiction
+所轄 しょかつ Jurisdiction
+怠け者 なまけもの Lazy Person
+寂しい さびしい Lonely
+師匠 ししょう Master
+巨匠 きょしょう Master
+凡庸 ぼんよう Mediocre
+搾乳 さくにゅう Milking
+錯誤 さくご Mistake
+交錯 こうさく Mixture
+記念碑 きねんひ Monument
+疎か おろそか Neglect
+窒素 ちっそ Nitrogen
+方向音痴 ほうこうおんち No Sense O...
+凡人 ぼんじん Ordinary P...
+倒錯 とうさく Perversion
+庶民的 しょみんてき Popular
+歌謡曲 かようきょく Popular Song
+困窮 こんきゅう Poverty
+窮乏 きゅうぼう Poverty
+宰相 さいしょう Prime Mini...
+非凡 ひぼん Prodigy
+脈拍 みゃくはく Pulse
+恭しい うやうやしい Respectful
+束縛 そくばく Restraint
+米穀 べいこく Rice
+飽和 ほうわ Saturation
+少尉 しょうい Second Lie...
+縫製 ほうせい Sewing
+裁縫 さいほう Sewing
+柴犬 しばいぬ Shiba Inu
+船舶 せんぱく Ship
+静寂 せいじゃく Silence
+怠い だるい Sluggish
+石碑 せきひ Stone Monu...
+弦楽 げんがく String Music
+窒息 ちっそく Suffocation
+主宰 しゅさい Supervision
+窮屈 きゅうくつ Tight
+呆れる あきれる To Be Amazed
+飽きる あきる To Get Tir...
+縫う ぬう To Sew
+搾る しぼる To Squeeze
+逸れる それる To Stray
+縛る しばる To Tie
+智 ち Wisdom
+靖国神社 やすくにじんじゃ Yasukuni S...
+甲乙 こうおつ A And B
+堕胎 だたい Abortion
+約款 やっかん Agreement
+年俸 ねんぽう Annual Salary
+盲腸 もうちょう Appendix
+定款 ていかん Articles O...
+平衡 へいこう Balance
+山賊 さんぞく Bandit
+浴槽 よくそう Bathtub
+鼓動 こどう Beat
+恐喝 きょうかつ Blackmail
+盲目 もうもく Blindness
+盲人 もうじん Blind Person
+盲点 もうてん Blind Spot
+敢然 かんぜん Boldly
+勇敢 ゆうかん Brave
+醸成 じょうせい Brew
+醸造 じょうぞう Brewing
+閲覧 えつらん Browsing
+検閲 けんえつ Censor
+海峡 かいきょう Channel
+循環器 じゅんかんき Circulator...
+熊之実 くまのみ Clownfish
+色盲 しきもう Colour Blin...
+羅針盤 らしんばん Compass
+受胎 じゅたい Conception
+弔意 ちょうい Condolence
+角膜 かくまく Cornea
+堕落 だらく Corruption
+網羅 もうら Covering
+烏 からす Crow
+敢えて あえて Dare To
+濃紺 のうこん Dark Blue
+敢行 かんこう Decisive A...
+太鼓 たいこ Drum
+鼓膜 こまく Eardrum
+胎児 たいじ Embryo
+羅列 られつ Enumeration
+酵素 こうそ Enzyme
+均衡 きんこう Equilibrium
+発酵 はっこう Fermentation
+敢闘 かんとう Fight Bravely
+水槽 すいそう Fish Tank
+萌芽 ほうが Germination
+憂い うれい Grief
+腸 ちょう Guts
+鼓 つづみ Hand Drum
+何遍 なんべん How Many T...
+鼓舞 こぶ Inspiration
+遮断 しゃだん Isolation
+大腸 だいちょう Large Inte...
+凸版 とっぱん Letterpress
+借款 しゃっかん Loan
+伐採 ばっさい Lumbering
+奉行 ぶぎょう Magistrate
+楓 かえで Maple
+楓糖 ふうとう Maple Sugar
+旋律 せんりつ Melody
+膜 まく Membrane
+弔辞 ちょうじ Memorial A...
+紺 こん Navy Blue
+一遍 いっぺん Once
+烏龍茶 う-ろんちゃ Oolong Tea
+海賊 かいぞく Pirate
+胎盤 たいばん Placenta
+峡谷 きょうこく Ravine
+迎賓館 げいひんかん Reception ...
+惜しい おしい Regrettable
+果敢 かかん Resolute
+網膜 もうまく Retina
+校閲 こうえつ Revision
+旋回 せんかい Revolution
+減俸 げんぽう Salary Red...
+粗塩 あらじお Sea Salt
+乙 おつ Second
+烏賊 いか Squid
+胃腸 いちょう Stomach
+盗賊 とうぞく Thief
+醸す かもす To Brew
+遮る さえぎる To Interrupt
+弔う とむらう To Mourn For
+鎮まる しずまる To Quiet Down
+漬ける つける To Soak
+遍歴 へんれき Travels
+間伐 かんばつ Tree Thinning
+坪 つぼ Tsubo
+凹凸 おうとつ Uneven
+普遍 ふへん Universal
+不愉快 ふゆかい Unpleasant
+悪循環 あくじゅんかん Vicious Ci...
+傍ら かたわら While
+旋風 せんぷう Whirlwind
+酵母 こうぼ Yeast
+扶助 ふじょ Aid
+恩赦 おんしゃ Amnesty
+憤慨 ふんがい Anger
+解剖 かいぼう Autopsy
+蝶々 ちょうちょう Butterfly
+触媒 しょくばい Catalyst
+更迭 こうてつ Change
+鶏 にわとり Chicken
+鶏卵 けいらん Chicken Egg
+養鶏 ようけい Chicken Fa...
+鶏肉 とりにく Chicken Meat
+年譜 ねんぷ Chronologi...
+暁 あかつき Dawn
+老朽 ろうきゅう Decrepit
+戯曲 ぎきょく Drama
+呆気 あっけ Dumbfounded
+地殻 ちかく Earth's Crust
+享受 きょうじゅ Enjoyment
+晩酌 ばんしゃく Evening Drink
+藩主 はんしゅ Feudal Lord
+藩 はん Fiefdom
+瑞々しい みずみずしい Fresh
+ー
+遊戯 ゆうぎ Game
+棋譜 きふ Game Records
+系譜 けいふ Genealogy
+紳士協定 しんしきょうてい Gentlemen'...
+淑やか しとやか Graceful
+手錠 てじょう Handcuffs
+縛り首 しばりくび Hanging
+豪傑 ごうけつ Hero
+呆け ぼけ Idiot
+不朽 ふきゅう Immortal
+媒介 ばいかい Intermediary
+陪審 ばいしん Jury
+淑女 しゅくじょ Lady
+錠 じょう Lock
+傑作 けっさく Masterpiece
+媒酌 ばいしゃく Matchmaking
+媒体 ばいたい Media
+濁流 だくりゅう Muddy Stream
+譜面 ふめん Music
+管弦楽 かんげんがく Orchestral...
+容赦 ようしゃ Pardon
+嘱託 しょくたく Part Time ...
+錠剤 じょうざい Pill
+汚濁 おだく Pollution
+肖像 しょうぞう Portrait
+赦免 しゃめん Remission
+憤り いきどおり Resentment
+奔走 ほんそう Running About
+帆 ほ Sail
+帆走 はんそう Sailing
+楽譜 がくふ Score
+縫目 ぬいめ Seam
+殻 から Shell
+絹 きぬ Silk
+絹糸 けんし Silk Thread
+脊椎 せきつい Spine
+弦楽器 げんがっき Stringed I...
+感慨 かんがい Strong Fee...
+硫酸 りゅうさん Sulfuric Acid
+扶養 ふよう Support
+執行猶予 しっこうゆうよ Suspended ...
+起訴猶予 きそゆうよ Suspension...
+拍子 ひょうし Tempo
+窃盗 せっとう Theft
+金縛り かなしばり Tied Down ...
+呆れ返る あきれかえる To Be Utte...
+朽ちる くちる To Decay
+凌ぐ しのぐ To Endure
+濁す にごす To Make Muddy
+酌む くむ To Serve
+飽くまでも あくまでも To The Last
+戯れる たわむれる To Toy With
+飽き あき Weariness
+奔放 ほんぽう Wild
+環礁 かんしょう Atoll
+一遍に いっぺんに At Once
+叔母 おば Aunt
+慶事 けいじ Auspicious...
+憂き目 うきめ Bitterness
+大胆 だいたん Bold
+岬 みさき Cape
+鋳造 ちゅうぞう Casting
+変遷 へんせん Change
+慶祝 けいしゅく Congratula...
+慶弔 けいちょう Congratula...
+危篤 きとく Critical C...
+遮断機 しゃだんき Crossing Gate
+酪農 らくのう Dairy Farming
+回忌 かいき Death Anni...
+左遷 させん Demotion
+閑散 かんさん Deserted
+落胆 らくたん Discourage...
+擬装 ぎそう Disguise
+東亜 とうあ East Asia
+大腸菌 だいちょうきん E. Coli
+雌 めす Female
+雌花 めばな Female Flower
+一周忌 いっしゅうき First Anni...
+取り敢えず とりあえず For The Ti...
+親睦 しんぼく Friendship
+胆石 たんせき Gallstones
+胆 たん Guts
+不均衡 ふきんこう Imbalance
+模擬 もぎ Imitation
+甚大 じんだい Immense
+侮辱 ぶじょく Insult
+漆黒 しっこく Jet Black
+漆 うるし Lacquer
+漆器 しっき Lacquerware
+法曹 ほうそう Lawyer
+崇高 すうこう Loftiness
+婚姻 こんいん Marriage
+卑劣 ひれつ Mean
+忌 き Mourning
+遷都 せんと Move The Capital
+ご無沙汰 ごぶさた Neglecting...
+~漬け づけ Pickled
+魂胆 こんたん Plot
+閑静 かんせい Quiet
+暗礁 あんしょう Reef
+岩礁 がんしょう Reef
+早乙女 さおとめ Rice Plant...
+峠 とうげ Ridge
+浪人 ろうにん Ronin
+禍根 かこん Root Of Evil
+軽蔑 けいべつ Scorn
+侮蔑 ぶべつ Scorn
+吟味 ぎんみ Scrutiny
+紡績 ぼうせき Spinning
+紡織 ぼうしょく Spinning A...
+萌え もえ Sprouting
+駐屯 ちゅうとん Stationed
+弁慶 べんけい Strong Person
+卑屈 ひくつ Subservient
+禁忌 きんき Taboo
+凹む へこむ To Become ...
+漬かる つかる To Be Pickled
+詠む よむ To Compose
+侮る あなどる To Despise
+堪える たえる To Endure
+憧れる あこがれる To Long For
+蔑む さげすむ To Scorn
+紡ぐ つむぐ To Spin
+漬物 つけもの Tsukemono
+叔父 おじ Uncle
+凸凹 でこぼこ Uneven
+普遍的 ふへんてき Universal
+忌まわしい いまわしい Unpleasant
+稚拙 ちせつ Unskillful
+流浪 るろう Vagrancy
+浮浪者 ふろうしゃ Vagrant
+甚だ はなはだ Very
+放浪 ほうろう Wandering
+戦禍 せんか War Damages
+浪費 ろうひ Waste
+惜しまない おしまない Without Sp...
+崇拝 すうはい Worship
+憧れ あこがれ Yearning
+解剖学 かいぼうがく Anatomy
+匿名 とくめい Anonymity
+蛮行 ばんこう Barbarism
+花婿 はなむこ Bridegroom
+煩忙 はんぼう Busy
+某 ぼう Certain
+吸い殻 すいがら Cigarette ...
+煩雑 はんざつ Complex
+死刑囚 しけいしゅう Condemned ...
+矯正 きょうせい Correction
+逝去 せいきょ Death
+感慨無量 かんがいむりょう Deep Emotion
+感慨深い かんがいぶかい Deeply Moving
+妄想 もうそう Delusion
+下痢 げり Diarrhea
+殉職 じゅんしょく Die At One...
+罷免 ひめん Dismissal
+赤痢 せきり Dysentery
+漸く ようやく Finally
+狐 きつね Fox
+升 ます Grid
+謹賀新年 きんがしんねん Happy New ...
+隠匿 いんとく Hide
+婿 むこ Husband
+弾劾 だんがい Impeachment
+藍 あい Indigo
+湖畔 こはん Lake Shore
+長唄 ながうた Long Shami...
+廉価 れんか Low Price
+帆柱 ほばしら Mast
+渓流 けいりゅう Mountain S...
+煩い うるさい Noisy
+管弦楽団 かんげんがくだん Orchestra
+桟橋 さんばし Pier
+戯れ たわむれ Play Flirt
+囚人 しゅうじん Prisoner
+容赦なく ようしゃなく Relentlessly
+帆船 はんせん Sailboat
+野蛮 やばん Savage
+醜聞 しゅうぶん Scandal
+藻 も Seaweed
+海藻 かいそう Seaweed
+分泌 ぶんぴつ Secretion
+醜態 しゅうたい Shameful S...
+寡黙 かもく Silent
+唄 うた Song
+娘婿 むすめむこ Son In Law
+南蛮 なんばん Southern Barbarians
+湧水 ゆうすい Spring Water
+升目 ますめ Square
+硫黄 いおう Sulfur
+悪戯 いたずら Tease
+倹約 けんやく Thrift
+慕う したう To Adore
+濁る にごる To Become Cloudy
+拷問 ごうもん Torture
+唄う うたう To Sing
+湧く わく To Well Up
+坑道 こうどう Tunnel
+醜悪 しゅうあく Ugliness
+醜い みにくい Ugly
+泌尿器 ひにょうき Urinary System
+渓谷 けいこく Valley
+寡婦 かふ Widow
+思慕 しぼ Yearning

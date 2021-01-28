@@ -1,0 +1,20 @@
+<res>
+	<charset id="CS-KOCHI-MINCHO-48" src="assets/fonts/kochi-mincho.ttf" size="48" collection="ASCII"></charset>
+	<animation id="TA" trigger="HOVER" color="0xffff00"></animation>
+</res>
+
+<ui>	
+	<panel layout="LinearVertical" color="0xff00ff" margins="0.08" id="testid">
+		<button color="0xfff000" id="a" text="HELSINKI" textcolor="0xff0000ff">1</button>
+		<button color="0xffffffff" highlight="0x00aaaaff" id="b">2</button>
+		<button id="c" text="TESTER">3</button>
+		<button id="d">
+			<button id="ff">5</button>
+			<button id="fff">6</button>
+		</button>
+		<button id="exit" text="EXIT" anim="TA"></button>
+	</panel>
+	<panel layout="LinearVertical" color="0xffffff" margins="0.08" id="tp2">
+		<button color="0xff0000" text="RIP"></button>
+	</panel>
+</ui>
