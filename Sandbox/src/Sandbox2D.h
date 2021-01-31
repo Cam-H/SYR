@@ -32,6 +32,11 @@ private:
 
 	SYR::Ref<SYR::VertexArray> m_TestMesh;
 	SYR::Ref<SYR::VertexArray> m_TestMesh2;
+	SYR::Ref<SYR::VertexArray> m_TestMesh3;
+	SYR::Ref<SYR::VertexArray> m_TestMesh4;
+	SYR::Ref<SYR::VertexArray> m_TestMesh5;
+
+	SYR::Ref<SYR::VertexArray> m_TestFloor;
 
 	SYR::CameraController m_CameraController;
 	SYR::CameraController m_PCameraController;

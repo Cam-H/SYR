@@ -7,7 +7,7 @@
 namespace SYR {
 
 	enum class FileFormat {
-		NONE = 0, OBJ
+		NONE = 0, OBJ, MTL
 	};
 
 	static FileFormat getFileFormat(const std::string& filepath) {
@@ -15,6 +15,8 @@ namespace SYR {
 
 		if (fileFormat == "obj") {
 			return FileFormat::OBJ;
+		} else if (fileFormat == "mtl") {
+			return FileFormat::MTL;
 		}
 
 		SYR_CORE_WARN("Unrecognized file format: {0}", fileFormat);

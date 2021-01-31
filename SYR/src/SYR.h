@@ -36,6 +36,7 @@
 #include "SYR/Renderer/FrameBuffer.h"
 
 #include "SYR/Renderer/Shader.h"
+#include "SYR/Renderer/Material.h"
 #include "SYR/Renderer/Texture.h"
 #include "SYR/Renderer/SubTexture2D.h"
 #include "SYR/Renderer/OrthographicCamera.h"

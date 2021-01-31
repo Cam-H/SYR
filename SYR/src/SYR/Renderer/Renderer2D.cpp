@@ -727,7 +727,7 @@ namespace SYR {
 		}
 
 
-		drawCircle({position.x, position.y}, 0.01f);
+		//drawCircle({position.x, position.y}, 0.01f);
 
 		for (int i = 0; i < text.length(); i++) {
 			CharacterPointer cp = characterSet->getCharacterPointer(text.at(i));
@@ -798,7 +798,7 @@ namespace SYR {
 		}
 
 
-		drawCircle({ position.x, position.y }, 0.01f);
+		//drawCircle({ position.x, position.y }, 0.01f);
 
 		for (std::vector<uint32_t>::iterator it = text.begin(); it != text.end(); ++it) {
 			CharacterPointer cp = characterSet->getCharacterPointer(*it);

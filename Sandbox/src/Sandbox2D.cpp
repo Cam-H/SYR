@@ -116,7 +116,7 @@ void Sandbox2D::onAttach() {
 	//SYR::CharacterSet::addCharactersToSet(SYR::CharacterCollection::KATAKANA, &codes);
 
 	//m_CharacterSet = SYR::CharacterSet::create("assets/fonts/kochi-mincho.ttf", SYR::A::NONE);
-	m_CharacterSet = SYR::CharacterSet::create("assets/fonts/kochi-mincho.ttf", codes);
+	m_CharacterSet = SYR::CharacterSet::create("assets/fonts/arial.ttf", codes, 24);
 
 	SYR::FrameBufferSpecification spec;
 	spec.width = 1280;
@@ -127,21 +127,16 @@ void Sandbox2D::onAttach() {
 	m_ActiveScene = SYR::createRef<SYR::Scene>();
 	m_ActiveScene->prepare();
 
+	
 	//m_CameraController = *m_ActiveScene->getUiCamera();
 	//m_CameraController.setZoomLevel(2.0f);
 	//m_ActiveScene->getUiCamera()->setZoomLevel(2);
 
-	glm::vec2* body = new glm::vec2[4];
 	/*
-	body[0] = glm::vec2(0.0f, 0.0f);
-	body[1] = glm::vec2(1.0f, 0.0f);
-	body[2] = glm::vec2(1.0f, 1.0f);
-	body[3] = glm::vec2(0.0f, 1.5f);
-	*/
-	
-
 	SYR::Entity temp = m_ActiveScene->createEntity();
 	temp.getComponent<SYR::TransformComponent>().offset(glm::vec3(-1.2f, 0.5f, 0.0f));
+
+	glm::vec2* body = new glm::vec2[4];
 
 	body = new glm::vec2[4];
 	body[0] = glm::vec2(0.5f, 0.0f);
@@ -183,14 +178,24 @@ void Sandbox2D::onAttach() {
 	temp = m_ActiveScene->createEntity();
 	temp.addComponent<SYR::Hitbox2DComponent>(hitboxes);
 	temp.getComponent<SYR::TransformComponent>().offset(glm::vec3(0.0f, 3.0f, 0.0f));
+	*/
 
 	SYR::Renderer::getShaderLibrary()->load("MeshShader", "assets/shaders/B3D.glsl");
+	SYR::Renderer::getShaderLibrary()->load("GrayShader", "assets/shaders/Gray.glsl");
+
 	//m_MeshShader = SYR::Shader::create("assets/shaders/B3D.glsl");
 
 	m_TestMesh2 = SYR::FileHandler::loadMesh("assets/meshes/Screen.obj");
+	m_TestMesh3 = SYR::FileHandler::loadMesh("assets/meshes/Torus.obj");
+	m_TestMesh4 = SYR::FileHandler::loadMesh("assets/meshes/Screen.obj");
+	m_TestMesh5 = SYR::FileHandler::loadMesh("assets/meshes/LeafSword.obj");
 
-	SYR::Scene::loadUi(m_ActiveScene, "assets/ui/TestUI1.xml");
+	m_TestFloor = SYR::FileHandler::loadMesh("assets/meshes/Floor.obj");
+
+	//SYR::Scene::loadUi(m_ActiveScene, "assets/ui/TestUI1.xml");
 	//SYR::UiSystem::loadPredefinedUi(m_ActiveScene, "assets/ui/TestUI1.xml");
+
+	SYR::Renderer::getMaterialLibrary()->loadMaterials("assets/meshes/LeafSword.mtl");
 }
 
 void Sandbox2D::onDetach() {
@@ -243,7 +248,19 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 
 	SYR::Renderer::beginScene(m_PCameraController.getCamera());
 	//SYR::Renderer::submit(m_MeshShader, m_TestMesh, glm::translate(glm::mat4(1.0f), pos));
-	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("MeshShader"), m_TestMesh2, glm::translate(glm::mat4(1.0f), { 5.0f, 1.0f, 1.0f }) * glm::rotate(glm::mat4(1.0f), rotation, { 1.2f, 1.1f, 1.0f }));
+
+	static float px = 0, py = 0, pz = 0;
+	//px += velocity.x;
+	//py += velocity.y;
+	//pz += velocity.z;
+	//SYR_CORE_INFO("{0} {1} {2}", px, py, pz);
+
+	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("GrayShader"), m_TestFloor, glm::translate(glm::mat4(1.0f), { 0, -5, 0 }));
+	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("MeshShader"), m_TestMesh2, glm::translate(glm::mat4(1.0f), { px, py, -5 }) * glm::rotate(glm::mat4(1.0f), rotation, { 1.2f, 1.1f, 1.0f }));
+	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("MeshShader"), m_TestMesh3, glm::translate(glm::mat4(1.0f), { 5, -2, 0 }) * glm::rotate(glm::mat4(1.0f), rotation, { 1.5f, 1.0f, 1.0f }));
+	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("GrayShader"), m_TestMesh4, glm::translate(glm::mat4(1.0f), { 10 * sin(rotation / 2), 0, 10 * cos(rotation / 2) }));
+	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("GrayShader"), m_TestMesh5, glm::translate(glm::mat4(1.0f), { 0, 8, 20 }) * glm::rotate(glm::mat4(1.0f), rotation, { 0.0f, 1.0f, 0.0f }));
+
 	//SYR::Renderer::endScene();
 
 	if (m_ActiveScene->entityIDExists(std::string("testid"))) {
@@ -258,59 +275,17 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 			SYR::Application::get().stop();
 		}
 	}
-
-	//inline static Application& get() { return *s_Instance; }
-
-	//SYR::Entity::getComponent<SYR::TransformComponent>(m_ActiveScene.get(), ttt).offset(velocity);
-	//SYR::Entity::getComponent<SYR::TransformComponent>(m_ActiveScene.get(), ttt).scale(1 + velocity.z);
-
-	//SYR_TRACE("Delta time: {0}s ({1}ms)", ts.getSeconds(), ts.getMilliseconds());
-
-
 	
 	SYR::Renderer2D::beginScene(m_CameraController.getCamera());
 
-	glm::mat4 transform = glm::translate(glm::mat4(1.0f), { 0.75f, 0.5f, 1.0f }) * glm::scale(glm::mat4(1.0f), { 1.0f, 1.0f, 1.0f });
-	//SYR::Renderer2D::drawQuad(glm::translate(glm::mat4(1.0f), { 0.75f, 0.5f, 1.0f }) * glm::scale(glm::mat4(1.0f), { 1.0f, 1.0f, 1.0f }), {1.0f, 1.0f, 1.0f, 1.0f}, m_CharacterSet->getCharacterSheet());
-
-	transform = glm::translate(glm::mat4(1.0f), { -1.0f, 0.0f, 1.0f });
+	glm::mat4 transform = glm::translate(glm::mat4(1.0f), { px, py, pz });
 
 	m_ActiveScene->onUpdate(ts);
 	m_ActiveScene->onDraw();
 
-
-	
-	glm::vec2 pos(0.0f, 0.0f);
-	glm::vec2 size(1.0f, 1.0f);
-	glm::vec4 color(0.8f, 0.2f, 0.3f, 1.0f);
-
-	//SYR::Renderer2D::drawQuad(pos, size, color);
-
-
-
-	
-	pos = { -1.5f, 0.0f };
-	size = { 0.5f, 0.5f };
-	color = { 0.2f, 0.5f, 0.2f, 1.0f };
-
-	//SYR::Renderer2D::drawRotatedQuad(pos, size, -rotation, color, m_Texture);
-
-	pos = { 5.0f, 0.0f };
-	size = { 7.0f, 5.0f };
-	//SYR::Renderer2D::drawRotatedQuad(glm::vec3(pos.x, pos.y, -0.1f), size, rotation, m_Texture);
-
-	int i = 0;
-	for (float y = -5.0f; y < 5.0f; y+=0.1f) {
-		for (float x = -5.0f; x < 5.0f; x+=0.1f) {
-			glm::vec4 c = { (x + 5.0f) / 10, (y + 5.0f) / 10.0f, 0.2f, 0.75f};
-			//SYR::Renderer2D::drawQuad(glm::vec2(x, y), glm::vec2(0.09f, 0.09f), c);
-		}
-	}
-
-	//SYR::Renderer2D::drawQuad(glm::vec3(0, 0, 1.0f), size, m_SpriteSheet);
-	//SYR::Renderer2D::drawRotatedQuad(glm::vec3(-1.0f, 0, 0.9f), glm::vec2(1.0f, 2.0f), rotation, m_SubTexture);
-	SYR::Renderer2D::drawText(SYR::Renderer::getCharacterSetLibrary()->get("CS-KOCHI-MINCHO-48"), SYR::Renderer2D::TextAlignment::VERTICAL_TOP, "ABCDEF?", { -1.0f, 0.1f, 1.0f }, { 1.0f, 0.4f, 0.0f, 1.0f });
-	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::VERTICAL_CENTER, "3BZPAAMAAPZB3", { -0.6f, -0.5f, 1.0f }, { 1.0f, 0.0f, 1.0f, 1.0f });
+	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "W/A/S/D/SHIFT/SPACE to move camera", { -1.75f, 0.95f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
+	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "Mouse to reorient camera", { -1.75f, 0.85f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
+	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "ALT+F4 to close", { -1.75f, 0.75f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
 
 	//SYR::Renderer2D::drawLine(glm::vec2(0.0f, 0.0f), glm::vec2(-1.0f, -1.0f), glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
 	

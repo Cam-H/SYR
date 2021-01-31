@@ -41,7 +41,7 @@ namespace SYR {
 	}
 
 	void OpenGLVertexArray::addVertexBuffer(const Ref<VertexBuffer>& vertexBuffer) {
-		SYR_CORE_ASSERT(vertexBuffer->getLayout().getElements().size(), "Vertex buffer has not layout!");
+		SYR_CORE_ASSERT(vertexBuffer->getLayout().getElements().size(), "Vertex buffer has no layout!");
 
 		glBindVertexArray(m_RendererID);
 		vertexBuffer->bind();

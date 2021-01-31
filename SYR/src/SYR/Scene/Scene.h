@@ -46,6 +46,7 @@ namespace SYR {
 		TransformComponent* m_Anchor;
 
 		CameraController m_UiCamera;
+		bool m_UiEnabled = false;
 
 		friend class Entity;
 

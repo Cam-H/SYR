@@ -23,6 +23,7 @@ namespace SYR {
 		Renderer2D::init();
 
 		m_ShaderLibrary = createRef<ShaderLibrary>();
+		m_MaterialLibrary = createRef<MaterialLibrary>();
 		m_CharacterSetLibrary = createRef<CharacterSetLibrary>();
 	}
 
@@ -32,6 +33,7 @@ namespace SYR {
 
 	void Renderer::beginScene(Camera& camera){
 		m_SceneData->ViewProjectionMatrix = camera.getViewProjectionMatrix();
+		m_SceneData->CameraPosition = camera.getPosition();
 	}
 	
 	void Renderer::endScene() {}
@@ -41,6 +43,10 @@ namespace SYR {
 
 		shader->setMat4("u_ViewProjection", m_SceneData->ViewProjectionMatrix);
 		shader->setMat4("u_Transform", transform);
+		shader->setMat3("u_NormalMatrix", glm::transpose(glm::inverse(transform)));
+		shader->setFloat3("u_ViewPosition", m_SceneData->CameraPosition);
+
+		shader->setFloat3("material.ambient", { 1.0f, 0.5f, 0.31f });
 
 		vertexArray->bind();
 		RenderCommand::drawIndexed(vertexArray);

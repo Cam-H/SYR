@@ -43,10 +43,12 @@ namespace SYR {
 	}
 
 	void Scene::loadUi(Ref<Scene> scene, const std::string& filepath) {
+		scene->m_UiEnabled = true;
+
 		scene->m_MainPanel = Entity::create(UiSystem::loadPredefinedUi(scene.get(), filepath).getHandle(), scene.get());
 		scene->m_MainPanel->getComponent<TransformComponent>().scale({ 2 * scene->m_AspectRatio, 2 });
 
-		scene->getEntityByID(std::string("tp2")).getComponent<UiComponent>().setAnchor(scene->m_MainPanel->getHandle(), UiAlignment::INNER_LEFT, UiAlignment::INNER_TOP);
+		//scene->getEntityByID(std::string("tp2")).getComponent<UiComponent>().setAnchor(scene->m_MainPanel->getHandle(), UiAlignment::INNER_LEFT, UiAlignment::INNER_TOP);
 		//scene->getEntityByID(std::string("c")).getComponent<UiComponent>().visibility = UiVisibility::GONE;
 	}
 
@@ -86,14 +88,20 @@ namespace SYR {
 	void Scene::onDraw() {
 
 		render(m_Registry);
-		renderUi(m_Registry, m_MainPanel->m_EntityHandle);
+		
+		if (m_UiEnabled) {
+			renderUi(m_Registry, m_MainPanel->m_EntityHandle);
+		}
 
 		handleCollisions(m_Registry);
 
 	}
 
 	bool Scene::onWindowResized(WindowResizeEvent& e) {
-		m_MainPanel->getComponent<TransformComponent>().scale({ ((float)e.getWidth() / (float)e.getHeight()) / m_AspectRatio, 1 });
+		if (m_UiEnabled) {
+			m_MainPanel->getComponent<TransformComponent>().scale({ ((float)e.getWidth() / (float)e.getHeight()) / m_AspectRatio, 1 });
+		}
+
 		m_AspectRatio = (float)e.getWidth() / (float)e.getHeight();
 
 		return false;

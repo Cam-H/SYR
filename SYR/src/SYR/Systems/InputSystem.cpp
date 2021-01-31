@@ -84,12 +84,12 @@ namespace SYR {
 	}
 
 	bool InputSystem::onMouseScrolled(MouseScrolledEvent& e) {
-		SYR_CORE_INFO("{0} {1}", e.getXOffset(), e.getYOffset());
+		//SYR_CORE_INFO("{0} {1}", e.getXOffset(), e.getYOffset());
 		return false;
 	}
 
 	bool InputSystem::onMouseButtonPressed(MouseButtonPressedEvent& e) {
-		SYR_CORE_INFO(e.getMouseButton());
+		//SYR_CORE_INFO(e.getMouseButton());
 		s_InputStack.leftClick = e.getMouseButton() == 0;
 
 		switch (e.getMouseButton()) {
@@ -102,7 +102,7 @@ namespace SYR {
 	}
 
 	bool InputSystem::onMouseButtonReleased(MouseButtonReleasedEvent& e) {
-		SYR_CORE_INFO(e.getMouseButton());
+		//SYR_CORE_INFO(e.getMouseButton());
 
 		switch (e.getMouseButton()) {
 		case 0:
@@ -114,7 +114,7 @@ namespace SYR {
 	}
 
 	bool InputSystem::onKeyPressedEvent(KeyPressedEvent& e) {
-		SYR_CORE_INFO("F {0} {1}", e.getKeyCode(), e.getRepeatCount());
+		//SYR_CORE_INFO("F {0} {1}", e.getKeyCode(), e.getRepeatCount());
 
 		std::map<int, int>::iterator it = s_InputStack.keyPresses.find(e.getKeyCode());
 		if (it == s_InputStack.keyPresses.end()) {
@@ -128,7 +128,7 @@ namespace SYR {
 
 	bool InputSystem::onKeyReleasedEvent(KeyReleasedEvent& e) {
 		//s_NavigationVector = { 0, 0 };
-		SYR_CORE_INFO(e.getKeyCode());
+		//SYR_CORE_INFO(e.getKeyCode());
 		return false;
 	}
 
