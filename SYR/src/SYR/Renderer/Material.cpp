@@ -5,7 +5,15 @@
 
 namespace SYR {
 
-	MaterialLibrary::MaterialLibrary(){}
+	MaterialLibrary::MaterialLibrary() {
+		m_Materials.push_back(
+			{ "DEFAULT", {0.1f, 0.1f, 0.1f}, {1, 0, 1}, {0, 0, 0}, 32 }
+		);
+
+		m_Materials.push_back(
+			{ "None", {0, 0, 0}, {1, 0.5f, 1}, {1, 1, 0}, 32 }
+		);
+	}
 
 	void MaterialLibrary::loadMaterials(const std::string& materialFile) {
 
@@ -33,8 +41,7 @@ namespace SYR {
 
 	void MaterialLibrary::loadMTLMaterial(const std::string& MTLContent) {
 
-		Ref<Material> material = createRef<Material>();
-		std::string materialName = "";
+		Material material;
 
 		const char* delimiter = "\n";
 		size_t delimLength = strlen(delimiter);
@@ -50,36 +57,67 @@ namespace SYR {
 			std::string token = line.substr(0, begin++);
 
 			if (token == "newmtl") {
-				materialName = line.substr(token.length() + 1);
+				material.name = line.substr(token.length() + 1);
+
+				if (exists(material.name)) {
+					SYR_CORE_WARN("A material already exists with name: \"{0}\"! The material was not loaded", material.name);
+					return;
+				}
+
 			} else if (token == "Ka") {//AMBIENT
-				material->ambient = {
+				material.ambient = {
 										(float)atof(line.substr(begin, line.find(' ', begin)).c_str()),
 										(float)atof(line.substr(line.find(' ', begin), line.find_last_of(' ')).c_str()),
 										(float)atof(line.substr(line.find_last_of(' ')).c_str())
 				};
 
 			} else if (token == "Kd") {//DIFFUSE
-				material->diffuse = {
+				material.diffuse = {
 										(float)atof(line.substr(begin, line.find(' ', begin)).c_str()),
 										(float)atof(line.substr(line.find(' ', begin), line.find_last_of(' ')).c_str()),
 										(float)atof(line.substr(line.find_last_of(' ')).c_str())
 				};
 
 			} else if (token == "Ks") {//SPECULAR
-				material->specular = {
+				material.specular = {
 										(float)atof(line.substr(begin, line.find(' ', begin)).c_str()),
 										(float)atof(line.substr(line.find(' ', begin), line.find_last_of(' ')).c_str()),
 										(float)atof(line.substr(line.find_last_of(' ')).c_str())
 				};
 
 			} else if (token == "Ns") {//SPECULAR HIGHLIGHTS (shine)
-				material->shine = (float)atof(line.substr(begin).c_str());
+				material.shine = (float)atof(line.substr(begin).c_str());
 			}
 
 			prev = pos + 1;
 		}
 
-		m_Materials.insert(std::pair<std::string, Ref<Material>>(materialName, material));
+		m_Materials.push_back(material);
 	}
 
+	uint32_t MaterialLibrary::getIDOfMaterial(const std::string& materialName) {
+		int i = 1;
+
+		for (std::vector<Material>::iterator it = m_Materials.begin(); it != m_Materials.end(); ++it) {
+			if (it->name == materialName) {
+				return i;
+			}
+
+			i++;
+		}
+
+		SYR_CORE_WARN("The specified material was not found! Returning default material ID (0)");
+
+		return 0;
+	}
+
+	bool MaterialLibrary::exists(const std::string& materialName) {
+		for (std::vector<Material>::iterator it = m_Materials.begin(); it != m_Materials.end(); ++it) {
+			if (it->name == materialName) {
+				return true;
+			}
+		}
+
+		return false;
+	}
 }

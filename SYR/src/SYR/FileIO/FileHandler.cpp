@@ -29,7 +29,7 @@ namespace SYR {
 
 		FileFormat format = getFileFormat(filepath);
 
-		std::string content = readFile(filepath);
+		std::string content = readFile(filepath, true);
 
 		switch (format) {
 		case FileFormat::OBJ:

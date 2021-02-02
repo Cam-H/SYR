@@ -6,6 +6,8 @@
 namespace SYR {
 
 	struct Material {
+		std::string name;
+
 		glm::vec3 ambient;
 		glm::vec3 diffuse;
 		glm::vec3 specular;
@@ -19,14 +21,20 @@ namespace SYR {
 
 		void loadMaterials(const std::string& materialFile);
 
-		void add(Material material);
+		//void add(Material material);
 
-		bool exists(const std::string& name);
+		Material get(uint32_t materialID) { return m_Materials.at(materialID); }
 
-		Ref<Material> get(const std::string& name);
+		uint32_t getIDOfMaterial(const std::string& materialName);
+
+		uint32_t getMaterialCount() { return m_Materials.size(); }
+
+		bool exists(const std::string& materialName);
+
+		//Ref<Material> get(const std::string& name);
 	private:
 		void loadMTLMaterial(const std::string& MTLContent);
 	private:
-		std::unordered_map<std::string, Ref<Material>> m_Materials;
+		std::vector<Material> m_Materials;
 	};
 }

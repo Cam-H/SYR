@@ -1,6 +1,5 @@
 # Blender v2.79 (sub 0) OBJ File: ''
 # www.blender.org
-mtllib Floor.mtl
 o Cube_Cube.001
 v -38.197483 -0.159183 38.197483
 v -38.197483 0.159183 38.197483

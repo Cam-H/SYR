@@ -46,7 +46,19 @@ namespace SYR {
 		shader->setMat3("u_NormalMatrix", glm::transpose(glm::inverse(transform)));
 		shader->setFloat3("u_ViewPosition", m_SceneData->CameraPosition);
 
-		shader->setFloat3("material.ambient", { 1.0f, 0.5f, 0.31f });
+		//shader->setFloat3("u_Materials[1].ambient", { 1.0f, 0.5f, 1 });
+
+		
+		for (uint32_t i = 0; i < m_MaterialLibrary->getMaterialCount(); i++) {
+			Material mat = m_MaterialLibrary->get(i);
+
+			shader->setFloat3("u_Materials[" + std::to_string(i) + "].ambient", mat.ambient);
+			shader->setFloat3("u_Materials[" + std::to_string(i) + "].diffuse", mat.diffuse);
+			shader->setFloat3("u_Materials[" + std::to_string(i) + "].specular", mat.specular);
+			shader->setFloat("u_Materials[" + std::to_string(i) + "].shine", mat.shine);
+		}
+		shader->setFloat3("u_AmbientLight", { 0, 0, 0 });
+
 
 		vertexArray->bind();
 		RenderCommand::drawIndexed(vertexArray);

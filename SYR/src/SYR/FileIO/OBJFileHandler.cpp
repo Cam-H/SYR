@@ -1,11 +1,15 @@
 #include "syrpch.h"
 #include "OBJFileHandler.h"
 
+#include "SYR/Renderer/Renderer.h"
+
 #include <glm/glm.hpp>
 
 namespace SYR {
 
 	Ref<VertexArray> OBJFileHandler::parseOBJFile(const std::string& content) {
+		std::string path = content.substr(0, content.find("\n"));
+
 		const char* delimiter = "\n";
 		size_t delimLength = strlen(delimiter);
 
@@ -15,6 +19,8 @@ namespace SYR {
 		std::vector<glm::vec3> vertices;
 		std::vector<glm::vec3> normals;
 		std::vector<uint32_t> indices;
+
+		uint32_t materialID = 0;
 
 		std::unordered_map<std::string, uint32_t> vertexKeys;
 		
@@ -45,6 +51,11 @@ namespace SYR {
 
 				normals.push_back(glm::vec3(x, y, z));
 
+			} else if (token == "mtllib") {
+				SYR_CORE_INFO("Loading {0}", (path + line.substr(begin)));
+				Renderer::getMaterialLibrary()->loadMaterials(path + line.substr(begin));
+			} else if (token == "usemtl") {
+				materialID = Renderer::getMaterialLibrary()->getIDOfMaterial(line.substr(begin));
 			} else if (token == "f") {
 
 				std::string faceContent = line.substr(begin);
@@ -54,6 +65,8 @@ namespace SYR {
 				vertices[2] = faceContent.substr(faceContent.find_last_of(' ') + 1).c_str();
 
 				for (int i = 0; i < 3; i++) {
+					vertices[i] = vertices[i] + " " + std::to_string(materialID);
+
 					std::unordered_map<std::string, uint32_t>::iterator vertexIndex = vertexKeys.find(vertices[i]);
 
 					if (vertexIndex == vertexKeys.end()) {
@@ -62,9 +75,9 @@ namespace SYR {
 					} else {
 						indices.push_back(vertexIndex->second);
 					}
-
-					indexCount++;
 				}
+
+				indexCount += 3;
 			}
 
 			prev = pos + 1;
@@ -73,13 +86,15 @@ namespace SYR {
 		struct MeshVertex {
 			glm::vec3 position;
 			glm::vec3 normal;
+			float material;
 		};
 
 		MeshVertex* vertexBufferBase = new MeshVertex[vertexKeys.size()];
 
 		for (std::unordered_map<std::string, uint32_t>::iterator it = vertexKeys.begin(); it != vertexKeys.end(); ++it) {
 			uint32_t index = (uint32_t)atof(it->first.substr(0, it->first.find('/')).c_str()) - 1;
-			uint32_t normalIndex = (uint32_t)atof(it->first.substr(it->first.find_last_of('/') + 1).c_str()) - 1;
+			uint32_t normalIndex = (uint32_t)atof(it->first.substr(it->first.find_last_of('/') + 1, it->first.find(' ') - it->first.find_last_of('/') - 1).c_str()) - 1;
+			float materialIndex = (float)atof(it->first.substr(it->first.find(' ') + 1).c_str()) - 1;
 
 			if (it->first.find("//") == std::string::npos) {//Vertex-Texture-Normal
 				
@@ -87,12 +102,13 @@ namespace SYR {
 
 			(vertexBufferBase + it->second)->position = vertices.at(index);
 			(vertexBufferBase + it->second)->normal = normals.at(normalIndex);
+			(vertexBufferBase + it->second)->material = materialIndex;
 		}
 
 		Ref<VertexArray> mesh = VertexArray::create();
 
 		Ref<VertexBuffer> vb = VertexBuffer::create(vertexCount * sizeof(MeshVertex));
-		vb->setLayout({ {ShaderDataType::FLOAT3, "position"}, {ShaderDataType::FLOAT3, "normal"} });
+		vb->setLayout({ {ShaderDataType::FLOAT3, "position"}, {ShaderDataType::FLOAT3, "normal"}, {ShaderDataType::FLOAT, "material"} });
 		vb->setData(vertexBufferBase, vertexCount * sizeof(MeshVertex));
 
 		mesh->addVertexBuffer(vb);

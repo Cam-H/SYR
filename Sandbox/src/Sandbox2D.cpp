@@ -194,8 +194,6 @@ void Sandbox2D::onAttach() {
 
 	//SYR::Scene::loadUi(m_ActiveScene, "assets/ui/TestUI1.xml");
 	//SYR::UiSystem::loadPredefinedUi(m_ActiveScene, "assets/ui/TestUI1.xml");
-
-	SYR::Renderer::getMaterialLibrary()->loadMaterials("assets/meshes/LeafSword.mtl");
 }
 
 void Sandbox2D::onDetach() {

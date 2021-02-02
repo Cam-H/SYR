@@ -24,7 +24,7 @@ namespace SYR {
 		return FileFormat::NONE;
 	}
 
-	static std::string readFile(const std::string& filepath) {
+	static std::string readFile(const std::string& filepath, bool insertFilePath = false) {
 		std::string result;
 		std::ifstream in(filepath, std::ios::in | std::ios::binary);
 
@@ -39,7 +39,7 @@ namespace SYR {
 			SYR_CORE_ERROR("Could not open file '{0}'", filepath);
 		}
 
-		return result;
+		return (insertFilePath ? filepath.substr(0, filepath.find_last_of("\\/") + 1) + "\n" : "") + result;
 	}
 
 	static std::vector<char> readBinaryFile(const std::string& filepath) {

@@ -20,6 +20,8 @@ namespace SYR {
 		virtual void setInt(const std::string& name, int value) override;
 		virtual void setIntArray(const std::string& name, int* values, uint32_t count) override;
 
+		virtual void setFloat(const std::string& name, float value) override;
+		virtual void setFloat2(const std::string& name, const glm::vec2& value) override;
 		virtual void setFloat3(const std::string& name, const glm::vec3& value) override;
 		virtual void setFloat4(const std::string& name, const glm::vec4& value) override;
 
