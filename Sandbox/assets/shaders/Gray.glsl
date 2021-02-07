@@ -8,7 +8,7 @@ struct Material {
     vec3 diffuse;
     vec3 specular;
     float shine;
-}; 
+};
   
 layout(location=0) in vec3 position;
 layout(location=1) in vec3 normal;
@@ -20,7 +20,6 @@ uniform mat3 u_NormalMatrix;
 uniform vec3 u_ViewPosition;
 uniform Material u_Materials[MAX_MATERIALS];
 
-out vec4 Color;
 out vec3 Normal;
 
 out vec3 FragPos;
@@ -30,7 +29,6 @@ flat out Material FragMat;
 void main(){
 	gl_Position = u_ViewProjection * u_Transform * vec4(position, 1.0);
 
-	Color = vec4(material / 5, 0.8, 0.8, 1.0);
 	Normal = u_NormalMatrix * normal;
 
 	FragPos = vec3(u_Transform * vec4(position, 1.0));
@@ -42,6 +40,21 @@ void main(){
 #type fragment
 #version 330 core
 
+#define MAX_LIGHTS 8
+
+struct Light {
+	vec3 color;
+
+	vec3 position;
+	vec3 direction;
+
+	float linearAttenuation;
+	float quadraticAttenuation;
+
+	float innerCutoff;
+	float outerCutoff;
+};
+
 struct Material {
     vec3 ambient;
     vec3 diffuse;
@@ -49,9 +62,10 @@ struct Material {
     float shine;
 }; 
   
+uniform Light u_Lights[MAX_LIGHTS];
+uniform int u_ActiveLightCount;
 uniform vec3 u_AmbientLight;
 
-in vec4 Color;
 in vec3 Normal;
 
 in vec3 FragPos;
@@ -60,29 +74,41 @@ flat in Material FragMat;
 
 out vec4 outColor;
 
+vec3 CalculateLightContribution(Light light, Material material, vec3 normal, vec3 fragPos, vec3 viewPos);
+
 void main(){
+	vec3 normal = normalize(Normal);
+
+	vec3 result = vec3(0, 0, 0);
+	for(int i = 0; i < u_ActiveLightCount; i++) {
+		result += CalculateLightContribution(u_Lights[i], FragMat, normal, FragPos, ViewPos);
+	}
+
+	outColor = vec4(result + u_AmbientLight * FragMat.ambient, 1.0);
+}
+
+vec3 CalculateLightContribution(Light light, Material material, vec3 normal, vec3 fragPos, vec3 viewPos){
 	
-	vec3 lightColor = vec3(1, 1, 1);
+	vec3 lightDirection = normalize(light.position - fragPos);
+	//vec3 lightDirection = normalize(vec3(1, 10, 0) - fragPos);
 
-	vec3 ambient = u_AmbientLight * FragMat.ambient;
+	vec3 viewDirection = normalize(viewPos - fragPos);
+	vec3 reflectDirection = reflect(-lightDirection, normal);
 
-	float specularStrength = 0.5;
-
-	vec3 lightPos = vec3(1.0, 10.0, 0.0);
-	vec3 lightDirection = normalize(lightPos - FragPos);
-
-	vec3 viewDirection = normalize(ViewPos - FragPos);
-	vec3 reflectDirection = reflect(-lightDirection, Normal);
+	float distance = length(light.position - fragPos);
+	float attenuation = 1.0 / (1 + (light.linearAttenuation + light.quadraticAttenuation * distance) * distance);
 
 
+	float diff = max(dot(normal, lightDirection), 0.0);
+	float spec = pow(max(dot(viewDirection, reflectDirection), 0.0), material.shine);
 
-	float diff = max(dot(Normal, lightDirection), 0.0);
-	float spec = pow(max(dot(viewDirection, reflectDirection), 0.0), FragMat.shine);
+	vec3 diffuse = material.diffuse * diff * light.color;
+	vec3 specular = material.specular * spec * light.color;
 
-	vec3 diffuse = lightColor * (diff * FragMat.diffuse);
-	vec3 specular = FragMat.specular * spec * lightColor;
 
-	//outColor = vec4(lightColor * mat.diffuse, 1.0);
-	outColor = vec4(ambient + diffuse + specular, 1.0);
-	//outColor = Color;
+	float theta = dot(lightDirection, -light.direction);
+	float epsilon = light.innerCutoff - light.outerCutoff;
+	float intensity = clamp((theta - light.outerCutoff) / epsilon, 0.0, 1.0);
+
+	return (diffuse + specular) * intensity * attenuation;
 }

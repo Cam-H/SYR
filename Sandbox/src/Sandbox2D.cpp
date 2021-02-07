@@ -184,11 +184,24 @@ void Sandbox2D::onAttach() {
 	SYR::Renderer::getShaderLibrary()->load("GrayShader", "assets/shaders/Gray.glsl");
 
 	//m_MeshShader = SYR::Shader::create("assets/shaders/B3D.glsl");
+	SYR::Entity e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TransformComponent>().offset({ -10, 5, -5 });
+	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Screen.obj"));
 
-	m_TestMesh2 = SYR::FileHandler::loadMesh("assets/meshes/Screen.obj");
-	m_TestMesh3 = SYR::FileHandler::loadMesh("assets/meshes/Torus.obj");
-	m_TestMesh4 = SYR::FileHandler::loadMesh("assets/meshes/Screen.obj");
-	m_TestMesh5 = SYR::FileHandler::loadMesh("assets/meshes/LeafSword.obj");
+	e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TransformComponent>().offset({ 0, -5, 0 });
+	e.addComponent<SYR::VelocityComponent>(glm::vec3(0, 0, 0), glm::vec3(glm::radians(50.0f), glm::radians(90.0f), 0));
+	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Torus.obj"));
+
+	e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TransformComponent>().offset({ 0, 0, 10 });
+	e.addComponent<SYR::VelocityComponent>(glm::vec3(0, 0, 0), glm::vec3(glm::radians(50.0f), glm::radians(90.0f), 0));
+	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Screen.obj"));
+
+	e = m_ActiveScene->createEntity();
+	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/LeafSword.obj"));
+	e.getComponent<SYR::TransformComponent>().offset({ 15, 8, 0 });
+	e.addComponent<SYR::VelocityComponent>(glm::vec3(0, 0, 0), glm::vec3(0, glm::radians(90.0f), 0));
 
 	m_TestFloor = SYR::FileHandler::loadMesh("assets/meshes/Floor.obj");
 
@@ -254,10 +267,6 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 	//SYR_CORE_INFO("{0} {1} {2}", px, py, pz);
 
 	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("GrayShader"), m_TestFloor, glm::translate(glm::mat4(1.0f), { 0, -5, 0 }));
-	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("MeshShader"), m_TestMesh2, glm::translate(glm::mat4(1.0f), { px, py, -5 }) * glm::rotate(glm::mat4(1.0f), rotation, { 1.2f, 1.1f, 1.0f }));
-	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("MeshShader"), m_TestMesh3, glm::translate(glm::mat4(1.0f), { 5, -2, 0 }) * glm::rotate(glm::mat4(1.0f), rotation, { 1.5f, 1.0f, 1.0f }));
-	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("GrayShader"), m_TestMesh4, glm::translate(glm::mat4(1.0f), { 10 * sin(rotation / 2), 0, 10 * cos(rotation / 2) }));
-	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("GrayShader"), m_TestMesh5, glm::translate(glm::mat4(1.0f), { 0, 8, 20 }) * glm::rotate(glm::mat4(1.0f), rotation, { 0.0f, 1.0f, 0.0f }));
 
 	//SYR::Renderer::endScene();
 
