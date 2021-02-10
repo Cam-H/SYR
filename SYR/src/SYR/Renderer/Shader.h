@@ -40,6 +40,8 @@ namespace SYR {
 		bool exists(const std::string& name);
 
 		Ref<Shader> get(const std::string& name);
+		Shader* gett(const std::string& name);
+
 	private:
 		std::unordered_map<std::string, Ref<Shader>> m_Shaders;
 	};

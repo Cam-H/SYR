@@ -23,7 +23,7 @@ namespace SYR {
 		CharacterPointer() = default;
 		CharacterPointer(uint32_t x, uint32_t y, glm::ivec2 bearing, glm::ivec2 advance, uint32_t width, uint32_t height, uint32_t containerWidth, uint32_t containerHeight) {
 			float rx = (float)x / containerWidth, ry = (float)y / containerHeight;
-			float rw = (float)width / containerWidth, rh = (float)(height - 1) / containerHeight;
+			float rw = (float)width / containerWidth, rh = (float)height / containerHeight;
 
 			texCoords[0] = { rx, ry };
 			texCoords[1] = { rx + rw, ry };

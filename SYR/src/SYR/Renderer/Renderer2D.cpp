@@ -681,7 +681,8 @@ namespace SYR {
 		float aspectRatio = (float)dimensions.x / dimensions.y;
 		float xScale = 2.0f * aspectRatio / dimensions.x, yScale = 2.0f / dimensions.y;
 
-		float x = 0, y = 0;
+		float x = 0, y = 0, z = position.z - 0.001f;
+		float zOffset = 0.001f / text.length();
 		uint8_t xM = 0, yM = 0;
 
 		for (int i = 0; i < text.length(); i++) {
@@ -731,7 +732,7 @@ namespace SYR {
 
 		for (int i = 0; i < text.length(); i++) {
 			CharacterPointer cp = characterSet->getCharacterPointer(text.at(i));
-			glm::mat4 transform = glm::translate(glm::mat4(1.0f), { x + (cp.dimensions.x / 2 + cp.bearing.x) * xM * xScale, y - (cp.dimensions.y / 2 - cp.bearing.y + characterSet->getLinespacing() / 2 * xM) * yScale, position.z })
+			glm::mat4 transform = glm::translate(glm::mat4(1.0f), { x + (cp.dimensions.x / 2 + cp.bearing.x) * xM * xScale, y - (cp.dimensions.y / 2 - cp.bearing.y + characterSet->getLinespacing() / 2 * xM) * yScale, z += zOffset })
 				* glm::scale(glm::mat4(1.0f), { cp.dimensions.x * xScale, cp.dimensions.y * yScale, 0.0f });
 
 			drawRotatedQuad(transform, color, characterSet->getCharacterSheet(), cp.texCoords);

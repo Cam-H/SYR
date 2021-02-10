@@ -357,13 +357,13 @@ namespace SYR {
 		
 		for (const entt::entity e : view) {
 
-			glm::vec3& velocity = view.get<VelocityComponent>(e);
+			VelocityComponent& velocity = view.get<VelocityComponent>(e);
 
-			if (velocity.x != 0 || velocity.y != 0 || velocity.z != 0) {
-				glm::vec3 displacement = { velocity.x * ts, velocity.y * ts, velocity.z * ts };
+			view.get<TransformComponent>(e).offset(velocity.velocity * ts.getSeconds());
+			view.get<TransformComponent>(e).rotate(velocity.rotation.x * ts.getSeconds(), glm::vec3(1, 0, 0));
+			view.get<TransformComponent>(e).rotate(velocity.rotation.y * ts.getSeconds(), glm::vec3(0, 1, 0));
+			view.get<TransformComponent>(e).rotate(velocity.rotation.z * ts.getSeconds(), glm::vec3(0, 0, 1));
 
-				view.get<TransformComponent>(e).offset(displacement);
-			}
 		}
 	}
 

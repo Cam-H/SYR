@@ -57,8 +57,7 @@ namespace SYR {
 			shader->setFloat3("u_Materials[" + std::to_string(i) + "].specular", mat.specular);
 			shader->setFloat("u_Materials[" + std::to_string(i) + "].shine", mat.shine);
 		}
-		shader->setFloat3("u_AmbientLight", { 0, 0, 0 });
-
+		shader->setFloat3("u_AmbientLight", { 0.01f, 0.01f, 0.01f });
 
 		vertexArray->bind();
 		RenderCommand::drawIndexed(vertexArray);

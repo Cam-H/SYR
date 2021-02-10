@@ -59,4 +59,9 @@ namespace SYR {
 		return m_Shaders[name];
 	}
 
+	Shader* ShaderLibrary::gett(const std::string& name) {
+		SYR_CORE_ASSERT(exists(name), "Shader {0} not found!", name);
+		return m_Shaders[name].get();
+	}
+
 }

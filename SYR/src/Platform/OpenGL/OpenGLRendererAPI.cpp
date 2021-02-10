@@ -30,7 +30,7 @@ namespace SYR {
 		glEnable(GL_BLEND);
 
 		glEnable(GL_DEPTH_TEST);
-
+		glEnable(GL_MULTISAMPLE);
 		//glDisable(GL_CULL_FACE);
 	}
 

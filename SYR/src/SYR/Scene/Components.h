@@ -5,6 +5,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/string_cast.hpp>
 
+#include "SYR/Renderer/VertexArray.h"
 #include "Hitbox2D.h"
 #include <entt.hpp>
 
@@ -30,6 +31,10 @@ namespace SYR {
 			transform = transform * glm::translate(glm::mat4(1.0f), offset);
 		}
 
+		void rotate(float rotation, glm::vec3 axis) {
+			transform = transform * glm::rotate(glm::mat4(1.0f), rotation, axis);
+		}
+
 		void scale(double scalar) {
 			scale(glm::vec2(scalar, scalar));
 		}
@@ -51,11 +56,13 @@ namespace SYR {
 	};
 
 	struct VelocityComponent {
-		glm::vec3 velocity {0.0f, 0.0f, 0.0f};
+		glm::vec3 velocity{ 0.0f, 0.0f, 0.0f };
+		glm::vec3 rotation{ 0.0f, 0.0f, 0.0f };
 
 		VelocityComponent() = default;
 		VelocityComponent(const VelocityComponent&) = default;
 		VelocityComponent(const glm::vec3& velocity) : velocity(velocity) {}
+		VelocityComponent(const glm::vec3& velocity, const glm::vec3& rotation) : velocity(velocity), rotation(rotation) {}
 
 		void setVelocity(glm::vec3& velocity) {
 			this->velocity = velocity;
@@ -63,6 +70,83 @@ namespace SYR {
 
 		operator glm::vec3& () { return velocity; }
 		operator const glm::vec3& () { return velocity; }
+	};
+
+	enum class LightType {
+		POINT = 0, DIRECTION, SPOT
+	};
+
+	struct LightComponent {
+		LightType lightType;
+
+		glm::vec3 color;
+
+		glm::vec3 position;
+		glm::vec3 direction;
+
+		float linearAttenuation;
+		float quadraticAttenuation;
+
+		float innerCutoff;
+		float outerCutoff;
+
+		LightComponent() = default;
+		LightComponent(const LightComponent&) = default;
+
+		//Direction light definition
+		LightComponent(glm::vec3 color, glm::vec3 direction) {
+			this->color = color;
+			//position = glm::normalize(direction) * std::numeric_limits<float>::max();
+			this->direction = glm::normalize(direction);
+			position = -direction * 100000.0f;
+
+			linearAttenuation = quadraticAttenuation = 0;
+			innerCutoff = outerCutoff = -1;
+
+			lightType = LightType::DIRECTION;
+		}
+
+		//Point light definition
+		LightComponent(glm::vec3 color, glm::vec3 position, float linearAttenuation, float quadraticAttenuation) : color(color), position(position), direction({ 0.0f, 0.0f, 0.0f }), linearAttenuation(linearAttenuation), quadraticAttenuation(quadraticAttenuation), innerCutoff(-1), outerCutoff(-1), lightType(LightType::POINT) {}
+
+		//Spot light definition
+		LightComponent(glm::vec3 color, glm::vec3 position, glm::vec3 direction, float innerAngle, float outerAngle) {
+			this->color = color;
+			this->position = position;
+			this->direction = glm::normalize(direction);
+
+			linearAttenuation = quadraticAttenuation = 0;
+
+			innerCutoff = cos(glm::radians(innerAngle));
+			outerCutoff = cos(glm::radians(outerAngle));
+
+			lightType = LightType::SPOT;
+		}
+
+		void moveTo(glm::vec3 newPos) {
+			position = newPos;
+		}
+
+		void setAttenuation(float linearAttenuation, float quadraticAttenuation) {
+			this->linearAttenuation = linearAttenuation;
+			this->quadraticAttenuation = quadraticAttenuation;
+		}
+
+		void setSpotlight(glm::vec3 direction, float innerAngle, float outerAngle) {
+			this->direction = direction;
+
+			innerCutoff = cos(glm::radians(innerAngle));
+			outerCutoff = cos(glm::radians(outerAngle));
+		}
+	};
+
+	struct MeshComponent {
+
+		Ref<VertexArray> mesh;
+
+		MeshComponent() = default;
+		MeshComponent(const MeshComponent&) = default;
+		MeshComponent(Ref<VertexArray> mesh) : mesh(mesh) {}
 	};
 
 	struct SpriteRendererComponent {

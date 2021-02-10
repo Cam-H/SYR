@@ -253,11 +253,18 @@ namespace SYR {
 			return uint8_t();
 		}
 
+		int cellSpacing = 2;//Must be an even number
+
 		uint32_t x = 0, y = 0;
 		uint32_t area = 0;
 
 		//Calculate area + width for the character sheet
 		for (std::vector<Character>::iterator it = characters.begin(); it != characters.end(); ++it) {
+
+			//Width/Height increased to add spacing between cells
+			it->width += cellSpacing;
+			it->height += cellSpacing;
+
 			area += it->width * it->height;
 		}
 
@@ -294,11 +301,11 @@ namespace SYR {
 				offset = it->height;
 			}
 
-			CharacterPointer cp = CharacterPointer(x, y, it->bearing, it->advance, it->width, it->height, *width, *height);
+			CharacterPointer cp = CharacterPointer(x + cellSpacing / 2, y + cellSpacing / 2, it->bearing, it->advance, it->width - cellSpacing, it->height - cellSpacing, *width, *height);
 			m_CharacterList.insert(std::pair<uint32_t, CharacterPointer>(it->key, cp));
-			for (uint32_t i = 0; i < it->height; i++) {
-				for (uint32_t j = 0; j < it->width; j++) {
-					content[x + j + (y + i) * *width] = *(it->buffer + j + i * it->width);
+			for (uint32_t i = 0; i < it->height - cellSpacing; i++) {
+				for (uint32_t j = 0; j < it->width - cellSpacing; j++) {
+					content[x + j + (y + i + 1) * *width + cellSpacing / 2] = *(it->buffer + j + i * (it->width - cellSpacing));
 				}
 			}
 

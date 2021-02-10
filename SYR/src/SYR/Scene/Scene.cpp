@@ -5,7 +5,10 @@
 #include "SYR/Systems/UiSystem.h"
 #include "SYR/Systems/InputSystem.h"
 
+#include "SYR/Renderer/Renderer.h"
 #include "SYR/Renderer/Renderer2D.h"
+
+#include "SYR/Core/Input.h"
 
 #include <glm/gtx/matrix_decompose.hpp>
 
@@ -39,7 +42,29 @@ namespace SYR {
 	}
 
 	void Scene::prepare() {
+		Entity entity = { m_Registry.create(), this };
+		m_Entities.push_back(entity);
+		
+		auto& tag = entity.addComponent<TagComponent>();
+		tag.tag = "Test Light";
+		tag.id = "TL";
 
+		//entity.addComponent<LightComponent>(glm::vec3(0.8f, 0.8f, 1), glm::vec3(1, 20, 0));
+		//entity.addComponent<LightComponent>(glm::vec3(0.8f, 0.8f, 1), glm::vec3(1, 10, 0), 0.03f, 0.0064f);
+		entity.addComponent<LightComponent>(glm::vec3(0, 1, 1), glm::vec3(15, 2, 15), 0.03f, 0.001f);
+
+		entity = { m_Registry.create(), this };
+		m_Entities.push_back(entity);
+
+		entity.addComponent<TagComponent>().id = "TL2";
+		entity.addComponent<LightComponent>(glm::vec3(1, 0.7f, 0), glm::vec3(0, 10, 0), glm::vec3(0, -1, 0.2f), 30, 30.5f);
+
+
+		entity = { m_Registry.create(), this };
+		m_Entities.push_back(entity);
+
+		entity.addComponent<TagComponent>();
+		entity.addComponent<LightComponent>(glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(0, -1, 0));
 	}
 
 	void Scene::loadUi(Ref<Scene> scene, const std::string& filepath) {
@@ -87,13 +112,48 @@ namespace SYR {
 
 	void Scene::onDraw() {
 
-		render(m_Registry);
-		
-		if (m_UiEnabled) {
-			renderUi(m_Registry, m_MainPanel->m_EntityHandle);
+		static float n = 0;
+		m_Registry.get<LightComponent>(getEntityByID(std::string("TL2")).getHandle()).direction.x = cos(n += 0.01f) / 1.5f;
+		m_Registry.get<LightComponent>(getEntityByID(std::string("TL2")).getHandle()).direction.z = sin(n += 0.01f) / 1.5f;
+
+		auto view = m_Registry.view<LightComponent>();
+
+		Ref<Shader> shader = Renderer::getShaderLibrary()->get("GrayShader");
+
+		uint32_t i = 0;
+		for (const entt::entity e : view) {
+			LightComponent& light = view.get<LightComponent>(e);
+
+			shader->bind();
+			shader->setFloat3("u_Lights[" + std::to_string(i) + "].color", light.color);
+
+			shader->setFloat3("u_Lights[" + std::to_string(i) + "].position", light.position);
+			shader->setFloat3("u_Lights[" + std::to_string(i) + "].direction", glm::length(light.direction) != 0 ? glm::normalize(light.direction) : light.direction);
+
+			shader->setFloat("u_Lights[" + std::to_string(i) + "].linearAttenuation", light.linearAttenuation);
+			shader->setFloat("u_Lights[" + std::to_string(i) + "].quadraticAttenuation", light.quadraticAttenuation);
+
+			shader->setFloat("u_Lights[" + std::to_string(i) + "].innerCutoff", light.innerCutoff);
+			shader->setFloat("u_Lights[" + std::to_string(i) + "].outerCutoff", light.outerCutoff);
+
+			i++;
 		}
 
-		handleCollisions(m_Registry);
+		shader->setInt("u_ActiveLightCount", view.size());
+
+		auto meshView = m_Registry.view<MeshComponent>();
+
+		for (const entt::entity e : meshView) {
+			Renderer::submit(shader, meshView.get<MeshComponent>(e).mesh, m_Registry.get<TransformComponent>(e).transform);
+		}
+
+		//render(m_Registry);
+		
+		if (m_UiEnabled) {
+			//renderUi(m_Registry, m_MainPanel->m_EntityHandle);
+		}
+
+		//handleCollisions(m_Registry);
 
 	}
 
