@@ -4,3 +4,5 @@
 [submodule "SYR/vendor/GLFW"]
 	path = SYR/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "SYR/vendor/spdlog"]
+	url = https://github.com/gabime/spdlog
