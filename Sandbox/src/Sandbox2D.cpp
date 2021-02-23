@@ -182,6 +182,7 @@ void Sandbox2D::onAttach() {
 
 	SYR::Renderer::getShaderLibrary()->load("MeshShader", "assets/shaders/B3D.glsl");
 	SYR::Renderer::getShaderLibrary()->load("GrayShader", "assets/shaders/Gray.glsl");
+	SYR::Renderer::getShaderLibrary()->load("OutlineShader", "assets/shaders/Highlight.glsl");
 
 	//m_MeshShader = SYR::Shader::create("assets/shaders/B3D.glsl");
 	SYR::Entity e = m_ActiveScene->createEntity();
@@ -200,6 +201,8 @@ void Sandbox2D::onAttach() {
 
 	e = m_ActiveScene->createEntity();
 	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/LeafSword.obj"));
+	e.getComponent<SYR::TagComponent>().id = "SWORD";
+	//e.addComponent<SYR::OutlineComponent>(SYR::FileHandler::loadMesh("assets/meshes/LeafSword.obj"));
 	e.getComponent<SYR::TransformComponent>().offset({ 15, 8, 0 });
 	e.addComponent<SYR::VelocityComponent>(glm::vec3(0, 0, 0), glm::vec3(0, glm::radians(90.0f), 0));
 
@@ -294,7 +297,7 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "Mouse to reorient camera", { -1.75f, 0.85f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
 	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "ALT+F4 to close", { -1.75f, 0.75f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
 
-	SYR::Renderer2D::drawQuad(glm::mat4(1.0f) * glm::scale(glm::mat4(1.0f), { 0.6f, 0.6f, 1.0f }), glm::vec4(1, 1, 0, 1), m_CharacterSet->getCharacterSheet());
+	//SYR::Renderer2D::drawQuad(glm::mat4(1.0f) * glm::scale(glm::mat4(1.0f), { 0.6f, 0.6f, 1.0f }), glm::vec4(1, 1, 0, 1), m_CharacterSet->getCharacterSheet());
 
 	//SYR::Renderer2D::drawLine(glm::vec2(0.0f, 0.0f), glm::vec2(-1.0f, -1.0f), glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
 	

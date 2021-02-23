@@ -1,6 +1,6 @@
-[submodule "SYR/vendor/imgui"]
-	path = SYR/vendor/imgui
-	url = https://github.com/TheCherno/imgui
 [submodule "SYR/vendor/glm"]
 	path = SYR/vendor/glm
 	url = https://github.com/g-truc/glm
+[submodule "SYR/vendor/GLFW"]
+	path = SYR/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW

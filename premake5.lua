@@ -21,6 +21,7 @@ IncludeDir["freetype"] = "SYR/vendor/freetype/include"
 
 include "SYR/vendor/GLFW"
 include "SYR/vendor/Glad"
+include "SYR/vendor/freetype"
 
 project "SYR"
 	location "SYR"
@@ -50,7 +51,6 @@ project "SYR"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb}",
 		"%{IncludeDir.entt}",
