@@ -107,7 +107,8 @@ project "Sandbox"
 		"SYR/vendor/spdlog/include",
 		"SYR/src",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.freetype}"
 	}
 
 	links{
