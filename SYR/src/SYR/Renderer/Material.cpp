@@ -17,10 +17,10 @@ namespace SYR {
 
 	void MaterialLibrary::loadMaterials(const std::string& materialFile) {
 
-		switch (getFileFormat(materialFile)) {
+		switch (FileHandler::getFileFormat(materialFile)) {
 		case FileFormat::MTL:
 			{
-			std::string content = readFile(materialFile);
+			std::string content = FileHandler::readFile(materialFile);
 
 			const char* delimiter = "newmtl";
 			size_t delimLength = strlen(delimiter);

@@ -147,6 +147,11 @@ namespace SYR {
 			Renderer::submit(shader, meshView.get<MeshComponent>(e).mesh, m_Registry.get<TransformComponent>(e).transform);
 		}
 
+		std::string sid = "SWORD";
+		Entity s = getEntityByID(sid);
+		//Renderer::outline(Renderer::getShaderLibrary()->get("OutlineShader"), m_Registry.get<OutlineComponent>(s.getHandle()).scaledMesh, m_Registry.get<TransformComponent>(s.getHandle()).transform * glm::scale(glm::mat4(1.0f), { 1.1f, 1.1f, 1.1f }));
+	
+
 		//render(m_Registry);
 		
 		if (m_UiEnabled) {

@@ -149,6 +149,14 @@ namespace SYR {
 		MeshComponent(Ref<VertexArray> mesh) : mesh(mesh) {}
 	};
 
+	struct OutlineComponent {
+		Ref<VertexArray> scaledMesh;
+
+		OutlineComponent() = default;
+		OutlineComponent(const OutlineComponent&) = default;
+		//OutlineComponent(Ref<VertexArray> mesh) : mesh(mesh) {}
+	};
+
 	struct SpriteRendererComponent {
 		glm::vec4 color {1.0f, 1.0f, 1.0f, 1.0f};
 

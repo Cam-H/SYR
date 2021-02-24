@@ -14,6 +14,7 @@ namespace SYR {
 		virtual void clear() override;
 
 		virtual void drawIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount = 0) override;
+		virtual void outlineIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount = 0) override;
 
 		virtual void drawLines(const Ref<VertexArray>& vertexArray, float lineWidth, uint32_t indexCount) override;
 	};

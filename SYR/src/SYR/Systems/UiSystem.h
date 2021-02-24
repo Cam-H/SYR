@@ -13,7 +13,7 @@ namespace SYR {
 	class UiSystem {
 	public:
 		static Entity loadPredefinedUi(Scene* scene, const std::string& filepath) {
-			std::string content = readFile(filepath);
+			std::string content = FileHandler::readFile(filepath);
 
 			std::vector<std::string> fields = splitXMLSiblings(content);
 

@@ -29,7 +29,14 @@ namespace SYR {
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		glEnable(GL_BLEND);
 
+		glEnable(GL_STENCIL_TEST);
+		//glStencilMask(0x00);//Disables writing to the stencil buffer
+		//glStencilFunc(GL_EQUAL, 1, 0xFF);//Specifies what fragments pass the test
+		//glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
+
 		glEnable(GL_DEPTH_TEST);
+		//glDepthFunc(GL_LESS);
+		//glDepthMask(GL_FALSE);//Disable writing to the depth buffer
 		glEnable(GL_MULTISAMPLE);
 		//glDisable(GL_CULL_FACE);
 	}
@@ -43,10 +50,19 @@ namespace SYR {
 	}
 
 	void OpenGLRendererAPI::clear() {
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 	}
 
 	void OpenGLRendererAPI::drawIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount) {
+		uint32_t count = indexCount != 0 ? indexCount : vertexArray->getIndexBuffer()->getCount();
+
+		vertexArray->bind();
+
+		glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, nullptr);
+		glBindTexture(GL_TEXTURE_2D, 0);
+	}
+
+	void OpenGLRendererAPI::outlineIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount) {
 		uint32_t count = indexCount != 0 ? indexCount : vertexArray->getIndexBuffer()->getCount();
 
 		vertexArray->bind();

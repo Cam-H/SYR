@@ -63,4 +63,18 @@ namespace SYR {
 		RenderCommand::drawIndexed(vertexArray);
 	}
 
+	void Renderer::outline(const Ref<Shader>& shader, const Ref<VertexArray>& vertexArray, const glm::mat4& transform) {
+		shader->bind();
+
+		shader->setMat4("u_ViewProjection", m_SceneData->ViewProjectionMatrix);
+		shader->setMat4("u_Transform", transform);
+		//shader->setMat3("u_NormalMatrix", glm::transpose(glm::inverse(transform)));
+		//shader->setFloat3("u_ViewPosition", m_SceneData->CameraPosition);
+
+
+		
+		vertexArray->bind();
+		RenderCommand::drawIndexed(vertexArray);
+	}
+
 }

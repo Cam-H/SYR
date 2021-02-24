@@ -5,6 +5,51 @@
 
 namespace SYR {
 
+	FileFormat FileHandler::getFileFormat(const std::string& filepath) {
+		std::string fileFormat = filepath.substr(filepath.find_last_of('.') + 1);
+
+		if (fileFormat == "obj") {
+			return FileFormat::OBJ;
+		}
+		else if (fileFormat == "mtl") {
+			return FileFormat::MTL;
+		}
+
+		SYR_CORE_WARN("Unrecognized file format: {0}", fileFormat);
+
+		return FileFormat::NONE;
+	}
+
+	std::string FileHandler::readFile(const std::string& filepath, bool insertFilePath) {
+		std::string result;
+		std::ifstream in(filepath, std::ios::in | std::ios::binary);
+
+		if (in) {
+			in.seekg(0, std::ios::end);
+			result.resize(in.tellg());
+			in.seekg(0, std::ios::beg);
+			in.read(&result[0], result.size());
+			in.close();
+		}
+		else {
+			SYR_CORE_ERROR("Could not open file '{0}'", filepath);
+		}
+
+		return (insertFilePath ? filepath.substr(0, filepath.find_last_of("\\/") + 1) + "\n" : "") + result;
+	}
+
+	std::vector<char> FileHandler::readBinaryFile(const std::string& filepath) {
+		std::ifstream input(filepath, std::ios::binary);
+
+		std::vector<char> bytes(
+			(std::istreambuf_iterator<char>(input)),
+			(std::istreambuf_iterator<char>()));
+
+		input.close();
+
+		return bytes;
+	}
+
 	std::vector<uint32_t> FileHandler::parseUTF8File(const std::string& filepath) {
 		std::vector<char> bytes = readBinaryFile(filepath);
 
@@ -33,7 +78,7 @@ namespace SYR {
 
 		switch (format) {
 		case FileFormat::OBJ:
-			return OBJFileHandler::parseOBJFile(content);
+			return OBJFileHandler::loadMesh(content);
 		default:
 			SYR_CORE_WARN("Could not load mesh!");
 			return VertexArray::create();

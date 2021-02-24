@@ -19,6 +19,7 @@ namespace SYR {
 		virtual void clear() = 0;
 
 		virtual void drawIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount = 0) = 0;
+		virtual void outlineIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount = 0) = 0;
 
 		virtual void drawLines(const Ref<VertexArray>& vertexArray, float lineWidth, uint32_t indexCount = 0) = 0;
 
