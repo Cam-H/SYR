@@ -30,8 +30,6 @@ private:
 	SYR::Ref<SYR::Scene> m_ActiveScene;
 	SYR::Entity entity;
 
-	SYR::Ref<SYR::VertexArray> m_TestFloor;
-
 	SYR::CameraController m_CameraController;
 	SYR::CameraController m_PCameraController;
 

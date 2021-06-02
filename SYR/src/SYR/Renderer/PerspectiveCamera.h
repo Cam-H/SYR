@@ -17,6 +17,8 @@ namespace SYR {
 		PerspectiveCamera(float yaw, float pitch) : m_Rotation(yaw, pitch, 0.0f) {
 			setProjection(0, 0, 0, 0);
 			updateCameraVectors();
+
+			recalculateViewMatrix();
 		}
 
 		PerspectiveCamera(glm::vec3 position = glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f), float yaw = YAW, float pitch = PITCH) : m_Front(glm::vec3(0.0f, 0.0f, -1.0f))
@@ -29,6 +31,8 @@ namespace SYR {
 			m_Rotation = { yaw, pitch, 0.0f };
 
 			updateCameraVectors();
+
+			recalculateViewMatrix();
 		}
 
 		virtual void setProjection(float left, float right, float bottom, float top) override;

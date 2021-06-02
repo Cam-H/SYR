@@ -55,6 +55,7 @@ namespace SYR {
 	}
 
 	void Application::run() {
+
 		while (m_Running) {
 
 			float time = (float)glfwGetTime();

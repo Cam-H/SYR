@@ -6,9 +6,10 @@ layout(location=1) in vec3 normal;
 
 uniform mat4 u_ViewProjection;
 uniform mat4 u_Transform;
+uniform float u_NormalScaling;
 
 void main(){
-	gl_Position = u_ViewProjection * u_Transform * vec4(position, 1.0);
+	gl_Position = u_ViewProjection * u_Transform * vec4(position + normal * u_NormalScaling, 1.0);
 }
 
 #type fragment
@@ -17,5 +18,5 @@ void main(){
 out vec4 outColor;
 
 void main(){
-	outColor = vec4(0.04, 0.28, 0.26, 1.0);
+	outColor = vec4(0.8, 0.2, 0.26, 1.0);
 }

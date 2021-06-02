@@ -112,6 +112,8 @@ namespace SYR {
 
 	void Scene::onDraw() {
 
+		//TODO move to a system
+
 		static float n = 0;
 		m_Registry.get<LightComponent>(getEntityByID(std::string("TL2")).getHandle()).direction.x = cos(n += 0.01f) / 1.5f;
 		m_Registry.get<LightComponent>(getEntityByID(std::string("TL2")).getHandle()).direction.z = sin(n += 0.01f) / 1.5f;
@@ -143,19 +145,47 @@ namespace SYR {
 
 		auto meshView = m_Registry.view<MeshComponent>();
 
+		//Set stencil operation
+		RenderCommand::setStencilOperation(RendererAPI::STENCIL::KEEP, RendererAPI::STENCIL::REPLACE, RendererAPI::STENCIL::REPLACE);
+
+		RenderCommand::setStencilMask(0x00);
+
 		for (const entt::entity e : meshView) {
-			Renderer::submit(shader, meshView.get<MeshComponent>(e).mesh, m_Registry.get<TransformComponent>(e).transform);
+			if (!m_Registry.has<OutlineComponent>(e)) {
+				Renderer::submit(shader, meshView.get<MeshComponent>(e).mesh, m_Registry.get<TransformComponent>(e).transform);
+			}
 		}
 
-		std::string sid = "SWORD";
-		Entity s = getEntityByID(sid);
-		//Renderer::outline(Renderer::getShaderLibrary()->get("OutlineShader"), m_Registry.get<OutlineComponent>(s.getHandle()).scaledMesh, m_Registry.get<TransformComponent>(s.getHandle()).transform * glm::scale(glm::mat4(1.0f), { 1.1f, 1.1f, 1.1f }));
-	
+		for (const entt::entity e : meshView) {
+			if (m_Registry.has<OutlineComponent>(e)) {
+
+				//Enable stencil writing
+				RenderCommand::setStencilFunction(RendererAPI::STENCIL::ALWAYS, 1, 0xFF);
+				RenderCommand::setStencilMask(0xFF);
+				RenderCommand::enableDepthBuffer();
+
+				//Render object to be outlined
+				Renderer::submit(shader, meshView.get<MeshComponent>(e).mesh, m_Registry.get<TransformComponent>(e).transform);
+
+				//Disable stencil writing and depth testing
+				RenderCommand::setStencilFunction(RendererAPI::STENCIL::NOTEQUAL, 1, 0xFF);
+				RenderCommand::setStencilMask(0x00);
+				RenderCommand::disableDepthBuffer();
+
+				//Render a scaled version of the object, but only the fragments whose stencil values are not equal to 1
+				Renderer::outline(Renderer::getShaderLibrary()->get("OutlineShader"), m_Registry.get<OutlineComponent>(e).scaledMesh, m_Registry.get<TransformComponent>(e).transform, 0.1f);
+
+			}
+		}
+
+		//Reenable depth testing and restore stencil function
+		RenderCommand::setStencilFunction(RendererAPI::STENCIL::ALWAYS, 1, 0xFF);
+		RenderCommand::setStencilMask(0xFF);
+		RenderCommand::enableDepthBuffer();
 
 		//render(m_Registry);
-		
 		if (m_UiEnabled) {
-			//renderUi(m_Registry, m_MainPanel->m_EntityHandle);
+			renderUi(m_Registry, m_MainPanel->m_EntityHandle);
 		}
 
 		//handleCollisions(m_Registry);

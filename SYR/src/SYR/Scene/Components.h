@@ -150,11 +150,12 @@ namespace SYR {
 	};
 
 	struct OutlineComponent {
+
 		Ref<VertexArray> scaledMesh;
 
 		OutlineComponent() = default;
 		OutlineComponent(const OutlineComponent&) = default;
-		//OutlineComponent(Ref<VertexArray> mesh) : mesh(mesh) {}
+		OutlineComponent(Ref<VertexArray> scaledMesh) : scaledMesh(scaledMesh) {}
 	};
 
 	struct SpriteRendererComponent {
@@ -205,12 +206,26 @@ namespace SYR {
 		VISIBLE = 0, HIDDEN, GONE
 	};
 
-	struct UiComponent {
-
+	struct AnchorComponent {
 		entt::entity anchorHandle = entt::null;
 
 		UiAlignment horizontalAlignment = UiAlignment::FLOAT;
 		UiAlignment verticalAlignment = UiAlignment::FLOAT;
+		
+		AnchorComponent() = default;
+		AnchorComponent(const AnchorComponent&) = default;
+
+		AnchorComponent(entt::entity anchorHandle, UiAlignment horizontalAlignment, UiAlignment verticalAlignment) : anchorHandle(anchorHandle), horizontalAlignment(horizontalAlignment), verticalAlignment(verticalAlignment) {}
+
+		void setAnchor(entt::entity anchorHandle, UiAlignment horizontalAlignment, UiAlignment verticalAlignment) {
+			this->anchorHandle = anchorHandle;
+			this->horizontalAlignment = horizontalAlignment;
+			this->verticalAlignment = verticalAlignment;
+
+		}
+	};
+
+	struct UiComponent {
 
 		UiVisibility visibility = UiVisibility::VISIBLE;
 		
@@ -220,14 +235,6 @@ namespace SYR {
 
 		UiComponent() = default;
 		UiComponent(const UiComponent&) = default;
-
-		void setAnchor(entt::entity anchorHandle, UiAlignment horizontalAlignment, UiAlignment verticalAlignment) {
-			this->anchorHandle = anchorHandle;
-			this->horizontalAlignment = horizontalAlignment;
-			this->verticalAlignment = verticalAlignment;
-
-		}
-
 
 		//UiComponent()
 	};

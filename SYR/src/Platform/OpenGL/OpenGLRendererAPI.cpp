@@ -30,15 +30,15 @@ namespace SYR {
 		glEnable(GL_BLEND);
 
 		glEnable(GL_STENCIL_TEST);
-		//glStencilMask(0x00);//Disables writing to the stencil buffer
-		//glStencilFunc(GL_EQUAL, 1, 0xFF);//Specifies what fragments pass the test
-		//glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
 
 		glEnable(GL_DEPTH_TEST);
 		//glDepthFunc(GL_LESS);
 		//glDepthMask(GL_FALSE);//Disable writing to the depth buffer
 		glEnable(GL_MULTISAMPLE);
-		//glDisable(GL_CULL_FACE);
+
+		/*FACE CULLING*/
+		//glEnable(GL_CULL_FACE);
+		//glCullFace(GL_BACK);
 	}
 
 	void OpenGLRendererAPI::setViewport(uint32_t x, uint32_t y, uint32_t width, uint32_t height) {
@@ -79,5 +79,104 @@ namespace SYR {
 
 		glLineWidth(lineWidth);
 		glDrawElements(GL_LINES, count, GL_UNSIGNED_INT, nullptr);
+	}
+
+	void OpenGLRendererAPI::disableStencilBuffer() {
+		glDisable(GL_STENCIL_TEST);
+	}
+
+	void OpenGLRendererAPI::enableStencilBuffer() {
+		glEnable(GL_STENCIL_TEST);
+	}
+
+	void OpenGLRendererAPI::disableDepthBuffer() {
+		glDisable(GL_DEPTH_TEST);
+	}
+
+	void OpenGLRendererAPI::enableDepthBuffer() {
+		glEnable(GL_DEPTH_TEST);
+	}
+
+	void OpenGLRendererAPI::setStencilOperation(STENCIL sfail, STENCIL dpfail, STENCIL dppass) {
+		uint16_t stencilFail = 0;
+		uint16_t depthFail = 0;
+		uint16_t pass = 0;
+
+		switch (sfail) {
+		case STENCIL::KEEP:
+			stencilFail = GL_KEEP;
+			break;
+		case STENCIL::ZERO:
+			stencilFail = GL_ZERO;
+			break;
+		case STENCIL::REPLACE:
+			stencilFail = GL_REPLACE;
+			break;
+		}
+
+		switch (dpfail) {
+		case STENCIL::KEEP:
+			depthFail = GL_KEEP;
+			break;
+		case STENCIL::ZERO:
+			depthFail = GL_ZERO;
+			break;
+		case STENCIL::REPLACE:
+			depthFail = GL_REPLACE;
+			break;
+		}
+
+		switch (dppass) {
+		case STENCIL::KEEP:
+			pass = GL_KEEP;
+			break;
+		case STENCIL::ZERO:
+			pass = GL_ZERO;
+			break;
+		case STENCIL::REPLACE:
+			pass = GL_REPLACE;
+			break;
+		}
+
+		glStencilOp(stencilFail, depthFail, pass);
+
+	}
+	void OpenGLRendererAPI::setStencilFunction(STENCIL action, uint8_t reference, uint8_t mask) {
+		uint16_t function = 0;
+
+		switch (action) {
+		case STENCIL::ALWAYS:
+			function = GL_ALWAYS;
+			break;
+		case STENCIL::NEVER:
+			function = GL_NEVER;
+			break;
+		case STENCIL::LESS:
+			function = GL_LESS;
+			break;
+		case STENCIL::LEQUAL:
+			function = GL_LEQUAL;
+			break;
+		case STENCIL::EQUAL:
+			function = GL_EQUAL;
+			break;
+		case STENCIL::GEQUAL:
+			function = GL_GEQUAL;
+			break;
+		case STENCIL::GREATER:
+			function = GL_GREATER;
+			break;
+		case STENCIL::NOTEQUAL:
+			function = GL_NOTEQUAL;
+			break;
+		default:
+			SYR_CORE_WARN("Unrecognized stencil function type!");
+		}
+
+		glStencilFunc(function, reference, mask);
+	}
+
+	void OpenGLRendererAPI::setStencilMask(uint8_t mask) {
+		glStencilMask(mask);
 	}
 }

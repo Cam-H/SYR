@@ -18,6 +18,12 @@ namespace SYR {
 
 	enum class CameraControlType {
 		LOCKED_CAMERA, FIXED_CAMERA, FREE_CAMERA
+
+		/*
+		* LOCKED - No manual translation or rotation
+		* FIXED - No manual translation
+		* FREE - Enables manual translation and rotation (by hiding / centering mouse)
+		*/
 	};
 
 	class CameraController {
@@ -28,6 +34,7 @@ namespace SYR {
 
 
 		void setCameraControlType(CameraControlType controlType);
+		CameraControlType getCameraControlType() { return m_CameraControlType; }
 
 		float getZoomLevel() const { return m_ZoomLevel; }
 		void setZoomLevel(float level) { m_ZoomLevel = level; calculateView(); }

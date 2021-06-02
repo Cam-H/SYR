@@ -22,8 +22,8 @@ namespace SYR {
 
 		static std::vector<uint32_t> parseUTF8File(const std::string& filepath);
 
-		static Ref<VertexArray> loadMesh(const std::string& filepath);
-	
+		static Ref<VertexArray> loadMesh(const std::string& filepath, boolean smoothed = false);
+
 	private:
 	};
 }

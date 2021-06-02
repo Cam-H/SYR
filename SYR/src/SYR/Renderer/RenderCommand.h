@@ -25,6 +25,34 @@ namespace SYR {
 			viewportDimensions = glm::ivec2(width, height);
 		}
 
+		inline static void disableStencilBuffer() {
+			s_RendererAPI->disableStencilBuffer();
+		}
+
+		inline static void enableStencilBuffer() {
+			s_RendererAPI->enableStencilBuffer();
+		}
+
+		inline static void disableDepthBuffer() {
+			s_RendererAPI->disableDepthBuffer();
+		}
+
+		inline static void enableDepthBuffer() {
+			s_RendererAPI->enableDepthBuffer();
+		}
+
+		inline static void setStencilOperation(RendererAPI::STENCIL sfail, RendererAPI::STENCIL dpfail, RendererAPI::STENCIL dppass) {
+			s_RendererAPI->setStencilOperation(sfail, dpfail, dppass);
+		}
+
+		inline static void setStencilFunction(RendererAPI::STENCIL action, uint8_t reference, uint8_t mask) {
+			s_RendererAPI->setStencilFunction(action, reference, mask);
+		}
+
+		inline static void setStencilMask(uint8_t mask) {
+			s_RendererAPI->setStencilMask(mask);
+		}
+
 		inline static glm::ivec2 getViewportDimensions() { return viewportDimensions; }
 
 	private:

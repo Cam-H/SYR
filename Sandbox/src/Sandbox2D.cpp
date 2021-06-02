@@ -7,7 +7,7 @@
 #include <SYR/Core/Application.h>
 
 
-Sandbox2D::Sandbox2D() : Layer("Sandbox2D"), m_CameraController(SYR::CameraType::ORTHOGRAPHIC, SYR::CameraControlType::LOCKED_CAMERA, 1280.0f / 720.0f), m_PCameraController(SYR::CameraType::PERSPECTIVE, SYR::CameraControlType::FREE_CAMERA, 1280.0f / 720.0f) {
+Sandbox2D::Sandbox2D() : Layer("Sandbox2D"), m_CameraController(SYR::CameraType::ORTHOGRAPHIC, SYR::CameraControlType::LOCKED_CAMERA, 1280.0f / 720.0f), m_PCameraController(SYR::CameraType::PERSPECTIVE, SYR::CameraControlType::LOCKED_CAMERA, 1280.0f / 720.0f) {
 	//SYR::PerspectiveCamera pcam = SYR::PerspectiveCamera(1280.0f / 720.0f);
 }
 
@@ -186,30 +186,39 @@ void Sandbox2D::onAttach() {
 
 	//m_MeshShader = SYR::Shader::create("assets/shaders/B3D.glsl");
 	SYR::Entity e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TagComponent>().id = "SPH1";
 	e.getComponent<SYR::TransformComponent>().offset({ -10, 5, -5 });
 	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Screen.obj"));
 
 	e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TagComponent>().id = "TORUS";
 	e.getComponent<SYR::TransformComponent>().offset({ 0, -5, 0 });
 	e.addComponent<SYR::VelocityComponent>(glm::vec3(0, 0, 0), glm::vec3(glm::radians(50.0f), glm::radians(90.0f), 0));
 	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Torus.obj"));
+	e.addComponent<SYR::OutlineComponent>(SYR::FileHandler::loadMesh("assets/meshes/Torus.obj", true));
+
 
 	e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TagComponent>().id = "SPH2";
 	e.getComponent<SYR::TransformComponent>().offset({ 0, 0, 10 });
 	e.addComponent<SYR::VelocityComponent>(glm::vec3(0, 0, 0), glm::vec3(glm::radians(50.0f), glm::radians(90.0f), 0));
 	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Screen.obj"));
 
 	e = m_ActiveScene->createEntity();
-	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/LeafSword.obj"));
 	e.getComponent<SYR::TagComponent>().id = "SWORD";
-	//e.addComponent<SYR::OutlineComponent>(SYR::FileHandler::loadMesh("assets/meshes/LeafSword.obj"));
+	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/LeafSword.obj"));
+	e.addComponent<SYR::OutlineComponent>(SYR::FileHandler::loadMesh("assets/meshes/LeafSword.obj", true));
 	e.getComponent<SYR::TransformComponent>().offset({ 15, 8, 0 });
 	e.addComponent<SYR::VelocityComponent>(glm::vec3(0, 0, 0), glm::vec3(0, glm::radians(90.0f), 0));
 
-	m_TestFloor = SYR::FileHandler::loadMesh("assets/meshes/Floor.obj");
+	e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TagComponent>().id = "FLOOR";
+	e.getComponent<SYR::TransformComponent>().offset({ 0, -5, 0 });
+	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Floor.obj"));
 
-	//SYR::Scene::loadUi(m_ActiveScene, "assets/ui/TestUI1.xml");
+	SYR::Scene::loadUi(m_ActiveScene, "assets/ui/TestUI1.xml");
 	//SYR::UiSystem::loadPredefinedUi(m_ActiveScene, "assets/ui/TestUI1.xml");
+
 }
 
 void Sandbox2D::onDetach() {
@@ -253,6 +262,27 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 		velocity.z -= 0.01;
 	}
 
+
+	static bool escPressed = false;
+
+	if (SYR::Input::isKeyPressed(SYR_KEY_ESCAPE)) {
+
+		if (!escPressed) {
+			if (m_PCameraController.getCameraControlType() == SYR::CameraControlType::FREE_CAMERA) {
+				m_PCameraController.setCameraControlType(SYR::CameraControlType::LOCKED_CAMERA);
+				m_ActiveScene->enableUi();
+			}
+			else {
+				m_PCameraController.setCameraControlType(SYR::CameraControlType::FREE_CAMERA);
+				m_ActiveScene->disableUi();
+			}
+		}
+
+		escPressed = true;
+	} else {
+		escPressed = false;
+	}
+
 	static float rotation = 0.0f;
 	rotation += ts;
 
@@ -269,8 +299,6 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 	//pz += velocity.z;
 	//SYR_CORE_INFO("{0} {1} {2}", px, py, pz);
 
-	SYR::Renderer::submit(SYR::Renderer::getShaderLibrary()->get("GrayShader"), m_TestFloor, glm::translate(glm::mat4(1.0f), { 0, -5, 0 }));
-
 	//SYR::Renderer::endScene();
 
 	if (m_ActiveScene->entityIDExists(std::string("testid"))) {
@@ -285,6 +313,16 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 			SYR::Application::get().stop();
 		}
 	}
+
+	/*
+	static float t = 0.0f;
+	t += 0.001f;
+
+	if (m_ActiveScene->entityIDExists(std::string("exit"))) {
+		SYR::Entity sword = m_ActiveScene->getEntityByID(std::string("SWORD"));
+		sword.getComponent<SYR::TransformComponent>().scale(2 + cos(t));
+	}
+	*/
 	
 	SYR::Renderer2D::beginScene(m_CameraController.getCamera());
 

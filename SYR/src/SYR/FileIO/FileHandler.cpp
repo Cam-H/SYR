@@ -70,7 +70,7 @@ namespace SYR {
 		return content;
 	}
 
-	Ref<VertexArray> FileHandler::loadMesh(const std::string& filepath) {
+	Ref<VertexArray> FileHandler::loadMesh(const std::string& filepath, boolean smoothed) {
 
 		FileFormat format = getFileFormat(filepath);
 
@@ -78,7 +78,7 @@ namespace SYR {
 
 		switch (format) {
 		case FileFormat::OBJ:
-			return OBJFileHandler::loadMesh(content);
+			return smoothed ? OBJFileHandler::loadSmoothMesh(content) : OBJFileHandler::loadMesh(content);
 		default:
 			SYR_CORE_WARN("Could not load mesh!");
 			return VertexArray::create();

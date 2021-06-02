@@ -96,7 +96,7 @@ namespace SYR {
 	}
 
 	uint32_t MaterialLibrary::getIDOfMaterial(const std::string& materialName) {
-		int i = 1;
+		int i = 0;
 
 		for (std::vector<Material>::iterator it = m_Materials.begin(); it != m_Materials.end(); ++it) {
 			if (it->name == materialName) {

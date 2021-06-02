@@ -11,7 +11,10 @@ namespace SYR {
 		static Ref<VertexArray> loadSmoothMesh(const std::string& content);
 
 	private:
-		static void parseOBJFile(const std::string& content, std::vector<glm::vec3>* vertices, std::vector<glm::vec3>* normals, std::vector<uint32_t>* indices, std::unordered_map<std::string, uint32_t>* vertexKeys);
+		static void parseOBJFile(const std::string& content, std::vector<glm::vec3>* vertices, std::vector<glm::vec3>* normals, std::vector<uint32_t>* indices, std::vector<std::array<uint32_t, 3>>* vertexKeys);
+		
+		static glm::vec2 splitString2(char delim, std::string& line);
+		static glm::vec3 splitString3(char delim, std::string& line);
 	};
 
 }

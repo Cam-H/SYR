@@ -39,7 +39,7 @@ namespace SYR {
 					mainPanel.addComponent<UiComponent>();
 
 					mainPanel.getComponent<UiComponent>().visibility = UiVisibility::VISIBLE;
-					mainPanel.getComponent<UiComponent>().baseColor = { 0.3f, 0.3f, 0.3f, 0.5f };
+					mainPanel.getComponent<UiComponent>().baseColor = { 0.3f, 0.3f, 0.3f, 0.5f };//TODO make transparent
 				}
 			}
 
@@ -48,7 +48,7 @@ namespace SYR {
 
 		static Entity createUiElement(Scene* activeScene, Entity anchor, UiAlignment alignment) {
 			Entity entity = activeScene->createEntity();
-			entity.addComponent<UiComponent>(anchor.getHandle(), alignment);
+			entity.addComponent<UiComponent>();
 			//entity.getComponent<SYR::UiComponent>().baseColor = glm::vec4(i / 8.0f, 1.0f - i / 8.0f, 0.0f, 1.0f);
 			//entity.getComponent<SYR::TransformComponent>().scale(0.25f + i / 80.0f);
 

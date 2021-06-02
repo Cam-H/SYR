@@ -24,7 +24,7 @@ namespace SYR {
 		static void flush();
 
 		static void submit(const Ref<Shader>& shader, const Ref<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
-		static void outline(const Ref<Shader>& shader, const Ref<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
+		static void outline(const Ref<Shader>& shader, const Ref<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f), const float normalScaling = 0);
 
 		inline static RendererAPI::API getAPI() { return RendererAPI::getAPI(); }
 

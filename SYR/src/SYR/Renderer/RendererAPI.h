@@ -10,6 +10,12 @@ namespace SYR {
 		enum class API {
 			NONE = 0, OPENGL
 		};
+		
+		enum class STENCIL {
+			KEEP, ZERO, REPLACE, INCR, INCR_WRAP, DECR, DECR_WRAP, INVERT,
+			ALWAYS, NEVER, LESS, LEQUAL, EQUAL, GEQUAL, GREATER, NOTEQUAL
+		};
+
 	public:
 		virtual void init() = 0;
 
@@ -22,6 +28,17 @@ namespace SYR {
 		virtual void outlineIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount = 0) = 0;
 
 		virtual void drawLines(const Ref<VertexArray>& vertexArray, float lineWidth, uint32_t indexCount = 0) = 0;
+
+		virtual void disableDepthBuffer() = 0;
+		virtual void enableDepthBuffer() = 0;
+
+		//Stencil Buffer Management
+		virtual void disableStencilBuffer() = 0;
+		virtual void enableStencilBuffer() = 0;
+
+		virtual void setStencilOperation(STENCIL sfail, STENCIL dpfail, STENCIL dppass) = 0;
+		virtual void setStencilFunction(STENCIL action, uint8_t reference, uint8_t mask) = 0;
+		virtual void setStencilMask(uint8_t mask) = 0;
 
 		inline static API getAPI() { return s_API; }
 	private:

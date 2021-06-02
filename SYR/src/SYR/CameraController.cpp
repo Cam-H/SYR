@@ -2,6 +2,7 @@
 #include "CameraController.h"
 
 #include "SYR/Core/Input.h"
+#include "SYR/Core/Application.h"
 
 namespace SYR {
 
@@ -15,18 +16,14 @@ namespace SYR {
 	CameraController::CameraController(CameraType cameraType, float aspectRatio) : m_CameraType(cameraType), m_AspectRatio(aspectRatio) {
 		initializeCamera(cameraType);
 
-		m_CameraControlType = CameraControlType::LOCKED_CAMERA;
+		setCameraControlType(CameraControlType::LOCKED_CAMERA);
 	}
 
 	CameraController::CameraController(CameraType cameraType, CameraControlType cameraControlType, float aspectRatio) : m_CameraType(cameraType), m_CameraControlType(cameraControlType), m_AspectRatio(aspectRatio) {
 		//SYR_CORE_INFO("Z: {0}", dynamic_cast<PerspectiveCamera*>(camera));
 
 		initializeCamera(cameraType);
-
-		if (cameraControlType == CameraControlType::FREE_CAMERA) {
-			//Window.hideCursor();
-			//TODO
-		}
+		setCameraControlType(cameraControlType);
 	}
 
 	void CameraController::initializeCamera(CameraType cameraType) {
@@ -41,7 +38,21 @@ namespace SYR {
 			SYR_CORE_ERROR("Unrecognized camera type!");
 			m_Camera = nullptr;
 		}
+
+		calculateView();
+		//m_Camera->offset({ 0, 0, 0 });//Call a camera function to force it to recalculate the view matrix
 	}
+
+	void CameraController::setCameraControlType(CameraControlType controlType) { 
+		m_CameraControlType = controlType;
+
+		if (m_CameraControlType == CameraControlType::LOCKED_CAMERA) {//Show mouse in locked view
+			Application::get().getWindow().showCursor();
+		} else {//Hide mouse in free camera mode
+			Application::get().getWindow().hideCursor();
+		}
+	}
+
 
 	void CameraController::calculateView() {
 		m_Camera->setProjection(-m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);

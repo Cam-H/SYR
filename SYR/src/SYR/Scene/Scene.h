@@ -30,6 +30,9 @@ namespace SYR {
 		void onUpdate(Timestep ts);
 		void onDraw();
 
+		void enableUi() { m_UiEnabled = true; }
+		void disableUi() { m_UiEnabled = false; }
+
 		bool entityIDExists(std::string& id);
 		Entity getEntityByID(std::string& id);
 
@@ -46,7 +49,7 @@ namespace SYR {
 		TransformComponent* m_Anchor;
 
 		CameraController m_UiCamera;
-		bool m_UiEnabled = false;
+		bool m_UiEnabled = true;
 
 		friend class Entity;
 

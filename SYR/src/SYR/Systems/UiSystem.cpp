@@ -68,17 +68,18 @@ namespace SYR {
 			}
 		}
 		
-		auto uiView = registry.view<UiComponent>();
-		for (const entt::entity e : uiView) {
-			UiComponent& ui = uiView.get<UiComponent>(e);
+		/*
+		auto anchorView = registry.view<AnchorComponent>();
+		for (const entt::entity e : anchorView) {
+			AnchorComponent& anchor = anchorView.get<AnchorComponent>(e);
 			glm::mat4& transform = registry.get<TransformComponent>(e).transform;
 
-			if (ui.anchorHandle != entt::null) {
-				glm::mat4& anchor = registry.view<TransformComponent>().get(ui.anchorHandle).transform;
+			if (anchor.anchorHandle != entt::null) {
+				glm::mat4& anchorTransform = registry.view<TransformComponent>().get(anchor.anchorHandle).transform;
 
 				glm::vec3 scale;
 				glm::vec3 translation;
-				glm::decompose(anchor, scale, glm::quat(), translation, glm::vec3(), glm::vec4());
+				glm::decompose(anchorTransform, scale, glm::quat(), translation, glm::vec3(), glm::vec4());
 
 				glm::vec3 scale2;
 				glm::vec3 cTranslation;
@@ -87,7 +88,7 @@ namespace SYR {
 				float xOffset = 0, yOffset = 0;
 				float xMod = 0, yMod = 0;
 
-				switch (ui.horizontalAlignment) {
+				switch (anchor.horizontalAlignment) {
 				case UiAlignment::CENTER:
 					break;
 				case UiAlignment::OUTER_LEFT:
@@ -106,10 +107,10 @@ namespace SYR {
 					xMod = 1;
 					break;
 				default:
-					SYR_CORE_WARN("Unrecognized UI Component Alignment: {0}", ui.horizontalAlignment);
+					SYR_CORE_WARN("Unrecognized UI Component Alignment: {0}", anchor.horizontalAlignment);
 				}
 
-				switch (ui.verticalAlignment) {
+				switch (anchor.verticalAlignment) {
 				case UiAlignment::CENTER:
 					break;
 				case UiAlignment::OUTER_TOP:
@@ -128,13 +129,14 @@ namespace SYR {
 					yMod = 1;
 					break;
 				default:
-					SYR_CORE_WARN("Unrecognized UI Component Alignment: {0}", ui.verticalAlignment);
+					SYR_CORE_WARN("Unrecognized UI Component Alignment: {0}", anchor.verticalAlignment);
 
 				}
 
 				transform = glm::translate(glm::mat4(1.0f), { cTranslation.x * xMod + (translation.x + xOffset) * !xMod, cTranslation.y * yMod + (translation.y + yOffset) * !yMod, cTranslation.z }) * glm::scale(glm::mat4(1.0f), scale2);
 			}
 		}
+		*/
 	}
 
 	std::vector<entt::entity> UiSystem::getActiveEntities(entt::registry& registry, std::vector<entt::entity> entities) {
@@ -317,7 +319,6 @@ namespace SYR {
 		entity.getComponent<TagComponent>().id = id;
 
 		entity.addComponent<UiComponent>();
-		entity.getComponent<UiComponent>().anchorHandle = entt::null;
 		entity.getComponent<UiComponent>().baseColor = color;
 		entity.getComponent<UiComponent>().highlightColor = highlightColor;
 		entity.getComponent<UiComponent>().selectColor = selectColor;
