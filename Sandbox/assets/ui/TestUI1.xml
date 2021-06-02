@@ -5,16 +5,18 @@
 
 <ui>	
 	<panel layout="LinearVertical" color="0xff00ff" margins="0.08" id="testid">
+		<panel layout="LinearHorizontal" color="0xffffff" margins="0.08" id="tp2">
+			<button color="0xff0000" text="A"></button>
+			<button color="0xff0000" text="B"></button>
+			<button color="0xff0000" text="C"></button>
+		</panel>
 		<button color="0xfff000" id="a" text="HELSINKI" textcolor="0xff0000ff">1</button>
 		<button color="0xffffffff" highlight="0x00aaaaff" id="b">2</button>
-		<button id="c" text="TESTER">3</button>
-		<button id="d">
+		<button id="c" text="TEST" xAnchor="MAIN PANEL" xAlign="INNER_LEFT" yAnchor="MAIN PANEL" yAlign="INNER_BOTTOM">3</button>
+		<button id="d" text="Anchor" xAnchor="testid" xAlign="OUTER_RIGHT">
 			<button id="ff">5</button>
 			<button id="fff">6</button>
 		</button>
 		<button id="exit" text="EXIT" anim="TA"></button>
-	</panel>
-	<panel layout="LinearVertical" color="0xffffff" margins="0.08" id="tp2">
-		<button color="0xff0000" text="RIP"></button>
 	</panel>
 </ui>

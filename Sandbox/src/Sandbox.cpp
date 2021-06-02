@@ -40,7 +40,7 @@ public:
 		pushLayer(new Sandbox2D());
 		//pushOverlay(new SYR::ImGuiLayer());
 		
-		getWindow().hideCursor();
+		//getWindow().hideCursor();
 	}
 
 	~Sandbox() {

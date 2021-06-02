@@ -46,7 +46,7 @@ namespace SYR {
 			return mainPanel;
 		}
 
-		static Entity createUiElement(Scene* activeScene, Entity anchor, UiAlignment alignment) {
+		static Entity createUiElement(Scene* activeScene, Entity anchor, Alignment alignment) {
 			Entity entity = activeScene->createEntity();
 			entity.addComponent<UiComponent>();
 			//entity.getComponent<SYR::UiComponent>().baseColor = glm::vec4(i / 8.0f, 1.0f - i / 8.0f, 0.0f, 1.0f);
@@ -88,6 +88,12 @@ namespace SYR {
 
 		static std::string getSource(std::string header);
 		static std::string getCollection(std::string header);
+
+		static std::string getHorizontalAnchor(std::string header);
+		static Alignment getHorizontalAlignment(std::string header);
+
+		static std::string getVerticalAnchor(std::string header);
+		static Alignment getVerticalAlignment(std::string header);
 
 		static bool containsXMLElements(const std::string& content);
 		static bool rootIsElement(const std::string& content, const std::string& element);

@@ -56,8 +56,11 @@ namespace SYR {
 			case Layout::LINEAR_HORIZONTAL:
 				width = (scale.x - xMargins * 2 - spacing * (elementCount - 1)) / elementCount;
 				height = scale.y - yMargins * 2;
-				x += -scale.x / 2 + width / 2 + xMargins;
-				xOffset = width + spacing;
+				x -= -scale.x / 2 + width / 2 + xMargins;
+				xOffset = -(width + spacing);
+				break;
+			case Layout::GRID:
+
 				break;
 			}
 
@@ -68,64 +71,79 @@ namespace SYR {
 			}
 		}
 		
-		/*
+		
 		auto anchorView = registry.view<AnchorComponent>();
 		for (const entt::entity e : anchorView) {
 			AnchorComponent& anchor = anchorView.get<AnchorComponent>(e);
 			glm::mat4& transform = registry.get<TransformComponent>(e).transform;
 
-			if (anchor.anchorHandle != entt::null) {
-				glm::mat4& anchorTransform = registry.view<TransformComponent>().get(anchor.anchorHandle).transform;
+
+			float xOffset = 0, yOffset = 0;
+			float xMod = 1, yMod = 1;
+
+			glm::vec3 scale2;
+			glm::vec3 cTranslation;
+			glm::decompose(transform, scale2, glm::quat(), cTranslation, glm::vec3(), glm::vec4());
+
+			if (anchor.horizontalAnchorHandle != entt::null) {
+				glm::mat4& anchorTransform = registry.view<TransformComponent>().get(anchor.horizontalAnchorHandle).transform;
 
 				glm::vec3 scale;
 				glm::vec3 translation;
 				glm::decompose(anchorTransform, scale, glm::quat(), translation, glm::vec3(), glm::vec4());
 
-				glm::vec3 scale2;
-				glm::vec3 cTranslation;
-				glm::decompose(transform, scale2, glm::quat(), cTranslation, glm::vec3(), glm::vec4());
-
-				float xOffset = 0, yOffset = 0;
-				float xMod = 0, yMod = 0;
+				xMod = 0;
 
 				switch (anchor.horizontalAlignment) {
-				case UiAlignment::CENTER:
+				case Alignment::CENTER:
 					break;
-				case UiAlignment::OUTER_LEFT:
+				case Alignment::OUTER_LEFT:
 					xOffset = -(scale.x / 2 + scale2.x / 2);
 					break;
-				case UiAlignment::INNER_LEFT:
+				case Alignment::INNER_LEFT:
 					xOffset = -scale.x / 2 + scale2.x / 2;
 					break;
-				case UiAlignment::INNER_RIGHT:
+				case Alignment::INNER_RIGHT:
 					xOffset = scale.x / 2 - scale2.x / 2;
 					break;
-				case UiAlignment::OUTER_RIGHT:
+				case Alignment::OUTER_RIGHT:
 					xOffset = scale.x / 2 + scale2.x / 2;
 					break;
-				case UiAlignment::FLOAT:
+				case Alignment::FLOAT:
 					xMod = 1;
 					break;
 				default:
 					SYR_CORE_WARN("Unrecognized UI Component Alignment: {0}", anchor.horizontalAlignment);
 				}
 
+				xOffset += translation.x;
+			}
+
+			if (anchor.verticalAnchorHandle != entt::null) {
+				glm::mat4& anchorTransform = registry.view<TransformComponent>().get(anchor.verticalAnchorHandle).transform;
+
+				glm::vec3 scale;
+				glm::vec3 translation;
+				glm::decompose(anchorTransform, scale, glm::quat(), translation, glm::vec3(), glm::vec4());
+
+				yMod = 0;
+
 				switch (anchor.verticalAlignment) {
-				case UiAlignment::CENTER:
+				case Alignment::CENTER:
 					break;
-				case UiAlignment::OUTER_TOP:
+				case Alignment::OUTER_TOP:
 					yOffset = scale.y / 2 + scale2.y / 2;
 					break;
-				case UiAlignment::INNER_TOP:
+				case Alignment::INNER_TOP:
 					yOffset = scale.y / 2 - scale2.y / 2;
 					break;
-				case UiAlignment::INNER_BOTTOM:
+				case Alignment::INNER_BOTTOM:
 					yOffset = -scale.y / 2 + scale2.y / 2;
 					break;
-				case UiAlignment::OUTER_BOTTOM:
+				case Alignment::OUTER_BOTTOM:
 					yOffset = -(scale.y / 2 + scale2.y / 2);
 					break;
-				case UiAlignment::FLOAT:
+				case Alignment::FLOAT:
 					yMod = 1;
 					break;
 				default:
@@ -133,10 +151,12 @@ namespace SYR {
 
 				}
 
-				transform = glm::translate(glm::mat4(1.0f), { cTranslation.x * xMod + (translation.x + xOffset) * !xMod, cTranslation.y * yMod + (translation.y + yOffset) * !yMod, cTranslation.z }) * glm::scale(glm::mat4(1.0f), scale2);
+				yOffset += translation.y;
 			}
+
+			transform = glm::translate(glm::mat4(1.0f), { cTranslation.x * xMod + (xOffset) * !xMod, cTranslation.y * yMod + (yOffset) * !yMod, cTranslation.z }) * glm::scale(glm::mat4(1.0f), scale2);
 		}
-		*/
+		
 	}
 
 	std::vector<entt::entity> UiSystem::getActiveEntities(entt::registry& registry, std::vector<entt::entity> entities) {
@@ -330,6 +350,19 @@ namespace SYR {
 		if (!text.empty()) {//Label / Text
 			entity.addComponent<TextComponent>(text, getFont(header), getTextColor(header));
 		}
+
+		/***********************UI ANCHORING****************************/
+		entity.addComponent<AnchorComponent>();
+
+		std::string horizontalAnchorID = getHorizontalAnchor(header);
+		if (!horizontalAnchorID.empty()) {
+			entity.getComponent<AnchorComponent>().setHorizontalAnchor(horizontalAnchorID, getHorizontalAlignment(header));
+		}
+
+		std::string verticalAnchorID = getVerticalAnchor(header);
+		if (!verticalAnchorID.empty()) {
+			entity.getComponent<AnchorComponent>().setVerticalAnchor(verticalAnchorID, getVerticalAlignment(header));
+		}
 	}
 
 	std::vector<std::string> UiSystem::splitXMLSiblings(const std::string& content) {
@@ -514,6 +547,91 @@ namespace SYR {
 		return { 0.0f, 0.0f, 0.0f, 1.0f };
 	}
 
+	std::string UiSystem::getHorizontalAnchor(std::string header) {
+		std::string attribute = "xAnchor=";
+		int index = header.find(attribute, 0);
+
+		if (index != std::string::npos) {
+			index += attribute.length() + 1;
+			return header.substr(index, header.find('\"', index) - index);
+		}
+
+		return std::string();
+	}
+
+	Alignment UiSystem::getHorizontalAlignment(std::string header) {
+		std::string attribute = "xAlign=";
+		int index = header.find(attribute, 0);
+
+		if (index != std::string::npos) {
+			index += attribute.length() + 1;
+			std::string alignmentType = header.substr(index, header.find('\"', index) - index);
+
+			if (alignmentType.compare("CENTER") == 0) {
+				return Alignment::CENTER;
+			}
+			else if (alignmentType.compare("OUTER_LEFT") == 0) {
+				return Alignment::OUTER_LEFT;
+			}
+			else if (alignmentType.compare("INNER_LEFT") == 0) {
+				return Alignment::INNER_LEFT;
+			}
+			else if (alignmentType.compare("OUTER_RIGHT") == 0) {
+				return Alignment::OUTER_RIGHT;
+			}
+			else if (alignmentType.compare("INNER_RIGHT") == 0) {
+				return Alignment::INNER_RIGHT;
+			}
+			else if (alignmentType.compare("FLOAT") != 0) {
+				SYR_CORE_WARN("Unrecognized alignment: {0}. Using float alignment by default", alignmentType);
+			}
+		}
+
+		return Alignment::FLOAT;
+	}
+
+	std::string UiSystem::getVerticalAnchor(std::string header) {
+		std::string attribute = "yAnchor=";
+		int index = header.find(attribute, 0);
+
+		if (index != std::string::npos) {
+			index += attribute.length() + 1;
+			return header.substr(index, header.find('\"', index) - index);
+		}
+
+		return std::string();
+	}
+
+	Alignment UiSystem::getVerticalAlignment(std::string header) {
+		std::string attribute = "yAlign=";
+		int index = header.find(attribute, 0);
+
+		if (index != std::string::npos) {
+			index += attribute.length() + 1;
+			std::string alignmentType = header.substr(index, header.find('\"', index) - index);
+
+			if (alignmentType.compare("CENTER") == 0) {
+				return Alignment::CENTER;
+			}
+			else if (alignmentType.compare("OUTER_TOP") == 0) {
+				return Alignment::OUTER_TOP;
+			}
+			else if (alignmentType.compare("INNER_TOP") == 0) {
+				return Alignment::INNER_TOP;
+			}
+			else if (alignmentType.compare("OUTER_BOTTOM") == 0) {
+				return Alignment::OUTER_BOTTOM;
+			}
+			else if (alignmentType.compare("INNER_BOTTOM") == 0) {
+				return Alignment::INNER_BOTTOM;
+			}
+			else if (alignmentType.compare("FLOAT") != 0) {
+				SYR_CORE_WARN("Unrecognized alignment: {0}. Using float alignment by default", alignmentType);
+			}
+		}
+
+		return Alignment::FLOAT;
+	}
 
 
 	bool UiSystem::containsXMLElements(const std::string& content) {

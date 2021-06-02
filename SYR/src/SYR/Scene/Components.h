@@ -196,7 +196,7 @@ namespace SYR {
 		}
 	};
 
-	enum class UiAlignment {
+	enum class Alignment {
 		FLOAT = 0,
 		CENTER,
 		OUTER_LEFT, INNER_LEFT, INNER_RIGHT, OUTER_RIGHT,
@@ -207,21 +207,50 @@ namespace SYR {
 	};
 
 	struct AnchorComponent {
-		entt::entity anchorHandle = entt::null;
 
-		UiAlignment horizontalAlignment = UiAlignment::FLOAT;
-		UiAlignment verticalAlignment = UiAlignment::FLOAT;
+		entt::entity horizontalAnchorHandle = entt::null;
+		entt::entity verticalAnchorHandle = entt::null;
+
+		//Necessary to initialize the anchor when loading anchor data from a file since entities are initialized too early 
+		std::string horizontalAnchorHandleID;
+		std::string verticalAnchorHandleID;
+
+		Alignment horizontalAlignment = Alignment::FLOAT;
+		Alignment verticalAlignment = Alignment::FLOAT;
 		
+		//TODO add anchor offsets
+
 		AnchorComponent() = default;
 		AnchorComponent(const AnchorComponent&) = default;
 
-		AnchorComponent(entt::entity anchorHandle, UiAlignment horizontalAlignment, UiAlignment verticalAlignment) : anchorHandle(anchorHandle), horizontalAlignment(horizontalAlignment), verticalAlignment(verticalAlignment) {}
+		//AnchorComponent(entt::entity anchorHandle, UiAlignment horizontalAlignment, UiAlignment verticalAlignment) : anchorHandle(anchorHandle), horizontalAlignment(horizontalAlignment), verticalAlignment(verticalAlignment) {}
 
-		void setAnchor(entt::entity anchorHandle, UiAlignment horizontalAlignment, UiAlignment verticalAlignment) {
-			this->anchorHandle = anchorHandle;
+		void setHorizontalAnchor(entt::entity anchorHandle, Alignment horizontalAlignment) {
+			this->horizontalAnchorHandle = anchorHandle;
 			this->horizontalAlignment = horizontalAlignment;
+		}
+
+		void setHorizontalAnchor(std::string anchorHandleID, Alignment horizontalAlignment) {
+			this->horizontalAnchorHandleID = anchorHandleID;
+			this->horizontalAlignment = horizontalAlignment;
+
+#ifdef _DEBUG
+			SYR_CORE_WARN("Horizontal anchor handle ID set. The entity reference still needs to be created");
+#endif
+		}
+
+		void setVerticalAnchor(entt::entity anchorHandle, Alignment verticalAlignment) {
+			this->verticalAnchorHandle = anchorHandle;
+			this->verticalAlignment = verticalAlignment;
+		}
+
+		void setVerticalAnchor(std::string anchorHandleID, Alignment verticalAlignment) {
+			this->verticalAnchorHandleID = anchorHandleID;
 			this->verticalAlignment = verticalAlignment;
 
+#ifdef _DEBUG
+			SYR_CORE_WARN("Horizontal anchor handle ID set. The entity reference still needs to be created");
+#endif
 		}
 	};
 

@@ -73,6 +73,13 @@ namespace SYR {
 		scene->m_MainPanel = Entity::create(UiSystem::loadPredefinedUi(scene.get(), filepath).getHandle(), scene.get());
 		scene->m_MainPanel->getComponent<TransformComponent>().scale({ 2 * scene->m_AspectRatio, 2 });
 
+		//Link entity IDs to the anchors
+		auto anchorView = scene->m_Registry.view<AnchorComponent>();
+		for (const entt::entity e : anchorView) {
+			anchorView.get(e).horizontalAnchorHandle = scene->getEntityByID(anchorView.get(e).horizontalAnchorHandleID).getHandle();
+			anchorView.get(e).verticalAnchorHandle = scene->getEntityByID(anchorView.get(e).verticalAnchorHandleID).getHandle();
+		}
+
 		//scene->getEntityByID(std::string("tp2")).getComponent<UiComponent>().setAnchor(scene->m_MainPanel->getHandle(), UiAlignment::INNER_LEFT, UiAlignment::INNER_TOP);
 		//scene->getEntityByID(std::string("c")).getComponent<UiComponent>().visibility = UiVisibility::GONE;
 	}
@@ -219,7 +226,7 @@ namespace SYR {
 			}
 		}
 
-		SYR_CORE_WARN("No Entity had the ID: {0}", id);
+		SYR_CORE_WARN("No Entity had the ID: \"{0}\"", id);
 
 		return {entt::null, nullptr};
 	}
