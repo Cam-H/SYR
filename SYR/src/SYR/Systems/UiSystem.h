@@ -35,7 +35,7 @@ namespace SYR {
 					mainPanel.getComponent<TagComponent>().id = "MAIN PANEL";
 					mainPanel.getComponent<TagComponent>().tag = "MAIN PANEL";
 
-					mainPanel.addComponent<LayoutComponent>(Layout::FLOAT, panels);
+					mainPanel.addComponent<LayoutComponent>(Layout::FLOAT, Alignment::FLOAT, panels);
 					mainPanel.addComponent<UiComponent>();
 
 					mainPanel.getComponent<UiComponent>().visibility = UiVisibility::VISIBLE;
@@ -69,12 +69,23 @@ namespace SYR {
 
 		static std::string getString(std::string header, std::string attribute);
 
+		static float getPreferredWidth(std::string header);
+		static float getPreferredHeight(std::string header);
+
 		static Layout getLayout(std::string header);
+		static Alignment getLayoutAlignment(std::string header);
+		static std::string getType(std::string header);
+
+		static float getContentWidth(std::string header);
+		static float getContentHeight(std::string header);
 
 		static std::string getID(std::string header);
 
 		static float getMargins(std::string header);
 		static float getSpacing(std::string header);
+
+		static int getCols(std::string header);
+		static int getRows(std::string header);
 
 		static glm::vec4 getColor(std::string header);
 		static glm::vec4 getHighlightColor(std::string header);

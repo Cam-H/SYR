@@ -4,8 +4,8 @@
 </res>
 
 <ui>	
-	<panel layout="LinearVertical" color="0xff00ff" margins="0.08" id="testid">
-		<panel layout="LinearHorizontal" color="0xffffff" margins="0.08" id="tp2">
+	<panel layout="Linear" layoutAlignment="Vertical" type="scroll" color="0xff00ff" margins="0.08" id="testid">
+		<panel layout="Linear" layoutAlignment="Horizontal" color="0xffffff" margins="0.08" id="tp2">
 			<button color="0xff0000" text="A"></button>
 			<button color="0xff0000" text="B"></button>
 			<button color="0xff0000" text="C"></button>
@@ -18,5 +18,16 @@
 			<button id="fff">6</button>
 		</button>
 		<button id="exit" text="EXIT" anim="TA"></button>
+	</panel>
+	<panel layout="Grid" rows="3" cols="-1" color="oxaaaaaa" margins="0.05" id="gridtest" xAnchor="MAIN PANEL" xAlign="INNER_RIGHT" yAnchor="MAIN PANEL" yAlign="INNER_TOP">
+		<button color="0xfff000" id="1" text="1" textcolor="0xff0000ff">1</button>
+		<button color="0xfff000" id="2" text="2" textcolor="0xff0000ff">2</button>
+		<button color="0xfff000" id="3" text="3" textcolor="0xff0000ff">3</button>
+		<button color="0xfff000" id="4" text="4" textcolor="0xff0000ff">4</button>
+		<button color="0xfff000" id="5" text="5" textcolor="0xff0000ff">5</button>
+		<button color="0xfff000" id="6" text="6" textcolor="0xff0000ff">6</button>
+		<button color="0xfff000" id="7" text="7" textcolor="0xff0000ff">7</button>
+		<button color="0xfff000" id="8" text="8" textcolor="0xff0000ff">8</button>
+		<button color="0xfff000" id="9" text="9" textcolor="0xff0000ff">9</button>
 	</panel>
 </ui>

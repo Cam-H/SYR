@@ -37,36 +37,47 @@ namespace SYR {
 
 			float width = 0, height = 0;
 			float xOffset = 0, yOffset = 0;
+			uint16_t xMod = 1, yMod = 1;
 
 			switch (layout.layout) {
 			case Layout::FLOAT:
 				for (std::vector<entt::entity>::iterator it = activeElements.begin(); it != activeElements.end(); ++it) {
 					glm::vec3 cTranslation;
 					glm::decompose(registry.get<TransformComponent>(*it).transform, glm::vec3(), glm::quat(), cTranslation, glm::vec3(), glm::vec4());
-					registry.get<TransformComponent>(*it).offset({ 0, 0, z - cTranslation.z });
+					registry.get<TransformComponent>(*it).offset({ 0, 0, z - cTranslation.z });//Manipulate the height of ui components so they do not clip into eachother when rendering
 				}
 				continue;
 				break;
-			case Layout::LINEAR_VERTICAL:
-				width = scale.x - xMargins * 2;
-				height = (scale.y - yMargins * 2 - spacing * (elementCount - 1)) / elementCount;
-				y += -scale.y / 2 + height / 2 + yMargins;
-				yOffset = height + spacing;
-				break;
-			case Layout::LINEAR_HORIZONTAL:
-				width = (scale.x - xMargins * 2 - spacing * (elementCount - 1)) / elementCount;
-				height = scale.y - yMargins * 2;
-				x -= -scale.x / 2 + width / 2 + xMargins;
-				xOffset = -(width + spacing);
+			case Layout::LINEAR:
+				if (layout.alignment == Alignment::VERTICAL) {
+					width = scale.x - xMargins * 2;
+					height = (scale.y - yMargins * 2 - spacing * (elementCount - 1)) / elementCount;
+					y += -scale.y / 2 + height / 2 + yMargins;
+					yOffset = height + spacing;
+				} else if (layout.alignment == Alignment::HORIZONTAL) {
+					width = (scale.x - xMargins * 2 - spacing * (elementCount - 1)) / elementCount;
+					height = scale.y - yMargins * 2;
+					x -= -scale.x / 2 + width / 2 + xMargins;
+					xOffset = -(width + spacing);
+				}
+
+				xMod = yMod = activeElements.size();
 				break;
 			case Layout::GRID:
+
+				width = scale.x - xMargins * 2;
+				height = scale.y - yMargins * 2;
+
+				if (layout.contentWidth != -1.0f) {
+					
+				}
 
 				break;
 			}
 
 			int i = activeElements.size() - 1;
 			for (std::vector<entt::entity>::iterator it = activeElements.begin(); it != activeElements.end(); ++it) {
-				Entity::getComponent<TransformComponent>(registry, *it).transform = glm::translate(glm::mat4(1.0f), { x + xOffset * i, y + yOffset * i, z }) * glm::scale(glm::mat4(1.0f), { width, height, 1.0f });
+				Entity::getComponent<TransformComponent>(registry, *it).transform = glm::translate(glm::mat4(1.0f), { x + xOffset * (i % xMod), y + yOffset * (i % yMod), z }) * glm::scale(glm::mat4(1.0f), { width, height, 1.0f });
 				i--;
 			}
 		}
@@ -154,7 +165,7 @@ namespace SYR {
 				yOffset += translation.y;
 			}
 
-			transform = glm::translate(glm::mat4(1.0f), { cTranslation.x * xMod + (xOffset) * !xMod, cTranslation.y * yMod + (yOffset) * !yMod, cTranslation.z }) * glm::scale(glm::mat4(1.0f), scale2);
+			transform = glm::translate(glm::mat4(1.0f), { cTranslation.x * xMod + xOffset * !xMod, cTranslation.y * yMod + yOffset * !yMod, cTranslation.z }) * glm::scale(glm::mat4(1.0f), scale2);
 		}
 		
 	}
@@ -315,17 +326,38 @@ namespace SYR {
 				SYR_CORE_WARN("Discarding {0} XML Elements. Only panels may contain other elements!", children.size());
 			}
 
-			if (childContainer.size() > 0) {
+			if (childContainer.size() > 0) {//TODO fill out
 				Layout layout = getLayout(header);
+				Alignment alignment = getLayoutAlignment(header);
+				std::string type = getType(header);
 
 				float margins = getMargins(header);
 				float spacing = getSpacing(header);
 
-				SYR_CORE_INFO("{0} {1} {2}", layout, margins, spacing);
+				float contentWidth = getContentWidth(header);
+				float contentHeight = getContentHeight(header);
 
-				entity.addComponent<LayoutComponent>(layout, childContainer);
+				if (layout == Layout::GRID) {
+					int cols = getCols(header);
+					int rows = getRows(header);
+
+					if (cols != -1) {
+						contentWidth = (1.0f - 2 * margins - (cols - 1) * spacing) / cols;
+					} else if (rows != -1) {
+						contentHeight = (1.0f - 2 * margins - (rows - 1) * spacing) / rows;
+					}
+				}
+
+				entity.addComponent<LayoutComponent>(layout, alignment, childContainer);
+				entity.getComponent<LayoutComponent>().setScrollable(type.compare("scroll") == 0);//TODO warning
+
 				entity.getComponent<LayoutComponent>().setMargins(margins);
 				entity.getComponent<LayoutComponent>().setSpacing(spacing);
+
+				entity.getComponent<LayoutComponent>().contentWidth = contentWidth;
+				entity.getComponent<LayoutComponent>().contentHeight = contentHeight;
+
+				SYR_CORE_ERROR("{0} {1}", entity.getComponent<LayoutComponent>().contentWidth, entity.getComponent<LayoutComponent>().contentHeight);
 			}
 		}
 
@@ -400,31 +432,6 @@ namespace SYR {
 		return siblings;
 	}
 
-	Layout UiSystem::getLayout(std::string header) {
-		std::string attribute = "layout=";
-		int index = header.find(attribute, 0);
-
-		if (index != std::string::npos) {
-			index += attribute.length() + 1;
-			std::string layoutType = header.substr(index, header.find('\"', index) - index);
-
-			if (layoutType.compare("LinearVertical") == 0) {
-				return Layout::LINEAR_VERTICAL;
-			}
-			else if (layoutType.compare("LinearHorizontal") == 0) {
-				return Layout::LINEAR_HORIZONTAL;
-			}
-			else if (layoutType.compare("Grid") == 0) {
-
-			}
-			else if (layoutType.compare("Float") != 0) {
-				SYR_CORE_WARN("Unrecognized layout: {0}. Using float layout by default", layoutType);
-			}
-		}
-
-		return Layout::FLOAT;
-	}
-
 	std::string UiSystem::getString(std::string header, std::string attribute) {
 		int index = header.find(attribute, 0);
 
@@ -434,6 +441,107 @@ namespace SYR {
 		}
 
 		return std::string();
+	}
+
+	float UiSystem::getPreferredWidth(std::string header) {
+		std::string widthPref = getString(header, "preferredWidth");
+
+		return widthPref.empty() ? -1.0f : std::stof(widthPref);
+	}
+
+	float UiSystem::getPreferredHeight(std::string header) {
+		std::string heightPref = getString(header, "preferredHeight");
+
+		return heightPref.empty() ? -1.0f : std::stof(heightPref);
+	}
+
+	Layout UiSystem::getLayout(std::string header) {
+		std::string attribute = "layout=";
+		int index = header.find(attribute, 0);
+
+		if (index != std::string::npos) {
+			index += attribute.length() + 1;
+			std::string layoutType = header.substr(index, header.find('\"', index) - index);
+
+			if (layoutType.compare("Linear") == 0) {
+				return Layout::LINEAR;
+			}
+			else if (layoutType.compare("Grid") == 0) {
+				return Layout::GRID;
+			}
+			else if (layoutType.compare("Float") != 0) {
+				SYR_CORE_WARN("Unrecognized layout: {0}. Using float layout by default", layoutType);
+			}
+		}
+
+		return Layout::FLOAT;
+	}
+
+	Alignment UiSystem::getLayoutAlignment(std::string header) {
+		std::string attribute = "layoutAlignment=";
+		int index = header.find(attribute, 0);
+
+		if (index != std::string::npos) {
+			index += attribute.length() + 1;
+			std::string alignmentType = header.substr(index, header.find('\"', index) - index);
+			
+			SYR_CORE_INFO("---> {0}", alignmentType);
+
+			if (alignmentType.compare("Float") == 0) {
+				return Alignment::FLOAT;
+			}
+			else if (alignmentType.compare("Center") == 0) {
+				return Alignment::CENTER;
+			}
+			else if (alignmentType.compare("Horizontal") == 0) {
+				return Alignment::HORIZONTAL;
+			}
+			else if (alignmentType.compare("Vertical") == 0) {
+				return Alignment::VERTICAL;
+			}
+			else if (alignmentType.compare("OuterLeft") == 0) {
+				return Alignment::OUTER_LEFT;
+			}
+			else if (alignmentType.compare("InnerLeft") == 0) {
+				return Alignment::INNER_LEFT;
+			}
+			else if (alignmentType.compare("InnerRight") == 0) {
+				return Alignment::INNER_RIGHT;
+			}
+			else if (alignmentType.compare("OuterRight") == 0) {
+				return Alignment::OUTER_RIGHT;
+			}
+			else if (alignmentType.compare("OuterTop") == 0) {
+				return Alignment::OUTER_TOP;
+			}
+			else if (alignmentType.compare("InnerTop") == 0) {
+				return Alignment::INNER_TOP;
+			}
+			else if (alignmentType.compare("InnerBottom") == 0) {
+				return Alignment::INNER_BOTTOM;
+			}
+			else if (alignmentType.compare("OuterBottom") == 0) {
+				return Alignment::OUTER_BOTTOM;
+			} 
+		}
+
+		return Alignment::FLOAT;
+	}
+
+	std::string UiSystem::getType(std::string header) {
+		return getString(header, "type=");
+	}
+
+	float UiSystem::getContentWidth(std::string header) {
+		std::string widthPref = getString(header, "contentWidth");
+
+		return widthPref.empty() ? -1.0f : std::stof(widthPref);
+	}
+
+	float UiSystem::getContentHeight(std::string header) {
+		std::string heightPref = getString(header, "contentHeight");
+
+		return heightPref.empty() ? -1.0f : std::stof(heightPref);
 	}
 
 	std::string UiSystem::getID(std::string header) {
@@ -464,6 +572,32 @@ namespace SYR {
 
 		return 0.05f;
 	}
+
+	int UiSystem::getCols(std::string header) {
+		std::string attribute = "cols=";
+		int index = header.find(attribute, 0);
+
+		if (index != std::string::npos) {
+			index += attribute.length() + 1;
+
+			return std::stoi(header.substr(index, header.find('\"') - index));
+		}
+
+		return -1;
+	}
+	int UiSystem::getRows(std::string header) {
+		std::string attribute = "rows=";
+		int index = header.find(attribute, 0);
+
+		if (index != std::string::npos) {
+			index += attribute.length() + 1;
+
+			return std::stoi(header.substr(index, header.find('\"') - index));
+		}
+
+		return -1;
+	}
+
 
 	glm::vec4 UiSystem::getColor(std::string header) {
 		std::string attribute = "color=";

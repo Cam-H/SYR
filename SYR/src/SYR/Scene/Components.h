@@ -199,6 +199,7 @@ namespace SYR {
 	enum class Alignment {
 		FLOAT = 0,
 		CENTER,
+		HORIZONTAL, VERTICAL,
 		OUTER_LEFT, INNER_LEFT, INNER_RIGHT, OUTER_RIGHT,
 		OUTER_TOP, INNER_TOP, INNER_BOTTOM, OUTER_BOTTOM
 	};
@@ -281,22 +282,62 @@ namespace SYR {
 	};
 
 	enum class Layout {
-		FLOAT = 0, LINEAR_VERTICAL, LINEAR_HORIZONTAL, GRID
+		FLOAT = 0, LINEAR, GRID
 	};
 
 	struct LayoutComponent {
 
 		Layout layout;
+		Alignment alignment;
+
 		std::vector<entt::entity> entities;
 
 		float margins;
 		float spacing;
 
+		glm::vec2 contentDimensions{ 0.0f, 0.0f };
 		glm::vec2 offset{ 0.0f, 0.0f };
+
+		bool forceResize = true;
+
+		float contentWidth = -1.0f;
+		float contentHeight = -1.0f;
+
+		bool scrollable = false;
+		bool wrap = false;
 
 		LayoutComponent() = default;
 		LayoutComponent(const LayoutComponent&) = default;
-		LayoutComponent(Layout layout, std::vector<entt::entity> entities) : layout(layout), entities(entities), margins(0.0f), spacing(0.0f) {}
+		LayoutComponent(Layout layout, Alignment alignment, std::vector<entt::entity> entities) {
+			this->layout = layout;
+			this->alignment = Alignment::VERTICAL;
+
+			this->entities = entities;
+
+			margins = spacing = 0;
+
+			switch (alignment) {
+			case Alignment::FLOAT: case Alignment::CENTER:
+				SYR_CORE_WARN("Invalid layout alignment: \"{0}\". Defaulting to a vertical alignment", alignment);
+				break;
+			case Alignment::OUTER_LEFT: case Alignment::INNER_LEFT: case Alignment::INNER_RIGHT: case Alignment::OUTER_RIGHT:
+				SYR_CORE_WARN("Using layout alignment \"{0}\" defaults to a horizontal alignment");
+				[[fallthrough]];
+			case Alignment::HORIZONTAL:
+				this->alignment = Alignment::HORIZONTAL;
+				break;
+			case Alignment::OUTER_TOP: case Alignment::INNER_TOP: case Alignment::INNER_BOTTOM: case Alignment::OUTER_BOTTOM:
+				SYR_CORE_WARN("Using layout alignment \"{0}\" defaults to a vertical alignment");
+				[[fallthrough]];
+			case Alignment::VERTICAL:
+				this->alignment = Alignment::VERTICAL;
+				break;
+			}
+		}
+
+		void setScrollable(bool scrollable) {
+			this->scrollable = scrollable;
+		}
 
 		void setMargins(float margins) {
 			this->margins = margins;
@@ -305,6 +346,14 @@ namespace SYR {
 		void setSpacing(float spacing) {
 			this->spacing = spacing;
 		}
+	};
+
+	struct MouseListenerComponent {
+
+	};
+
+	struct KeyboardListenerComponent{
+	
 	};
 
 	struct ListenerComponent {
