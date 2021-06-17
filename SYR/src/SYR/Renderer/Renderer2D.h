@@ -92,10 +92,10 @@ namespace SYR {
 
 		//Strings
 		static void drawText(const Ref<CharacterSet> characterSet, const std::string& text, const glm::vec3& position);
-		static void drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, const std::string& text, const glm::vec3& position, const glm::vec4& color);
+		static void drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, const std::string& text, const glm::vec3& position, const glm::vec4& color, bool positionWithAspectRatio = true);
 
 		static void drawText(const Ref<CharacterSet> characterSet, std::vector<uint32_t> text, const glm::vec3& position);
-		static void drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, std::vector<uint32_t> text, const glm::vec3& position, const glm::vec4& color);
+		static void drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, std::vector<uint32_t> text, const glm::vec3& position, const glm::vec4& color, bool positionWithAspectRatio = true);
 
 		struct Statistics {
 			uint32_t drawCalls = 0;

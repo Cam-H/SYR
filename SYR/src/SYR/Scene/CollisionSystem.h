@@ -32,6 +32,15 @@ namespace SYR {
 		static const glm::vec2* getOutline(Hitbox2D hitbox);
 
 	public:
+
+		static bool checkCollision(const glm::vec2* vertices, uint16_t vertexCount, const glm::vec2& center, float radius);
+
+		static float getCollision(const glm::vec2* vertices, uint16_t vertexCount, const glm::vec4& line);
+		static bool checkCollision(const glm::vec2* vertices, uint16_t vertexCount, const glm::vec4& line);
+		
+		static float getCollision(const glm::vec4& lineA, const glm::vec4& lineB);
+		static bool checkCollision(const glm::vec4& lineA, const glm::vec4& lineB);
+
 		static glm::vec2 getOverlap(Hitbox2D a, Hitbox2D b);
 		static glm::vec2 getOverlap(const glm::vec2& c1, float r1, const glm::vec2& c2, float r2);
 

@@ -66,6 +66,7 @@ namespace SYR {
 		
 		const CharacterPointer getCharacterPointer(uint32_t key) { return m_CharacterList.find(key) == m_CharacterList.end() ? m_CharacterList[63] : m_CharacterList[key]; }
 
+		const int getAscent() { return m_Ascent; }
 		const int getLinespacing() { return m_Linespacing; }
 	private:
 		uint8_t* pack(std::vector<Character> rectangles, uint32_t* width, uint32_t* height);

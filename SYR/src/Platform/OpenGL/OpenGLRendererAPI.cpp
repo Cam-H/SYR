@@ -112,6 +112,21 @@ namespace SYR {
 		case STENCIL::REPLACE:
 			stencilFail = GL_REPLACE;
 			break;
+		case STENCIL::INCR:
+			stencilFail = GL_INCR;
+			break;
+		case STENCIL::INCR_WRAP:
+			stencilFail = GL_INCR_WRAP;
+			break;
+		case STENCIL::DECR:
+			stencilFail = GL_DECR;
+			break;
+		case STENCIL::DECR_WRAP:
+			stencilFail = GL_DECR_WRAP;
+			break;
+		case STENCIL::INVERT:
+			stencilFail = GL_INVERT;
+			break;
 		}
 
 		switch (dpfail) {
@@ -124,6 +139,21 @@ namespace SYR {
 		case STENCIL::REPLACE:
 			depthFail = GL_REPLACE;
 			break;
+		case STENCIL::INCR:
+			depthFail = GL_INCR;
+			break;
+		case STENCIL::INCR_WRAP:
+			depthFail = GL_INCR_WRAP;
+			break;
+		case STENCIL::DECR:
+			depthFail = GL_DECR;
+			break;
+		case STENCIL::DECR_WRAP:
+			depthFail = GL_DECR_WRAP;
+			break;
+		case STENCIL::INVERT:
+			depthFail = GL_INVERT;
+			break;
 		}
 
 		switch (dppass) {
@@ -135,6 +165,22 @@ namespace SYR {
 			break;
 		case STENCIL::REPLACE:
 			pass = GL_REPLACE;
+			break;
+		case STENCIL::INCR:
+			pass = GL_INCR;
+			glClear(GL_STENCIL_BUFFER_BIT);
+			break;
+		case STENCIL::INCR_WRAP:
+			pass = GL_INCR_WRAP;
+			break;
+		case STENCIL::DECR:
+			pass = GL_DECR;
+			break;
+		case STENCIL::DECR_WRAP:
+			pass = GL_DECR_WRAP;
+			break;
+		case STENCIL::INVERT:
+			pass = GL_INVERT;
 			break;
 		}
 

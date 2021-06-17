@@ -3,20 +3,13 @@
 #include <entt.hpp>
 #include <glm/glm.hpp>
 
+#include <queue>
+
 #include "SYR/Events/ApplicationEvent.h"
 #include "SYR/Events/MouseEvent.h"
 #include "SYR/Events/KeyEvent.h"
 
 namespace SYR {
-
-	struct InputStack {
-		float mx = 0;
-		float my = 0;
-
-		bool leftClick = false;
-
-		std::map<int, int> keyPresses;
-	};
 
 	class InputSystem {
 	public:
@@ -30,9 +23,31 @@ namespace SYR {
 
 		static void onEvent(Event& e);
 
-		static glm::vec2 getNavigationVector() { return s_NavigationVector; }
+		static bool isHovered(entt::registry& registry, entt::entity entity, glm::vec2 pointer);
+		static entt::entity getHoveredEntity(entt::registry& registry);
 
 	private:
+
+		enum class InputType {
+			MOUSE_MOVE = 0, MOUSE_PRESS, MOUSE_RELEASE, MOUSE_SCROLL, KEY_PRESS, KEY_RELEASE
+		};
+
+		typedef struct InputSet {
+
+			InputType inputType;
+
+			float mx;
+			float my;
+
+			int value;
+			uint8_t repeats;
+
+		} InputSet;
+
+		static void enqueue(InputType inputType, int value);
+		static void enqueue(InputSet inputSet);
+
+		static void dequeue();
 
 		static bool onWindowResize(WindowResizeEvent& e);
 
@@ -47,9 +62,11 @@ namespace SYR {
 	private:
 		inline static float s_WindowWidth = 1280, s_WindowHeight = 720;
 		
-		inline static InputStack s_InputStack;
+		inline static float s_Mx = 0, s_My = 0;
 
-		inline static glm::vec2 s_NavigationVector{ 0, 0 };
+		inline static std::queue<InputSet> s_InputQueue;
+
+		inline static glm::vec2 s_NavigationHeading { 0, 0 };
 	};
 
 }

@@ -11,9 +11,17 @@
 
 namespace SYR {
 
+	enum class Status {
+		VISIBLE = 0, HIDDEN, GONE
+	};
+
 	struct TagComponent {
 		std::string tag;
 		std::string id;
+
+		entt::entity parent = entt::null;
+
+		Status status = Status::VISIBLE;
 
 		TagComponent() = default;
 		TagComponent(const TagComponent&) = default;
@@ -203,9 +211,6 @@ namespace SYR {
 		OUTER_LEFT, INNER_LEFT, INNER_RIGHT, OUTER_RIGHT,
 		OUTER_TOP, INNER_TOP, INNER_BOTTOM, OUTER_BOTTOM
 	};
-	enum class UiVisibility {
-		VISIBLE = 0, HIDDEN, GONE
-	};
 
 	struct AnchorComponent {
 
@@ -256,8 +261,6 @@ namespace SYR {
 	};
 
 	struct UiComponent {
-
-		UiVisibility visibility = UiVisibility::VISIBLE;
 		
 		glm::vec4 baseColor{ 1.0f, 1.0f, 1.0f, 1.0f };
 		glm::vec4 highlightColor{ 0.0f, 1.0f, 1.0f, 1.0f };
@@ -265,16 +268,21 @@ namespace SYR {
 
 		UiComponent() = default;
 		UiComponent(const UiComponent&) = default;
-
-		//UiComponent()
 	};
 
 	struct TextComponent {
 
 		std::string text;
+		std::string placeholderText;
 
 		std::string characterSetName;
 		glm::vec4 textColor{ 0.0f, 0.0f, 0.0f, 1.0f };
+
+		Alignment alignment = Alignment::CENTER;
+		bool hypertextEnabled = false;
+
+		uint16_t characterLimit = 256;
+		bool editable = false;
 
 		TextComponent() = default;
 		TextComponent(const TextComponent&) = default;
@@ -291,19 +299,28 @@ namespace SYR {
 		Alignment alignment;
 
 		std::vector<entt::entity> entities;
+		entt::entity selectedEntity;
 
 		float margins;
 		float spacing;
 
-		glm::vec2 contentDimensions{ 0.0f, 0.0f };
-		glm::vec2 offset{ 0.0f, 0.0f };
-
 		bool forceResize = true;
+
+
+		int cols;
+		int rows;
 
 		float contentWidth = -1.0f;
 		float contentHeight = -1.0f;
 
+		bool restrictRenderingToBounds = false;
+
+		bool square = false;
+
 		bool scrollable = false;
+		glm::vec2 contentLimits{ 0, 0 };
+		float offset = 0;
+
 		bool wrap = false;
 
 		LayoutComponent() = default;
@@ -348,24 +365,23 @@ namespace SYR {
 		}
 	};
 
-	struct MouseListenerComponent {
+	struct IOListenerComponent {
 
-	};
+		const glm::vec2* vertices;
+		uint16_t vertexCount;
 
-	struct KeyboardListenerComponent{
-	
-	};
+		bool keyListener = true;
+		bool mouseListener = true;
 
-	struct ListenerComponent {
+		bool interactable = true;
+		
+		bool hovered = false;
+		bool selected = false;
+		bool checked = false;
 
-		bool listening;
-
-		bool hovered;
-		bool selected;
-		bool checked;
-
-		ListenerComponent() = default;
-		ListenerComponent(const ListenerComponent&) = default;
+		IOListenerComponent() = default;
+		IOListenerComponent(const IOListenerComponent&) = default;
+		IOListenerComponent(const glm::vec2 vertices[], uint16_t vertexCount) : vertices(vertices), vertexCount(vertexCount) {}
 
 	};
 }

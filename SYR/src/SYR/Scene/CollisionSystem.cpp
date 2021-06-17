@@ -14,6 +14,131 @@
 
 namespace SYR {
 
+	bool CollisionSystem::checkCollision(const glm::vec2* vertices, uint16_t vertexCount, const glm::vec2& center, float radius) {
+
+		glm::vec2 minimumDisplacement = { 0.0f, 0.0f };
+
+		const glm::vec4* aEdges = getEdges(vertices, vertexCount);//Get all of the edges of the polygon
+		const glm::vec4* bEdges = getEdges(center, vertices, vertexCount);//Get all important edges of the circle (those normal to polygon edges)
+
+		uint16_t uniqueAxisCount;
+
+		const glm::vec4* uniqueAxes = getUniqueAxes(bEdges, vertexCount, aEdges, vertexCount, uniqueAxisCount);
+
+		for (uint16_t i = 0; i < uniqueAxisCount; i++) {
+
+			//Get the shadows of the polygon and circle along the axis
+			glm::vec4 aProj = getShadow(uniqueAxes[i], vertices, vertexCount);
+			glm::vec4 bProj = getShadow(uniqueAxes[i], center, radius);
+
+			glm::vec2 overlap = getOverlap(aProj, bProj);
+
+			//If there was no overlap along the given axis
+			if (overlap.x == 0 && overlap.y == 0) {
+				return false;
+			}
+		}
+
+		return true;//Condition reached only when there is overlap along every axis
+	}
+
+	float CollisionSystem::getCollision(const glm::vec2* vertices, uint16_t vertexCount, const glm::vec4& line) {
+
+		if (glm::length(line) == 0) {
+			return -1;
+		}
+
+		float tMin = getCollision(line, { vertices[0].x, vertices[0].y, vertices[vertexCount - 1].x, vertices[vertexCount - 1].y });
+		for (uint16_t i = 0; i < vertexCount - 1; i++) {
+			float temp = getCollision(line, { vertices[i].x, vertices[i].y, vertices[i + 1].x, vertices[i + 1].y });
+
+			if (temp > 0 && (tMin < 0 || temp < tMin)) {
+				tMin = temp;
+			}
+		}
+
+		return tMin;
+	}
+
+	bool CollisionSystem::checkCollision(const glm::vec2* vertices, uint16_t vertexCount, const glm::vec4& line) {
+
+		if (glm::length(line) == 0) {
+			return false;
+		}
+
+
+		float tMin = getCollision(line, { vertices[0].x, vertices[0].y, vertices[vertexCount - 1].x, vertices[vertexCount - 1].y });
+		for (uint16_t i = 0; i < vertexCount - 1; i++) {
+			float temp = getCollision(line, { vertices[i].x, vertices[i].y, vertices[i + 1].x, vertices[i + 1].y });
+
+			if (temp != -1) {
+				return true;
+			}
+		}
+
+		return tMin >= 0;
+	}
+
+	float CollisionSystem::getCollision(const glm::vec4& tLine, const glm::vec4& uLine) {
+
+		if (glm::length(tLine) == 0 || glm::length(uLine) == 0) {
+			return false;
+		}
+
+		//Renderer2D::drawLine({ uLine.x, uLine.y }, { uLine.z, uLine.w }, { 0.0f, 0.0f, 0.0f, 1.0f });
+
+		glm::vec2 xt = { tLine.z - tLine.x, tLine.x };
+		glm::vec2 yt = { tLine.w - tLine.y, tLine.y };
+
+		glm::vec2 xu = { uLine.z - uLine.x , uLine.x };
+		glm::vec2 yu = { uLine.w - uLine.y , uLine.y };
+
+		float u = -1;
+		float t = -1;
+
+		if (yt.x == 0) {
+			if (yu.x == 0) {//A parallel lines case (horizontal)
+				if (yt.y == yu.y) {//Check if the lines are collinear
+					u = 0;
+					t = (xu.y - xt.y + xu.x * u) / xt.x;
+				}
+			}
+			else {
+				u = (yt.y - yu.y) / yu.x;
+				t = (xu.y - xt.y + xu.x * u) / xt.x;
+			}
+
+		} else {//Standard case
+			if (yu.x * xt.x / yt.x - xu.x == 0) {//Check for special case
+				if (xt.x == 0 && xu.x == 0) {//Both lines are parallel to the vertical
+					if (xt.y == xu.y) {//Check if lines are colliner
+						u = 0;
+						t = (yu.y - yt.y + yu.x * u) / yt.x;
+					}
+				} else {
+					SYR_CORE_ERROR("Unhandled line collision case!");
+				}
+			}
+			else {
+				u = (xu.y - xt.y - xt.x * (yu.y - yt.y) / yt.x) / (yu.x * xt.x / yt.x - xu.x);
+				t = (yu.y - yt.y + yu.x * u) / yt.x;
+			}
+		}
+
+		if (0 <= u && u <= 1 && t > 0) {
+			//Renderer2D::drawCircle({ xu.x * u + xu.y, yu.x * u + yu.y }, 0.01f, { 1.0f, 0.0f, 0.0f, 1.0f });
+			return t;
+		}
+
+		return -1;
+	}
+
+	bool CollisionSystem::checkCollision(const glm::vec4& tLine, const glm::vec4& uLine) {
+		float t = getCollision(tLine, uLine);
+		
+		return 0 <= t && t<= 1;
+	}
+
 	void checkCollisions(entt::registry& registry) {
 		auto view = registry.view<TransformComponent, Hitbox2DComponent>();
 		
@@ -145,7 +270,7 @@ namespace SYR {
 		glm::vec4 shadow = { projection.x - radius * axis.x / scale, projection.y - radius * axis.y / scale , projection.x + radius * axis.x / scale , projection.y + radius * axis.y / scale };
 
 #ifdef _DEBUG
-		Renderer2D::drawLine(glm::vec2(shadow.x, shadow.y), glm::vec2(shadow.z, shadow.w), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
+		//Renderer2D::drawLine(glm::vec2(shadow.x, shadow.y), glm::vec2(shadow.z, shadow.w), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
 #endif
 
 		return shadow;
@@ -176,7 +301,7 @@ namespace SYR {
 		}
 
 #ifdef _DEBUG
-		Renderer2D::drawLine(glm::vec2(shadow.x, shadow.y), glm::vec2(shadow.z, shadow.w), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
+		//Renderer2D::drawLine(glm::vec2(shadow.x, shadow.y), glm::vec2(shadow.z, shadow.w), glm::vec4(0.0f, 0.0f, 1.0f, 1.0f));
 #endif
 
 		return shadow;
@@ -346,7 +471,7 @@ namespace SYR {
 		glm::vec2 normal = { overlap.z - overlap.x, overlap.w - overlap.y };
 		normal = { -normal.y / glm::length(normal) / 10, normal.x / glm::length(normal) / 10 };
 
-		Renderer2D::drawLine(glm::vec2(overlap.x + normal.x, overlap.y + normal.y), glm::vec2(overlap.z + normal.x, overlap.w + normal.y), glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
+		//Renderer2D::drawLine(glm::vec2(overlap.x + normal.x, overlap.y + normal.y), glm::vec2(overlap.z + normal.x, overlap.w + normal.y), glm::vec4(1.0f, 0.0f, 0.0f, 1.0f));
 #endif
 
 		return glm::vec2(overlap.z - overlap.x, overlap.w - overlap.y);

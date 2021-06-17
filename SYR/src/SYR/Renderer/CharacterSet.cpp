@@ -74,6 +74,7 @@ namespace SYR {
 		if (characterCollection != CharacterCollection::ASCII && characterCollection != CharacterCollection::ENGLISH)
 			addCharacter(face, &characters, 63);//Add "?" character in case user tries to render characters that are not in the set
 
+		m_Ascent = face->ascender >> 6;//TODO manage different ascender conventions
 		m_Linespacing = face->height >> 6;
 
 		FT_Done_Face(face);
@@ -120,6 +121,7 @@ namespace SYR {
 
 		}
 
+		m_Ascent = face->ascender >> 6;//TODO manage different ascender conventions
 		m_Linespacing = face->height >> 6;
 
 		FT_Done_Face(face);

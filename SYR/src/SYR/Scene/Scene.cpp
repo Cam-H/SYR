@@ -4,6 +4,7 @@
 #include "CollisionSystem.h"
 #include "SYR/Systems/UiSystem.h"
 #include "SYR/Systems/InputSystem.h"
+#include "SYR/Systems/ConsoleSystem.h"
 
 #include "SYR/Renderer/Renderer.h"
 #include "SYR/Renderer/Renderer2D.h"
@@ -49,8 +50,6 @@ namespace SYR {
 		tag.tag = "Test Light";
 		tag.id = "TL";
 
-		//entity.addComponent<LightComponent>(glm::vec3(0.8f, 0.8f, 1), glm::vec3(1, 20, 0));
-		//entity.addComponent<LightComponent>(glm::vec3(0.8f, 0.8f, 1), glm::vec3(1, 10, 0), 0.03f, 0.0064f);
 		entity.addComponent<LightComponent>(glm::vec3(0, 1, 1), glm::vec3(15, 2, 15), 0.03f, 0.001f);
 
 		entity = { m_Registry.create(), this };
@@ -106,6 +105,10 @@ namespace SYR {
 		//auto group = m_Registry.group<TransformComponent>(entt::get<SpriteRendererComponent>);
 		//auto&[transform, sprite] = group.get<TransformComponent, SpriteRendererComponent>(entity);
 		//for(auto entity : group) { Renderer2D::drawQuad(transform, sprite.color); }
+
+		if (m_ConsoleEnabled) {
+
+		}
 
 		movement(m_Registry, ts);
 		checkCollisions(m_Registry);

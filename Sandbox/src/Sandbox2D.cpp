@@ -303,13 +303,13 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 
 	if (m_ActiveScene->entityIDExists(std::string("testid"))) {
 		SYR::Entity ttt = m_ActiveScene->getEntityByID(std::string("testid"));
-		ttt.getComponent<SYR::TransformComponent>().offset(velocity);
-		ttt.getComponent<SYR::TransformComponent>().scale(1 + velocity.z);
+		//ttt.getComponent<SYR::TransformComponent>().offset(velocity);
+		//ttt.getComponent<SYR::TransformComponent>().scale(1 + velocity.z);
 	}
 
 	if (m_ActiveScene->entityIDExists(std::string("exit"))) {
 		SYR::Entity exitButton = m_ActiveScene->getEntityByID(std::string("exit"));
-		if (exitButton.getComponent<SYR::ListenerComponent>().checked) {
+		if (exitButton.getComponent<SYR::IOListenerComponent>().checked) {
 			SYR::Application::get().stop();
 		}
 	}
@@ -331,12 +331,23 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 	m_ActiveScene->onUpdate(ts);
 	m_ActiveScene->onDraw();
 
-	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "W/A/S/D/SHIFT/SPACE to move camera", { -1.75f, 0.95f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
-	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "Mouse to reorient camera", { -1.75f, 0.85f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
-	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "ALT+F4 to close", { -1.75f, 0.75f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
+	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "W/A/S/D/SHIFT/SPACE to move camera", { -1.0f, 0.95f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
+	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "Mouse to reorient camera", { -1.0f, 0.85f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
+	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "ALT+F4 to close", { -1.0f, 0.75f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
+
+	float wWidth = SYR::Application::get().getWindow().getWidth();
+	float wHeight = SYR::Application::get().getWindow().getHeight();
+
+	float mx = 2 * (SYR::Input::getMouseX() - wWidth / 2) / wWidth;
+	float my = -2 * (SYR::Input::getMouseY() - wHeight / 2) / wHeight;
+
+	std::string pointer = "(" + fmt::format("{:.2f}", mx) + ", " + fmt::format("{:.2f}", my) + ") ";
+
+	if (m_PCameraController.getCameraControlType() != SYR::CameraControlType::FREE_CAMERA) {
+		SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, pointer, { mx, my, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
+	}
 
 	//SYR::Renderer2D::drawQuad(glm::mat4(1.0f) * glm::scale(glm::mat4(1.0f), { 0.6f, 0.6f, 1.0f }), glm::vec4(1, 1, 0, 1), m_CharacterSet->getCharacterSheet());
-
 	//SYR::Renderer2D::drawLine(glm::vec2(0.0f, 0.0f), glm::vec2(-1.0f, -1.0f), glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
 	
 	SYR::Renderer2D::endScene();

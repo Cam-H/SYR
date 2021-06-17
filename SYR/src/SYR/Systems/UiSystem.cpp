@@ -14,6 +14,7 @@ namespace SYR {
 	void positionComponents(entt::registry& registry) {
 		auto view = registry.view<TransformComponent, LayoutComponent>();
 
+		/**********************LAYOUT POSITIONING**********************/
 		for (const entt::entity e : view) {
 			glm::mat4& transform = view.get<TransformComponent>(e).transform;
 			LayoutComponent& layout = view.get<LayoutComponent>(e);
@@ -31,13 +32,13 @@ namespace SYR {
 
 			float spacing = scale.y * layout.spacing;
 
-			float x = translation.x + layout.offset.x;
-			float y = translation.y + layout.offset.y;
+			float x = translation.x - layout.contentLimits.x * layout.offset;
+			float y = translation.y + layout.contentLimits.y * layout.offset;
 			float z = translation.z + 0.001f;
 
 			float width = 0, height = 0;
 			float xOffset = 0, yOffset = 0;
-			uint16_t xMod = 1, yMod = 1;
+			uint16_t xMod = 1, yMod = 1, yDiv = UINT16_MAX;
 
 			switch (layout.layout) {
 			case Layout::FLOAT:
@@ -52,13 +53,17 @@ namespace SYR {
 				if (layout.alignment == Alignment::VERTICAL) {
 					width = scale.x - xMargins * 2;
 					height = (scale.y - yMargins * 2 - spacing * (elementCount - 1)) / elementCount;
-					y += -scale.y / 2 + height / 2 + yMargins;
-					yOffset = height + spacing;
+					yOffset = -(height + spacing);
+					y += scale.y / 2 - height / 2 - yMargins;
+
+					layout.contentLimits = { 0, (height + spacing) * elementCount - spacing + yMargins * 2 - scale.y };
 				} else if (layout.alignment == Alignment::HORIZONTAL) {
 					width = (scale.x - xMargins * 2 - spacing * (elementCount - 1)) / elementCount;
 					height = scale.y - yMargins * 2;
-					x -= -scale.x / 2 + width / 2 + xMargins;
-					xOffset = -(width + spacing);
+					xOffset = width + spacing;
+					x += -scale.x / 2 + width / 2 + xMargins;
+
+					layout.contentLimits = { (width + spacing) * elementCount - spacing + xMargins * 2 - scale.x, 0 };
 				}
 
 				xMod = yMod = activeElements.size();
@@ -68,21 +73,90 @@ namespace SYR {
 				width = scale.x - xMargins * 2;
 				height = scale.y - yMargins * 2;
 
-				if (layout.contentWidth != -1.0f) {
+				if (layout.cols != -1) {
+
+					width = (width - (layout.cols - 1) * spacing) / layout.cols;
+					xOffset = width + spacing;
+					x += -scale.x / 2 + width / 2 + xMargins;
+					xMod = layout.cols;
+
+					uint16_t elementsPerColumn = layout.entities.size() / layout.cols + (layout.entities.size() % layout.cols > 0 ? 1 : 0);//Determine the necessary number of rows
+					yDiv = layout.cols;
 					
+					if (layout.square) {//IF the layout should be squared such that the content height is equal to the content width (in pixels)
+						//-> use the contentWidth as contentHeight
+						height = width;
+					} else if (layout.contentHeight != -1.0f) {//IF the content height is defined
+						//-> use contentHeight as defined
+						height = layout.contentHeight * scale.y;
+					} else {//IF elements should not be squared, and are not allowed to extend past the layout boundaries then height is determined through a calculation of the largest allowable content height
+						//-> determine an appropriate content height for the layout
+						height = (height - (elementsPerColumn - 1) * spacing) / elementsPerColumn;
+					}
+
+					yOffset = -(height + spacing);
+					y += scale.y / 2 - height / 2 - yMargins;
+
+					layout.contentLimits = { 0, (height + spacing) * elementsPerColumn - spacing + yMargins * 2 - scale.y };
+
+				} else if (layout.rows != -1) {
+
+					height = (height - (layout.rows - 1) * spacing) / layout.rows;
+					yOffset = -(height + spacing);
+					y += scale.y / 2 - height / 2 - yMargins;
+
+					uint16_t elementsPerRow = layout.entities.size() / layout.rows + (layout.entities.size() % layout.rows > 0 ? 1 : 0);//Determine the necessary number of rows
+					xMod = elementsPerRow;
+					yDiv = elementsPerRow;
+
+					if (layout.square) {//IF the layout should be squared such that the content width is equal to the content height (in pixels)
+						//-> use the contentHeight as contentWidth
+						width = height;
+					}
+					else if (layout.contentWidth != -1.0f) {//IF the content width is defined
+						 //-> use contentWidth as defined
+						width = layout.contentWidth * scale.x;
+					}
+					else {//IF elements should not be squared, and are not allowed to extend past the layout boundaries then width is determined through a calculation of the largest allowable content width
+						//-> determine an appropriate content width for the layout
+						width = (width - (elementsPerRow - 1) * spacing) / elementsPerRow;
+					}
+
+					xOffset = width + spacing;
+					x += -scale.x / 2 + width / 2 + xMargins;
+
+					layout.contentLimits = { (width + spacing) * elementsPerRow - spacing + xMargins * 2 - scale.x, 0 };
+
+				} else {
+					//TODO develop grid positioning for undefined rows / columns
+					SYR_CORE_WARN("WARNING: Grid positioning for an undefined number of rows and columns has not yet been developed. Defaulting to 2 columns");
+					layout.cols = 2;
+
+					if (layout.square) {
+
+					} else if (layout.contentWidth != -1.0f) {
+
+					} else if (layout.contentHeight != -1.0f) {
+
+					} else {
+						//TODO complete layout definition
+					}
+
 				}
 
 				break;
 			}
 
-			int i = activeElements.size() - 1;
+			int i = activeElements.size() - 1; i = 0;
 			for (std::vector<entt::entity>::iterator it = activeElements.begin(); it != activeElements.end(); ++it) {
-				Entity::getComponent<TransformComponent>(registry, *it).transform = glm::translate(glm::mat4(1.0f), { x + xOffset * (i % xMod), y + yOffset * (i % yMod), z }) * glm::scale(glm::mat4(1.0f), { width, height, 1.0f });
-				i--;
+				Entity::getComponent<TransformComponent>(registry, *it).transform = glm::translate(glm::mat4(1.0f), { x + xOffset * (i % xMod), y + yOffset * (i % yMod + i / yDiv), z }) * glm::scale(glm::mat4(1.0f), { width, height, 1.0f });
+				//i--;
+				i++;
 			}
 		}
 		
 		
+		/**********************ANCHORING**********************/
 		auto anchorView = registry.view<AnchorComponent>();
 		for (const entt::entity e : anchorView) {
 			AnchorComponent& anchor = anchorView.get<AnchorComponent>(e);
@@ -167,14 +241,13 @@ namespace SYR {
 
 			transform = glm::translate(glm::mat4(1.0f), { cTranslation.x * xMod + xOffset * !xMod, cTranslation.y * yMod + yOffset * !yMod, cTranslation.z }) * glm::scale(glm::mat4(1.0f), scale2);
 		}
-		
 	}
 
 	std::vector<entt::entity> UiSystem::getActiveEntities(entt::registry& registry, std::vector<entt::entity> entities) {
 		std::vector<entt::entity> active;
 
 		for (std::vector<entt::entity>::iterator it = entities.begin(); it != entities.end(); ++it) {
-			if (!registry.has<UiComponent>(*it) || registry.get<UiComponent>(*it).visibility != UiVisibility::GONE) {
+			if (!registry.has<TagComponent>(*it) || registry.get<TagComponent>(*it).status != Status::GONE) {
 				active.push_back(*it);
 			}
 		}
@@ -182,42 +255,34 @@ namespace SYR {
 		return active;
 	}
 
+	void renderUi(entt::registry& registry, entt::entity root) {
+		RenderCommand::setStencilOperation(RendererAPI::STENCIL::KEEP, RendererAPI::STENCIL::REPLACE, RendererAPI::STENCIL::INCR);
 
-	//Negates any user inputs applied to non-visible components
-	void UiSystem::processUiInputs(entt::registry& registry) {
-		auto view = registry.view<LayoutComponent>();
+		renderUi(registry, root, 0);
 
-		for (entt::entity e : view) {
-			if (registry.has<UiComponent>(e) && registry.get<UiComponent>(e).visibility != UiVisibility::VISIBLE) {
-				LayoutComponent& layout = view.get<LayoutComponent>(e);
+		Renderer2D::flush();//Render any last ui elements before stencil reset
 
-				for (std::vector<entt::entity>::iterator it = layout.entities.begin(); it != layout.entities.end(); ++it) {
-					if (registry.has<ListenerComponent>(*it)) {
-						ListenerComponent& listener = registry.get<ListenerComponent>(*it);
-
-						listener.hovered = listener.selected = listener.checked = false;
-					}
-				}
-			}
-			
-		}
-
+		//RenderCommand::setStencilFunction(RendererAPI::STENCIL::ALWAYS, 1, 0xFF);
+		//RenderCommand::setStencilMask(0x00);
 	}
 
-
-	void renderUi(entt::registry& registry, entt::entity root) {
+	void renderUi(entt::registry& registry, entt::entity root, uint16_t layer) {
 		static Ref<Texture2D> texture = Texture2D::create("assets/textures/Empty.png");
 
 		UiComponent& ui = registry.get<UiComponent>(root);
 
-		if (ui.visibility == UiVisibility::VISIBLE) {
+		if (registry.get<TagComponent>(root).status == Status::VISIBLE) {//Only render the ui element when it should be visible
 			glm::mat4& transform = registry.get<TransformComponent>(root).transform;
 
-			if (registry.has<ListenerComponent>(root)) {
-				if (registry.get<ListenerComponent>(root).selected || (!registry.get<ListenerComponent>(root).hovered && registry.get<ListenerComponent>(root).checked)) {
+			RenderCommand::setStencilFunction(RendererAPI::STENCIL::EQUAL, layer, 0xFF);
+			RenderCommand::setStencilMask(0xFF);
+
+			//Handle any highlighting / animations for interactive components
+			if (registry.has<IOListenerComponent>(root)) {
+				if (registry.get<IOListenerComponent>(root).selected || (!registry.get<IOListenerComponent>(root).hovered && registry.get<IOListenerComponent>(root).checked)) {
 					Renderer2D::drawQuad(transform, ui.selectColor, texture);
-				} else if (registry.get<ListenerComponent>(root).hovered) {
-					if (registry.get<ListenerComponent>(root).checked && false) {
+				} else if (registry.get<IOListenerComponent>(root).hovered) {
+					if (registry.get<IOListenerComponent>(root).checked && false) {
 						Renderer2D::drawQuad(transform, { ui.highlightColor.r * ui.selectColor.r, ui.highlightColor.g * ui.selectColor.g , ui.highlightColor.b * ui.selectColor.b, 1.0f }, texture);
 					} else {
 						Renderer2D::drawQuad(transform, ui.highlightColor, texture);
@@ -229,19 +294,28 @@ namespace SYR {
 				Renderer2D::drawQuad(transform, ui.baseColor, texture);
 			}
 
+			Renderer2D::flush();
+			RenderCommand::setStencilFunction(RendererAPI::STENCIL::EQUAL, layer + 1, 0xFF);
+
+			//Handle any text rendering for the component
 			if (registry.has<TextComponent>(root)) {
 				TextComponent& text = registry.get<TextComponent>(root);
 				glm::vec3 translation;
 				glm::decompose(transform, glm::vec3(), glm::quat(), translation, glm::vec3(), glm::vec4());
 				translation.z += 0.001f;
 
-				Renderer2D::drawText(Renderer::getCharacterSetLibrary()->get(text.characterSetName), Renderer2D::TextAlignment::HORIZONTAL_CENTER, text.text, translation, text.textColor);
+				Renderer2D::drawText(Renderer::getCharacterSetLibrary()->get(text.characterSetName), Renderer2D::TextAlignment::HORIZONTAL_CENTER, text.text, translation, text.textColor, false);
 			}
 
+			Renderer2D::flush();
+
+
+			//Render any contents of the ui element
 			if (registry.has<LayoutComponent>(root)) {
+
 				LayoutComponent& layout = registry.get<LayoutComponent>(root);
 				for (std::vector<entt::entity>::iterator it = layout.entities.begin(); it != layout.entities.end(); ++it) {
-					renderUi(registry, *it);
+					renderUi(registry, *it, layer + 1);
 				}
 			}
 			
@@ -285,7 +359,7 @@ namespace SYR {
 		}
 	}
 
-	void UiSystem::loadUiElements(Scene* scene, std::vector<entt::entity>* container, const std::string& content) {
+	void UiSystem::loadUiElements(Scene* scene, std::vector<entt::entity>* container, const std::string& content, entt::entity parent) {
 
 		static bool inUI = false;
 
@@ -299,7 +373,7 @@ namespace SYR {
 
 			std::vector<std::string> children = splitXMLSiblings(body);
 			for (std::vector<std::string>::iterator it = children.begin(); it != children.end(); ++it) {
-				loadUiElements(scene, container, *it);
+				loadUiElements(scene, container, *it, parent);
 			}
 
 			inUI = false;
@@ -319,10 +393,9 @@ namespace SYR {
 
 			if (tag.compare("panel") == 0) {
 				for (std::vector<std::string>::iterator it = children.begin(); it != children.end(); ++it) {
-					loadUiElements(scene, &childContainer, *it);
+					loadUiElements(scene, &childContainer, *it, entity.getHandle());
 				}
-			}
-			else {
+			} else {
 				SYR_CORE_WARN("Discarding {0} XML Elements. Only panels may contain other elements!", children.size());
 			}
 
@@ -334,19 +407,6 @@ namespace SYR {
 				float margins = getMargins(header);
 				float spacing = getSpacing(header);
 
-				float contentWidth = getContentWidth(header);
-				float contentHeight = getContentHeight(header);
-
-				if (layout == Layout::GRID) {
-					int cols = getCols(header);
-					int rows = getRows(header);
-
-					if (cols != -1) {
-						contentWidth = (1.0f - 2 * margins - (cols - 1) * spacing) / cols;
-					} else if (rows != -1) {
-						contentHeight = (1.0f - 2 * margins - (rows - 1) * spacing) / rows;
-					}
-				}
 
 				entity.addComponent<LayoutComponent>(layout, alignment, childContainer);
 				entity.getComponent<LayoutComponent>().setScrollable(type.compare("scroll") == 0);//TODO warning
@@ -354,12 +414,36 @@ namespace SYR {
 				entity.getComponent<LayoutComponent>().setMargins(margins);
 				entity.getComponent<LayoutComponent>().setSpacing(spacing);
 
-				entity.getComponent<LayoutComponent>().contentWidth = contentWidth;
-				entity.getComponent<LayoutComponent>().contentHeight = contentHeight;
+				entity.getComponent<LayoutComponent>().cols = getCols(header);
+				entity.getComponent<LayoutComponent>().rows = getRows(header);
 
-				SYR_CORE_ERROR("{0} {1}", entity.getComponent<LayoutComponent>().contentWidth, entity.getComponent<LayoutComponent>().contentHeight);
+				entity.getComponent<LayoutComponent>().restrictRenderingToBounds = true;
+
+				entity.getComponent<LayoutComponent>().square = getString(header, "square=").compare("true") == 0;
+				entity.getComponent<LayoutComponent>().scrollable = getString(header, "scroll=").compare("true") == 0;
+				entity.getComponent<LayoutComponent>().wrap = getString(header, "wrap=").compare("true") == 0;
+
+
+				entity.getComponent<LayoutComponent>().contentWidth = getContentWidth(header);
+				entity.getComponent<LayoutComponent>().contentHeight = getContentHeight(header);
+
+				//Add a hitbox to panels so they can listen to mouse scrolls / hovering
+				glm::vec2* hitbox = new glm::vec2[4]{ glm::vec2(-0.5f, 0.5f), glm::vec2(0.5f, 0.5f), glm::vec2(0.5f, -0.5f), glm::vec2(-0.5f, -0.5f) };
+				entity.addComponent<IOListenerComponent>(hitbox, 4);
+				entity.getComponent<IOListenerComponent>().keyListener = false;
+				entity.getComponent<IOListenerComponent>().interactable = false;
 			}
 		}
+
+		entity.getComponent<TagComponent>().parent = parent;//Assign a parent to the child entity
+
+		float baseWidth = getFloat(header, "width=");
+		baseWidth = baseWidth == -1.0f ? 1.0f : baseWidth;//Set baseWidth to default value if the vlaue was not specified
+
+		float baseHeight = getFloat(header, "height=");
+		baseHeight = baseHeight == -1.0f ? 1.0f : baseHeight;//Set baseHeight to default value if the vlaue was not specified
+
+		entity.getComponent<TransformComponent>().setTransform(glm::scale(glm::mat4(1.0f), { baseWidth, baseHeight, 1.0f }));
 
 		std::string id = getID(header);
 		std::string text = getText(header);
@@ -374,9 +458,10 @@ namespace SYR {
 		entity.getComponent<UiComponent>().baseColor = color;
 		entity.getComponent<UiComponent>().highlightColor = highlightColor;
 		entity.getComponent<UiComponent>().selectColor = selectColor;
-
+		
 		if (tag.compare("button") == 0) {//Button
-			entity.addComponent<ListenerComponent>();
+			glm::vec2* hitbox = new glm::vec2[4]{ glm::vec2(-0.5f, 0.5f), glm::vec2(0.5f, 0.5f), glm::vec2(0.5f, -0.5f), glm::vec2(-0.5f, -0.5f) };
+			entity.addComponent<IOListenerComponent>(hitbox, 4);
 		}
 
 		if (!text.empty()) {//Label / Text
@@ -441,6 +526,23 @@ namespace SYR {
 		}
 
 		return std::string();
+	}
+
+	/**
+	* Returns -1.0f if the specified attribute was not found
+	*/
+	float UiSystem::getFloat(std::string header, std::string attribute) {
+		std::string content = getString(header, attribute);
+		int index = header.find(attribute, 0);
+
+		if (index != std::string::npos) {
+			index += attribute.length() + 1;
+			std::string content = header.substr(index, header.find('\"', index) - index);
+
+			return content.empty() ? -1.0f : std::stof(content);
+		}
+
+		return -1.0f;
 	}
 
 	float UiSystem::getPreferredWidth(std::string header) {
@@ -533,13 +635,13 @@ namespace SYR {
 	}
 
 	float UiSystem::getContentWidth(std::string header) {
-		std::string widthPref = getString(header, "contentWidth");
+		std::string widthPref = getString(header, "contentWidth=");
 
 		return widthPref.empty() ? -1.0f : std::stof(widthPref);
 	}
 
 	float UiSystem::getContentHeight(std::string header) {
-		std::string heightPref = getString(header, "contentHeight");
+		std::string heightPref = getString(header, "contentHeight=");
 
 		return heightPref.empty() ? -1.0f : std::stof(heightPref);
 	}

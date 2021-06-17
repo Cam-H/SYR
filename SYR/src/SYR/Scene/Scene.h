@@ -30,6 +30,9 @@ namespace SYR {
 		void onUpdate(Timestep ts);
 		void onDraw();
 
+		void enableConsole();
+		void disableConsole() { m_ConsoleEnabled = false; }
+
 		void enableUi() { m_UiEnabled = true; }
 		void disableUi() { m_UiEnabled = false; }
 
@@ -43,6 +46,8 @@ namespace SYR {
 	private:
 		entt::registry m_Registry;
 		std::vector<Entity> m_Entities;
+
+		bool m_ConsoleEnabled;
 
 		float m_AspectRatio = 1280.0f / 720.0f;
 		Ref<Entity> m_MainPanel;

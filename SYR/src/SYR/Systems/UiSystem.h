@@ -34,11 +34,11 @@ namespace SYR {
 
 					mainPanel.getComponent<TagComponent>().id = "MAIN PANEL";
 					mainPanel.getComponent<TagComponent>().tag = "MAIN PANEL";
+					mainPanel.getComponent<TagComponent>().status = Status::VISIBLE;
 
 					mainPanel.addComponent<LayoutComponent>(Layout::FLOAT, Alignment::FLOAT, panels);
 					mainPanel.addComponent<UiComponent>();
 
-					mainPanel.getComponent<UiComponent>().visibility = UiVisibility::VISIBLE;
 					mainPanel.getComponent<UiComponent>().baseColor = { 0.3f, 0.3f, 0.3f, 0.5f };//TODO make transparent
 				}
 			}
@@ -55,7 +55,6 @@ namespace SYR {
 			return entity;
 		}
 
-		static void processUiInputs(entt::registry& registry);
 		static std::vector<entt::entity> getActiveEntities(entt::registry& registry, std::vector<entt::entity> entities);
 
 
@@ -63,11 +62,12 @@ namespace SYR {
 
 		static void loadUiResources(std::map<std::string, uint32_t>* resources, const std::string& content);
 
-		static void loadUiElements(Scene* scene, std::vector<entt::entity>* container, const std::string& content);
+		static void loadUiElements(Scene* scene, std::vector<entt::entity>* container, const std::string& content, entt::entity parent = entt::null);
 
 		static std::vector<std::string> splitXMLSiblings(const std::string& content);
 
 		static std::string getString(std::string header, std::string attribute);
+		static float getFloat(std::string header, std::string attribute);
 
 		static float getPreferredWidth(std::string header);
 		static float getPreferredHeight(std::string header);
@@ -113,6 +113,7 @@ namespace SYR {
 	
 	void positionComponents(entt::registry& registry);
 	void renderUi(entt::registry& registry, entt::entity root);
+	void renderUi(entt::registry& registry, entt::entity root, uint16_t layer);
 	void renderUiComponent(entt::registry& registry, entt::entity uiComponent);
 
 

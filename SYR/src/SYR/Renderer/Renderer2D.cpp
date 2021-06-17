@@ -118,17 +118,17 @@ namespace SYR {
 
 		delete[] quadIndices;
 
-		
+		/*
+		s_Data->quadVertexPositions[1] = { 1.0f,  1.0f, 0.0f, 1.0f };
+		s_Data->quadVertexPositions[2] = { 1.0f, -1.0f, 0.0f, 1.0f };
+		s_Data->quadVertexPositions[3] = { -1.0f, -1.0f, 0.0f, 1.0f };
+		s_Data->quadVertexPositions[0] = { -1.0f,  1.0f, 0.0f, 1.0f };
+		*/
+
 		s_Data->quadVertexPositions[1] = { 0.5f,  0.5f, 0.0f, 1.0f };
 		s_Data->quadVertexPositions[2] = { 0.5f, -0.5f, 0.0f, 1.0f };
 		s_Data->quadVertexPositions[3] = { -0.5f, -0.5f, 0.0f, 1.0f };
 		s_Data->quadVertexPositions[0] = { -0.5f,  0.5f, 0.0f, 1.0f };
-		/*
-		s_Data->quadVertexPositions[0] = { -0.5f, -0.5f, 0.0f, 1.0f };
-		s_Data->quadVertexPositions[1] = { -0.5f,  0.5f, 0.0f, 1.0f };
-		s_Data->quadVertexPositions[2] = { 0.5f,  0.5f, 0.0f, 1.0f };
-		s_Data->quadVertexPositions[3] = { 0.5f, -0.5f, 0.0f, 1.0f };
-		*/
 		
 		//Line Vertex Array setup
 
@@ -675,7 +675,7 @@ namespace SYR {
 		drawText(characterSet, TextAlignment::HORIZONTAL_CENTER, text, position, { 0.0f, 0.0f, 0.0f, 1.0f });
 	}
 
-	void Renderer2D::drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, const std::string& text, const glm::vec3& position, const glm::vec4& color) {
+	void Renderer2D::drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, const std::string& text, const glm::vec3& position, const glm::vec4& color, bool positionWithAspectRatio) {
 		glm::ivec2 dimensions = RenderCommand::getViewportDimensions();
 
 		float aspectRatio = (float)dimensions.x / dimensions.y;
@@ -684,6 +684,8 @@ namespace SYR {
 		float x = 0, y = 0, z = position.z - 0.001f;
 		float zOffset = 0.001f / text.length();
 		uint8_t xM = 0, yM = 0;
+
+		float rx = position.x * (positionWithAspectRatio ? aspectRatio : 1);
 
 		for (int i = 0; i < text.length(); i++) {
 			CharacterPointer cp = characterSet->getCharacterPointer(text.at(i));
@@ -696,39 +698,38 @@ namespace SYR {
 
 		switch (textAlignment) {
 		case TextAlignment::HORIZONTAL_LEFT:
-			x = position.x;
+			x = rx;
 			y = position.y;
 			xM = 1;
 			break;
 		case TextAlignment::HORIZONTAL_CENTER:
-			x = -x / 2 + position.x;
+			x = -x / 2 + rx;
 			y = position.y;
 			xM = 1;
 			break;
 		case TextAlignment::HORIZONTAL_RIGHT:
-			x = -x + position.x;
+			x = -x + rx;
 			y = position.y;
 			xM = 1;
 			break;
 		case TextAlignment::VERTICAL_TOP:
-			x = position.x;
+			x = rx;
 			y = position.y - y / text.length();
 			yM = 1;
 			break;
 		case TextAlignment::VERTICAL_CENTER:
-			x = position.x;
+			x = rx;
 			y = y / 2 + position.y - y / text.length();
 			yM = 1;
 			break;
 		case TextAlignment::VERTICAL_BOTTOM:
-			x = position.x;
+			x = rx;
 			y = y + position.y - y / text.length();
 			yM = 1;
 			break;
 		}
 
-
-		//drawCircle({position.x, position.y}, 0.01f);
+		//drawCircle({rx, position.y}, 0.01f);
 
 		for (int i = 0; i < text.length(); i++) {
 			CharacterPointer cp = characterSet->getCharacterPointer(text.at(i));
@@ -747,7 +748,7 @@ namespace SYR {
 		drawText(characterSet, TextAlignment::HORIZONTAL_CENTER, text, position, { 0.0f, 0.0f, 0.0f, 1.0f });
 	}
 
-	void Renderer2D::drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, std::vector<uint32_t> text, const glm::vec3& position, const glm::vec4& color) {
+	void Renderer2D::drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, std::vector<uint32_t> text, const glm::vec3& position, const glm::vec4& color, bool positionWithAspectRatio) {
 		glm::ivec2 dimensions = RenderCommand::getViewportDimensions();
 
 		float aspectRatio = (float)dimensions.x / dimensions.y;
