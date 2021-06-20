@@ -39,7 +39,7 @@ namespace SYR {
 					mainPanel.addComponent<LayoutComponent>(Layout::FLOAT, Alignment::FLOAT, panels);
 					mainPanel.addComponent<UiComponent>();
 
-					mainPanel.getComponent<UiComponent>().baseColor = { 0.3f, 0.3f, 0.3f, 0.5f };//TODO make transparent
+					mainPanel.getComponent<UiComponent>().baseColor = { 0.3f, 0.3f, 0.3f, 0.0f };
 				}
 			}
 

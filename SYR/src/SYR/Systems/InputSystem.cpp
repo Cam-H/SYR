@@ -173,14 +173,7 @@ namespace SYR {
 
 					glm::mat4& transform = view.get<TransformComponent>(e).transform;
 
-					glm::vec2* transformedVertices = new glm::vec2[view.get<IOListenerComponent>(e).vertexCount];
-					for (int i = 0; i < view.get<IOListenerComponent>(e).vertexCount; i++) {
-						glm::vec2 baseVertex = view.get<IOListenerComponent>(e).vertices[i];
-						glm::vec4 vertex = { baseVertex.x, baseVertex.y, 1.0f, 1.0f };
-						glm::vec3 pos = transform * vertex;
-
-						transformedVertices[i] = { pos.x, pos.y };
-					}
+					glm::vec2* transformedVertices = view.get<IOListenerComponent>(e).getTransformedVertices(transform);
 
 					float temp = CollisionSystem::getCollision(transformedVertices, view.get<IOListenerComponent>(e).vertexCount, nav);
 					if (temp > 0 && (tMin < 0 || temp < tMin)) {
@@ -239,16 +232,9 @@ namespace SYR {
 	bool InputSystem::isHovered(entt::registry& registry, entt::entity entity, glm::vec2 pointer) {
 		if (registry.has<IOListenerComponent>(entity)) {
 			IOListenerComponent& io = registry.get<IOListenerComponent>(entity);
+			
 			glm::mat4& transform = registry.get<TransformComponent>(entity).transform;
-
-			glm::vec2* transformedVertices = new glm::vec2[io.vertexCount];
-			for (int i = 0; i < io.vertexCount; i++) {
-				glm::vec2 baseVertex = io.vertices[i];
-				glm::vec4 vertex = { baseVertex.x, baseVertex.y, 1.0f, 1.0f };
-				glm::vec3 pos = transform * vertex;
-
-				transformedVertices[i] = { pos.x, pos.y };
-			}
+			glm::vec2* transformedVertices = io.getTransformedVertices(transform);
 
 			return CollisionSystem::checkCollision(transformedVertices, io.vertexCount, pointer, 0.002f);
 		}

@@ -1,0 +1,7 @@
+<ui>	
+	<panel layout="Linear" yAnchor="MAIN PANEL" yAlign="INNER_TOP" height="1.8f" width="3.2f" layoutAlignment="Vertical" type="scroll" margins="0.01" id="console" color="0x222222aa" highlight="0x222222aa" select="0x222222aa">
+		<textbox text="W/A/S/D/SHIFT/SPACE to move camera"></textbox>
+		<textbox text="Mouse to reorient camera"></textbox>
+		<textbox text="ALT+F4 to close"></textbox>
+	</panel>
+</ui>

@@ -256,11 +256,11 @@ namespace SYR {
 	}
 
 	void renderUi(entt::registry& registry, entt::entity root) {
-		RenderCommand::setStencilOperation(RendererAPI::STENCIL::KEEP, RendererAPI::STENCIL::REPLACE, RendererAPI::STENCIL::INCR);
+		//RenderCommand::setStencilOperation(RendererAPI::STENCIL::KEEP, RendererAPI::STENCIL::REPLACE, RendererAPI::STENCIL::INCR);
 
 		renderUi(registry, root, 0);
 
-		Renderer2D::flush();//Render any last ui elements before stencil reset
+		//Renderer2D::flush();//Render any last ui elements before stencil reset
 
 		//RenderCommand::setStencilFunction(RendererAPI::STENCIL::ALWAYS, 1, 0xFF);
 		//RenderCommand::setStencilMask(0x00);
@@ -274,8 +274,8 @@ namespace SYR {
 		if (registry.get<TagComponent>(root).status == Status::VISIBLE) {//Only render the ui element when it should be visible
 			glm::mat4& transform = registry.get<TransformComponent>(root).transform;
 
-			RenderCommand::setStencilFunction(RendererAPI::STENCIL::EQUAL, layer, 0xFF);
-			RenderCommand::setStencilMask(0xFF);
+			//RenderCommand::setStencilFunction(RendererAPI::STENCIL::EQUAL, layer, 0xFF);
+			//RenderCommand::setStencilMask(0xFF);
 
 			//Handle any highlighting / animations for interactive components
 			if (registry.has<IOListenerComponent>(root)) {
@@ -294,8 +294,8 @@ namespace SYR {
 				Renderer2D::drawQuad(transform, ui.baseColor, texture);
 			}
 
-			Renderer2D::flush();
-			RenderCommand::setStencilFunction(RendererAPI::STENCIL::EQUAL, layer + 1, 0xFF);
+			//Renderer2D::flush();
+			//RenderCommand::setStencilFunction(RendererAPI::STENCIL::EQUAL, layer + 1, 0xFF);
 
 			//Handle any text rendering for the component
 			if (registry.has<TextComponent>(root)) {
@@ -304,10 +304,17 @@ namespace SYR {
 				glm::decompose(transform, glm::vec3(), glm::quat(), translation, glm::vec3(), glm::vec4());
 				translation.z += 0.001f;
 
+				glm::vec2* transformedVertices = registry.get<IOListenerComponent>(root).getTransformedVertices(transform);
+
+				Renderer2D::drawLine(transformedVertices[0], transformedVertices[1], text.textColor);
+				Renderer2D::drawLine(transformedVertices[2], transformedVertices[3], text.textColor);
+				Renderer2D::drawLine(transformedVertices[1], transformedVertices[2], text.textColor);
+				Renderer2D::drawLine(transformedVertices[3], transformedVertices[0], text.textColor);
+
 				Renderer2D::drawText(Renderer::getCharacterSetLibrary()->get(text.characterSetName), Renderer2D::TextAlignment::HORIZONTAL_CENTER, text.text, translation, text.textColor, false);
 			}
 
-			Renderer2D::flush();
+			//Renderer2D::flush();
 
 
 			//Render any contents of the ui element
@@ -360,6 +367,10 @@ namespace SYR {
 	}
 
 	void UiSystem::loadUiElements(Scene* scene, std::vector<entt::entity>* container, const std::string& content, entt::entity parent) {
+
+		static uint16_t panelCount = 0;
+		static uint16_t buttonCount = 0;
+		static uint16_t textboxCount = 0;
 
 		static bool inUI = false;
 
@@ -432,6 +443,8 @@ namespace SYR {
 				entity.addComponent<IOListenerComponent>(hitbox, 4);
 				entity.getComponent<IOListenerComponent>().keyListener = false;
 				entity.getComponent<IOListenerComponent>().interactable = false;
+
+				entity.getComponent<TagComponent>().tag = "Panel." + std::to_string(panelCount++);
 			}
 		}
 
@@ -459,13 +472,26 @@ namespace SYR {
 		entity.getComponent<UiComponent>().highlightColor = highlightColor;
 		entity.getComponent<UiComponent>().selectColor = selectColor;
 		
+
+
 		if (tag.compare("button") == 0) {//Button
 			glm::vec2* hitbox = new glm::vec2[4]{ glm::vec2(-0.5f, 0.5f), glm::vec2(0.5f, 0.5f), glm::vec2(0.5f, -0.5f), glm::vec2(-0.5f, -0.5f) };
 			entity.addComponent<IOListenerComponent>(hitbox, 4);
+			entity.getComponent<TagComponent>().tag = "Button." + std::to_string(buttonCount++);
+
+			if (!text.empty()) {//Label / Text
+				entity.addComponent<TextComponent>(text, getFont(header), getTextColor(header));
+			}
 		}
 
-		if (!text.empty()) {//Label / Text
+		if (tag.compare("textbox") == 0) {//Textbox
+			glm::vec2* hitbox = new glm::vec2[4]{ glm::vec2(-0.48f, 0.48f), glm::vec2(0.48f, 0.48f), glm::vec2(0.48f, -0.48f), glm::vec2(-0.48f, -0.48f) };
+			entity.addComponent<IOListenerComponent>(hitbox, 4);
+			entity.getComponent<TagComponent>().tag = "Textbox." + std::to_string(textboxCount++);
+
 			entity.addComponent<TextComponent>(text, getFont(header), getTextColor(header));
+			//entity.getComponent<TextComponent>().alignment = Alignment::
+
 		}
 
 		/***********************UI ANCHORING****************************/

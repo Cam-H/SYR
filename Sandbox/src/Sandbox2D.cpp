@@ -216,6 +216,26 @@ void Sandbox2D::onAttach() {
 	e.getComponent<SYR::TransformComponent>().offset({ 0, -5, 0 });
 	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Floor.obj"));
 
+	/*************************************************LIGHTS*************************************************/
+	
+	e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TagComponent>().tag = "Test Light";
+	e.getComponent<SYR::TagComponent>().id = "TL";
+	e.addComponent<SYR::LightComponent>(glm::vec3(0, 1, 1), glm::vec3(15, 2, 15), 0.03f, 0.001f);
+
+	e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TagComponent>().id = "TL2";
+	e.addComponent<SYR::LightComponent>(glm::vec3(1, 0.7f, 0), glm::vec3(0, 10, 0), glm::vec3(0, -1, 0.2f), 30, 30.5f);
+
+	e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TagComponent>().id = "TL3";
+	e.addComponent<SYR::LightComponent>(glm::vec3(0, 0, 1.0f), glm::vec3(0, 10, 0), glm::vec3(0, -1, 0.2f), 15, 16);
+
+	e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TagComponent>().id = "TL4";
+	e.addComponent<SYR::LightComponent>(glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(0, -1, 0));
+
+
 	SYR::Scene::loadUi(m_ActiveScene, "assets/ui/TestUI1.xml");
 	//SYR::UiSystem::loadPredefinedUi(m_ActiveScene, "assets/ui/TestUI1.xml");
 
@@ -314,6 +334,22 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 		}
 	}
 
+	//Spin the spotlights
+	static float n = 0;
+	if (m_ActiveScene->entityIDExists(std::string("TL2"))) {
+		SYR::Entity light = m_ActiveScene->getEntityByID(std::string("TL2"));
+		
+		light.getComponent<SYR::LightComponent>().direction.x = cos(n) / 1.5f;
+		light.getComponent<SYR::LightComponent>().direction.z = sin(n) / 1.5f;
+	}
+	if (m_ActiveScene->entityIDExists(std::string("TL3"))) {
+		SYR::Entity light = m_ActiveScene->getEntityByID(std::string("TL3"));
+
+		light.getComponent<SYR::LightComponent>().direction.x = cos(n * 3) / 1.5f;
+		light.getComponent<SYR::LightComponent>().direction.z = sin(n * 3) / 1.5f;
+	}
+	n += 0.01f;
+
 	/*
 	static float t = 0.0f;
 	t += 0.001f;
@@ -324,16 +360,13 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 	}
 	*/
 	
-	SYR::Renderer2D::beginScene(m_CameraController.getCamera());
 
 	glm::mat4 transform = glm::translate(glm::mat4(1.0f), { px, py, pz });
 
+	SYR::Renderer2D::beginScene(m_CameraController.getCamera());
+
 	m_ActiveScene->onUpdate(ts);
 	m_ActiveScene->onDraw();
-
-	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "W/A/S/D/SHIFT/SPACE to move camera", { -1.0f, 0.95f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
-	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "Mouse to reorient camera", { -1.0f, 0.85f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
-	SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, "ALT+F4 to close", { -1.0f, 0.75f, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
 
 	float wWidth = SYR::Application::get().getWindow().getWidth();
 	float wHeight = SYR::Application::get().getWindow().getHeight();
@@ -349,6 +382,7 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 
 	//SYR::Renderer2D::drawQuad(glm::mat4(1.0f) * glm::scale(glm::mat4(1.0f), { 0.6f, 0.6f, 1.0f }), glm::vec4(1, 1, 0, 1), m_CharacterSet->getCharacterSheet());
 	//SYR::Renderer2D::drawLine(glm::vec2(0.0f, 0.0f), glm::vec2(-1.0f, -1.0f), glm::vec4(0.0f, 1.0f, 0.0f, 1.0f));
+	
 	
 	SYR::Renderer2D::endScene();
 

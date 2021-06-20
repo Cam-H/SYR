@@ -4,7 +4,7 @@
 #include "CollisionSystem.h"
 #include "SYR/Systems/UiSystem.h"
 #include "SYR/Systems/InputSystem.h"
-#include "SYR/Systems/ConsoleSystem.h"
+#include "SYR/Systems/CommandSystem.h"
 
 #include "SYR/Renderer/Renderer.h"
 #include "SYR/Renderer/Renderer2D.h"
@@ -43,27 +43,7 @@ namespace SYR {
 	}
 
 	void Scene::prepare() {
-		Entity entity = { m_Registry.create(), this };
-		m_Entities.push_back(entity);
 		
-		auto& tag = entity.addComponent<TagComponent>();
-		tag.tag = "Test Light";
-		tag.id = "TL";
-
-		entity.addComponent<LightComponent>(glm::vec3(0, 1, 1), glm::vec3(15, 2, 15), 0.03f, 0.001f);
-
-		entity = { m_Registry.create(), this };
-		m_Entities.push_back(entity);
-
-		entity.addComponent<TagComponent>().id = "TL2";
-		entity.addComponent<LightComponent>(glm::vec3(1, 0.7f, 0), glm::vec3(0, 10, 0), glm::vec3(0, -1, 0.2f), 30, 30.5f);
-
-
-		entity = { m_Registry.create(), this };
-		m_Entities.push_back(entity);
-
-		entity.addComponent<TagComponent>();
-		entity.addComponent<LightComponent>(glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(0, -1, 0));
 	}
 
 	void Scene::loadUi(Ref<Scene> scene, const std::string& filepath) {
@@ -106,10 +86,6 @@ namespace SYR {
 		//auto&[transform, sprite] = group.get<TransformComponent, SpriteRendererComponent>(entity);
 		//for(auto entity : group) { Renderer2D::drawQuad(transform, sprite.color); }
 
-		if (m_ConsoleEnabled) {
-
-		}
-
 		movement(m_Registry, ts);
 		checkCollisions(m_Registry);
 
@@ -123,10 +99,6 @@ namespace SYR {
 	void Scene::onDraw() {
 
 		//TODO move to a system
-
-		static float n = 0;
-		m_Registry.get<LightComponent>(getEntityByID(std::string("TL2")).getHandle()).direction.x = cos(n += 0.01f) / 1.5f;
-		m_Registry.get<LightComponent>(getEntityByID(std::string("TL2")).getHandle()).direction.z = sin(n += 0.01f) / 1.5f;
 
 		auto view = m_Registry.view<LightComponent>();
 

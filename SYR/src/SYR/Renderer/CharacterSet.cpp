@@ -87,7 +87,7 @@ namespace SYR {
 		uint32_t z = 0;
 		for (uint32_t i = 0; i < height; i++) {
 			for (uint32_t j = 0; j < width; j++) {
-				buffer[z] = 0;
+				buffer[z] = 255;
 				buffer[z + 1] = 255;
 				buffer[z + 2] = 255;
 				buffer[z + 3] = *(set + j + width * i);

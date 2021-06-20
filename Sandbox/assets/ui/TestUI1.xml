@@ -10,8 +10,8 @@
 			<button color="0xff0000" text="B"></button>
 			<button color="0xff0000" text="C"></button>
 		</panel>
-		<button color="0xfff000" id="a" text="HELSINKI" textcolor="0xff0000ff">1</button>
-		<button color="0xffffffff" highlight="0x00aaaaff" id="b">2</button>
+		<textbox color="0xfff000" id="a" text="HELSINKI" textcolor="0xff0000ff">1</textbox>
+		<textbox color="0xffffffff" highlight="0x00aaaaff" id="b">2</textbox>
 		<button id="c" text="Anchor" xAnchor="MAIN PANEL" xAlign="INNER_LEFT" yAnchor="MAIN PANEL" yAlign="INNER_BOTTOM">3</button>
 		<button id="d" text="Test">
 			<button id="ff">5</button>

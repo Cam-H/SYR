@@ -383,5 +383,19 @@ namespace SYR {
 		IOListenerComponent(const IOListenerComponent&) = default;
 		IOListenerComponent(const glm::vec2 vertices[], uint16_t vertexCount) : vertices(vertices), vertexCount(vertexCount) {}
 
+		inline glm::vec2* getTransformedVertices(glm::mat4& transform) {
+			glm::vec2* transformedVertices = new glm::vec2[vertexCount];
+
+			for (int i = 0; i < vertexCount; i++) {
+				glm::vec2 baseVertex = vertices[i];
+				glm::vec4 vertex = { baseVertex.x, baseVertex.y, 1.0f, 1.0f };
+				glm::vec3 pos = transform * vertex;
+
+				transformedVertices[i] = { pos.x, pos.y };
+			}
+
+			return transformedVertices;
+		}
+
 	};
 }

@@ -211,9 +211,11 @@ namespace SYR {
 			s_Data->textureSlots[i]->bind(i);
 		}
 
-		RenderCommand::drawIndexed(s_Data->quadVertexArray, s_Data->quadIndexCount);
-		s_Data->stats.drawCalls++;
-
+		//If the index buffer count is zero the renderer will default to drawing the whatever is currently in the vertex array as if the index count were not specified. The if statement prevents this effect
+		if (s_Data->quadIndexCount > 0) {
+			RenderCommand::drawIndexed(s_Data->quadVertexArray, s_Data->quadIndexCount);
+			s_Data->stats.drawCalls++;
+		}
 
 		s_Data->lineShader->bind();
 		RenderCommand::drawLines(s_Data->lineVertexArray, 2.0f, s_Data->lineIndexCount);
