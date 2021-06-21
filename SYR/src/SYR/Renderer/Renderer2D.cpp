@@ -676,11 +676,97 @@ namespace SYR {
 		s_Data->stats.quadCount++;
 	}
 
+	std::vector<CharacterTransform> Renderer2D::calculateCharacterTransforms(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, const std::string& text, const glm::vec3& position, bool positionWithAspectRatio) {
+		std::vector<uint32_t> codes(0);
+
+		for (uint32_t i = 0; i < text.length(); i++) {
+			codes.push_back(text.at(i));
+		}
+
+		return calculateCharacterTransforms(characterSet, textAlignment, codes, position, positionWithAspectRatio);
+	}
+
+
+	std::vector<CharacterTransform> Renderer2D::calculateCharacterTransforms(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, std::vector<uint32_t> text, const glm::vec3& position, bool positionWithAspectRatio) {
+		std::vector<CharacterTransform> cpos(0);
+
+		glm::ivec2 dimensions = RenderCommand::getViewportDimensions();
+
+		float aspectRatio = (float)dimensions.x / dimensions.y;
+		float xScale = 2.0f * aspectRatio / dimensions.x, yScale = 2.0f / dimensions.y;
+
+		float x = 0, y = 0, z = position.z - 0.001f;
+		float zOffset = 0.001f / text.size();
+		uint8_t xM = 0, yM = 0;
+
+		float rx = position.x * (positionWithAspectRatio ? aspectRatio : 1);
+
+		for (std::vector<uint32_t>::iterator it = text.begin(); it != text.end(); ++it) {
+			CharacterPointer cp = characterSet->getCharacterPointer(*it);
+			x += cp.advance.x >> 16;
+			y += cp.advance.y >> 16;
+		}
+
+		x *= xScale;
+		y *= yScale;
+
+		switch (textAlignment) {
+		case TextAlignment::HORIZONTAL_LEFT:
+			x = position.x;
+			y = position.y;
+			xM = 1;
+			break;
+		case TextAlignment::HORIZONTAL_CENTER:
+			x = -x / 2 + position.x;
+			y = position.y;
+			xM = 1;
+			break;
+		case TextAlignment::HORIZONTAL_RIGHT:
+			x = -x + position.x;
+			y = position.y;
+			xM = 1;
+			break;
+		case TextAlignment::VERTICAL_TOP:
+			x = position.x;
+			y = position.y - y / text.size();
+			yM = 1;
+			break;
+		case TextAlignment::VERTICAL_CENTER:
+			x = position.x;
+			y = y / 2 + position.y - y / text.size();
+			yM = 1;
+			break;
+		case TextAlignment::VERTICAL_BOTTOM:
+			x = position.x;
+			y = y + position.y - y / text.size();
+			yM = 1;
+			break;
+		}
+
+		for (std::vector<uint32_t>::iterator it = text.begin(); it != text.end(); ++it) {
+			CharacterPointer cp = characterSet->getCharacterPointer(*it);
+			glm::mat4 transform = glm::translate(glm::mat4(1.0f), { x + (cp.dimensions.x / 2 + cp.bearing.x) * xM * xScale, y - (cp.dimensions.y / 2 - cp.bearing.y + characterSet->getLinespacing() / 2 * xM) * yScale, position.z + zOffset })
+				* glm::scale(glm::mat4(1.0f), { cp.dimensions.x * xScale, cp.dimensions.y * yScale, 0.0f });
+
+			cpos.push_back(CharacterTransform{ transform, glm::vec3(x, y, z) });
+
+			x += xM * (cp.advance.x >> 16) * xScale;
+			y -= yM * (cp.advance.y >> 16) * yScale;
+
+			z += zOffset;
+		}
+
+		cpos.push_back(CharacterTransform{ glm::mat4(1.0f), glm::vec3(x, y, z) });
+
+		return cpos;
+	}
+
+
 	void Renderer2D::drawText(const Ref<CharacterSet> characterSet, const std::string& text, const glm::vec3& position) {
 		drawText(characterSet, TextAlignment::HORIZONTAL_CENTER, text, position, { 0.0f, 0.0f, 0.0f, 1.0f });
 	}
 
-	void Renderer2D::drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, const std::string& text, const glm::vec3& position, const glm::vec4& color, bool positionWithAspectRatio) {
+	void Renderer2D::drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, const std::string& text, const glm::vec3& position, const glm::vec4& color, bool positionWithAspectRatio, bool hypertextEnabled) {
 		glm::ivec2 dimensions = RenderCommand::getViewportDimensions();
 
 		float aspectRatio = (float)dimensions.x / dimensions.y;
@@ -754,69 +840,25 @@ namespace SYR {
 	}
 
 	void Renderer2D::drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, std::vector<uint32_t> text, const glm::vec3& position, const glm::vec4& color, bool positionWithAspectRatio) {
-		glm::ivec2 dimensions = RenderCommand::getViewportDimensions();
-
-		float aspectRatio = (float)dimensions.x / dimensions.y;
-		float xScale = 2.0f * aspectRatio / dimensions.x, yScale = 2.0f / dimensions.y;
-
-		float x = 0, y = 0;
-		uint8_t xM = 0, yM = 0;
-
-		for (std::vector<uint32_t>::iterator it = text.begin(); it != text.end(); ++it) {
-			CharacterPointer cp = characterSet->getCharacterPointer(*it);
-			x += cp.advance.x >> 16;
-			y += cp.advance.y >> 16;
-		}
-
-		x *= xScale;
-		y *= yScale;
-
-		switch (textAlignment) {
-		case TextAlignment::HORIZONTAL_LEFT:
-			x = position.x;
-			y = position.y;
-			xM = 1;
-			break;
-		case TextAlignment::HORIZONTAL_CENTER:
-			x = -x / 2 + position.x;
-			y = position.y;
-			xM = 1;
-			break;
-		case TextAlignment::HORIZONTAL_RIGHT:
-			x = -x + position.x;
-			y = position.y;
-			xM = 1;
-			break;
-		case TextAlignment::VERTICAL_TOP:
-			x = position.x;
-			y = position.y - y / text.size();
-			yM = 1;
-			break;
-		case TextAlignment::VERTICAL_CENTER:
-			x = position.x;
-			y = y / 2 + position.y - y / text.size();
-			yM = 1;
-			break;
-		case TextAlignment::VERTICAL_BOTTOM:
-			x = position.x;
-			y = y + position.y - y / text.size();
-			yM = 1;
-			break;
-		}
-
+		std::vector<CharacterTransform> cTransforms = calculateCharacterTransforms(characterSet, textAlignment, text, position, positionWithAspectRatio);
+		uint32_t i = 0;
 
 		//drawCircle({ position.x, position.y }, 0.01f);
 
 		for (std::vector<uint32_t>::iterator it = text.begin(); it != text.end(); ++it) {
-			CharacterPointer cp = characterSet->getCharacterPointer(*it);
-			glm::mat4 transform = glm::translate(glm::mat4(1.0f), { x + (cp.dimensions.x / 2 + cp.bearing.x) * xM * xScale, y - (cp.dimensions.y / 2 - cp.bearing.y + characterSet->getLinespacing() / 2 * xM) * yScale, position.z })
-				* glm::scale(glm::mat4(1.0f), { cp.dimensions.x * xScale, cp.dimensions.y * yScale, 0.0f });
+			CharacterPointer cp = characterSet->getCharacterPointer(text.at(i));
 
-			drawRotatedQuad(transform, color, characterSet->getCharacterSheet(), cp.texCoords);
 
-			x += xM * (cp.advance.x >> 16) * xScale;
-			y -= yM * (cp.advance.y >> 16) * yScale;
+			drawRotatedQuad(cTransforms.at(i).transform, color, characterSet->getCharacterSheet(), cp.texCoords);
+
+			i++;
 		}
+
+		/*
+		for (std::vector<CharacterTransform>::iterator it = cTransforms.begin(); it != cTransforms.end(); ++it) {
+			drawCircle(it->base, 0.01f);
+		}
+		*/
 	}
 
 	void Renderer2D::resetStats() {

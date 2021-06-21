@@ -18,9 +18,10 @@ namespace SYR {
 
 	class SYR_API KeyPressedEvent : public KeyEvent {
 	public:
-		KeyPressedEvent(int keycode, int repeatCount) : KeyEvent(keycode), m_RepeatCount(repeatCount) {}
+		KeyPressedEvent(int keycode, int repeatCount, int mods) : KeyEvent(keycode), m_RepeatCount(repeatCount), m_Mods(mods) {}
 
 		inline int getRepeatCount() const { return m_RepeatCount; }
+		inline int getModifiers() const { return m_Mods; }
 
 		std::string toString() const override {
 			std::stringstream ss;
@@ -32,6 +33,7 @@ namespace SYR {
 		EVENT_CLASS_TYPE(KeyPressed)
 	private:
 		int m_RepeatCount;
+		int m_Mods;
 	};
 
 	class SYR_API KeyReleasedEvent : public KeyEvent {

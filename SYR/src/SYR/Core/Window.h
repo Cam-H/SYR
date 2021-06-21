@@ -4,6 +4,7 @@
 
 #include "SYR/Core/Core.h"
 #include "SYR/Events/Event.h"
+#include "SYR/Core/MouseCodes.h"
 
 namespace SYR {
 
@@ -35,7 +36,7 @@ namespace SYR {
 		virtual void setVSync(bool enabled) = 0;
 		virtual bool isVSync() const = 0;
 
-		virtual void showCursor() = 0;
+		virtual void showCursor(uint32_t cursor = SYR_ARROW_CURSOR) = 0;
 		virtual void hideCursor() = 0;
 
 		virtual void* getNativeWindow() const = 0;

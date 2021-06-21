@@ -47,6 +47,10 @@ namespace SYR {
 		m_Context = new OpenGLContext(m_Window);
 		m_Context->init();
 
+		m_Cursor = glfwCreateStandardCursor(GLFW_ARROW_CURSOR);
+
+		glfwSetInputMode(m_Window, GLFW_LOCK_KEY_MODS, GLFW_TRUE);
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		setVSync(true);
 
@@ -68,11 +72,11 @@ namespace SYR {
 
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
-			
+
 			switch (action) {
 			case GLFW_PRESS:
 				{
-					KeyPressedEvent event(key, 0);
+					KeyPressedEvent event(key, 0, mods);
 					data.EventCallback(event);
 				}
 				break;
@@ -84,7 +88,7 @@ namespace SYR {
 				break;
 			case GLFW_REPEAT:
 				{
-					KeyPressedEvent event(key, 1);
+					KeyPressedEvent event(key, 1, mods);
 					data.EventCallback(event);
 				}
 				break;
@@ -157,7 +161,12 @@ namespace SYR {
 		return m_Data.VSync;
 	}
 
-	void WindowsWindow::showCursor() {
+	void WindowsWindow::showCursor(uint32_t cursor) {
+		
+		glfwDestroyCursor(m_Cursor);
+		m_Cursor = glfwCreateStandardCursor(cursor);
+		glfwSetCursor(m_Window, m_Cursor);
+
 		glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
 	}
 

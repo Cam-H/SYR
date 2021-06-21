@@ -279,8 +279,8 @@ namespace SYR {
 
 	struct TextComponent {
 
-		std::string text;
-		std::string placeholderText;
+		std::vector<uint32_t> text;
+		std::vector<uint32_t> placeholderText;
 
 		std::string characterSetName;
 		glm::vec4 textColor{ 0.0f, 0.0f, 0.0f, 1.0f };
@@ -296,7 +296,13 @@ namespace SYR {
 
 		TextComponent() = default;
 		TextComponent(const TextComponent&) = default;
-		TextComponent(std::string text, std::string characterSetName, glm::vec4 textColor = { 0.0f, 0.0f, 0.0f, 1.0f }) : text(text), characterSetName(characterSetName), textColor(textColor) {}	
+		TextComponent(std::string text, std::string characterSetName, glm::vec4 textColor = { 0.0f, 0.0f, 0.0f, 1.0f }) : characterSetName(characterSetName), textColor(textColor) {
+			for (int i = 0; i < text.length(); i++) {
+				this->text.push_back((uint32_t)text.at(i));
+			}
+		}
+		TextComponent(std::vector<uint32_t> text, std::string characterSetName, glm::vec4 textColor = { 0.0f, 0.0f, 0.0f, 1.0f }) : text(text), characterSetName(characterSetName), textColor(textColor) {}
+
 	};
 
 	enum class Layout {

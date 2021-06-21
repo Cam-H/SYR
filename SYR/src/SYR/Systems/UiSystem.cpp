@@ -268,6 +268,9 @@ namespace SYR {
 
 	void renderUi(entt::registry& registry, entt::entity root, uint16_t layer) {
 		static Ref<Texture2D> texture = Texture2D::create("assets/textures/Empty.png");
+		
+		static float t = 0;
+		t += 0.002f;
 
 		UiComponent& ui = registry.get<UiComponent>(root);
 
@@ -304,7 +307,7 @@ namespace SYR {
 				glm::decompose(transform, glm::vec3(), glm::quat(), translation, glm::vec3(), glm::vec4());
 				translation.z += 0.001f;
 
-				if (registry.get<TextComponent>(root).editable) {
+				if (registry.get<TextComponent>(root).editable && registry.get<TextComponent>(root).start != -1) {
 					glm::vec2* transformedVertices = registry.get<IOListenerComponent>(root).getTransformedVertices(transform * glm::scale(glm::mat4(1.0f), { 0.95f, 0.9f, 1.0f }));
 
 					Renderer2D::drawLine(transformedVertices[0], transformedVertices[1], text.textColor);
@@ -314,7 +317,29 @@ namespace SYR {
 
 				}
 
-				Renderer2D::drawText(Renderer::getCharacterSetLibrary()->get(text.characterSetName), text.alignment, text.text, translation, text.textColor, false);
+				if (text.text.size() != 0) {
+					Renderer2D::drawText(Renderer::getCharacterSetLibrary()->get(text.characterSetName), text.alignment, text.text, translation, text.textColor, false);
+				} else {
+					Renderer2D::drawText(Renderer::getCharacterSetLibrary()->get(text.characterSetName), text.alignment, text.placeholderText, translation, text.textColor * glm::vec4{1, 1, 1, 0.5f}, false);
+				}
+
+				if (text.start >= 0) {
+					std::vector<CharacterTransform> cTransforms = Renderer2D::calculateCharacterTransforms(Renderer::getCharacterSetLibrary()->get(text.characterSetName), text.alignment, text.text, translation, false);
+					glm::vec4 color{ 0.0f, 0.0f, 0.0f, round(abs(sin(t))) };
+					float width = 0.01f;
+
+					if (text.end != -1 && text.end != text.start) {
+						color = { 0.2f, 0.4f, 1.0f, 0.5f };
+						width = cTransforms.at(text.end).base.x - cTransforms.at(text.start).base.x;
+						cTransforms.at(text.start).base.x += width / 2;
+					}
+					
+					glm::mat4 cTransform = glm::translate(glm::mat4(1.0f), { cTransforms.at(text.start).base.x, cTransforms.at(text.start).base.y, cTransforms.at(text.start).base.z + 0.01f })
+						* glm::scale(glm::mat4(1.0f), { width, 0.12f, 1.0f });
+					
+					Renderer2D::drawRotatedQuad(cTransform, color, texture);
+				}
+
 			}
 
 			//Renderer2D::flush();
@@ -488,6 +513,16 @@ namespace SYR {
 
 			entity.addComponent<TextComponent>(text, getFont(header), getTextColor(header));
 			entity.getComponent<TextComponent>().editable = getBoolean(header, "editable=");
+
+			//Read placeholder text and convert it to the generic text rendering format
+			std::string placeholder = getString(header, "placeholder=");
+			std::vector<uint32_t> codes(0);
+
+			for (int i = 0; i < placeholder.length(); i++) {
+				codes.push_back((uint32_t)placeholder.at(i));
+			}
+
+			entity.getComponent<TextComponent>().placeholderText = codes;
 
 			//entity.getComponent<TextComponent>().alignment = Alignment::
 
