@@ -217,8 +217,11 @@ namespace SYR {
 			s_Data->stats.drawCalls++;
 		}
 
-		s_Data->lineShader->bind();
-		RenderCommand::drawLines(s_Data->lineVertexArray, 2.0f, s_Data->lineIndexCount);
+		if (s_Data->lineIndexCount > 0) {
+			s_Data->lineShader->bind();
+			RenderCommand::drawLines(s_Data->lineVertexArray, 2.0f, s_Data->lineIndexCount);
+		}
+
 	}
 
 	void Renderer2D::startNewBatch() {

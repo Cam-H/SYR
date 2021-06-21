@@ -45,7 +45,7 @@ public:
 		SYR::Renderer::getCharacterSetLibrary()->add("Arial36", SYR::CharacterSet::create("assets/fonts/arial.ttf", SYR::CharacterCollection::ASCII, 36));
 
 		pushLayer(new Sandbox2D());
-		pushOverlay(new Console());
+		//pushOverlay(new Console());
 		
 		//getWindow().hideCursor();
 	}

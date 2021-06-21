@@ -377,7 +377,7 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 	std::string pointer = "(" + fmt::format("{:.2f}", mx) + ", " + fmt::format("{:.2f}", my) + ") ";
 
 	if (m_PCameraController.getCameraControlType() != SYR::CameraControlType::FREE_CAMERA) {
-		SYR::Renderer2D::drawText(m_CharacterSet, SYR::Renderer2D::TextAlignment::HORIZONTAL_LEFT, pointer, { mx, my, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
+		SYR::Renderer2D::drawText(m_CharacterSet, SYR::TextAlignment::HORIZONTAL_LEFT, pointer, { mx, my, 1.0f }, { 1.0f, 1.0f, 1.0f, 1.0f });
 	}
 
 	//SYR::Renderer2D::drawQuad(glm::mat4(1.0f) * glm::scale(glm::mat4(1.0f), { 0.6f, 0.6f, 1.0f }), glm::vec4(1, 1, 0, 1), m_CharacterSet->getCharacterSheet());
@@ -393,7 +393,6 @@ void Sandbox2D::onUpdate(SYR::Timestep ts) {
 	//SYR_CORE_INFO("Renderer2D Stats: {0} {1} {2} {3}", stats.drawCalls, stats.quadCount, stats.getTotalVertexCount(), stats.getTotalIndexCount());
 }
 void Sandbox2D::onEvent(SYR::Event& e) {
-	
 	m_CameraController.onEvent(e);
 	m_PCameraController.onEvent(e);
 	m_ActiveScene->onEvent(e);

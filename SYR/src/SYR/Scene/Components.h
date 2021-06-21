@@ -9,6 +9,8 @@
 #include "Hitbox2D.h"
 #include <entt.hpp>
 
+#include "SYR/Core/KeyCodes.h"
+
 namespace SYR {
 
 	enum class Status {
@@ -270,6 +272,11 @@ namespace SYR {
 		UiComponent(const UiComponent&) = default;
 	};
 
+	enum class TextAlignment {
+		HORIZONTAL_LEFT = 0, HORIZONTAL_CENTER, HORIZONTAL_RIGHT,
+		VERTICAL_TOP, VERTICAL_CENTER, VERTICAL_BOTTOM
+	};
+
 	struct TextComponent {
 
 		std::string text;
@@ -278,15 +285,18 @@ namespace SYR {
 		std::string characterSetName;
 		glm::vec4 textColor{ 0.0f, 0.0f, 0.0f, 1.0f };
 
-		Alignment alignment = Alignment::CENTER;
+		TextAlignment alignment = TextAlignment::HORIZONTAL_CENTER;
 		bool hypertextEnabled = false;
 
-		uint16_t characterLimit = 256;
+		uint16_t characterLimit = 16;
 		bool editable = false;
+
+		int start = -1;
+		int end = -1;
 
 		TextComponent() = default;
 		TextComponent(const TextComponent&) = default;
-		TextComponent(std::string text, std::string characterSetName, glm::vec4 textColor = { 0.0f, 0.0f, 0.0f, 1.0f }) : text(text), characterSetName(characterSetName), textColor(textColor) {}
+		TextComponent(std::string text, std::string characterSetName, glm::vec4 textColor = { 0.0f, 0.0f, 0.0f, 1.0f }) : text(text), characterSetName(characterSetName), textColor(textColor) {}	
 	};
 
 	enum class Layout {

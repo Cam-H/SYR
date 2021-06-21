@@ -9,6 +9,8 @@
 #include "SYR/Events/MouseEvent.h"
 #include "SYR/Events/KeyEvent.h"
 
+#include "SYR/Scene/Components.h"
+
 namespace SYR {
 
 	class InputSystem {
@@ -43,6 +45,9 @@ namespace SYR {
 			uint8_t repeats;
 
 		} InputSet;
+
+		static void addKey(TextComponent& tc, int key);
+		
 
 		static void enqueue(InputType inputType, int value);
 		static void enqueue(InputSet inputSet);

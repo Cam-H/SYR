@@ -4,7 +4,6 @@
 
 #include "SYR/Core/Input.h"
 
-#include "SYR/Scene/Components.h"
 #include "SYR/Scene/CollisionSystem.h"
 
 #include <glm/gtc/matrix_transform.hpp>
@@ -50,6 +49,8 @@ namespace SYR {
 				s_NavigationHeading.x += modifier;
 				break;
 			}
+
+			SYR_CORE_INFO("{0} {1} {2}", set.inputType, set.value, set.repeats);
 			
 
 			for (const entt::entity e : view) {
@@ -68,6 +69,10 @@ namespace SYR {
 						}
 					}
 
+					if (registry.has<TextComponent>(e) && registry.get<TextComponent>(e).editable) {
+						addKey(registry.get<TextComponent>(e), set.value);
+					}
+
 					runKeyMovement = true;
 					break;
 				case InputType::KEY_RELEASE:
@@ -84,11 +89,22 @@ namespace SYR {
 					break;
 				case InputType::MOUSE_PRESS:
 					view.get<IOListenerComponent>(e).selected = (set.value == 0 && view.get<IOListenerComponent>(e).hovered);
+
+					if (registry.has<TextComponent>(e) && registry.get<TextComponent>(e).editable) {
+						//Determine start index
+						registry.get<TextComponent>(e).start = registry.get<TextComponent>(e).text.length() > 0 ? registry.get<TextComponent>(e).text.length() - 1 : 0;
+					}
+
 					break;
 				case InputType::MOUSE_RELEASE:
 					if (set.value == 0 && view.get<IOListenerComponent>(e).selected) {
 						if (view.get<IOListenerComponent>(e).hovered) {
 							view.get<IOListenerComponent>(e).checked = !view.get<IOListenerComponent>(e).checked;
+						}
+
+						if (registry.has<TextComponent>(e) && registry.get<TextComponent>(e).editable) {
+							//Determine end index
+							registry.get<TextComponent>(e).end = registry.get<TextComponent>(e).start;
 						}
 
 						view.get<IOListenerComponent>(e).selected = false;
@@ -254,11 +270,51 @@ namespace SYR {
 		return entt::null;
 	}
 
+	void InputSystem::addKey(TextComponent& tc, int key) {
+		switch (key) {
+		case SYR_KEY_BACKSPACE:
+			if (tc.start > 0) {
+				SYR_CORE_ERROR("{0} {1}", (tc.text.substr(0, tc.start - 1)), tc.text.substr(tc.start + 1));
+				//tc.text = tc.text.substr(0, tc.start - 1) + (tc.start < tc.text.length() - 1 ? "" : tc.text.substr(tc.start + 1));
+				//tc.start--;
+			}
+			break;
+		case SYR_KEY_DELETE:
+			if (tc.start != -1 && tc.start < tc.text.length()) {
+				tc.text = tc.text.substr(0, tc.start) + tc.text.substr(tc.start + 1);
+			}
+			break;
+		case SYR_KEY_LEFT:
+			if (tc.start > 0) {
+				tc.start--;
+			}
+			break;
+		case SYR_KEY_RIGHT:
+			if (tc.start < tc.text.length() - 1) {
+				tc.start++;
+			}
+			break;
+		default:
+			if (tc.start != -1) {
+				SYR_CORE_ERROR("{0} - {1}", (tc.text.substr(0, tc.start)), tc.text.substr(tc.start + 1));
+
+				tc.text += (char)key;
+				tc.start++;
+			}
+
+		}
+
+		tc.end = tc.start;
+
+	}
+
+
 	void InputSystem::enqueue(InputType inputType, int value) {
 		enqueue({ inputType, s_Mx, s_My, value, 0 });
 	}
 
 	void InputSystem::enqueue(InputSet inputSet) {
+		SYR_CORE_INFO("tt");
 		s_InputQueue.emplace(inputSet);
 	}
 
@@ -278,6 +334,8 @@ namespace SYR {
 
 		dispatcher.dispatch<KeyPressedEvent>(std::bind(InputSystem::onKeyPressedEvent, std::placeholders::_1));
 		dispatcher.dispatch<KeyReleasedEvent>(std::bind(InputSystem::onKeyReleasedEvent, std::placeholders::_1));
+
+		
 	}
 
 	bool InputSystem::onWindowResize(WindowResizeEvent& e) {

@@ -304,14 +304,17 @@ namespace SYR {
 				glm::decompose(transform, glm::vec3(), glm::quat(), translation, glm::vec3(), glm::vec4());
 				translation.z += 0.001f;
 
-				glm::vec2* transformedVertices = registry.get<IOListenerComponent>(root).getTransformedVertices(transform);
+				if (registry.get<TextComponent>(root).editable) {
+					glm::vec2* transformedVertices = registry.get<IOListenerComponent>(root).getTransformedVertices(transform * glm::scale(glm::mat4(1.0f), { 0.95f, 0.9f, 1.0f }));
 
-				Renderer2D::drawLine(transformedVertices[0], transformedVertices[1], text.textColor);
-				Renderer2D::drawLine(transformedVertices[2], transformedVertices[3], text.textColor);
-				Renderer2D::drawLine(transformedVertices[1], transformedVertices[2], text.textColor);
-				Renderer2D::drawLine(transformedVertices[3], transformedVertices[0], text.textColor);
+					Renderer2D::drawLine(transformedVertices[0], transformedVertices[1], text.textColor);
+					Renderer2D::drawLine(transformedVertices[2], transformedVertices[3], text.textColor);
+					Renderer2D::drawLine(transformedVertices[1], transformedVertices[2], text.textColor);
+					Renderer2D::drawLine(transformedVertices[3], transformedVertices[0], text.textColor);
 
-				Renderer2D::drawText(Renderer::getCharacterSetLibrary()->get(text.characterSetName), Renderer2D::TextAlignment::HORIZONTAL_CENTER, text.text, translation, text.textColor, false);
+				}
+
+				Renderer2D::drawText(Renderer::getCharacterSetLibrary()->get(text.characterSetName), text.alignment, text.text, translation, text.textColor, false);
 			}
 
 			//Renderer2D::flush();
@@ -327,12 +330,6 @@ namespace SYR {
 			}
 			
 		}
-	}
-
-	void renderUiComponent(entt::registry& registry, const entt::entity uiComponent) {
-		glm::mat4& transform = registry.get<TransformComponent>(uiComponent).transform;
-		
-
 	}
 
 	void UiSystem::loadUiResources(std::map<std::string, uint32_t>* resources, const std::string& content) {
@@ -430,7 +427,7 @@ namespace SYR {
 
 				entity.getComponent<LayoutComponent>().restrictRenderingToBounds = true;
 
-				entity.getComponent<LayoutComponent>().square = getString(header, "square=").compare("true") == 0;
+				entity.getComponent<LayoutComponent>().square = getBoolean(header, "square=");
 				entity.getComponent<LayoutComponent>().scrollable = getString(header, "scroll=").compare("true") == 0;
 				entity.getComponent<LayoutComponent>().wrap = getString(header, "wrap=").compare("true") == 0;
 
@@ -485,11 +482,13 @@ namespace SYR {
 		}
 
 		if (tag.compare("textbox") == 0) {//Textbox
-			glm::vec2* hitbox = new glm::vec2[4]{ glm::vec2(-0.48f, 0.48f), glm::vec2(0.48f, 0.48f), glm::vec2(0.48f, -0.48f), glm::vec2(-0.48f, -0.48f) };
+			glm::vec2* hitbox = new glm::vec2[4]{ glm::vec2(-0.5f, 0.5f), glm::vec2(0.5f, 0.5f), glm::vec2(0.5f, -0.5f), glm::vec2(-0.5f, -0.5f) };
 			entity.addComponent<IOListenerComponent>(hitbox, 4);
 			entity.getComponent<TagComponent>().tag = "Textbox." + std::to_string(textboxCount++);
 
 			entity.addComponent<TextComponent>(text, getFont(header), getTextColor(header));
+			entity.getComponent<TextComponent>().editable = getBoolean(header, "editable=");
+
 			//entity.getComponent<TextComponent>().alignment = Alignment::
 
 		}
@@ -569,6 +568,17 @@ namespace SYR {
 		}
 
 		return -1.0f;
+	}
+
+	bool UiSystem::getBoolean(std::string header, std::string attribute) {
+		int index = header.find(attribute, 0);
+
+		if (index != std::string::npos) {
+			index += attribute.length() + 1;
+			return header.substr(index, header.find('\"', index) - index).compare("true") == 0;
+		}
+
+		return false;
 	}
 
 	float UiSystem::getPreferredWidth(std::string header) {

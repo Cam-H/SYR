@@ -5,6 +5,8 @@
 #include "SubTexture2D.h"
 #include "CharacterSet.h"
 
+#include "SYR/Scene/Components.h"
+
 namespace SYR {
 
 	class Renderer2D {
@@ -84,11 +86,6 @@ namespace SYR {
 		static void drawRotatedQuad(const glm::mat4& transform, const glm::vec4& color, const Ref<SubTexture2D>& subtexture);
 
 		static void drawRotatedQuad(const glm::mat4& transform, const glm::vec4& color, const Ref<Texture2D>& texture, const glm::vec2 texcoords[]);
-
-		enum class TextAlignment {
-			HORIZONTAL_LEFT = 0, HORIZONTAL_CENTER, HORIZONTAL_RIGHT,
-			VERTICAL_TOP, VERTICAL_CENTER, VERTICAL_BOTTOM
-		};
 
 		//Strings
 		static void drawText(const Ref<CharacterSet> characterSet, const std::string& text, const glm::vec3& position);

@@ -69,6 +69,8 @@ namespace SYR {
 		static std::string getString(std::string header, std::string attribute);
 		static float getFloat(std::string header, std::string attribute);
 
+		static bool getBoolean(std::string header, std::string attribute);
+
 		static float getPreferredWidth(std::string header);
 		static float getPreferredHeight(std::string header);
 
