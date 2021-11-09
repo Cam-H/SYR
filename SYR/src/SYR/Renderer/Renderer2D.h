@@ -9,6 +9,12 @@
 
 namespace SYR {
 
+	struct CharacterTransform {
+		glm::mat4 transform;
+
+		glm::vec3 base;
+	};
+
 	class Renderer2D {
 	public:
 
@@ -88,8 +94,13 @@ namespace SYR {
 		static void drawRotatedQuad(const glm::mat4& transform, const glm::vec4& color, const Ref<Texture2D>& texture, const glm::vec2 texcoords[]);
 
 		//Strings
+
+		static std::vector<CharacterTransform> calculateCharacterTransforms(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, const std::string& text, const glm::vec3& position, bool positionWithAspectRatio = true);
+		static std::vector<CharacterTransform> calculateCharacterTransforms(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, std::vector<uint32_t> text, const glm::vec3& position, bool positionWithAspectRatio = true);
+
+
 		static void drawText(const Ref<CharacterSet> characterSet, const std::string& text, const glm::vec3& position);
-		static void drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, const std::string& text, const glm::vec3& position, const glm::vec4& color, bool positionWithAspectRatio = true);
+		static void drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, const std::string& text, const glm::vec3& position, const glm::vec4& color, bool positionWithAspectRatio = true, bool hypertextEnabled = false);
 
 		static void drawText(const Ref<CharacterSet> characterSet, std::vector<uint32_t> text, const glm::vec3& position);
 		static void drawText(const Ref<CharacterSet> characterSet, TextAlignment textAlignment, std::vector<uint32_t> text, const glm::vec3& position, const glm::vec4& color, bool positionWithAspectRatio = true);

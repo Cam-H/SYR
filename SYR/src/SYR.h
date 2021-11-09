@@ -11,7 +11,7 @@
 #include "SYR/Core/Timer.h"
 
 #include "SYR/Core/Input.h"
-#include "SYR/Core/MouseButtonCodes.h"
+#include "SYR/Core/MouseCodes.h"
 #include "SYR/Core/KeyCodes.h"
 #include "SYR/CameraController.h"
 

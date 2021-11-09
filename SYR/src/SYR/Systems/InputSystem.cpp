@@ -2,7 +2,10 @@
 #include "InputSystem.h"
 #include "UiSystem.h"
 
+#include "SYR/Core/Application.h"
+
 #include "SYR/Core/Input.h"
+#include "SYR/Core/MouseCodes.h"
 
 #include "SYR/Scene/CollisionSystem.h"
 
@@ -10,6 +13,7 @@
 #include <glm/gtx/matrix_decompose.hpp>
 
 #include "SYR/Renderer/Renderer2D.h"
+#include "SYR/Renderer/Renderer.h"
 
 
 namespace SYR {
@@ -19,6 +23,12 @@ namespace SYR {
 
 		glm::vec4 nav = { 0, 0, 0, 0 };
 		bool runKeyMovement = false;
+
+		static bool textHovered = false;
+
+		if (!s_InputQueue.empty()) {
+			textHovered = false;
+		}
 
 		//Skip input processing if there are no new inputs
 		while (!s_InputQueue.empty()) {
@@ -48,18 +58,14 @@ namespace SYR {
 			case SYR_KEY_RIGHT:
 				s_NavigationHeading.x += modifier;
 				break;
-			}
-
-			SYR_CORE_INFO("{0} {1} {2}", set.inputType, set.value, set.repeats);
-			
+			}			
 
 			for (const entt::entity e : view) {
-				if (registry.has<UiComponent>(e)) {
-					//continue;
-				}
 
 				switch (set.inputType) {
-				case InputType::KEY_PRESS: 
+				case InputType::KEY_PRESS:
+					runKeyMovement = true;
+
 					if (set.value == SYR_KEY_ENTER) {
 						for (const entt::entity e : view) {
 							if (view.get<IOListenerComponent>(e).hovered) {
@@ -70,12 +76,14 @@ namespace SYR {
 					}
 
 					if (registry.has<TextComponent>(e) && registry.get<TextComponent>(e).editable) {
-						addKey(registry.get<TextComponent>(e), set.value);
+						addKey(registry.get<TextComponent>(e), set.value, set.mods);
+						runKeyMovement = false;//Prevent any key navigation when typing
 					}
 
-					runKeyMovement = true;
 					break;
 				case InputType::KEY_RELEASE:
+					runKeyMovement = true;
+
 					if (set.value == SYR_KEY_ENTER) {
 						for (const entt::entity e : view) {
 							if (view.get<IOListenerComponent>(e).selected) {
@@ -85,26 +93,57 @@ namespace SYR {
 							}
 						}
 					}
-					runKeyMovement = true;
+
 					break;
 				case InputType::MOUSE_PRESS:
-					view.get<IOListenerComponent>(e).selected = (set.value == 0 && view.get<IOListenerComponent>(e).hovered);
+					view.get<IOListenerComponent>(e).selected = (set.value == SYR_MOUSE_BUTTON_LEFT && view.get<IOListenerComponent>(e).hovered);
 
 					if (registry.has<TextComponent>(e) && registry.get<TextComponent>(e).editable) {
-						//Determine start index
-						registry.get<TextComponent>(e).start = registry.get<TextComponent>(e).text.length() > 0 ? registry.get<TextComponent>(e).text.length() - 1 : 0;
+						if (view.get<IOListenerComponent>(e).hovered) {
+							TextComponent& text = registry.get<TextComponent>(e);
+
+							glm::mat4& transform = registry.get<TransformComponent>(e).transform;
+
+							glm::vec3 translation;
+							glm::decompose(transform, glm::vec3(), glm::quat(), translation, glm::vec3(), glm::vec4());
+
+							std::vector<CharacterTransform> cTransforms = Renderer2D::calculateCharacterTransforms(Renderer::getCharacterSetLibrary()->get(text.characterSetName), text.alignment, text.text, translation, false);
+
+							uint32_t minIndex = 0;
+							float min = glm::length(glm::vec2(cTransforms.at(0).base.x - mouse.x, cTransforms.at(0).base.y - mouse.y));
+
+							//Identify the nearest point to the mouse click
+							for (uint32_t i = 1; i < cTransforms.size(); i++) {
+								glm::vec2 delta = { cTransforms.at(i).base.x - mouse.x, cTransforms.at(i).base.y - mouse.y };
+								float temp = glm::length(delta);
+
+								if (temp < min) {
+									min = temp;
+									minIndex = i;
+								}
+							}
+
+							registry.get<TextComponent>(e).start = minIndex;
+							registry.get<TextComponent>(e).end = -1;
+
+						} else {
+							registry.get<TextComponent>(e).start = registry.get<TextComponent>(e).end = -1;
+						}
 					}
 
 					break;
 				case InputType::MOUSE_RELEASE:
-					if (set.value == 0 && view.get<IOListenerComponent>(e).selected) {
+					if (set.value == SYR_MOUSE_BUTTON_LEFT && view.get<IOListenerComponent>(e).selected) {
 						if (view.get<IOListenerComponent>(e).hovered) {
 							view.get<IOListenerComponent>(e).checked = !view.get<IOListenerComponent>(e).checked;
 						}
 
 						if (registry.has<TextComponent>(e) && registry.get<TextComponent>(e).editable) {
-							//Determine end index
-							registry.get<TextComponent>(e).end = registry.get<TextComponent>(e).start;
+
+							if (registry.get<TextComponent>(e).end == -1) {
+								registry.get<TextComponent>(e).end = registry.get<TextComponent>(e).start;
+							}
+							
 						}
 
 						view.get<IOListenerComponent>(e).selected = false;
@@ -133,6 +172,39 @@ namespace SYR {
 					
 					//Only hover an entity if the parent is also hovered so as to avoid interacting with potentially hidden (via stencil) elements
 					view.get<IOListenerComponent>(e).hovered = isHovered(registry, e, mouse) && (parent != entt::null ? isHovered(registry, parent, mouse) : true);
+
+					if (registry.has<TextComponent>(e) && registry.get<TextComponent>(e).editable) {
+						if (view.get<IOListenerComponent>(e).selected) {
+							TextComponent& text = registry.get<TextComponent>(e);
+
+							glm::mat4& transform = registry.get<TransformComponent>(e).transform;
+
+							glm::vec3 translation;
+							glm::decompose(transform, glm::vec3(), glm::quat(), translation, glm::vec3(), glm::vec4());
+
+							std::vector<CharacterTransform> cTransforms = Renderer2D::calculateCharacterTransforms(Renderer::getCharacterSetLibrary()->get(text.characterSetName), text.alignment, text.text, translation, false);
+
+							uint32_t minIndex = 0;
+							float min = glm::length(glm::vec2(cTransforms.at(0).base.x - mouse.x, cTransforms.at(0).base.y - mouse.y));
+
+							//Identify the nearest point to the mouse click
+							for (uint32_t i = 1; i < cTransforms.size(); i++) {
+								glm::vec2 delta = { cTransforms.at(i).base.x - mouse.x, cTransforms.at(i).base.y - mouse.y };
+								float temp = glm::length(delta);
+
+								if (temp < min) {
+									min = temp;
+									minIndex = i;
+								}
+							}
+
+							registry.get<TextComponent>(e).end = minIndex;
+						}
+
+						if (view.get<IOListenerComponent>(e).hovered) {
+							textHovered = true;
+						}
+					}
 
 #ifdef _DEBUG
 					glm::vec4 color = view.get<IOListenerComponent>(e).hovered ? glm::vec4(1.0f, 0.7f, 1.0f, 1.0f) : glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
@@ -242,7 +314,13 @@ namespace SYR {
 				//view.get<IOListenerComponent>(view.back()).hovered = true;
 			}
 		}
-		
+
+		/**********************************************************************CURSOR*********************************************************************************************/
+		if (textHovered) {
+			Application::get().getWindow().showCursor(SYR_IBEAM_CURSOR);
+		} else {
+			Application::get().getWindow().showCursor(SYR_ARROW_CURSOR);
+		}
 	}
 
 	bool InputSystem::isHovered(entt::registry& registry, entt::entity entity, glm::vec2 pointer) {
@@ -270,56 +348,109 @@ namespace SYR {
 		return entt::null;
 	}
 
-	void InputSystem::addKey(TextComponent& tc, int key) {
+	void InputSystem::addKey(TextComponent& tc, int key, uint8_t mods) {
+
+		bool shift = (mods >> 0) & 1;
+
+		if (tc.end == -1) {
+			tc.end = tc.start;
+		} else if (tc.end < tc.start) {//Correct (swap) indexing if the end index points to an element before the start index
+			int temp = tc.end;
+			tc.end = tc.start;
+			tc.start = temp;
+		}
+
 		switch (key) {
 		case SYR_KEY_BACKSPACE:
-			if (tc.start > 0) {
-				SYR_CORE_ERROR("{0} {1}", (tc.text.substr(0, tc.start - 1)), tc.text.substr(tc.start + 1));
-				//tc.text = tc.text.substr(0, tc.start - 1) + (tc.start < tc.text.length() - 1 ? "" : tc.text.substr(tc.start + 1));
-				//tc.start--;
+			if (tc.start > 0 || tc.end - tc.start > 0) {
+				tc.text.erase(tc.text.begin() + tc.start - (tc.end - tc.start == 0), tc.text.begin() + tc.end);
+				tc.start -= tc.end - tc.start == 0;
+				tc.end = tc.start;
 			}
 			break;
 		case SYR_KEY_DELETE:
-			if (tc.start != -1 && tc.start < tc.text.length()) {
-				tc.text = tc.text.substr(0, tc.start) + tc.text.substr(tc.start + 1);
+			if (tc.start != -1 && tc.start < tc.text.size()) {
+				tc.text.erase(tc.text.begin() + tc.start, tc.text.begin() + tc.end + (tc.end - tc.start == 0) );
+				tc.end = tc.start;
 			}
 			break;
 		case SYR_KEY_LEFT:
 			if (tc.start > 0) {
 				tc.start--;
 			}
+
+			tc.end = shift ? tc.end : tc.start;
+
 			break;
 		case SYR_KEY_RIGHT:
-			if (tc.start < tc.text.length() - 1) {
-				tc.start++;
+			if (tc.start != -1 && tc.start < tc.text.size()) {
+				tc.start += !shift * std::max(tc.end - tc.start, 1);
+				tc.end = shift ? std::min(tc.end + 1, (int)tc.text.size()) : tc.start;
 			}
 			break;
 		default:
-			if (tc.start != -1) {
-				SYR_CORE_ERROR("{0} - {1}", (tc.text.substr(0, tc.start)), tc.text.substr(tc.start + 1));
+			if (tc.start != -1 && key >= 32 && key <= 126) {//Only try adding a key if it is a valid string character
 
-				tc.text += (char)key;
-				tc.start++;
+				//Erase any highlighted text before adding the new character
+				if (tc.end - tc.start > 0) {
+					tc.text.erase(tc.text.begin() + tc.start, tc.text.begin() + tc.end);
+				}
+
+				if (tc.characterLimit == -1 || tc.text.size() < tc.characterLimit) {
+					uint32_t code = (uint32_t)key;
+
+					bool caps = (mods >> 4) & 1;
+
+					//Handle QWERTY special characters
+					if (shift) {
+						switch (code) {
+						case 48:
+							code = 41;
+							break;
+						case 49:
+							code = 33;
+							break;
+						case 50:
+							code = 64;
+							break;
+						case 51:
+							code = 35;
+							break;
+						case 52:
+							code = 36;
+							break;
+						case 53:
+							code = 37;
+							break;
+						case 54:
+							code = 94;
+							break;
+						case 55:
+							code = 38;
+							break;
+						case 56:
+							code = 42;
+							break;
+						case 57:
+							code = 40;
+							break;
+						}
+					}
+
+					//Handle capitalization of letters
+					if (code >= 65 && code <= 90) {
+						code += 32 * !(shift ^ caps);
+					}
+
+
+					tc.text.insert(tc.text.begin() + tc.start, code);
+					tc.start++;
+				}
+				
+				tc.end = tc.start;
 			}
 
 		}
-
-		tc.end = tc.start;
-
-	}
-
-
-	void InputSystem::enqueue(InputType inputType, int value) {
-		enqueue({ inputType, s_Mx, s_My, value, 0 });
-	}
-
-	void InputSystem::enqueue(InputSet inputSet) {
-		SYR_CORE_INFO("tt");
-		s_InputQueue.emplace(inputSet);
-	}
-
-	void InputSystem::dequeue() {
-		s_InputQueue.pop();
 	}
 
 	void InputSystem::onEvent(Event& e) {
@@ -348,32 +479,31 @@ namespace SYR {
 		s_Mx = e.getX();
 		s_My = e.getY();
 
-		enqueue(InputType::MOUSE_MOVE, 0);
+		s_InputQueue.emplace(InputSet{ InputType::MOUSE_MOVE, s_Mx, s_My, 0, 0, 0 });
 
 		return false;
 	}
 
 	bool InputSystem::onMouseScrolled(MouseScrolledEvent& e) {
-		enqueue(InputType::MOUSE_SCROLL, e.getYOffset());
+		s_InputQueue.emplace(InputSet{ InputType::MOUSE_SCROLL, s_Mx, s_My, (int)e.getYOffset(), 0, 0 });
 		//SYR_CORE_INFO("{0} {1}", e.getXOffset(), e.getYOffset());
 		return false;
 	}
 
 	bool InputSystem::onMouseButtonPressed(MouseButtonPressedEvent& e) {
-		enqueue(InputType::MOUSE_PRESS, e.getMouseButton());
+		s_InputQueue.emplace(InputSet{ InputType::MOUSE_PRESS, s_Mx, s_My, e.getMouseButton(), 0, 0 });
 		//SYR_CORE_INFO(e.getMouseButton());
 		return false;
 	}
 
 	bool InputSystem::onMouseButtonReleased(MouseButtonReleasedEvent& e) {
-		enqueue(InputType::MOUSE_RELEASE, e.getMouseButton());
+		s_InputQueue.emplace(InputSet{ InputType::MOUSE_RELEASE, s_Mx, s_My, e.getMouseButton(), 0, 0 });
 		//SYR_CORE_INFO(e.getMouseButton());
 		return false;
 	}
 
 	bool InputSystem::onKeyPressedEvent(KeyPressedEvent& e) {
-		enqueue({ InputType::KEY_PRESS, s_Mx, s_My, e.getKeyCode(), (uint8_t) e.getRepeatCount() });
-		//SYR_CORE_INFO("F {0} {1}", e.getKeyCode(), e.getRepeatCount());
+		s_InputQueue.emplace(InputSet{ InputType::KEY_PRESS, s_Mx, s_My, e.getKeyCode(), (uint8_t)e.getRepeatCount(), (uint8_t)e.getModifiers() });
 
 		/*
 		std::map<int, int>::iterator it = s_InputStack.keyPresses.find(e.getKeyCode());
@@ -387,7 +517,7 @@ namespace SYR {
 	}
 
 	bool InputSystem::onKeyReleasedEvent(KeyReleasedEvent& e) {
-		enqueue(InputType::KEY_RELEASE, e.getKeyCode());
+		s_InputQueue.emplace(InputSet{ InputType::KEY_RELEASE, s_Mx, s_My, e.getKeyCode(), 0, 0 });
 		//SYR_CORE_INFO("KR {0}", e.getKeyCode());
 		return false;
 	}

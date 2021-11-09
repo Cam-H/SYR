@@ -43,17 +43,13 @@ namespace SYR {
 
 			int value;
 			uint8_t repeats;
+			uint8_t mods;
+
 
 		} InputSet;
 
-		static void addKey(TextComponent& tc, int key);
+		static void addKey(TextComponent& tc, int key, uint8_t mods);
 		
-
-		static void enqueue(InputType inputType, int value);
-		static void enqueue(InputSet inputSet);
-
-		static void dequeue();
-
 		static bool onWindowResize(WindowResizeEvent& e);
 
 		static bool onMouseMoved(MouseMovedEvent& e);

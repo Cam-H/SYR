@@ -23,7 +23,7 @@ namespace SYR {
 		void setVSync(bool enabled) override;
 		bool isVSync() const override;
 
-		void showCursor() override;
+		void showCursor(uint32_t cursor) override;
 		void hideCursor() override;
 
 		inline virtual void* getNativeWindow() const { return m_Window; }
@@ -33,6 +33,8 @@ namespace SYR {
 	private:
 		GLFWwindow* m_Window;
 		GraphicsContext* m_Context;
+
+		GLFWcursor* m_Cursor;
 
 		struct WindowData {
 			std::string Title;
