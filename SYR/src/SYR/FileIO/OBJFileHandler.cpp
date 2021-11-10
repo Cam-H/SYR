@@ -48,8 +48,6 @@ namespace SYR {
 
 		}
 
-		SYR_CORE_INFO("SIIIII: {0} {1} {2} {3} {4}", vertices.size(), normals.size(), indices.size(), vertexKeys.size(), vertexCount);
-
 		Ref<VertexArray> mesh = VertexArray::create();
 
 		Ref<VertexBuffer> vb = VertexBuffer::create(vertexCount * sizeof(MeshVertex));
