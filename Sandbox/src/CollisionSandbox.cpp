@@ -236,9 +236,7 @@ void CollisionSandbox::onUpdate(SYR::Timestep ts) {
 	m_ActiveScene->onUpdate(ts);
 	m_ActiveScene->onDraw();
 
-	static glm::vec4 randColor = { 1, 0, 0, 1 };
-	static glm::vec4 concaveColor = { 0, 0, 1, 1 };
-	static glm::vec4 convexColor = { 0, 1, 0, 1 };
+	static glm::vec4 color = { 0, 1, 0, 1 };
 
 	static int z = -1;
 	static uint16_t vertexCount = 9;
@@ -257,6 +255,7 @@ void CollisionSandbox::onUpdate(SYR::Timestep ts) {
 	}
 	z++;
 
+
 	/*
 	getBorders(vertices, &vertexCount);
 
@@ -264,20 +263,34 @@ void CollisionSandbox::onUpdate(SYR::Timestep ts) {
 		SYR::Renderer2D::drawCircle(oVertices[i], 0.01f, { 1, 1, 1, 1 });
 		SYR::Renderer2D::drawText(m_CharacterSet, SYR::TextAlignment::HORIZONTAL_CENTER, std::to_string(i), { vertices[i].x, vertices[i].y - 0.05f, 1 }, { 1,1,1,1 }, false);
 	}
-	//SYR::Renderer2D::drawLine(oVertices[0], oVertices[sizeof(oVertices) / sizeof(glm::vec2) - 1], randColor);
 	
 	for (uint8_t i = 0; i < vertexCount - 1; i++) {
-		SYR::Renderer2D::drawLine(vertices[i], vertices[i + 1], { true ? convexColor : concaveColor });
+		SYR::Renderer2D::drawLine(vertices[i], vertices[i + 1], color);
 	}
-	SYR::Renderer2D::drawLine(vertices[vertexCount - 1], vertices[0], { true ? convexColor : concaveColor });
+	SYR::Renderer2D::drawLine(vertices[vertexCount - 1], vertices[0], color);
 
 
 	SYR::Renderer2D::endScene();
 	//*/
 
+	//SYR::Renderer::endScene();
 	//SYR::Renderer::beginScene(m_PCameraController.getCamera());
 
-	//SYR::Renderer::endScene();
+	SYR::Renderer::endScene();
+
+
+	glm::vec3 vx[] = { {1, 0, 0}, {1.1, 0.1, 1}, {1.1, 2, 0.2} };
+	glm::vec3 vx2[] = { {2, 2, 2}, {5.1, 1.1, 1}, {5.1, 5, 5.2} };
+
+	vertexCount = 3;
+
+	SYR::Renderer3D::beginScene(m_PCameraController.getCamera());
+	SYR::Renderer3D::drawLines(vx, vertexCount, { 1, 1, 1, 1 });
+	SYR::Renderer3D::drawLines(vx2, vertexCount, { 1, 1, 1, 1 });
+	SYR::Renderer3D::drawSphere({ -2, 1, 1 }, 2, { 0, 0, 1, 1 }, 36);
+	SYR::Renderer3D::drawSphere({ -2, 1, 1 }, 1, { 0, 1, 0, 1 }, 12);
+
+	SYR::Renderer3D::endScene();
 }
 
 void CollisionSandbox::onEvent(SYR::Event& e) {

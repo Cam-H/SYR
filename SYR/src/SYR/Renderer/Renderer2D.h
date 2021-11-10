@@ -30,6 +30,8 @@ namespace SYR {
 
 		//Lines
 
+		static void setLineWidth(float lineWidth);
+
 		static void drawLine(const glm::vec2& start, const glm::vec2& end);
 		static void drawLine(const glm::vec2& start, const glm::vec2& end, const glm::vec4& color);
 		static void drawLine(const glm::vec3& start, const glm::vec3& end);
@@ -119,6 +121,8 @@ namespace SYR {
 		static void startNewBatch();
 
 		static void prepareForBatch();
+	private:
+		inline static float s_LineWidth = 2.0f;
 	};
 
 }

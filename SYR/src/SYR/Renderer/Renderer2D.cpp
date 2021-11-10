@@ -118,13 +118,6 @@ namespace SYR {
 
 		delete[] quadIndices;
 
-		/*
-		s_Data->quadVertexPositions[1] = { 1.0f,  1.0f, 0.0f, 1.0f };
-		s_Data->quadVertexPositions[2] = { 1.0f, -1.0f, 0.0f, 1.0f };
-		s_Data->quadVertexPositions[3] = { -1.0f, -1.0f, 0.0f, 1.0f };
-		s_Data->quadVertexPositions[0] = { -1.0f,  1.0f, 0.0f, 1.0f };
-		*/
-
 		s_Data->quadVertexPositions[1] = { 0.5f,  0.5f, 0.0f, 1.0f };
 		s_Data->quadVertexPositions[2] = { 0.5f, -0.5f, 0.0f, 1.0f };
 		s_Data->quadVertexPositions[3] = { -0.5f, -0.5f, 0.0f, 1.0f };
@@ -219,7 +212,7 @@ namespace SYR {
 
 		if (s_Data->lineIndexCount > 0) {
 			s_Data->lineShader->bind();
-			RenderCommand::drawLines(s_Data->lineVertexArray, 2.0f, s_Data->lineIndexCount);
+			RenderCommand::drawLines(s_Data->lineVertexArray, s_LineWidth, s_Data->lineIndexCount);
 		}
 
 	}
@@ -248,6 +241,10 @@ namespace SYR {
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// DRAW LINE(S) ////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	void Renderer2D::setLineWidth(float lineWidth) {
+		s_LineWidth = lineWidth;
+	}
 
 	void Renderer2D::drawLine(const glm::vec2& start, const glm::vec2& end) {
 		SYR_CORE_PROFILE();
@@ -744,8 +741,8 @@ namespace SYR {
 		}
 
 		for (std::vector<uint32_t>::iterator it = text.begin(); it != text.end(); ++it) {
-			CharacterPointer cp = characterSet->getCharacterPointer(*it);
-			glm::mat4 transform = glm::translate(glm::mat4(1.0f), { x + (cp.dimensions.x / 2 + cp.bearing.x) * xM * xScale, y - (cp.dimensions.y / 2 - cp.bearing.y + characterSet->getLinespacing() / 2 * xM) * yScale, position.z + zOffset })
+			CharacterPointer cp = characterSet->getCharacterPointer(*it);//y - (cp.dimensions.y / 2 - cp.bearing.y + characterSet->getLinespacing() / 2 * xM) * yScale
+			glm::mat4 transform = glm::translate(glm::mat4(1.0f), { x + (cp.dimensions.x / 2 + cp.bearing.x) * xM * xScale, y - (cp.dimensions.y / 2 - cp.bearing.y + characterSet->getAscent() / 2) * yScale, position.z + zOffset })
 				* glm::scale(glm::mat4(1.0f), { cp.dimensions.x * xScale, cp.dimensions.y * yScale, 0.0f });
 
 			cpos.push_back(CharacterTransform{ transform, glm::vec3(x, y, z) });
@@ -854,11 +851,11 @@ namespace SYR {
 			i++;
 		}
 
-		/*
+		
 		for (std::vector<CharacterTransform>::iterator it = cTransforms.begin(); it != cTransforms.end(); ++it) {
-			drawCircle(it->base, 0.01f);
+			drawCircle(it->base, 0.005f);
 		}
-		*/
+		
 	}
 
 	void Renderer2D::resetStats() {

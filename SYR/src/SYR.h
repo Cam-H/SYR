@@ -29,6 +29,7 @@
 
 #include "SYR/Renderer/Renderer.h"
 #include "SYR/Renderer/Renderer2D.h"
+#include "SYR/Renderer/Renderer3D.h"
 #include "SYR/Renderer/RenderCommand.h"
 
 #include "SYR/Renderer/Buffer.h"

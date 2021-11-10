@@ -1,6 +1,7 @@
 #include "syrpch.h"
 #include "Renderer.h"
 #include "Renderer2D.h"
+#include "Renderer3D.h"
 
 #include "Platform/OpenGL/OpenGLShader.h"
 
@@ -21,6 +22,7 @@ namespace SYR {
 	void Renderer::init() {
 		RenderCommand::init();
 		Renderer2D::init();
+		Renderer3D::init();
 
 		m_ShaderLibrary = createRef<ShaderLibrary>();
 		m_MaterialLibrary = createRef<MaterialLibrary>();
