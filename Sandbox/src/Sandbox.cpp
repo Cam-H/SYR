@@ -13,6 +13,7 @@
 
 #include "Sandbox2D.h"
 #include "Console.h"
+#include "CollisionSandbox.h"
 
 class ExampleLayer : public SYR::Layer {
 public:
@@ -44,9 +45,11 @@ public:
 		SYR::Renderer::getCharacterSetLibrary()->add("Arial24", SYR::CharacterSet::create("assets/fonts/arial.ttf", SYR::CharacterCollection::ASCII, 24));
 		SYR::Renderer::getCharacterSetLibrary()->add("Arial36", SYR::CharacterSet::create("assets/fonts/arial.ttf", SYR::CharacterCollection::ASCII, 36));
 
-		pushLayer(new Sandbox2D());
+		//pushLayer(new Sandbox2D());
 		//pushOverlay(new Console());
 		
+		pushLayer(new CollisionSandbox());
+
 		//getWindow().hideCursor();
 	}
 

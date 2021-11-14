@@ -50,6 +50,18 @@ void CollisionSandbox::onAttach() {
 	e.getComponent<SYR::TransformComponent>().offset({ 0, -5, 0 });
 	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Floor.obj"));
 
+	e = m_ActiveScene->createEntity();
+	e.getComponent<SYR::TagComponent>().id = "CUBE1";
+	e.getComponent<SYR::TransformComponent>().offset({ 0, -2, -8 });
+	//e.getComponent<SYR::TransformComponent>().scale({ 3, 3, 3 });
+
+	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Cube2.obj"));
+
+	std::vector<glm::vec3> vertices;
+	std::vector<glm::vec3> normals;
+	std::vector<uint32_t> indices;
+	std::vector<std::array<uint32_t, 3>> vertexKeys;
+	
 	/*************************************************LIGHTS*************************************************/
 
 	e = m_ActiveScene->createEntity();
@@ -62,6 +74,12 @@ void CollisionSandbox::onAttach() {
 	e.addComponent<SYR::LightComponent>(glm::vec3(0.5f, 0.5f, 0.5f), glm::vec3(0, -1, 0));
 
 	srand(time(NULL));
+
+	m_PCameraController.setCameraControlType(SYR::CameraControlType::FREE_CAMERA);
+	//SYR::Application::get().getWindow().hideCursor();
+
+	//m_CL = SYR::createRef<SYR::ColliderLibrary>();
+	//m_CL->load("assets/meshes/Cube2.obj");
 }
 
 void CollisionSandbox::onDetach() {
@@ -289,6 +307,7 @@ void CollisionSandbox::onUpdate(SYR::Timestep ts) {
 	SYR::Renderer3D::drawLines(vx2, vertexCount, { 1, 1, 1, 1 });
 	SYR::Renderer3D::drawSphere({ -2, 1, 1 }, 2, { 0, 0, 1, 1 }, 36);
 	SYR::Renderer3D::drawSphere({ -2, 1, 1 }, 1, { 0, 1, 0, 1 }, 12);
+	SYR::Renderer3D::drawICOSphere({ -2, 5, 1 }, 1, { 0, 1, 0, 1 }, 8);
 
 	SYR::Renderer3D::endScene();
 }

@@ -23,4 +23,6 @@ private:
 	SYR::CameraController m_CameraController;
 	SYR::CameraController m_PCameraController;
 
+	SYR::Ref<SYR::ColliderLibrary> m_CL;
+
 };

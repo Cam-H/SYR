@@ -7,7 +7,7 @@
 namespace SYR {
 
 	enum class FileFormat {
-		NONE = 0, OBJ, MTL
+		NONE = 0, OBJ, MTL, BIN
 	};
 
 	
@@ -66,6 +66,7 @@ namespace SYR {
 		}
 
 		static Ref<VertexArray> loadMesh(const std::string& filepath, boolean smoothed = false);
+		static Ref<VertexArray> loadFaces(const std::string& filepath);
 
 	private:
 

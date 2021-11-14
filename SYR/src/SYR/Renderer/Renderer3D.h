@@ -30,6 +30,8 @@ namespace SYR {
 		static void drawICOSphere(const glm::vec3& position, float radius);
 		static void drawICOSphere(const glm::vec3& position, float radius, const glm::vec4& color, int loopVertexCount = 12);
 
+		//Also Cube Sphere
+
 	private:
 		static void startNewBatch();
 

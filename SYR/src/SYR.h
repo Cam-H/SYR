@@ -22,6 +22,7 @@
 #include "SYR/Systems/UiSystem.h"
 
 #include "SYR/Scene/Hitbox2D.h"
+#include "SYR/Scene/Collider.h"
 
 #include "SYR/FileIO/FileHandler.h"
 
