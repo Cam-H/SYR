@@ -121,13 +121,13 @@ namespace SYR {
 		s_LineWidth = lineWidth;
 	}
 
-	void Renderer3D::drawLines(const glm::vec3 vertices[], uint32_t vertexCount) {
+	void Renderer3D::drawLine(const glm::vec3& a, const glm::vec3& b, const glm::vec4& color, const glm::mat4& transform) {
 		SYR_CORE_PROFILE();
 
-		drawLines(vertices, vertexCount, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
+		drawLines(new glm::vec3[2]{ a, b }, 2, color, transform);
 	}
 
-	void Renderer3D::drawLines(const glm::vec3 vertices[], uint32_t vertexCount, const glm::vec4& color) {
+	void Renderer3D::drawLines(const glm::vec3 vertices[], uint32_t vertexCount, const glm::vec4& color, const glm::mat4& transform) {
 		SYR_CORE_PROFILE();
 
 		if (s_Data->lineIndexCount >= Renderer3DData::maxLineIndices) {
@@ -137,8 +137,9 @@ namespace SYR {
 		int closeIndex = s_Data->lineVertexCount;
 
 		for (uint32_t i = 0; i < vertexCount; i++) {
+			glm::vec4 vertex = { vertices[i].x, vertices[i].y, vertices[i].z, 1.0f };
 
-			s_Data->lineVertexBufferPtr->position = vertices[i];
+			s_Data->lineVertexBufferPtr->position = transform * vertex;
 			s_Data->lineVertexBufferPtr->color = color;
 			s_Data->lineVertexBufferPtr++;
 
@@ -153,42 +154,26 @@ namespace SYR {
 		s_Data->lineIndices[s_Data->lineIndexCount - 1] = closeIndex;
 	}
 
-	void Renderer3D::drawLines(const glm::vec3 vertices[], uint32_t vertexCount, const glm::mat4& transform, const glm::vec4& color) {
+	void Renderer3D::drawSphere(const glm::vec3& position, float radius, const glm::vec4& color, uint16_t sectorCount, uint16_t stackCount) {
 		SYR_CORE_PROFILE();
 
-		glm::vec3* transformedVertices = new glm::vec3[vertexCount];
-
-		for (uint32_t i = 0; i < vertexCount; i++) {
-			glm::vec4 vertex = { vertices[i].x, vertices[i].y, vertices[i].z, 1.0f };
-
-			transformedVertices[i] = transform * vertex;
-		}
-
-		drawLines(transformedVertices, vertexCount, color);
-	}
-
-	void Renderer3D::drawSphere(const glm::vec3& position, float radius) {
-		drawSphere(position, radius, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
-	}
-
-	void Renderer3D::drawSphere(const glm::vec3& position, float radius, const glm::vec4& color, int loopVertexCount) {
-		SYR_CORE_PROFILE();
-
-		double delta = PI * 2 / loopVertexCount;
-
-		if (s_Data->lineIndexCount + 2 * loopVertexCount * loopVertexCount >= Renderer3DData::maxLineIndices) {
-			startNewBatch();
-		}
+		double deltaX = PI * 2 / sectorCount;
+		double deltaY = PI / (stackCount + 1);
 
 		int closeIndex = s_Data->lineVertexCount;
 
 		glm::vec4 vertexColor = color;
 
-		//Generate vertices/indices for horizontal rings
-		for (double phi = -PI / 2 + delta; phi < PI / 2 - delta; phi += delta) {
+		//TODO limit
+		if (s_Data->lineIndexCount + 1 >= Renderer3DData::maxLineIndices) {
+			startNewBatch();
+		}
+
+		//Generate vertices/indices for HORIZONTAL rings
+		for (double phi = -PI / 2 + deltaY; phi <= PI / 2; phi += deltaY) {
 			float ringRadius = radius * cos(phi);
 
-			for (double theta = 0; theta < PI * 2; theta += delta) {
+			for (double theta = 0; theta < PI * 2; theta += deltaX) {
 				glm::vec3 vertexPosition = { position.x + ringRadius * cos(theta), position.y + radius * sin(phi), position.z + ringRadius * sin(theta) };
 
 				s_Data->lineVertexBufferPtr->position = vertexPosition;
@@ -202,14 +187,14 @@ namespace SYR {
 				s_Data->lineIndexCount += 2;
 			}
 
-			s_Data->lineIndices[s_Data->lineIndexCount - 1] = s_Data->lineVertexCount - (PI * 2) / delta;
+			s_Data->lineIndices[s_Data->lineIndexCount - 1] = s_Data->lineVertexCount - (PI * 2) / deltaX;
 
 		}
 		
 		//Generate vertices/indices for vertical loops
 		bool switcher = 0;
-		for (double theta = 0; theta <= PI * 2; theta += delta) {
-			for (double phi = -PI / 2; phi < PI / 2; phi += delta) {
+		for (double theta = 0; theta <= PI * 2; theta += deltaX) {
+			for (double phi = -PI / 2; phi < PI / 2; phi += deltaY) {
 				glm::vec3 vertexPosition = { position.x + radius * cos(theta) * cos(phi), position.y + radius * sin(phi + switcher * PI), position.z + radius * sin(theta) * cos(phi) };
 
 				s_Data->lineVertexBufferPtr->position = vertexPosition;
@@ -227,10 +212,6 @@ namespace SYR {
 		}
 
 		s_Data->lineIndexCount -= 2;
-	}
-
-	void Renderer3D::drawICOSphere(const glm::vec3& position, float radius) {
-		drawICOSphere(position, radius, glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
 	}
 
 	void Renderer3D::drawICOSphere(const glm::vec3& position, float radius, const glm::vec4& color, int loopVertexCount) {

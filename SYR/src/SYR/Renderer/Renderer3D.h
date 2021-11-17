@@ -15,20 +15,15 @@ namespace SYR {
 
 		static void flush();
 
-		//Lines
-
 		static void setLineWidth(float lineWidth);
 
-		static void drawLines(const glm::vec3 vertices[], uint32_t vertexCount);
-		static void drawLines(const glm::vec3 vertices[], uint32_t vertexCount, const glm::vec4& color);
-		static void drawLines(const glm::vec3 vertices[], uint32_t vertexCount, const glm::mat4& transform, const glm::vec4& color);
+		//Lines
+		static void drawLine(const glm::vec3& a, const glm::vec3& b, const glm::vec4& color = { 1, 1, 1, 1 }, const glm::mat4& transform = glm::mat4(1.0f));
+		static void drawLines(const glm::vec3 vertices[], uint32_t vertexCount, const glm::vec4& color = { 1, 1, 1, 1 }, const glm::mat4& transform = glm::mat4(1.0f));
 
 		//Spheres
-		static void drawSphere(const glm::vec3& position, float radius);
-		static void drawSphere(const glm::vec3& position, float radius, const glm::vec4& color, int loopVertexCount = 12);
-
-		static void drawICOSphere(const glm::vec3& position, float radius);
-		static void drawICOSphere(const glm::vec3& position, float radius, const glm::vec4& color, int loopVertexCount = 12);
+		static void drawSphere(const glm::vec3& position, float radius, const glm::vec4& color = { 1, 1, 1, 1 }, uint16_t sectorCount = 12, uint16_t stackCount = 12);
+		static void drawICOSphere(const glm::vec3& position, float radius, const glm::vec4& color = { 1, 1, 1, 1 }, int loopVertexCount = 12);
 
 		//Also Cube Sphere
 
