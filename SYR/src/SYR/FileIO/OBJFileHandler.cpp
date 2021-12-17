@@ -140,6 +140,55 @@ namespace SYR {
 		return mesh;
 	}
 
+	void OBJFileHandler::parseOBJFile(const std::string& content, std::vector<glm::vec3>* vertices, std::vector<glm::vec3>* normals, std::vector<std::vector<uint32_t>>* indices) {
+		std::string path = content.substr(0, content.find("\n"));
+
+		const char* delimiter = "\n";
+		size_t delimLength = strlen(delimiter);
+
+		const char* vertexToken = "v";
+		const char* faceToken = "f";
+
+		uint32_t vertexCount = 0;
+
+		size_t pos = 0;
+		size_t prev = 0;
+
+		while ((pos = content.find(delimiter, prev)) != std::string::npos) {
+
+			std::string line = content.substr(prev, pos - prev);
+
+			size_t begin = line.find(' ');
+			std::string token = line.substr(0, begin++);
+
+			if (token == "v") {//Load vertex
+				vertices->push_back(splitString3(' ', line.substr(begin, line.length() - line.find_first_of(' '))));
+			}else if (token == "vn") {//Load vertex normals
+				normals->push_back(splitString3(' ', line.substr(begin, line.length() - line.find_first_of(' '))));
+			}else if (token == "f") {//Load a face
+
+				//Split the face data into the individual vertices by delimiter: ' '
+				std::string faceContent = line.substr(begin);
+				std::stringstream test(line.substr(begin));
+				std::string segment;
+
+				std::vector<uint32_t> faceIndices;
+
+				while (std::getline(test, segment, ' ')) {
+					uint32_t vertexIndex = (uint32_t)atoi(segment.substr(0, segment.find('/')).c_str()) - 1;
+					faceIndices.push_back(vertexIndex);
+				}
+
+				indices->push_back(faceIndices);
+
+				
+			}
+
+			prev = pos + 1;
+		}
+	}
+
+
 	void OBJFileHandler::parseOBJFile(const std::string& content, std::vector<glm::vec3>* vertices, std::vector<glm::vec3>* normals, std::vector<uint32_t>* indices, std::vector<std::array<uint32_t, 3>>* vertexKeys) {
 		std::string path = content.substr(0, content.find("\n"));
 

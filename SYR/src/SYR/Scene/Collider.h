@@ -18,6 +18,9 @@ namespace SYR {
 		//Mass & MoI
 
 		float m_BoundingRadius;
+
+		uint16_t indexCount;
+		uint32_t* indices;
 	};
 
 	class Collider {
@@ -25,10 +28,13 @@ namespace SYR {
 
 		Collider(ColliderPhysicsData collider, uint32_t ID, const std::string& name = "");
 
+		static Ref<Collider> create(const std::string& filepath, const std::string& name);
+
 		const uint32_t getID() { return m_ID; }
 		const std::string& getName() { return m_Name; }
 
-		static Ref<Collider> create(const std::string& filepath, const std::string& name);
+		void render(const glm::mat4& transform = glm::mat4(1.0f));
+		
 
 	private:
 		static ColliderPhysicsData create(const std::string& filepath);
@@ -47,7 +53,7 @@ namespace SYR {
 
 	class ColliderLibrary {
 	public:
-		ColliderLibrary();
+		//ColliderLibrary();
 		
 		Ref<Collider> load(const std::string& filepath, const std::string& name = "");
 

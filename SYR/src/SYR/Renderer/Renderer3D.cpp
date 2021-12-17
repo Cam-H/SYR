@@ -158,60 +158,70 @@ namespace SYR {
 		SYR_CORE_PROFILE();
 
 		double deltaX = PI * 2 / sectorCount;
-		double deltaY = PI / (stackCount + 1);
-
-		int closeIndex = s_Data->lineVertexCount;
+		double deltaY = PI / stackCount;
 
 		glm::vec4 vertexColor = color;
 
-		//TODO limit
-		if (s_Data->lineIndexCount + 1 >= Renderer3DData::maxLineIndices) {
+		//Index Count = HORIZONTAL ring lines + VERTICAL loop lines = (stacks - 1) * sectors + sectors * stacks
+		if (s_Data->lineIndexCount + 2 * ((stackCount - 1) * sectorCount + sectorCount * stackCount) >= Renderer3DData::maxLineIndices) {
 			startNewBatch();
 		}
 
-		//Generate vertices/indices for HORIZONTAL rings
-		for (double phi = -PI / 2 + deltaY; phi <= PI / 2; phi += deltaY) {
-			float ringRadius = radius * cos(phi);
+		int initialVertexIndex = s_Data->lineVertexCount;
 
-			for (double theta = 0; theta < PI * 2; theta += deltaX) {
-				glm::vec3 vertexPosition = { position.x + ringRadius * cos(theta), position.y + radius * sin(phi), position.z + ringRadius * sin(theta) };
+		//Generate the vertices of the sphere ordered by HORIZONTAL layers
+		for (double phi = -PI / 2 + deltaY; phi <= PI / 2 - deltaY + 0.0001f; phi += deltaY) {
+			for (double theta = 0; theta <= PI * 2 - deltaX + 0.0001f; theta += deltaX) {
+				glm::vec3 vertexPosition = { position.x + radius * cos(phi) * cos(theta), position.y + radius * sin(phi), position.z + radius * cos(phi) * sin(theta) };
 
 				s_Data->lineVertexBufferPtr->position = vertexPosition;
 				s_Data->lineVertexBufferPtr->color = vertexColor;
 				s_Data->lineVertexBufferPtr++;
 
-				s_Data->lineIndices[s_Data->lineIndexCount] = s_Data->lineVertexCount;
-				s_Data->lineIndices[s_Data->lineIndexCount + 1] = s_Data->lineVertexCount + 1;
-
 				s_Data->lineVertexCount++;
+			}
+		}
+
+		//Add the poles of the sphere (not contained in the layers)
+		s_Data->lineVertexBufferPtr->position = {position.x, position.y - radius, position.z};
+		s_Data->lineVertexBufferPtr->color = vertexColor;
+		s_Data->lineVertexBufferPtr++;
+		s_Data->lineVertexBufferPtr->position = { position.x, position.y + radius, position.z };
+		s_Data->lineVertexBufferPtr->color = vertexColor;
+		s_Data->lineVertexBufferPtr++;
+		s_Data->lineVertexCount += 2;
+
+		//Generate the indices for the HORIZONTAL rings
+		for (uint32_t i = 0; i < stackCount - 1; i++) {
+			for (uint32_t j = 0; j < sectorCount; j++) {
+				s_Data->lineIndices[s_Data->lineIndexCount] = initialVertexIndex + i * sectorCount + j;
+				s_Data->lineIndices[s_Data->lineIndexCount + 1] = initialVertexIndex + i * sectorCount + j + 1;
+
 				s_Data->lineIndexCount += 2;
 			}
 
-			s_Data->lineIndices[s_Data->lineIndexCount - 1] = s_Data->lineVertexCount - (PI * 2) / deltaX;
-
+			s_Data->lineIndices[s_Data->lineIndexCount - 1] = initialVertexIndex + i * sectorCount;
 		}
 		
-		//Generate vertices/indices for vertical loops
-		bool switcher = 0;
-		for (double theta = 0; theta <= PI * 2; theta += deltaX) {
-			for (double phi = -PI / 2; phi < PI / 2; phi += deltaY) {
-				glm::vec3 vertexPosition = { position.x + radius * cos(theta) * cos(phi), position.y + radius * sin(phi + switcher * PI), position.z + radius * sin(theta) * cos(phi) };
+		//Generate the indices for the VERTICAL rings
+		for (uint32_t j = 0; j < sectorCount; j++) {
+			s_Data->lineIndices[s_Data->lineIndexCount] = s_Data->lineVertexCount - 2;
+			s_Data->lineIndices[s_Data->lineIndexCount + 1] = initialVertexIndex + j;
 
-				s_Data->lineVertexBufferPtr->position = vertexPosition;
-				s_Data->lineVertexBufferPtr->color = vertexColor;
-				s_Data->lineVertexBufferPtr++;
+			s_Data->lineIndexCount += 2;
 
-				s_Data->lineIndices[s_Data->lineIndexCount] = s_Data->lineVertexCount;
-				s_Data->lineIndices[s_Data->lineIndexCount + 1] = s_Data->lineVertexCount + 1;
-
-				s_Data->lineVertexCount++;
+			for (uint32_t i = 0; i < stackCount - 2; i++) {
+				s_Data->lineIndices[s_Data->lineIndexCount] = initialVertexIndex + i * sectorCount + j;
+				s_Data->lineIndices[s_Data->lineIndexCount + 1] = initialVertexIndex + (i + 1) * sectorCount + j;
+				
 				s_Data->lineIndexCount += 2;
 			}
 
-			switcher = !switcher;
+			s_Data->lineIndices[s_Data->lineIndexCount] = initialVertexIndex + (stackCount - 2) * sectorCount + j;
+			s_Data->lineIndices[s_Data->lineIndexCount + 1] = s_Data->lineVertexCount - 1;
+			
+			s_Data->lineIndexCount += 2;
 		}
-
-		s_Data->lineIndexCount -= 2;
 	}
 
 	void Renderer3D::drawICOSphere(const glm::vec3& position, float radius, const glm::vec4& color, int loopVertexCount) {

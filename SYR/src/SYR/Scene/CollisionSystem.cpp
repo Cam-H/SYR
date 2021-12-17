@@ -9,10 +9,101 @@
 #include <glm/gtx/matrix_decompose.hpp>
 
 #include "SYR/Renderer/Renderer2D.h"
+#include "SYR/Renderer/Renderer3D.h"
+
 
 #define PI 3.14159265358979323846
 
 namespace SYR {
+
+	static void getBorders(glm::vec3* vertices, uint16_t* vertexCount) {
+
+		glm::vec3 temp;
+		glm::vec3 referenceLine = { 0, 1 , 0 };//Use as the base line for dot product calculations to find exterior edges. Initially vertical to assist in getting first edgeTODO
+		uint16_t index = 1;
+
+		//Find an appropriate line to start connecting points (rightmost line). Extreme points necessarily won't be subsumed when creating a convex polygon
+		uint16_t extremeVertexIndex = 0;
+		for (uint16_t i = 1; i < *vertexCount; i++) {
+			if (vertices[extremeVertexIndex].x < vertices[i].x) {
+				extremeVertexIndex = i;
+			}
+		}
+		//Swap the starting vertex with the first element in the array
+		temp = vertices[0];
+		vertices[0] = vertices[extremeVertexIndex]; vertices[extremeVertexIndex] = temp;
+
+		//Order vertices such that a series of lines running from point to subsequent point encloses the maximum amount of space
+		for (uint16_t i = 0; i < *vertexCount - 1; i++) {
+			index = i + 1;
+
+			glm::vec3 base = vertices[index] - vertices[i];
+			float baseLength = glm::length(base);
+			base = base / baseLength;//Normalize base
+
+			for (uint16_t j = 0; j < *vertexCount; j++) {//Start from 0 rather than i to allow interior vertices to be cut if necessary
+				if (i == j) continue;
+
+				glm::vec3 test = vertices[j] - vertices[i];
+				float testLength = glm::length(test);
+				test = test / testLength;
+
+				float delta = glm::dot(referenceLine, base) - glm::dot(referenceLine, test);
+				if (delta > 0 || (delta > -0.0001f && testLength > baseLength)) {//Swap to new point if the internal angle is greater, or if the distance is longer (if both are collinear)
+					index = j;
+
+					base = test;
+					baseLength = testLength;
+				}
+			}
+
+			if (index <= i) {
+				*vertexCount = i + 1;
+				break;
+			}
+			else {
+				temp = vertices[index];
+				vertices[index] = vertices[i + 1];
+				vertices[i + 1] = temp;
+			}
+
+			referenceLine = vertices[i] - vertices[i + 1];
+		}
+
+	}
+
+
+	bool CollisionSystem::checkCollision(Collider a, glm::mat4& aTransform, Collider b, glm::mat4& bTransform) {
+		glm::vec3* vertices = a.m_ColliderPhysicsData.vertices;
+		uint16_t vertexCount = a.m_ColliderPhysicsData.vertexCount;
+
+		glm::vec3* normals = a.m_ColliderPhysicsData.normals;
+		uint16_t normalCount = a.m_ColliderPhysicsData.normalCount;
+
+		glm::vec3* projectedVertices = new glm::vec3[vertexCount];
+		for (uint32_t i = 0; i < vertexCount; i++) {
+			glm::vec4 vertex = { vertices[i].x, vertices[i].y, vertices[i].z, 1.0f };
+			vertex = aTransform * vertex;
+
+			glm::vec3 plane = { 0, 1, -5 };
+			float t = normals[0].x * plane.x - normals[0].x * vertex.x + normals[0].y * plane.y - normals[0].y * vertex.y + normals[0].z * plane.z - normals[0].z * vertex.z;
+			t /= pow(glm::length(normals[0]), 2);
+
+			Renderer3D::drawSphere(vertex, 0.05f, { 1, 0, 0, 1 }, 4, 4);
+			//projectedVertices[i] = glm::proj(vertices[i], normals[0]);
+			projectedVertices[i] = { vertex.x + t * normals[0].x, vertex.y + t * normals[0].y, vertex.z + t * normals[0].z };
+			//Renderer3D::drawSphere(projectedVertices[i], 0.05f, { 1, 0, 1, 1 }, 4, 4);
+			Renderer3D::drawLine({ 0, 0, 0 }, normals[0], { 0, 0, 1, 1 });
+		}
+
+		getBorders(projectedVertices, &vertexCount);
+
+		for (uint32_t i = 0; i < vertexCount; i++) {
+			Renderer3D::drawSphere(projectedVertices[i], 0.02f, { 0, 1, 1, 1 }, 4, 4);
+		}
+		Renderer3D::drawLines(projectedVertices, vertexCount, { 0, 1, 0, 1 });
+	}
+
 
 	bool CollisionSystem::checkCollision(const glm::vec2* vertices, uint16_t vertexCount, const glm::vec2& center, float radius) {
 

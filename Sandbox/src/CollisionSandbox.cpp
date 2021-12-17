@@ -50,13 +50,6 @@ void CollisionSandbox::onAttach() {
 	e.getComponent<SYR::TransformComponent>().offset({ 0, -5, 0 });
 	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Floor.obj"));
 
-	e = m_ActiveScene->createEntity();
-	e.getComponent<SYR::TagComponent>().id = "CUBE1";
-	e.getComponent<SYR::TransformComponent>().offset({ 0, -2, -8 });
-	//e.getComponent<SYR::TransformComponent>().scale({ 3, 3, 3 });
-
-	e.addComponent<SYR::MeshComponent>(SYR::FileHandler::loadMesh("assets/meshes/Cube2.obj"));
-
 	std::vector<glm::vec3> vertices;
 	std::vector<glm::vec3> normals;
 	std::vector<uint32_t> indices;
@@ -77,9 +70,12 @@ void CollisionSandbox::onAttach() {
 
 	m_PCameraController.setCameraControlType(SYR::CameraControlType::FREE_CAMERA);
 	//SYR::Application::get().getWindow().hideCursor();
+	
+	m_CL = SYR::createRef<SYR::ColliderLibrary>();
+	m_Cyl = m_CL->load("assets/meshes/Cylinder.obj");
+	m_Cube1 = m_CL->load("assets/meshes/Convex2.obj");
+	m_Cube2 = m_CL->load("assets/meshes/Convex2.obj");
 
-	//m_CL = SYR::createRef<SYR::ColliderLibrary>();
-	//m_CL->load("assets/meshes/Cube2.obj");
 }
 
 void CollisionSandbox::onDetach() {
@@ -134,54 +130,6 @@ static void getBorders(glm::vec2* vertices, uint16_t* vertexCount) {
 
 }
 //*/
-
-static void getBorders(glm::vec3* vertices, uint16_t* vertexCount) {
-
-	glm::vec3 temp;
-	glm::vec3 referenceLine = { 0, 1 , 0};//Use as the base line for dot product calculations to find exterior edges. Initially vertical to assist in getting first edgeTODO
-	uint16_t index = 1;
-
-	//Find an appropriate line to start connecting points (rightmost line). Extreme points necessarily won't be subsumed when creating a convex polygon
-	uint16_t extremeVertexIndex = 0;
-	for (uint16_t i = 1; i < *vertexCount; i++) {
-		if (vertices[extremeVertexIndex].x < vertices[i].x) {
-			extremeVertexIndex = i;
-		}
-	}
-	//Swap the starting vertex with the first element in the array
-	temp = vertices[0];
-	vertices[0] = vertices[extremeVertexIndex]; vertices[extremeVertexIndex] = temp;
-
-	//Order vertices such that a series of lines running from point to subsequent point encloses the maximum amount of space
-	for (uint16_t i = 0; i < *vertexCount - 1; i++) {
-		index = i + 1;
-		glm::vec3 base = glm::normalize(vertices[index] - vertices[i]);;
-
-		for (uint16_t j = 0; j < *vertexCount; j++) {//Start from 0 rather than i to allow interior vertices to be cut if necessary
-			if (i == j) continue;
-
-			glm::vec3 test = glm::normalize(vertices[j] - vertices[i]);
-
-			if (glm::dot(referenceLine, test) < glm::dot(referenceLine, base)) {
-				index = j;
-				base = glm::normalize(vertices[index] - vertices[i]);;
-			}
-		}
-
-		if (index <= i) {
-			*vertexCount = i + 1;
-			break;
-		}
-		else {
-			temp = vertices[index];
-			vertices[index] = vertices[i + 1];
-			vertices[i + 1] = temp;
-		}
-
-		referenceLine = vertices[i] - vertices[i + 1];
-	}
-
-}
 
 void CollisionSandbox::onUpdate(SYR::Timestep ts) {
 
@@ -305,9 +253,13 @@ void CollisionSandbox::onUpdate(SYR::Timestep ts) {
 	SYR::Renderer3D::beginScene(m_PCameraController.getCamera());
 	SYR::Renderer3D::drawLines(vx, vertexCount, { 1, 1, 1, 1 });
 	SYR::Renderer3D::drawLines(vx2, vertexCount, { 1, 1, 1, 1 });
-	SYR::Renderer3D::drawSphere({ -2, 1, 1 }, 2, { 0, 0, 1, 1 }, 36);
-	SYR::Renderer3D::drawSphere({ -2, 1, 1 }, 1, { 0, 1, 0, 1 }, 12);
+	SYR::Renderer3D::drawSphere({ -2, 1, 1 }, 2, { 0, 0, 1, 1 }, 16, 16);
+	SYR::Renderer3D::drawSphere({ -2, 1, 1 }, 1, { 0, 1, 0, 1 }, 24);
 	SYR::Renderer3D::drawICOSphere({ -2, 5, 1 }, 1, { 0, 1, 0, 1 }, 8);
+
+	//glm::mat4 cylTransform = glm::translate(glm::mat4(1.0f), {5, 1, 1}) * glm::rotate(glm::mat4(1.0f), 3.1415f, { 0.0f, 0.0f, 1.0f }) * glm::scale(glm::mat4(1.0f), { 1, 1, 1 });
+	glm::mat4 cylTransform = glm::translate(glm::mat4(1.0f), {0, 1, -5}) * glm::scale(glm::mat4(1.0f), { 1, 1, 1 });
+	m_Cube2->render(cylTransform);
 
 	SYR::Renderer3D::endScene();
 }

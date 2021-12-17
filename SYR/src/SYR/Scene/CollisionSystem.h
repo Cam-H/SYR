@@ -7,6 +7,9 @@
 
 #include "SYR/Core/Timestep.h"
 
+#include <glm/glm.hpp>
+
+#include "Collider.h"
 #include "Hitbox2D.h"
 
 namespace SYR {
@@ -32,6 +35,8 @@ namespace SYR {
 		static const glm::vec2* getOutline(Hitbox2D hitbox);
 
 	public:
+
+		static bool checkCollision(Collider a, glm::mat4& aTransform, Collider b, glm::mat4& bTransform);
 
 		static bool checkCollision(const glm::vec2* vertices, uint16_t vertexCount, const glm::vec2& center, float radius);
 
